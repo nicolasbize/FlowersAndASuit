@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     float speed = 4f;
-    [SerializeField]
-    Camera camera;
+    //[SerializeField]
+    //Camera camera;
     Vector3 target = Vector3.zero;
     Animator animator = null;
     SpriteRenderer spriteRenderer = null;
@@ -32,10 +32,11 @@ public class PlayerController : MonoBehaviour
             bool isMoving = Mathf.Abs(transform.position.x - target.x) > 0.1f;
             animator.SetBool("is_moving", isMoving);
         }
-        if (camera.transform.position.x - transform.position.x > 4) {
-            camera.transform.position = new Vector3(transform.position.x + 4, 0, 0);
-        } else if (transform.position.x - camera.transform.position.x > 4) {
-            camera.transform.position = new Vector3(transform.position.x - 4, 0, 0);
-        }
+        //camera.transform.position = new Vector3(transform.position.x, 0, 0);
+        //if (camera.transform.position.x - transform.position.x > 4) {
+        //    camera.transform.position = new Vector3(transform.position.x + 4, 0, 0);
+        //} else if (transform.position.x - camera.transform.position.x > 4) {
+        //    camera.transform.position = new Vector3(transform.position.x - 4, 0, 0);
+        //}
     }
 }
