@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 702f6f2272bc5f94d851d01cc77cf4a5
+guid: 81d0de2fab7ab4b4fbb1d07ae966335a
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 16
+  fontSize: 8
   forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - GROBOLD
+  - Nokia Cellphone FC
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

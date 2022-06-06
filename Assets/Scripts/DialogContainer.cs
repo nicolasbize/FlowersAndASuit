@@ -69,7 +69,7 @@ public class DialogContainer : MonoBehaviour, IPointerClickHandler
         float targetY = -200 + transform.childCount * 50;
         if (state == State.Appearing) {
             rect.anchoredPosition = Vector3.Lerp(rect.anchoredPosition, Vector2.zero, Time.deltaTime * speedAnimation);
-            if (rect.anchoredPosition.y > targetY - 0.01f) {
+            if (rect.anchoredPosition.y > targetY - 0.05f) {
                 state = State.Displayed;
             }
         } else if (state == State.Hiding) {

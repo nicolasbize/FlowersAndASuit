@@ -7,6 +7,7 @@ using UnityEngine;
 public class FloatingTextManager : MonoBehaviour
 {
     [SerializeField] float speedDisplay = 4f;
+    [SerializeField] float distanceAboveHead = 3f;
     public Transform textElement;
     bool isShowing = false;
     Queue<Tuple<GameObject, string>> messageQueue = new Queue<Tuple<GameObject, string>>();
@@ -30,7 +31,7 @@ public class FloatingTextManager : MonoBehaviour
 
     IEnumerator ShowMessage(GameObject target, string text) {
         textElement.GetComponent<TextMeshPro>().text = text;
-        float distAbove = target.GetComponent<SpriteRenderer>().sprite.bounds.extents.y + 0.2f;
+        float distAbove = target.GetComponent<SpriteRenderer>().sprite.bounds.extents.y + distanceAboveHead;
         textElement.position = target.transform.position + Vector3.up * distAbove;
         textElement.GetComponent<MeshRenderer>().enabled = true;
         isShowing = true;

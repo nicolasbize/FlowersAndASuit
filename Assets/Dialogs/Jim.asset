@@ -48,7 +48,7 @@ MonoBehaviour:
       branches: []
     - question: Is that what flower shops sell?
       answer: I think that's why it's called a "flower shop"
-      visited: 0
+      visited: 1
       objectGained: 
       final: 0
       branches: []
@@ -102,8 +102,8 @@ MonoBehaviour:
         final: 0
         branches: []
   - question: I have to go.
-    answer: 
-    visited: 0
+    answer: Finally!
+    visited: 1
     objectGained: 
     final: 1
     branches: []
