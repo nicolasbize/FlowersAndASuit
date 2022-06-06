@@ -82,9 +82,28 @@ MonoBehaviour:
         objectGained: 
         final: 0
         branches: []
+    - question: Aren't you supposed to be in school?
+      answer: School is for losers.   I'm not a loser!
+      visited: 0
+      objectGained: 
+      final: 0
+      branches:
+      - question: Seems like some education would be good for you!
+        answer: That's exactly what a loser would say!
+        visited: 0
+        objectGained: 
+        final: 0
+        branches: []
+      - question: It's important if you want to be successful!
+        answer: Are you calling yourself successful?     Now I definitely don't want
+          to go!
+        visited: 0
+        objectGained: 
+        final: 0
+        branches: []
   - question: I have to go.
     answer: 
-    visited: 1
+    visited: 0
     objectGained: 
     final: 1
     branches: []
