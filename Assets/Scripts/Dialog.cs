@@ -15,7 +15,9 @@ public class Dialog : ScriptableObject
         public string answer;
         public bool visited;
         public string objectGained;
+        public bool final; // will close the discussion
         public Branch[] branches;
+        public Branch parent;
     }
 
     public Branch[] branches;

@@ -65,6 +65,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void SetIdle() {
+        interactiveTarget = null;
+        state = State.Idle;
+    }
+
     bool CanMove() {
         return state == State.Idle || state == State.Moving;
     }

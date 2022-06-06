@@ -15,7 +15,10 @@ public class FloatingTextManager : MonoBehaviour
     public event OnQueueEmpty onEmptyQueue;
 
     public void AddText(GameObject target, string text) {
-        messageQueue.Enqueue(new Tuple<GameObject, string>(target, text));
+        string[] phrases = text.Split(new[] { "   " }, StringSplitOptions.None);
+        foreach (string phrase in phrases) {
+            messageQueue.Enqueue(new Tuple<GameObject, string>(target, phrase));
+        }
     }
 
     private void Update() {

@@ -13,66 +13,78 @@ MonoBehaviour:
   m_Name: Jim
   m_EditorClassIdentifier: 
   greeting: Hello young man!
-  reply: Oh wow you're really old!
+  reply: Wow you're really old!
   branches:
-  - question: You know, I'm not that old!
-    answer: Sure, sure... So... did you know Benjamin Franklin? He had a kite too!
+  - question: Hey I'm not that old!
+    answer: Cool! So did you know Benjamin Franklin?   He had a kite too!
     visited: 0
     objectGained: 
+    final: 0
     branches:
-    - question: Well no, that was like 200 years ago...
-      answer: But that's why I'm asking you!
+    - question: No, he lived 200 years ago...
+      answer: That's why I'm asking you!
       visited: 0
       objectGained: 
+      final: 0
       branches: []
-    - question: Of course! He's a great friend of mine
-      answer: Wow... you're like... ancient!
+    - question: Actually he's a great friend of mine
+      answer: Wow, you're ancient!
       visited: 0
       objectGained: 
+      final: 0
       branches: []
   - question: Do you know where I could find flowers?
-    answer: You could always try the flower shop down the street. My brain tells
-      me it'd be a good place to start looking.
+    answer: There's a flower shop down the street.   If you had a brain, you'd look
+      there!
     visited: 0
     objectGained: 
+    final: 0
     branches:
     - question: Does your brain ever teach you to be polite?
       answer: It does around smart people!
       visited: 0
       objectGained: 
+      final: 0
       branches: []
-    - question: Oh is that what the flower shop is selling?
-      answer: Yep! I think that's why it's called a "flower shop"
+    - question: Is that what flower shops sell?
+      answer: I think that's why it's called a "flower shop"
       visited: 0
       objectGained: 
+      final: 0
       branches: []
   - question: Can I play with your kite?
     answer: No way, you're gonna break it!
     visited: 0
     objectGained: 
+    final: 0
     branches:
     - question: Come on, just once!
-      answer: Let me think about it. No!
+      answer: Let me think about it.   No!
       visited: 0
       objectGained: 
+      final: 0
       branches: []
     - question: How could I break your kite?
       answer: If you looked at it for too long with your ugly face!
       visited: 0
       objectGained: 
+      final: 0
       branches:
       - question: You better watch your language!
         answer: Hey you're not my mom!
         visited: 0
         objectGained: 
+        final: 0
         branches: []
       - question: Maybe I should break you in half!
         answer: You can't catch me, you're too old!
         visited: 0
         objectGained: 
+        final: 0
         branches: []
   - question: I have to go.
     answer: 
-    visited: 0
+    visited: 1
     objectGained: 
+    final: 1
     branches: []
