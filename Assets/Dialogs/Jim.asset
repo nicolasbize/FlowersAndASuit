@@ -12,40 +12,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f87183926066d904ab1fd24c3f2d31aa, type: 3}
   m_Name: Jim
   m_EditorClassIdentifier: 
-  greeting: Well hello there young man!
-  reply: Oh wow you're really really old!
+  greeting: Hello young man!
+  reply: Oh wow you're really old!
   branches:
   - question: You know, I'm not that old!
     answer: Sure, sure... So... did you know Benjamin Franklin? He had a kite too!
+    visited: 0
+    objectGained: 
     branches:
     - question: Well no, that was like 200 years ago...
       answer: But that's why I'm asking you!
+      visited: 0
+      objectGained: 
       branches: []
     - question: Of course! He's a great friend of mine
       answer: Wow... you're like... ancient!
+      visited: 0
+      objectGained: 
       branches: []
   - question: Do you know where I could find flowers?
     answer: You could always try the flower shop down the street. My brain tells
       me it'd be a good place to start looking.
+    visited: 0
+    objectGained: 
     branches:
     - question: Does your brain ever teach you to be polite?
       answer: It does around smart people!
+      visited: 0
+      objectGained: 
       branches: []
     - question: Oh is that what the flower shop is selling?
       answer: Yep! I think that's why it's called a "flower shop"
+      visited: 0
+      objectGained: 
       branches: []
   - question: Can I play with your kite?
     answer: No way, you're gonna break it!
+    visited: 0
+    objectGained: 
     branches:
     - question: Come on, just once!
       answer: Let me think about it. No!
+      visited: 0
+      objectGained: 
       branches: []
     - question: How could I break your kite?
       answer: If you looked at it for too long with your ugly face!
+      visited: 0
+      objectGained: 
       branches:
       - question: You better watch your language!
         answer: Hey you're not my mom!
+        visited: 0
+        objectGained: 
         branches: []
       - question: Maybe I should break you in half!
         answer: You can't catch me, you're too old!
+        visited: 0
+        objectGained: 
         branches: []
+  - question: I have to go.
+    answer: 
+    visited: 0
+    objectGained: 
+    branches: []

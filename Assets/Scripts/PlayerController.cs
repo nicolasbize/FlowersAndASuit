@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer = null;
     Vector2 direction = Vector2.right;
     GameObject interactiveTarget = null;
-    
-    bool isMoving = false;
+    enum State { Talking, Moving, Idle, Interacting }
+    State state = State.Idle;
 
     private void Start() {
         animator = GetComponent<Animator>();
@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && CanMove()) {
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             target.z = transform.position.z; // don't play with z axis
             target.y = transform.position.y; // stay on same horizontal strip
@@ -47,15 +47,26 @@ public class PlayerController : MonoBehaviour
             }
             direction = transform.position.x < target.x ? Vector2.right : Vector2.left;
             spriteRenderer.flipX = direction == Vector2.right;
+            state = State.Moving;
         }
-        if (target != Vector3.zero) {
+        if (state == State.Moving && target != Vector3.zero) {
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-            isMoving = Mathf.Abs(transform.position.x - target.x) > 0.1f;
-            animator.SetBool("is_moving", isMoving);
+            if (Mathf.Abs(transform.position.x - target.x) < 0.1f) {
+                state = State.Idle;
+            }
+            animator.SetBool("is_moving", state == State.Moving);
         }
-        if (!isMoving && interactiveTarget != null) {
+        if (state == State.Idle && interactiveTarget != null) {
+            // have the player point towards the target before interacting
             direction = transform.position.x < interactiveTarget.transform.position.x ? Vector2.right : Vector2.left;
             spriteRenderer.flipX = direction == Vector2.right;
+            state = State.Talking;
+            interactiveTarget.GetComponent<Interactive>().StartDialog(gameObject, interactiveTarget);
         }
     }
+
+    bool CanMove() {
+        return state == State.Idle || state == State.Moving;
+    }
+
 }

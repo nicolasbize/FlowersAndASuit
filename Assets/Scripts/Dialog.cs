@@ -13,6 +13,8 @@ public class Dialog : ScriptableObject
     {
         public string question;
         public string answer;
+        public bool visited;
+        public string objectGained;
         public Branch[] branches;
     }
 
