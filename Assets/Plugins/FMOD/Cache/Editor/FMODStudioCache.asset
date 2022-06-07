@@ -50,7 +50,7 @@ MonoBehaviour:
   - {fileID: 4205306280637274764}
   StringsBanks:
   - {fileID: 2346158573358980646}
-  cacheTime: 637901208240000000
+  cacheTime: 637901210299482944
   cacheVersion: 10
 --- !u!114 &708493249341917311
 MonoBehaviour:
@@ -94,7 +94,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637901208240000000
+  lastModified: 637901210299482944
   FileSizes:
   - Name: Desktop
     Value: 826
@@ -114,7 +114,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637901208240000000
+  lastModified: 637901210299472968
   FileSizes:
   - Name: Desktop
     Value: 3821344

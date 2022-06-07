@@ -7,6 +7,8 @@ using static Dialog;
 public class Interactive : MonoBehaviour
 {
 
+    public float distanceToInteraction = 3f;
+    public string observation = "";
     public Dialog dialog;
     public Transform dialogContainer;
     public FloatingTextManager floatingTextManager;
@@ -15,8 +17,10 @@ public class Interactive : MonoBehaviour
     Branch[] currentBranches;
 
     public void Start() {
-        ClearVisitedFlag(dialog.branches);
-        SetBranchParent(dialog.branches, null);
+        if (dialog != null) {
+            ClearVisitedFlag(dialog.branches);
+            SetBranchParent(dialog.branches, null);
+        }
     }
 
     private void SetBranchParent(Branch[] branches, Branch parent) {
@@ -36,10 +40,16 @@ public class Interactive : MonoBehaviour
     public void StartDialog(GameObject player, GameObject target) {
         currentPlayer = player;
         currentTarget = target;
-        currentBranches = dialog.branches;
-        floatingTextManager.onEmptyQueue += ShowDialogOptions;
-        floatingTextManager.AddText(currentPlayer, dialog.greeting);
-        floatingTextManager.AddText(currentTarget, dialog.reply);
+        if (dialog != null) {
+            currentBranches = dialog.branches;
+            floatingTextManager.onEmptyQueue += ShowDialogOptions;
+            floatingTextManager.AddText(currentPlayer, dialog.greeting);
+            floatingTextManager.AddText(currentTarget, dialog.reply);
+        } else {
+            floatingTextManager.onEmptyQueue += FreePlayerFromConversation;
+            floatingTextManager.AddText(currentPlayer, observation);
+        }
+        
     }
     
     public void FreePlayerFromConversation() {
