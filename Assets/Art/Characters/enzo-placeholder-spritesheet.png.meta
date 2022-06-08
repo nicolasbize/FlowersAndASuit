@@ -1,0 +1,1272 @@
+fileFormatVersion: 2
+guid: 0b5c193caa292f149a9ab485cbd5d8e7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 184319474129718600
+    second: enzo-placeholder-spritesheet_0
+  - first:
+      213: -4550771133084209186
+    second: enzo-placeholder-spritesheet_1
+  - first:
+      213: 9087100193922018015
+    second: enzo-placeholder-spritesheet_2
+  - first:
+      213: -919816402642372300
+    second: enzo-placeholder-spritesheet_3
+  - first:
+      213: -8278740613452728382
+    second: enzo-placeholder-spritesheet_4
+  - first:
+      213: 3468282371378279222
+    second: enzo-placeholder-spritesheet_5
+  - first:
+      213: 427440889641507923
+    second: enzo-placeholder-spritesheet_6
+  - first:
+      213: 7683802533978262799
+    second: enzo-placeholder-spritesheet_7
+  - first:
+      213: 6251020736822514699
+    second: enzo-placeholder-spritesheet_8
+  - first:
+      213: -6433266888612561966
+    second: enzo-placeholder-spritesheet_9
+  - first:
+      213: 6089402384841619691
+    second: enzo-placeholder-spritesheet_10
+  - first:
+      213: 7399462374344022355
+    second: enzo-placeholder-spritesheet_11
+  - first:
+      213: -5896911077127539655
+    second: enzo-placeholder-spritesheet_12
+  - first:
+      213: -3871635497143108396
+    second: enzo-placeholder-spritesheet_13
+  - first:
+      213: -6711991159556293734
+    second: enzo-placeholder-spritesheet_14
+  - first:
+      213: -2283954235872756888
+    second: enzo-placeholder-spritesheet_15
+  - first:
+      213: 6575563862453651968
+    second: enzo-placeholder-spritesheet_16
+  - first:
+      213: -4547187641942716578
+    second: enzo-placeholder-spritesheet_17
+  - first:
+      213: 2838347734036556202
+    second: enzo-placeholder-spritesheet_18
+  - first:
+      213: 983449575172962962
+    second: enzo-placeholder-spritesheet_19
+  - first:
+      213: -8156201956867567597
+    second: enzo-placeholder-spritesheet_20
+  - first:
+      213: -8453704940766824794
+    second: enzo-placeholder-spritesheet_21
+  - first:
+      213: 6320554181957438331
+    second: enzo-placeholder-spritesheet_22
+  - first:
+      213: 1266877936186736168
+    second: enzo-placeholder-spritesheet_23
+  - first:
+      213: -7120160494439447104
+    second: enzo-placeholder-spritesheet_24
+  - first:
+      213: -2785428017456497373
+    second: enzo-placeholder-spritesheet_25
+  - first:
+      213: 853513845626904166
+    second: enzo-placeholder-spritesheet_26
+  - first:
+      213: -3626157000902407681
+    second: enzo-placeholder-spritesheet_27
+  - first:
+      213: 438197307278959820
+    second: enzo-placeholder-spritesheet_28
+  - first:
+      213: 4611562023295413716
+    second: enzo-placeholder-spritesheet_29
+  - first:
+      213: -3588204434279196644
+    second: enzo-placeholder-spritesheet_30
+  - first:
+      213: -1769540406802404392
+    second: enzo-placeholder-spritesheet_31
+  - first:
+      213: 2238437838865783628
+    second: enzo-placeholder-spritesheet_32
+  - first:
+      213: 1232162056816013934
+    second: enzo-placeholder-spritesheet_33
+  - first:
+      213: -763977266347428650
+    second: enzo-placeholder-spritesheet_34
+  - first:
+      213: -8281266965576213692
+    second: enzo-placeholder-spritesheet_35
+  - first:
+      213: 7649141236492586313
+    second: enzo-placeholder-spritesheet_36
+  - first:
+      213: 6093557467510908395
+    second: enzo-placeholder-spritesheet_37
+  - first:
+      213: 8810112861707754324
+    second: enzo-placeholder-spritesheet_38
+  - first:
+      213: -4768732046372056823
+    second: enzo-placeholder-spritesheet_39
+  - first:
+      213: 7580615615790555833
+    second: enzo-placeholder-spritesheet_40
+  - first:
+      213: 6206064407600743356
+    second: enzo-placeholder-spritesheet_41
+  - first:
+      213: 5582618008317810707
+    second: enzo-placeholder-spritesheet_42
+  - first:
+      213: 6023294272244035748
+    second: enzo-placeholder-spritesheet_43
+  - first:
+      213: 7886349338072897874
+    second: enzo-placeholder-spritesheet_44
+  - first:
+      213: 3967692710761966042
+    second: enzo-placeholder-spritesheet_45
+  - first:
+      213: 237176010656492556
+    second: enzo-placeholder-spritesheet_46
+  - first:
+      213: -3108938979885888831
+    second: enzo-placeholder-spritesheet_47
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 72
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2688
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d40bcc595de8200800000000000000
+      internalID: 184319474129718600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2688
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edfe966f3c968d0c0800000000000000
+      internalID: -4550771133084209186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2688
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdaea191b7ddb1e70800000000000000
+      internalID: 9087100193922018015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 2688
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4397cedead72c33f0800000000000000
+      internalID: -919816402642372300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2688
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7fc8356410c1d80800000000000000
+      internalID: -8278740613452728382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2688
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63370c6e070d12030800000000000000
+      internalID: 3468282371378279222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 2688
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c1f8579339ee500800000000000000
+      internalID: 427440889641507923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 2688
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d4502b1b952aa60800000000000000
+      internalID: 7683802533978262799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0418e5ad3610c650800000000000000
+      internalID: 6251020736822514699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2304
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db37f689d178b6a0800000000000000
+      internalID: -6433266888612561966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2304
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8b6eab437e18450800000000000000
+      internalID: 6089402384841619691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 2304
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359d4af43db20b660800000000000000
+      internalID: 7399462374344022355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2304
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9343fb75e96f92ea0800000000000000
+      internalID: -5896911077127539655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2304
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcfdf43700354ac0800000000000000
+      internalID: -3871635497143108396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 2304
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bb51f1a973ad2a0800000000000000
+      internalID: -6711991159556293734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 2304
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b3e8f29b3cd40e0800000000000000
+      internalID: -2283954235872756888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00a027b7e78114b50800000000000000
+      internalID: 6575563862453651968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1920
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f45f28ee425e0c0800000000000000
+      internalID: -4547187641942716578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1920
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9a844d936d36720800000000000000
+      internalID: 2838347734036556202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1920
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a71b69d2ae5ad00800000000000000
+      internalID: 983449575172962962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1920
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310109c98895fce80800000000000000
+      internalID: -8156201956867567597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1920
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6f0a165286eaa80800000000000000
+      internalID: -8453704940766824794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1920
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7bce2f6a8e17b750800000000000000
+      internalID: 6320554181957438331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1920
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82eb03055cad49110800000000000000
+      internalID: 1266877936186736168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5ca2921cb103d90800000000000000
+      internalID: -7120160494439447104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1536
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32db518d9fb2859d0800000000000000
+      internalID: -2785428017456497373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1536
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e187b025a48db00800000000000000
+      internalID: 853513845626904166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1536
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff98a6d7b6d4dadc0800000000000000
+      internalID: -3626157000902407681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc425e9112ac41600800000000000000
+      internalID: 438197307278959820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1536
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd64322a3f8fff30800000000000000
+      internalID: 4611562023295413716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1536
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c189e410413243ec0800000000000000
+      internalID: -3588204434279196644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1536
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dba7dc10645177e0800000000000000
+      internalID: -1769540406802404392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b536dca57801f10800000000000000
+      internalID: 2238437838865783628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62bb36ccd4891110800000000000000
+      internalID: 1232162056816013934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d433e659bec565f0800000000000000
+      internalID: -763977266347428650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b17a22297031d80800000000000000
+      internalID: -8281266965576213692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94dceed7d65372a60800000000000000
+      internalID: 7649141236492586313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5aa6d4b3aa09450800000000000000
+      internalID: 6093557467510908395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bd03148fec34a70800000000000000
+      internalID: 8810112861707754324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901d8fa387f02ddb0800000000000000
+      internalID: -4768732046372056823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2a9fd1db1c33960800000000000000
+      internalID: 7580615615790555833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3cc3492be502650800000000000000
+      internalID: 6206064407600743356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3185b762081797d40800000000000000
+      internalID: 5582618008317810707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a030c25a3a079350800000000000000
+      internalID: 6023294272244035748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259d87670f0f17d60800000000000000
+      internalID: 7886349338072897874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9afdaaf73101730800000000000000
+      internalID: 3967692710761966042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0cac68335e9a4300800000000000000
+      internalID: 237176010656492556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enzo-placeholder-spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca498b3874dad4d0800000000000000
+      internalID: -3108938979885888831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

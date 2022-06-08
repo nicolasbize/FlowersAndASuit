@@ -12,6 +12,8 @@ public class Interactive : MonoBehaviour
     public Dialog dialog;
     public Transform dialogContainer;
     public FloatingTextManager floatingTextManager;
+    public float overrideThickness;
+    public float overrideTextDistanceAboveHead;
     GameObject currentPlayer;
     GameObject currentTarget;
     Branch[] currentBranches;
@@ -43,9 +45,12 @@ public class Interactive : MonoBehaviour
         if (dialog != null) {
             currentBranches = dialog.branches;
             floatingTextManager.onEmptyQueue += ShowDialogOptions;
+            currentTarget.GetComponent<Animator>().SetBool("is_talking", true);
+            currentPlayer.GetComponent<Animator>().SetBool("is_talking", true);
             floatingTextManager.AddText(currentPlayer, dialog.greeting);
             floatingTextManager.AddText(currentTarget, dialog.reply);
         } else {
+            currentPlayer.GetComponent<Animator>().SetBool("is_talking", true);
             floatingTextManager.onEmptyQueue += FreePlayerFromConversation;
             floatingTextManager.AddText(currentPlayer, observation);
         }
@@ -55,6 +60,12 @@ public class Interactive : MonoBehaviour
     public void FreePlayerFromConversation() {
         floatingTextManager.onEmptyQueue -= FreePlayerFromConversation;
         currentPlayer.GetComponent<PlayerController>().SetIdle();
+        if (dialog != null) {
+            currentTarget.GetComponent<Animator>().SetBool("is_talking", false);
+            currentTarget.GetComponent<Animator>().SetBool("mouth_open", false);
+        }
+        currentPlayer.GetComponent<Animator>().SetBool("is_talking", false);
+        currentPlayer.GetComponent<Animator>().SetBool("mouth_open", false);
         currentPlayer = null;
         currentTarget = null;
     }

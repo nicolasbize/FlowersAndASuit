@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
 
     [SerializeField] float speed = 4f;
+    [SerializeField] float marginTarget = 0.1f;
     Vector3 target = Vector3.zero;
     Animator animator = null;
     SpriteRenderer spriteRenderer = null;
@@ -26,49 +27,58 @@ public class PlayerController : MonoBehaviour
         HighlightHoveredObjects();
         HandleClickInteractions();
         MovePlayer();
+
+        //animator.SetBool("is_talking", state == State.Talking);
+        animator.SetBool("is_moving", state == State.Moving);
         
     }
 
     private void HighlightHoveredObjects() {
-        var hoveredPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(hoveredPosition, Vector2.zero);
-        if (hit.collider != null) {
-            var targetObject = hit.collider.gameObject;
-            if (targetObject.GetComponent<Interactive>() != null) {
-                float thickness = 1f / targetObject.GetComponent<SpriteRenderer>().sprite.texture.width;
-                targetObject.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", thickness);
-                hovered = targetObject;
+        if (CanMove()) {
+
+            var hoveredPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(hoveredPosition, Vector2.zero);
+            if (hit.collider != null) {
+                var targetObject = hit.collider.gameObject;
+                if (targetObject.GetComponent<Interactive>() != null) {
+                    float thickness = targetObject.GetComponent<Interactive>().overrideThickness;
+                    if (thickness == 0) { // TODO: fix this, right now I can't properly get the right outline on spritesheets
+                        thickness = 1f / (18 * targetObject.GetComponent<SpriteRenderer>().bounds.size.x);
+                    }
+                    targetObject.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", thickness);
+                    hovered = targetObject;
+                }
+            } else if (hovered != null) {
+                hovered.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", 0f);
+                hovered = null;
             }
-        } else if (hovered != null) {
-            hovered.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", 0f);
-            hovered = null;
         }
     }
 
     private void MovePlayer() {
         if (state == State.Moving && target != Vector3.zero) {
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-            if (Mathf.Abs(transform.position.x - target.x) < 0.1f) {
+            if (Mathf.Abs(transform.position.x - target.x) < marginTarget) {
                 state = State.Idle;
             }
-            animator.SetBool("is_moving", state == State.Moving);
         }
         if (state == State.Idle && interactiveTarget != null) {
             // have the player point towards the target before interacting
             direction = transform.position.x < interactiveTarget.transform.position.x ? Vector2.right : Vector2.left;
-            spriteRenderer.flipX = direction == Vector2.right;
+            spriteRenderer.flipX = direction == Vector2.left;
             state = State.Talking;
+            interactiveTarget.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", 0f);
             interactiveTarget.GetComponent<Interactive>().StartDialog(gameObject, interactiveTarget);
         }
     }
 
     private void HandleClickInteractions() {
         if (Input.GetMouseButtonDown(0) && CanMove()) {
-            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+            target = mousePosition;
             target.z = transform.position.z; // don't play with z axis
             target.y = transform.position.y; // stay on same horizontal strip
-            Vector2 position2D = new Vector2(target.x, target.y);
-            RaycastHit2D hit = Physics2D.Raycast(position2D, Vector2.zero);
             if (hit.collider != null) {
                 var targetObject = hit.collider.gameObject;
                 if (targetObject.GetComponent<Interactive>() != null) {
@@ -81,7 +91,6 @@ public class PlayerController : MonoBehaviour
                     } else {
                         target.x = targetObject.transform.position.x + interactive.distanceToInteraction;
                     }
-                    Debug.Log(hit.collider.gameObject.name);
                 } else {
                     interactiveTarget = null;
                 }
@@ -89,7 +98,7 @@ public class PlayerController : MonoBehaviour
                 interactiveTarget = null;
             }
             direction = transform.position.x < target.x ? Vector2.right : Vector2.left;
-            spriteRenderer.flipX = direction == Vector2.right;
+            spriteRenderer.flipX = direction == Vector2.left;
             state = State.Moving;
         }
     }
