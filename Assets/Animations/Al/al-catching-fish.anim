@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: enzo-cutting-kite
+  m_Name: al-catching-fish
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -3871635497143108396, guid: 0b5c193caa292f149a9ab485cbd5d8e7, type: 3}
+      value: {fileID: -2142467791700466477, guid: 7c3ffebca9bf3e44aaf3d50309957726, type: 3}
     - time: 0.083333336
-      value: {fileID: -6711991159556293734, guid: 0b5c193caa292f149a9ab485cbd5d8e7, type: 3}
+      value: {fileID: -3009153127706760224, guid: 7c3ffebca9bf3e44aaf3d50309957726, type: 3}
     - time: 0.16666667
-      value: {fileID: -2283954235872756888, guid: 0b5c193caa292f149a9ab485cbd5d8e7, type: 3}
+      value: {fileID: 9144773495520299562, guid: 7c3ffebca9bf3e44aaf3d50309957726, type: 3}
     - time: 0.25
-      value: {fileID: 6575563862453651968, guid: 0b5c193caa292f149a9ab485cbd5d8e7, type: 3}
+      value: {fileID: 4443048491088171361, guid: 7c3ffebca9bf3e44aaf3d50309957726, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,10 +46,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -3871635497143108396, guid: 0b5c193caa292f149a9ab485cbd5d8e7, type: 3}
-    - {fileID: -6711991159556293734, guid: 0b5c193caa292f149a9ab485cbd5d8e7, type: 3}
-    - {fileID: -2283954235872756888, guid: 0b5c193caa292f149a9ab485cbd5d8e7, type: 3}
-    - {fileID: 6575563862453651968, guid: 0b5c193caa292f149a9ab485cbd5d8e7, type: 3}
+    - {fileID: -2142467791700466477, guid: 7c3ffebca9bf3e44aaf3d50309957726, type: 3}
+    - {fileID: -3009153127706760224, guid: 7c3ffebca9bf3e44aaf3d50309957726, type: 3}
+    - {fileID: 9144773495520299562, guid: 7c3ffebca9bf3e44aaf3d50309957726, type: 3}
+    - {fileID: 4443048491088171361, guid: 7c3ffebca9bf3e44aaf3d50309957726, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

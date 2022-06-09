@@ -47,8 +47,12 @@ public class Interactive : MonoBehaviour
             floatingTextManager.onEmptyQueue += ShowDialogOptions;
             currentTarget.GetComponent<Animator>().SetBool("is_talking", true);
             currentPlayer.GetComponent<Animator>().SetBool("is_talking", true);
-            floatingTextManager.AddText(currentPlayer, dialog.greeting);
-            floatingTextManager.AddText(currentTarget, dialog.reply);
+            if (!String.IsNullOrEmpty(dialog.greeting)) {
+                floatingTextManager.AddText(currentPlayer, dialog.greeting);
+            }
+            if (!String.IsNullOrEmpty(dialog.reply)) {
+                floatingTextManager.AddText(currentTarget, dialog.reply);
+            }
         } else {
             currentPlayer.GetComponent<Animator>().SetBool("is_talking", true);
             floatingTextManager.onEmptyQueue += FreePlayerFromConversation;
@@ -78,9 +82,14 @@ public class Interactive : MonoBehaviour
         Branch branch = FindBranch(option, dialog.branches);
         if (branch.question.Length != 0) {
             floatingTextManager.AddText(currentPlayer, branch.question);
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Interactions/Enzo-Jim", Enzo.position, Jim.position, 3);
+
         }
         if (branch.answer.Length != 0) {
             floatingTextManager.AddText(currentTarget, branch.answer);
+        }
+        if (branch.reaction.Length != 0) {
+            floatingTextManager.AddText(currentTarget, branch.reaction);
         }
         if (branch.branches.Length == 0) {
             if (branch.final) {

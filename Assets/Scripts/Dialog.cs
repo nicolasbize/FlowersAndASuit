@@ -13,6 +13,7 @@ public class Dialog : ScriptableObject
     {
         public string question;
         public string answer;
+        public string reaction;
         public bool visited;
         public string objectGained;
         public bool final; // will close the discussion

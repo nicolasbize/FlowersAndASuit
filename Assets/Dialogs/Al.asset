@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87183926066d904ab1fd24c3f2d31aa, type: 3}
+  m_Name: Al
+  m_EditorClassIdentifier: 
+  greeting: Catching anything good?
+  reply: Ah fish no bite!
+  branches:
+  - question: Did you try talking nicely to them?
+    answer: Fishy, fishy!! Come here fishy fishy!!   Not work!
+    reaction: 
+    visited: 1
+    objectGained: 
+    final: 0
+    branches:
+    - question: Did you try throwing food in the water?
+      answer: No, I want catch food from water, why throw food in water?
+      reaction: 
+      visited: 1
+      objectGained: 
+      final: 0
+      branches: []
+  - question: Maybe the water is too cold?
+    answer: Oh I took care of that, I warm the water!
+    reaction: Wait how did you...   Nevermind, I don't think I want to know.
+    visited: 1
+    objectGained: 
+    final: 0
+    branches: []
+  - question: Maybe it's too late in the day?
+    answer: 'Ha, you no smart, fish don''t know how read clock for time!   I don''t
+      even know how read clock! '
+    reaction: 
+    visited: 1
+    objectGained: 
+    final: 0
+    branches: []
+  - question: I think I need to go
+    answer: Allrighty!
+    reaction: 
+    visited: 1
+    objectGained: 
+    final: 1
+    branches: []
