@@ -89,7 +89,7 @@ public class Interactive : MonoBehaviour
             floatingTextManager.AddText(currentTarget, branch.answer);
         }
         if (branch.reaction.Length != 0) {
-            floatingTextManager.AddText(currentTarget, branch.reaction);
+            floatingTextManager.AddText(currentPlayer, branch.reaction);
         }
         if (branch.branches.Length == 0) {
             if (branch.final) {
