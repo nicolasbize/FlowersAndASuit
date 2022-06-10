@@ -7,6 +7,7 @@ using static Dialog;
 public class Interactive : MonoBehaviour
 {
 
+    public string hintText = "";
     public float distanceToInteraction = 3f;
     public string observation = "";
     public Dialog dialog;
@@ -75,7 +76,7 @@ public class Interactive : MonoBehaviour
     }
 
     public void ShowDialogOptions() {
-        dialogContainer.gameObject.GetComponent<DialogContainer>().Activate(dialog, currentBranches, OnOptionSelected);
+        dialogContainer.gameObject.GetComponent<UIDialogContainer>().Activate(dialog, currentBranches, OnOptionSelected);
     }
 
     public void OnOptionSelected(string option) {

@@ -8,12 +8,14 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float speed = 4f;
     [SerializeField] float marginTarget = 0.1f;
+    [SerializeField] Transform hintText;
     Vector3 target = Vector3.zero;
     Animator animator = null;
     SpriteRenderer spriteRenderer = null;
     Vector2 direction = Vector2.right;
     GameObject interactiveTarget = null;
     GameObject hovered = null;
+    InventoryItem currentItemDragged = null;
 
     enum State { Talking, Moving, Idle, Interacting }
     State state = State.Idle;
@@ -28,14 +30,15 @@ public class PlayerController : MonoBehaviour
         HandleClickInteractions();
         MovePlayer();
 
-        //animator.SetBool("is_talking", state == State.Talking);
         animator.SetBool("is_moving", state == State.Moving);
         
     }
 
     private void HighlightHoveredObjects() {
+        if (currentItemDragged != null) {
+            hintText.GetComponent<UIInventoryUsageHint>().SetTarget(null);
+        }
         if (CanMove()) {
-
             var hoveredPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(hoveredPosition, Vector2.zero);
             if (hit.collider != null) {
@@ -47,6 +50,9 @@ public class PlayerController : MonoBehaviour
                     }
                     targetObject.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", thickness);
                     hovered = targetObject;
+                    if (currentItemDragged != null) {
+                        hintText.GetComponent<UIInventoryUsageHint>().SetTarget(hovered.GetComponent<Interactive>().hintText);
+                    }
                 }
             } else if (hovered != null) {
                 hovered.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", 0f);
@@ -72,34 +78,44 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void SetDraggedInventoryItem(InventoryItem item) {
+        currentItemDragged = item;
+    }
+
+    public void RemoveDraggedInventoryItem() {
+        currentItemDragged = null;
+    }
+
     private void HandleClickInteractions() {
         if (Input.GetMouseButtonDown(0) && CanMove()) {
             var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
-            target = mousePosition;
-            target.z = transform.position.z; // don't play with z axis
-            target.y = transform.position.y; // stay on same horizontal strip
-            if (hit.collider != null) {
-                var targetObject = hit.collider.gameObject;
-                if (targetObject.GetComponent<Interactive>() != null) {
-                    Interactive interactive = targetObject.GetComponent<Interactive>();
-                    interactiveTarget = targetObject;
-                    float distToLeft = Mathf.Abs(targetObject.transform.position.x - interactive.distanceToInteraction - transform.position.x);
-                    float distToRight = Mathf.Abs(targetObject.transform.position.x + interactive.distanceToInteraction - transform.position.x);
-                    if (distToLeft < distToRight) {
-                        target.x = targetObject.transform.position.x - interactive.distanceToInteraction;
+            if (mousePosition.y > -2.8) { // don't allow clicking in toolbar for movement
+                target = mousePosition;
+                target.z = transform.position.z; // don't play with z axis
+                target.y = transform.position.y; // stay on same horizontal strip
+                if (hit.collider != null) {
+                    var targetObject = hit.collider.gameObject;
+                    if (targetObject.GetComponent<Interactive>() != null) {
+                        Interactive interactive = targetObject.GetComponent<Interactive>();
+                        interactiveTarget = targetObject;
+                        float distToLeft = Mathf.Abs(targetObject.transform.position.x - interactive.distanceToInteraction - transform.position.x);
+                        float distToRight = Mathf.Abs(targetObject.transform.position.x + interactive.distanceToInteraction - transform.position.x);
+                        if (distToLeft < distToRight) {
+                            target.x = targetObject.transform.position.x - interactive.distanceToInteraction;
+                        } else {
+                            target.x = targetObject.transform.position.x + interactive.distanceToInteraction;
+                        }
                     } else {
-                        target.x = targetObject.transform.position.x + interactive.distanceToInteraction;
+                        interactiveTarget = null;
                     }
                 } else {
                     interactiveTarget = null;
                 }
-            } else {
-                interactiveTarget = null;
+                direction = transform.position.x < target.x ? Vector2.right : Vector2.left;
+                spriteRenderer.flipX = direction == Vector2.left;
+                state = State.Moving;
             }
-            direction = transform.position.x < target.x ? Vector2.right : Vector2.left;
-            spriteRenderer.flipX = direction == Vector2.left;
-            state = State.Moving;
         }
     }
 

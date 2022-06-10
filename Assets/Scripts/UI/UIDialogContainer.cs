@@ -6,11 +6,8 @@ using UnityEngine.EventSystems;
 using UnityEngine;
 using static Dialog;
 
-public class DialogContainer : MonoBehaviour, IPointerClickHandler
+public class UIDialogContainer : MonoBehaviour, IPointerClickHandler
 {
-    //bool isShowing = false;
-    //bool isHiding = false;
-    //bool shown = false;
     RectTransform rect = null;
     [SerializeField] float speedAnimation = 10f;
     [SerializeField] Transform dialogOptionPrefab;
