@@ -1,67 +1,94 @@
 fileFormatVersion: 2
-guid: d6645268bb3719a438c6e271b8d109b3
+guid: 1b99c3e87cf1fa64aacb5b9b2daa05a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7567004582586179400
-    second: lewis-spritesheet_0
+      213: -3075495400823267669
+    second: jane-placeholder_0
   - first:
-      213: 6012511599709733045
-    second: lewis-spritesheet_1
+      213: 9013922865129972940
+    second: jane-placeholder_1
   - first:
-      213: -4642502817980080068
-    second: lewis-spritesheet_2
+      213: -6076029989981973859
+    second: jane-placeholder_2
   - first:
-      213: 3100553477674810831
-    second: lewis-spritesheet_3
+      213: -543220487659968962
+    second: jane-placeholder_3
   - first:
-      213: 5431502075318949897
-    second: lewis-spritesheet_4
+      213: -7503887144707827387
+    second: jane-placeholder_4
   - first:
-      213: -5176414015617101334
-    second: lewis-spritesheet_5
+      213: -4182587308445403997
+    second: jane-placeholder_5
   - first:
-      213: 1053671859075501881
-    second: lewis-spritesheet_6
+      213: -1799251414720644851
+    second: jane-placeholder_6
   - first:
-      213: 7031127758580397261
-    second: lewis-spritesheet_7
+      213: 6043480576875518614
+    second: jane-placeholder_7
   - first:
-      213: 1132180707316663966
-    second: lewis-spritesheet_8
+      213: -7983701339191636445
+    second: jane-placeholder_8
   - first:
-      213: -2449863217086491143
-    second: lewis-spritesheet_9
+      213: -1747519631809268580
+    second: jane-placeholder_9
   - first:
-      213: -6106346969340428667
-    second: lewis-spritesheet_10
+      213: 7125382950534119528
+    second: jane-placeholder_10
   - first:
-      213: -7370225603887239270
-    second: lewis-spritesheet_11
+      213: 5151976974803564527
+    second: jane-placeholder_11
   - first:
-      213: 3420911336502362999
-    second: lewis-spritesheet_12
+      213: 8408600510187915259
+    second: jane-placeholder_12
   - first:
-      213: 4167862829321898814
-    second: lewis-spritesheet_13
+      213: -3714292117767777842
+    second: jane-placeholder_13
   - first:
-      213: -7330528842112732534
-    second: lewis-spritesheet_14
+      213: -6934535487371555380
+    second: jane_0
   - first:
-      213: -6299902373575656264
-    second: lewis-spritesheet_15
+      213: -8980312929649537833
+    second: jane_1
   - first:
-      213: -8195068939259959501
-    second: lewis-spritesheet_16
+      213: -8705794937686532510
+    second: jane_2
   - first:
-      213: 4748842701673428535
-    second: lewis-spritesheet_17
+      213: -8049077179755190698
+    second: jane_3
   - first:
-      213: -3491220012262894552
-    second: lewis-spritesheet_18
+      213: -2076543468056605289
+    second: jane_4
   - first:
-      213: 4355539629376376462
-    second: lewis-spritesheet_19
+      213: -6359443766629399385
+    second: jane_5
+  - first:
+      213: 7093283160752579717
+    second: jane_6
+  - first:
+      213: -4044873237049027594
+    second: jane_7
+  - first:
+      213: -3248430582893415829
+    second: jane_8
+  - first:
+      213: 8047081897129819245
+    second: jane_9
+  - first:
+      213: -5317100422298813751
+    second: jane_10
+  - first:
+      213: 27848399534583266
+    second: jane_11
+  - first:
+      213: -1286966977788893469
+    second: jane_12
+  - first:
+      213: -3015228271376469830
+    second: jane_13
+  - first:
+      213: -1085759514690925034
+    second: jane_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -163,13 +190,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lewis-spritesheet_0
+      name: jane_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1314
-        width: 393
-        height: 438
+        y: 772
+        width: 386
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +204,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b0a2318c699cf690800000000000000
-      internalID: -7567004582586179400
+      spriteID: ccdc0e807b493cf90800000000000000
+      internalID: -6934535487371555380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lewis-spritesheet_1
+      name: jane_1
       rect:
         serializedVersion: 2
-        x: 393
-        y: 1314
-        width: 393
-        height: 438
+        x: 386
+        y: 772
+        width: 386
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,62 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b04d9cb17bb07350800000000000000
-      internalID: 6012511599709733045
+      spriteID: 7dc446068f48f5380800000000000000
+      internalID: -8980312929649537833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lewis-spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 786
-        y: 1314
-        width: 393
-        height: 438
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c302c89b844829fb0800000000000000
-      internalID: -4642502817980080068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lewis-spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 1179
-        y: 1314
-        width: 393
-        height: 438
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fcdb8e3e5f0670b20800000000000000
-      internalID: 3100553477674810831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lewis-spritesheet_4
+      name: jane_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 876
-        width: 393
-        height: 438
+        y: 386
+        width: 386
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 908de243c52906b40800000000000000
-      internalID: 5431502075318949897
+      spriteID: 26edcc321adce2780800000000000000
+      internalID: -8705794937686532510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lewis-spritesheet_5
+      name: jane_3
       rect:
         serializedVersion: 2
-        x: 393
-        y: 876
-        width: 393
-        height: 438
+        x: 386
+        y: 386
+        width: 386
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,188 +267,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae11acce0eea928b0800000000000000
-      internalID: -5176414015617101334
+      spriteID: 6562dfa63feeb4090800000000000000
+      internalID: -8049077179755190698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lewis-spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 786
-        y: 876
-        width: 393
-        height: 438
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93f450629f46f9e00800000000000000
-      internalID: 1053671859075501881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lewis-spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 1179
-        y: 876
-        width: 393
-        height: 438
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc4b294a175939160800000000000000
-      internalID: 7031127758580397261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lewis-spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 1572
-        y: 876
-        width: 393
-        height: 438
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e960921da5056bf00800000000000000
-      internalID: 1132180707316663966
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lewis-spritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 1965
-        y: 876
-        width: 393
-        height: 438
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f5934d4266500ed0800000000000000
-      internalID: -2449863217086491143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lewis-spritesheet_10
-      rect:
-        serializedVersion: 2
-        x: 2358
-        y: 876
-        width: 393
-        height: 438
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58e3e21c8c5e14ba0800000000000000
-      internalID: -6106346969340428667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lewis-spritesheet_11
-      rect:
-        serializedVersion: 2
-        x: 2751
-        y: 876
-        width: 393
-        height: 438
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9fefc5ccd2b7b990800000000000000
-      internalID: -7370225603887239270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lewis-spritesheet_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 438
-        width: 393
-        height: 438
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 773845c5cb4897f20800000000000000
-      internalID: 3420911336502362999
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lewis-spritesheet_13
-      rect:
-        serializedVersion: 2
-        x: 393
-        y: 438
-        width: 393
-        height: 438
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3b4946392937d930800000000000000
-      internalID: 4167862829321898814
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lewis-spritesheet_14
+      name: jane_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 393
-        height: 438
+        width: 386
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,20 +288,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a827d1e5bdab44a90800000000000000
-      internalID: -7330528842112732534
+      spriteID: 79d04d1c7b2ae23e0800000000000000
+      internalID: -2076543468056605289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lewis-spritesheet_15
+      name: jane_5
       rect:
         serializedVersion: 2
-        x: 393
+        x: 386
         y: 0
-        width: 393
-        height: 438
+        width: 386
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -492,20 +309,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bcf1676b204298a0800000000000000
-      internalID: -6299902373575656264
+      spriteID: 7a48bf88697beb7a0800000000000000
+      internalID: -6359443766629399385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lewis-spritesheet_16
+      name: jane_6
       rect:
         serializedVersion: 2
-        x: 786
+        x: 772
         y: 0
-        width: 393
-        height: 438
+        width: 386
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -513,20 +330,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 337a2951834454e80800000000000000
-      internalID: -8195068939259959501
+      spriteID: 584eaefe377607260800000000000000
+      internalID: 7093283160752579717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lewis-spritesheet_17
+      name: jane_7
       rect:
         serializedVersion: 2
-        x: 1179
+        x: 1158
         y: 0
-        width: 393
-        height: 438
+        width: 386
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -534,20 +351,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7367377d64747e140800000000000000
-      internalID: 4748842701673428535
+      spriteID: 6f35538b839bdd7c0800000000000000
+      internalID: -4044873237049027594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lewis-spritesheet_18
+      name: jane_8
       rect:
         serializedVersion: 2
-        x: 1572
+        x: 1544
         y: 0
-        width: 393
-        height: 438
+        width: 386
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -555,20 +372,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 824d55865e1bc8fc0800000000000000
-      internalID: -3491220012262894552
+      spriteID: b627f1588914be2d0800000000000000
+      internalID: -3248430582893415829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lewis-spritesheet_19
+      name: jane_9
       rect:
         serializedVersion: 2
-        x: 1965
+        x: 1930
         y: 0
-        width: 393
-        height: 438
+        width: 386
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -576,8 +393,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8e8d1e573cf17c30800000000000000
-      internalID: 4355539629376376462
+      spriteID: d6c36e4a95afcaf60800000000000000
+      internalID: 8047081897129819245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jane_10
+      rect:
+        serializedVersion: 2
+        x: 2316
+        y: 0
+        width: 386
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cabccd465dd536b0800000000000000
+      internalID: -5317100422298813751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jane_11
+      rect:
+        serializedVersion: 2
+        x: 2702
+        y: 0
+        width: 386
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed62d9c8ffe26000800000000000000
+      internalID: 27848399534583266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jane_12
+      rect:
+        serializedVersion: 2
+        x: 3088
+        y: 0
+        width: 386
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e62c333a56c32ee0800000000000000
+      internalID: -1286966977788893469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jane_13
+      rect:
+        serializedVersion: 2
+        x: 3474
+        y: 0
+        width: 386
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0f3efccd1c726d0800000000000000
+      internalID: -3015228271376469830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jane_14
+      rect:
+        serializedVersion: 2
+        x: 3860
+        y: 0
+        width: 386
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ec857597b9ee0f0800000000000000
+      internalID: -1085759514690925034
       vertices: []
       indices: 
       edges: []

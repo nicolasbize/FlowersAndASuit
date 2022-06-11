@@ -1,22 +1,7 @@
 fileFormatVersion: 2
-guid: 9723cb80517264c4794cc4724cbbf65d
+guid: e12def20adf68294496876538898c5e4
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -4573279408941005835
-    second: jim-spritesheet_0
-  - first:
-      213: 2934083896346255609
-    second: jim-spritesheet_1
-  - first:
-      213: -7577303205628958793
-    second: jim-spritesheet_2
-  - first:
-      213: 748757118602660188
-    second: jim-spritesheet_3
-  - first:
-      213: 6245553024606476342
-    second: jim-spritesheet_4
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -56,12 +41,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 18
+  spritePixelsToUnits: 72
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,28 +101,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: jim-spritesheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f3867b9b927880c0800000000000000
-      internalID: -4573279408941005835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

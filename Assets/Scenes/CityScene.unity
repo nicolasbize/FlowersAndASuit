@@ -254,6 +254,7 @@ Transform:
   m_Children:
   - {fileID: 1094002105}
   - {fileID: 2076931701}
+  - {fileID: 515221974}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -514,6 +515,112 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 837462971036866139, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
   m_PrefabInstance: {fileID: 514094067}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &515221973
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 78305931}
+    m_Modifications:
+    - target: {fileID: 5605873756938622304, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e12def20adf68294496876538898c5e4, type: 3}
+    - target: {fileID: 5605873756938622306, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_Name
+      value: Phone Booth
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622307, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622307, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -53.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622307, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622307, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622307, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622307, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622307, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622307, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622307, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622307, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622307, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: hintText
+      value: Phone Booth
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: itemGained
+      value: 
+      objectReference: {fileID: 11400000, guid: 68052d24f4aaf4c41a03b86c82c27033, type: 2}
+    - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: observation
+      value: This booth has a number.   I'll just write it down.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: floatingTextManager
+      value: 
+      objectReference: {fileID: 1073724686}
+    - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: distanceToInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: observationAfterTakingObject
+      value: I got that number already.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622311, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_Size.x
+      value: 1.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622311, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_Size.y
+      value: 5.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622311, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.7777777
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622311, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 6.25
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+--- !u!4 &515221974 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5605873756938622307, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+  m_PrefabInstance: {fileID: 515221973}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,6 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a896733c20c2743b7c57d63e821f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1143019896}
 --- !u!224 &653887898 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2292758150037689329, guid: 2254fb5401578ff4ebb6fa9c3a827cc0, type: 3}
@@ -840,6 +948,14 @@ PrefabInstance:
     - target: {fileID: 837462971036866138, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: m_FlipX
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 837462971036866138, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: m_Size.x
+      value: 5.3333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 837462971036866138, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: m_Size.y
+      value: 5.3333335
       objectReference: {fileID: 0}
     - target: {fileID: 837462971036866138, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: m_Sprite
@@ -1115,12 +1231,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryItems:
-  - {fileID: 11400000, guid: 55dc5f801885aa548bc891d4eb045325, type: 2}
-  - {fileID: 11400000, guid: 106b82d89c1a1fe46a1f049a453789a5, type: 2}
+  - {fileID: 11400000, guid: 1dcb1d1bc882c3f40adb6d000a9b9252, type: 2}
   - {fileID: 11400000, guid: 1c1bc0d48b9879343b56c41802dc592e, type: 2}
-  - {fileID: 11400000, guid: 07600f1057d29ad41b213f6f2368f4fe, type: 2}
-  - {fileID: 11400000, guid: 92441e9e8dbce334c8ec205c63b7efbc, type: 2}
-  - {fileID: 11400000, guid: 68052d24f4aaf4c41a03b86c82c27033, type: 2}
   prefabInventoryItem: {fileID: 2292758150037689329, guid: 2254fb5401578ff4ebb6fa9c3a827cc0, type: 3}
   UI: {fileID: 1717708911}
   hintTextObject: {fileID: 600736688}
@@ -1293,6 +1405,8 @@ MonoBehaviour:
   hintText: 
   distanceToInteraction: 0
   observation: 
+  observationAfterTakingObject: 
+  itemGained: {fileID: 0}
   dialog: {fileID: 0}
   dialogContainer: {fileID: 879508935}
   floatingTextManager: {fileID: 1073724686}
@@ -1311,16 +1425,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 837462971036866138, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: m_Size.x
-      value: 2.6666667
+      value: 5.3333335
       objectReference: {fileID: 0}
     - target: {fileID: 837462971036866138, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: m_Size.y
-      value: 2.6666667
+      value: 5.3333335
       objectReference: {fileID: 0}
     - target: {fileID: 837462971036866138, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7567004582586179400, guid: d6645268bb3719a438c6e271b8d109b3, type: 3}
+      objectReference: {fileID: 5230256661332701528, guid: d6645268bb3719a438c6e271b8d109b3, type: 3}
     - target: {fileID: 837462971036866138, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1677,7 +1791,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 9.42}
   m_SizeDelta: {x: 6, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1294497155

@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     GameObject hovered = null;
     InventoryItem currentItemDragged = null;
 
-    enum State { Talking, Moving, Idle, Interacting }
+    public enum State { Talking, Moving, Idle, Interacting }
     State state = State.Idle;
 
     private void Start() {
@@ -33,11 +33,18 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
 
         animator.SetBool("is_moving", state == State.Moving);
+        animator.SetBool("is_interacting", state == State.Interacting);
+        animator.SetBool("is_talking", state == State.Talking);
         
+
     }
 
     public void AddToInventory(InventoryItem item) {
         inventoryManager.GetComponent<UIInventoryManager>().AddToInventory(item);
+    }
+
+    public bool HasItemInInventory(InventoryItem item) {
+        return inventoryManager.GetComponent<UIInventoryManager>().HasItemInInventory(item);
     }
 
     private void HighlightHoveredObjects() {
@@ -68,8 +75,6 @@ public class PlayerController : MonoBehaviour
     public void ShowCombinationResult(string thought) {
         state = State.Idle;
         GetComponent<Interactive>().floatingTextManager.AddText(gameObject, thought);
-
-
     }
 
     private void MovePlayer() {
@@ -87,11 +92,26 @@ public class PlayerController : MonoBehaviour
             // have the player point towards the target before interacting
             direction = transform.position.x < interactiveTarget.transform.position.x ? Vector2.right : Vector2.left;
             spriteRenderer.flipX = direction == Vector2.left;
-            state = State.Talking;
-            interactiveTarget.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", 0f);
+            if (interactiveTarget.GetComponent<Interactive>().distanceToInteraction == 0) {
+                state = State.Interacting;
+            } else {
+                state = State.Talking;
+            }
+            CleanTipsAndOutline();
             interactiveTarget.GetComponent<Interactive>().StartDialog(gameObject, interactiveTarget);
             inventoryManager.GetComponent<UIInventoryManager>().active = false;
         }
+    }
+
+    private void CleanTipsAndOutline() {
+        foreach (SpriteRenderer sr in FindObjectsOfType<SpriteRenderer>()) {
+            sr.material.SetFloat("Thickness", 0f);   
+        }
+
+    }
+
+    public State GetState() {
+        return state;
     }
 
     public void SetDraggedInventoryItem(InventoryItem item) {
@@ -141,9 +161,6 @@ public class PlayerController : MonoBehaviour
         inventoryManager.GetComponent<UIInventoryManager>().active = true;
     }
 
-    bool CanInteract() {
-        return true;
-    }
     bool CanMove() {
         return state == State.Idle || state == State.Moving;
     }

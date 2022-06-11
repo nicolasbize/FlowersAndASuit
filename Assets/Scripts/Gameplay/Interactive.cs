@@ -10,6 +10,8 @@ public class Interactive : MonoBehaviour
     public string hintText = "";
     public float distanceToInteraction = 3f;
     public string observation = "";
+    public string observationAfterTakingObject = "";
+    public InventoryItem itemGained;
     public Dialog dialog;
     public Transform dialogContainer;
     public FloatingTextManager floatingTextManager;
@@ -56,9 +58,18 @@ public class Interactive : MonoBehaviour
                 floatingTextManager.AddText(currentTarget, dialog.reply);
             }
         } else {
+            string text = observation;
+            if (itemGained != null) {
+                // check if the player already has the item in their inventory
+                if (currentPlayer.GetComponent<PlayerController>().HasItemInInventory(itemGained)) {
+                    text = observationAfterTakingObject;
+                } else {
+                    itemGainedFromDialog = itemGained;
+                }
+            }
             currentPlayer.GetComponent<Animator>().SetBool("is_talking", true);
             floatingTextManager.onEmptyQueue += FreePlayerFromConversation;
-            floatingTextManager.AddText(currentPlayer, observation);
+            floatingTextManager.AddText(currentPlayer, text);
         }
         
     }
@@ -72,15 +83,20 @@ public class Interactive : MonoBehaviour
         }
         currentPlayer.GetComponent<Animator>().SetBool("is_talking", false);
         currentPlayer.GetComponent<Animator>().SetBool("mouth_open", false);
+        CheckForGainedObject();
         currentPlayer = null;
         currentTarget = null;
     }
 
-    public void ShowDialogOptions() {
+    private void CheckForGainedObject() {
         if (itemGainedFromDialog != null) {
             currentPlayer.GetComponent<PlayerController>().AddToInventory(itemGainedFromDialog);
             itemGainedFromDialog = null;
         }
+    }
+
+    public void ShowDialogOptions() {
+        CheckForGainedObject();
         dialogContainer.gameObject.GetComponent<UIDialogContainer>().Activate(dialog, currentBranches, OnOptionSelected);
     }
 

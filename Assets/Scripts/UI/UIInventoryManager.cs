@@ -38,7 +38,11 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
             EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
             results = results.FindAll(r => r.gameObject.tag == "InventoryItem");
             if (draggedObject != null) {
-                hoveredItem = results.Find(r => r.gameObject.GetComponent<RawImage>().enabled && r.gameObject.name != draggedObject.gameObject.name).gameObject;
+                RaycastResult hoveredObject = results.Find(r => r.gameObject.GetComponent<RawImage>().enabled && r.gameObject.name != draggedObject.gameObject.name);
+                hoveredItem = hoveredObject.gameObject;
+                
+                //hoveredItem = (hoveredObject == null) ? null : hoveredObject.gameObject;
+                // moved dragged object with mouse cursor
                 Vector2 pos;
                 RectTransformUtility.ScreenPointToLocalPointInRectangle(UI.transform as RectTransform, Input.mousePosition, Camera.main, out pos);
                 draggedObject.transform.position = UI.transform.TransformPoint(pos);
@@ -49,7 +53,6 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
             foreach (RaycastResult result in results) {
                 result.gameObject.GetComponent<RawImage>().material.SetFloat("Thickness", 0.04f);
             }
-
             RefreshToolTip();
         }
     }
@@ -62,8 +65,10 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
             hint.SetTarget(hoveredName);
         } else if (draggedObject == null && hoveredItem != null) {
             hint.SetItem(hoveredItem.GetComponent<UIInventoryItem>().item);
+            hint.SetTarget(null);
         } else if (draggedObject != null && hoveredItem == null) {
             hint.SetItem(draggedObject.GetComponent<UIInventoryItem>().item);
+            hint.SetTarget(null);
         } else {
             hint.SetItem(null);
             hint.SetTarget(null);
@@ -78,6 +83,10 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
             inventoryItems = newInventory.ToArray();
         }
         RefreshInventory();
+    }
+
+    public bool HasItemInInventory(InventoryItem item) {
+        return new List<InventoryItem>(inventoryItems).Find(i => i.itemName == item.itemName) != null;
     }
 
     private void RefreshInventory() {
