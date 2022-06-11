@@ -98,14 +98,14 @@ MonoBehaviour:
               answer: Say no more!
               reaction: 
               visited: 0
-              objectGained: {fileID: 11400000, guid: 106b82d89c1a1fe46a1f049a453789a5, type: 2}
+              objectGained: {fileID: 11400000, guid: 07600f1057d29ad41b213f6f2368f4fe, type: 2}
               final: 0
               branches: []
             - question: There's this kid with a kite I need to take care of
               answer: Oh that's nice, here you go!
               reaction: 
               visited: 0
-              objectGained: {fileID: 0}
+              objectGained: {fileID: 11400000, guid: 07600f1057d29ad41b213f6f2368f4fe, type: 2}
               final: 0
               branches: []
         - question: What a great way to lose weight!

@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float marginTarget = 0.1f;
     [SerializeField] Transform hintText;
     [SerializeField] float toolbarY = -2.8f;
+    [SerializeField] Transform inventoryManager;
     Vector3 target = Vector3.zero;
     Animator animator = null;
     SpriteRenderer spriteRenderer = null;
@@ -33,6 +34,10 @@ public class PlayerController : MonoBehaviour
 
         animator.SetBool("is_moving", state == State.Moving);
         
+    }
+
+    public void AddToInventory(InventoryItem item) {
+        inventoryManager.GetComponent<UIInventoryManager>().AddToInventory(item);
     }
 
     private void HighlightHoveredObjects() {
@@ -71,6 +76,10 @@ public class PlayerController : MonoBehaviour
         if (state == State.Moving && target != Vector3.zero) {
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
             if (Mathf.Abs(transform.position.x - target.x) < marginTarget) {
+                float x = Mathf.Round(transform.position.x);
+                float y = Mathf.Round(transform.position.y);
+                float z = Mathf.Round(transform.position.z);
+                transform.position = new Vector3(x, y, z);
                 state = State.Idle;
             }
         }
@@ -81,6 +90,7 @@ public class PlayerController : MonoBehaviour
             state = State.Talking;
             interactiveTarget.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", 0f);
             interactiveTarget.GetComponent<Interactive>().StartDialog(gameObject, interactiveTarget);
+            inventoryManager.GetComponent<UIInventoryManager>().active = false;
         }
     }
 
@@ -128,6 +138,7 @@ public class PlayerController : MonoBehaviour
     public void SetIdle() {
         interactiveTarget = null;
         state = State.Idle;
+        inventoryManager.GetComponent<UIInventoryManager>().active = true;
     }
 
     bool CanInteract() {

@@ -18,6 +18,7 @@ public class Interactive : MonoBehaviour
     GameObject currentPlayer;
     GameObject currentTarget;
     Branch[] currentBranches;
+    InventoryItem itemGainedFromDialog = null;
 
     public void Start() {
         if (dialog != null) {
@@ -76,11 +77,18 @@ public class Interactive : MonoBehaviour
     }
 
     public void ShowDialogOptions() {
+        if (itemGainedFromDialog != null) {
+            currentPlayer.GetComponent<PlayerController>().AddToInventory(itemGainedFromDialog);
+            itemGainedFromDialog = null;
+        }
         dialogContainer.gameObject.GetComponent<UIDialogContainer>().Activate(dialog, currentBranches, OnOptionSelected);
     }
 
     public void OnOptionSelected(string option) {
         Branch branch = FindBranch(option, dialog.branches);
+        if (branch.objectGained != null) {
+            itemGainedFromDialog = branch.objectGained;
+        }
         if (branch.question.Length != 0) {
             floatingTextManager.AddText(currentPlayer, branch.question);
             //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Interactions/Enzo-Jim", Enzo.position, Jim.position, 3);

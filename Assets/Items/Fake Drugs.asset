@@ -10,12 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 550190b613b059847a0369437fd85f19, type: 3}
-  m_Name: Poop Bag
+  m_Name: Fake Drugs
   m_EditorClassIdentifier: 
-  itemName: Poop Bag
-  texture: {fileID: 2800000, guid: a15c16d28f2656d46a9d02b48fb8dfa1, type: 3}
-  combinations:
-  - combineWith: {fileID: 11400000, guid: 92441e9e8dbce334c8ec205c63b7efbc, type: 2}
-    result: {fileID: 11400000, guid: d92145ee464f07f4faafe65bd62117b9, type: 2}
-    thought: Well this doesn't looks suspicious at all!
+  itemName: Fake Drugs
+  texture: {fileID: 2800000, guid: 941b0c1c569f8ed45a122746b09bdd2a, type: 3}
+  combinations: []
   interactions: []
