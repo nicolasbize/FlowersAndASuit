@@ -5,12 +5,16 @@ using UnityEngine;
 
 public class UIInventoryUsageHint : MonoBehaviour
 {
-
+    private bool active;
     private InventoryItem item;
     private string targetName;
 
     public void SetItem(InventoryItem inventoryItem) {
         item = inventoryItem;
+    }
+
+    public void SetActive(bool active) {
+        this.active = active;
     }
 
     public void SetTarget(string name) {
@@ -21,11 +25,12 @@ public class UIInventoryUsageHint : MonoBehaviour
     void Update()
     {
         string currentHint = "";
-        if (item != null) {
-            currentHint = "Use " + item.itemName;
-        }
-        if (targetName != null) {
-            currentHint += " on " + targetName;
+        if (item != null && targetName != null) {
+            currentHint = "Use " + item.itemName + " on " + targetName;
+        } else if (targetName != null) {
+            currentHint = targetName;
+        } else if (item != null) {
+            currentHint = (active ? "Use " : "") + item.itemName;
         }
         GetComponent<TextMeshProUGUI>().text = currentHint;
     }

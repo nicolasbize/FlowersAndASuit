@@ -1114,12 +1114,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1765d67ab664d0d45bf9cd45d2bb3c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryitems:
+  inventoryItems:
+  - {fileID: 11400000, guid: 55dc5f801885aa548bc891d4eb045325, type: 2}
   - {fileID: 11400000, guid: 106b82d89c1a1fe46a1f049a453789a5, type: 2}
+  - {fileID: 11400000, guid: 1c1bc0d48b9879343b56c41802dc592e, type: 2}
   prefabInventoryItem: {fileID: 2292758150037689329, guid: 2254fb5401578ff4ebb6fa9c3a827cc0, type: 3}
   UI: {fileID: 1717708911}
   hintTextObject: {fileID: 600736688}
   player: {fileID: 1143019896}
+  negativeCombinationFeedbacks:
+  - That's not gonna work.
+  - Come on, use your head.
+  - Hmm... No.
+  - Not sure what I should do here.
 --- !u!114 &1111872715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,6 +1165,7 @@ GameObject:
   - component: {fileID: 1143019895}
   - component: {fileID: 1143019894}
   - component: {fileID: 1143019897}
+  - component: {fileID: 1143019898}
   m_Layer: 0
   m_Name: Player - Enzo
   m_TagString: Untagged
@@ -1264,6 +1272,26 @@ MonoBehaviour:
   speed: 4
   marginTarget: 0.1
   hintText: {fileID: 600736688}
+--- !u!114 &1143019898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143019893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7390a51b2ba61d14aadd42dcc0ab62ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hintText: 
+  distanceToInteraction: 0
+  observation: 
+  dialog: {fileID: 0}
+  dialogContainer: {fileID: 879508935}
+  floatingTextManager: {fileID: 1073724686}
+  overrideThickness: 0
+  overrideTextDistanceAboveHead: 0
 --- !u!1001 &1144238556
 PrefabInstance:
   m_ObjectHideFlags: 0

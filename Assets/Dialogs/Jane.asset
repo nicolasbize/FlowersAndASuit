@@ -19,21 +19,21 @@ MonoBehaviour:
     answer: Yes, he comes here every day!   Such a sweet little kid!
     reaction: 
     visited: 0
-    objectGained: 
+    objectGained: {fileID: 0}
     final: 0
     branches:
     - question: Sweet isn't exactly the adjective I would have used!
       answer: Haha, I know, he is also very funny!
       reaction: 
       visited: 0
-      objectGained: 
+      objectGained: {fileID: 0}
       final: 0
       branches: []
     - question: Seems to me that he has an attitude problem!
       answer: Oh, he just misses his grandpa, that's all!
       reaction: 
       visited: 0
-      objectGained: 
+      objectGained: {fileID: 0}
       final: 0
       branches: []
   - question: Where could I find a nice suit?
@@ -41,35 +41,35 @@ MonoBehaviour:
       Unless you're blind of course.
     reaction: 
     visited: 0
-    objectGained: 
+    objectGained: {fileID: 0}
     final: 0
     branches: []
   - question: Your cat is very cute, what's her name?
     answer: Oh no that's a dog. His name is Max.
     reaction: 
     visited: 0
-    objectGained: 
+    objectGained: {fileID: 0}
     final: 0
     branches:
     - question: What a coincidence!   I have an ugly dog called Max too!
       answer: Oh really? Max is such an uncommon name for a dog!
       reaction: 
       visited: 0
-      objectGained: 
+      objectGained: {fileID: 0}
       final: 0
       branches: []
     - question: That explains the leash!
       answer: Do you really think he looks like a cat?
       reaction: 
       visited: 0
-      objectGained: 
+      objectGained: {fileID: 0}
       final: 0
       branches:
       - question: He walks a bit funny
         answer: Oh he's just walking and posing at the same time.
         reaction: 
         visited: 0
-        objectGained: 
+        objectGained: {fileID: 0}
         final: 0
         branches: []
       - question: Sure likes to mark his territory a lot!
@@ -77,48 +77,48 @@ MonoBehaviour:
           going right through him
         reaction: 
         visited: 0
-        objectGained: 
+        objectGained: {fileID: 0}
         final: 0
         branches:
         - question: You're right, it just keeps coming out!
           answer: Don't worry, I have an entire box full of trashbags!
           reaction: 
           visited: 0
-          objectGained: 
+          objectGained: {fileID: 0}
           final: 0
           branches:
           - question: Really? Could I have one?
             answer: Uuh it depends.   What are you going to do with it?
             reaction: 
             visited: 0
-            objectGained: 
+            objectGained: {fileID: 0}
             final: 0
             branches:
             - question: Let's just say I had some mexican food yesterday.
               answer: Say no more!
               reaction: 
               visited: 0
-              objectGained: poopbag
+              objectGained: {fileID: 11400000, guid: 106b82d89c1a1fe46a1f049a453789a5, type: 2}
               final: 0
               branches: []
             - question: There's this kid with a kite I need to take care of
               answer: Oh that's nice, here you go!
               reaction: 
               visited: 0
-              objectGained: poopbag
+              objectGained: {fileID: 0}
               final: 0
               branches: []
         - question: What a great way to lose weight!
           answer: That's what I thought too!   But my stomach is handling them fine!
           reaction: 
           visited: 0
-          objectGained: 
+          objectGained: {fileID: 0}
           final: 0
           branches: []
   - question: Unfortunately, I must leave
     answer: 
     reaction: 
     visited: 0
-    objectGained: 
+    objectGained: {fileID: 0}
     final: 1
     branches: []

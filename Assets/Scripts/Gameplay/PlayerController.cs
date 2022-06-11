@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed = 4f;
     [SerializeField] float marginTarget = 0.1f;
     [SerializeField] Transform hintText;
+    [SerializeField] float toolbarY = -2.8f;
     Vector3 target = Vector3.zero;
     Animator animator = null;
     SpriteRenderer spriteRenderer = null;
@@ -35,30 +36,35 @@ public class PlayerController : MonoBehaviour
     }
 
     private void HighlightHoveredObjects() {
-        if (currentItemDragged != null) {
-            hintText.GetComponent<UIInventoryUsageHint>().SetTarget(null);
-        }
         if (CanMove()) {
             var hoveredPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(hoveredPosition, Vector2.zero);
-            if (hit.collider != null) {
-                var targetObject = hit.collider.gameObject;
-                if (targetObject.GetComponent<Interactive>() != null) {
-                    float thickness = targetObject.GetComponent<Interactive>().overrideThickness;
-                    if (thickness == 0) { // TODO: fix this, right now I can't properly get the right outline on spritesheets
-                        thickness = 1f / (18 * targetObject.GetComponent<SpriteRenderer>().bounds.size.x);
-                    }
-                    targetObject.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", thickness);
-                    hovered = targetObject;
-                    if (currentItemDragged != null) {
+            if (hoveredPosition.y > toolbarY) { // don't allow clicking in toolbar for movement
+                hintText.GetComponent<UIInventoryUsageHint>().SetTarget(null);
+                if (hit.collider != null) {
+                    var targetObject = hit.collider.gameObject;
+                    if (targetObject.GetComponent<Interactive>() != null) {
+                        float thickness = targetObject.GetComponent<Interactive>().overrideThickness;
+                        if (thickness == 0) { // TODO: fix this, right now I can't properly get the right outline on spritesheets
+                            thickness = 1f / (18 * targetObject.GetComponent<SpriteRenderer>().bounds.size.x);
+                        }
+                        targetObject.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", thickness);
+                        hovered = targetObject;
                         hintText.GetComponent<UIInventoryUsageHint>().SetTarget(hovered.GetComponent<Interactive>().hintText);
                     }
+                } else if (hovered != null) {
+                    hovered.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", 0f);
+                    hovered = null;
                 }
-            } else if (hovered != null) {
-                hovered.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", 0f);
-                hovered = null;
             }
         }
+    }
+
+    public void ShowCombinationResult(string thought) {
+        state = State.Idle;
+        GetComponent<Interactive>().floatingTextManager.AddText(gameObject, thought);
+
+
     }
 
     private void MovePlayer() {
@@ -90,7 +96,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && CanMove()) {
             var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
-            if (mousePosition.y > -2.8) { // don't allow clicking in toolbar for movement
+            if (mousePosition.y > toolbarY) { // don't allow clicking in toolbar for movement
                 target = mousePosition;
                 target.z = transform.position.z; // don't play with z axis
                 target.y = transform.position.y; // stay on same horizontal strip

@@ -15,6 +15,16 @@ public class InventoryItem : ScriptableObject
         public string playerThought;
     }
 
+    [System.Serializable]
+    public class Combination
+    {
+        public InventoryItem combineWith;
+        public InventoryItem result;
+        public string thought;
+    }
+
+
+    public Combination[] combinations;
     public Interaction[] interactions;
 
 }
