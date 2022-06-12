@@ -546,6 +546,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: cutsceneManager
+      value: 
+      objectReference: {fileID: 1073724685}
+    - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: dialogContainer
       value: 
       objectReference: {fileID: 879508935}
@@ -684,6 +688,10 @@ PrefabInstance:
       value: This booth has a number.   I'll just write it down.
       objectReference: {fileID: 0}
     - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: cutsceneManager
+      value: 
+      objectReference: {fileID: 1073724685}
+    - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
       propertyPath: floatingTextManager
       value: 
       objectReference: {fileID: 1073724686}
@@ -768,6 +776,7 @@ MonoBehaviour:
   target: {fileID: 1143019896}
   smoothness: 2
   yOffset: 0
+  cutsceneManager: {fileID: 1073724685}
   leftBorder: -62
   rightBorder: 62
 --- !u!20 &519420031
@@ -988,6 +997,10 @@ PrefabInstance:
       propertyPath: observation
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: cutsceneManager
+      value: 
+      objectReference: {fileID: 1073724685}
     - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
       propertyPath: floatingTextManager
       value: 
@@ -1230,6 +1243,10 @@ PrefabInstance:
       value: Al the Fisherman
       objectReference: {fileID: 0}
     - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: cutsceneManager
+      value: 
+      objectReference: {fileID: 1073724685}
+    - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: dialogContainer
       value: 
       objectReference: {fileID: 879508935}
@@ -1298,8 +1315,9 @@ GameObject:
   - component: {fileID: 1073724685}
   - component: {fileID: 1073724686}
   - component: {fileID: 1073724687}
+  - component: {fileID: 1073724688}
   m_Layer: 0
-  m_Name: FloatingTextManager
+  m_Name: GameLogicManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1346,6 +1364,21 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
+--- !u!114 &1073724688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073724684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c43cca0cf4620a44b41fd05fbfbf8dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCutscene: {fileID: 11400000, guid: f7330bbb82415f44cb8e8e4ff9f100c1, type: 2}
+  margin: 0.01
+  moveSpeed: 2
 --- !u!4 &1094002105 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5605873756938622307, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
@@ -1490,7 +1523,7 @@ GameObject:
   - component: {fileID: 1143019897}
   - component: {fileID: 1143019898}
   m_Layer: 0
-  m_Name: Player - Enzo
+  m_Name: Enzo
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1574,7 +1607,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143019893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.0625, y: 0, z: 0}
+  m_LocalPosition: {x: 18.65, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1598,6 +1631,7 @@ MonoBehaviour:
   toolbarY: -2.8
   inventoryManager: {fileID: 1111872711}
   transitioner: {fileID: 123609314}
+  cutsceneManager: {fileID: 1073724685}
 --- !u!114 &1143019898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1618,6 +1652,7 @@ MonoBehaviour:
   destroyAfterPickup: 0
   dialog: {fileID: 0}
   dialogContainer: {fileID: 879508935}
+  cutsceneManager: {fileID: 1073724685}
   floatingTextManager: {fileID: 1073724686}
   overrideThickness: 0
   overrideTextDistanceAboveHead: 0
@@ -1725,6 +1760,10 @@ PrefabInstance:
       propertyPath: floatingText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: cutsceneManager
+      value: 
+      objectReference: {fileID: 1073724685}
     - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: dialogContainer
       value: 
@@ -1901,6 +1940,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: cutsceneManager
+      value: 
+      objectReference: {fileID: 1073724685}
+    - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: dialogContainer
       value: 
       objectReference: {fileID: 879508935}
@@ -2030,6 +2073,10 @@ PrefabInstance:
       propertyPath: observation
       value: I should probably ask before using this.
       objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: cutsceneManager
+      value: 
+      objectReference: {fileID: 1073724685}
     - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
       propertyPath: overrideThickness
       value: 0.0307
@@ -2356,6 +2403,10 @@ PrefabInstance:
       propertyPath: observation
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: cutsceneManager
+      value: 
+      objectReference: {fileID: 1073724685}
     - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
       propertyPath: floatingTextManager
       value: 
@@ -2847,6 +2898,10 @@ PrefabInstance:
       value: I love sugar!   It's probably going to kill me one day!
       objectReference: {fileID: 0}
     - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: cutsceneManager
+      value: 
+      objectReference: {fileID: 1073724685}
+    - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
       propertyPath: destroyAfterPickup
       value: 1
       objectReference: {fileID: 0}
@@ -2995,6 +3050,10 @@ PrefabInstance:
       value: No time to nap
       objectReference: {fileID: 0}
     - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: cutsceneManager
+      value: 
+      objectReference: {fileID: 1073724685}
+    - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
       propertyPath: floatingTextManager
       value: 
       objectReference: {fileID: 1073724686}
@@ -3120,6 +3179,10 @@ PrefabInstance:
       propertyPath: floatingText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: cutsceneManager
+      value: 
+      objectReference: {fileID: 1073724685}
     - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: dialogContainer
       value: 
@@ -3338,6 +3401,10 @@ PrefabInstance:
       propertyPath: hintText
       value: Trash
       objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: cutsceneManager
+      value: 
+      objectReference: {fileID: 1073724685}
     - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
       propertyPath: floatingTextManager
       value: 

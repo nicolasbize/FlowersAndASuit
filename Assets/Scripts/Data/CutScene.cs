@@ -5,16 +5,17 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New CutScene", menuName = "CutScene")]
 public class CutScene : ScriptableObject
 {
-    public enum StepType { MoveCharacter, BackgroundInteract, CameraPan, AnimateCharacter }
+    public enum StepType { MoveCharacter, CameraPan, AnimateCharacter }
 
     [System.Serializable]
     public class Step
     {
         public StepType type;
-        public Transform character;
-        public Transform targetLocation;
+        public string character;
+        public Vector3 targetLocation;
         public float interactionDuration; // also add sound event?
-        public string animationName;
+        public string animationProperty;
+        public bool animationValue;
         public string text;
         
     }

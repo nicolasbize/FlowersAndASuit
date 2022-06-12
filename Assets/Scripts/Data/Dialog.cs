@@ -17,6 +17,7 @@ public class Dialog : ScriptableObject
         public bool visited;
         public InventoryItem objectGained;
         public InventoryItem requiresObject;
+        public CutScene cutscene;
         public bool final; // will close the discussion
         public Branch[] branches;
         public Branch parent;

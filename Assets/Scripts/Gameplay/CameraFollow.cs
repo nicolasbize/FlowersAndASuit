@@ -8,10 +8,13 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] float smoothness = 0.12f;
     [SerializeField] float yOffset = 0.8f;
+    [SerializeField] Transform cutsceneManager;
     public float leftBorder = -16.5f;
     public float rightBorder = 16.5f;
 
     private void FixedUpdate() {
+        if (cutsceneManager.GetComponent<CutScenePlayer>().IsPlayingCutScene())
+            return;
         transform.position = Vector3.Lerp(transform.position, GetFinalPosition(), smoothness * Time.deltaTime);
     }
 

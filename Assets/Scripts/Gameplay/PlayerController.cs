@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float toolbarY = -2.8f;
     [SerializeField] Transform inventoryManager;
     [SerializeField] Transform transitioner;
+    [SerializeField] Transform cutsceneManager;
     Vector3 target = Vector3.zero;
     Animator animator = null;
     SpriteRenderer spriteRenderer = null;
@@ -29,6 +30,9 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update() {
+        if (cutsceneManager.GetComponent<CutScenePlayer>().IsPlayingCutScene())
+            return;
+
         HighlightHoveredObjects();
         HandleClickInteractions();
         MovePlayer();

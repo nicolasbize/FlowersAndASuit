@@ -15,6 +15,7 @@ public class Interactive : MonoBehaviour
     public bool destroyAfterPickup;
     public Dialog dialog;
     public Transform dialogContainer;
+    public Transform cutsceneManager;
     public FloatingTextManager floatingTextManager;
     public float overrideThickness;
     public float overrideTextDistanceAboveHead;
@@ -107,6 +108,9 @@ public class Interactive : MonoBehaviour
 
     public void OnOptionSelected(string option) {
         Branch branch = FindBranch(option, dialog.branches);
+        if (branch.cutscene != null) {
+
+        }
         if (branch.objectGained != null) {
             itemGainedFromDialog = branch.objectGained;
         }
