@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform hintText;
     [SerializeField] float toolbarY = -2.8f;
     [SerializeField] Transform inventoryManager;
+    [SerializeField] Transform transitioner;
     Vector3 target = Vector3.zero;
     Animator animator = null;
     SpriteRenderer spriteRenderer = null;
@@ -48,11 +49,11 @@ public class PlayerController : MonoBehaviour
     }
 
     private void HighlightHoveredObjects() {
+        hintText.GetComponent<UIInventoryUsageHint>().HoveredInteractive = null;
         if (CanMove()) {
             var hoveredPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(hoveredPosition, Vector2.zero);
-            if (hoveredPosition.y > toolbarY) { // don't allow clicking in toolbar for movement
-                hintText.GetComponent<UIInventoryUsageHint>().SetTarget(null);
+            if (hoveredPosition.y > Camera.main.transform.position.y + toolbarY) { // don't allow clicking in toolbar for movement
                 if (hit.collider != null) {
                     var targetObject = hit.collider.gameObject;
                     if (targetObject.GetComponent<Interactive>() != null) {
@@ -62,7 +63,7 @@ public class PlayerController : MonoBehaviour
                         }
                         targetObject.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", thickness);
                         hovered = targetObject;
-                        hintText.GetComponent<UIInventoryUsageHint>().SetTarget(hovered.GetComponent<Interactive>().hintText);
+                        hintText.GetComponent<UIInventoryUsageHint>().HoveredInteractive = hovered.GetComponent<Interactive>();
                     }
                 } else if (hovered != null) {
                     hovered.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", 0f);
@@ -98,9 +99,28 @@ public class PlayerController : MonoBehaviour
                 state = State.Talking;
             }
             CleanTipsAndOutline();
-            interactiveTarget.GetComponent<Interactive>().StartDialog(gameObject, interactiveTarget);
-            inventoryManager.GetComponent<UIInventoryManager>().active = false;
+            if (interactiveTarget.GetComponent<Interactive>().warpTo != null) {
+                transitioner.GetComponent<Animator>().SetTrigger("EnterDoor");
+                StartCoroutine(WarpTo(interactiveTarget.GetComponent<Interactive>().warpTo));
+            } else {
+                interactiveTarget.GetComponent<Interactive>().StartDialog(gameObject, interactiveTarget);
+                inventoryManager.GetComponent<UIInventoryManager>().active = false;
+            }
         }
+    }
+
+    IEnumerator WarpTo(Transform warp) {
+        yield return new WaitForSeconds(.5f);
+        SpawnInformation spawn = warp.GetComponent<SpawnInformation>();
+        transform.position = spawn.playerPosition;
+        Camera.main.GetComponent<CameraFollow>().leftBorder = spawn.limitCameraLeft;
+        Camera.main.GetComponent<CameraFollow>().rightBorder = spawn.limitCameraRight;
+        Camera.main.GetComponent<CameraFollow>().GoToFinalPosition();
+        yield return new WaitForSeconds(.5f);
+        transitioner.GetComponent<Animator>().SetTrigger("ExitDoor");
+        SetIdle();
+        yield return new WaitForSeconds(1f);
+        transitioner.GetComponent<Animator>().Play("TransitionIdle");
     }
 
     private void CleanTipsAndOutline() {
@@ -126,7 +146,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && CanMove()) {
             var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
-            if (mousePosition.y > toolbarY) { // don't allow clicking in toolbar for movement
+            if (mousePosition.y > Camera.main.transform.position.y + toolbarY) { // don't allow clicking in toolbar for movement
                 target = mousePosition;
                 target.z = transform.position.z; // don't play with z axis
                 target.y = transform.position.y; // stay on same horizontal strip

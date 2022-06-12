@@ -99,14 +99,14 @@ MonoBehaviour:
               reaction: 
               visited: 0
               objectGained: {fileID: 11400000, guid: 07600f1057d29ad41b213f6f2368f4fe, type: 2}
-              final: 0
+              final: 1
               branches: []
             - question: There's this kid with a kite I need to take care of
               answer: Oh that's nice, here you go!
               reaction: 
               visited: 0
               objectGained: {fileID: 11400000, guid: 07600f1057d29ad41b213f6f2368f4fe, type: 2}
-              final: 0
+              final: 1
               branches: []
         - question: What a great way to lose weight!
           answer: That's what I thought too!   But my stomach is handling them fine!

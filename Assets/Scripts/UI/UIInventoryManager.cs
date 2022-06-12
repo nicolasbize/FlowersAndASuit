@@ -40,8 +40,6 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
             if (draggedObject != null) {
                 RaycastResult hoveredObject = results.Find(r => r.gameObject.GetComponent<RawImage>().enabled && r.gameObject.name != draggedObject.gameObject.name);
                 hoveredItem = hoveredObject.gameObject;
-                
-                //hoveredItem = (hoveredObject == null) ? null : hoveredObject.gameObject;
                 // moved dragged object with mouse cursor
                 Vector2 pos;
                 RectTransformUtility.ScreenPointToLocalPointInRectangle(UI.transform as RectTransform, Input.mousePosition, Camera.main, out pos);
@@ -59,21 +57,8 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
 
     private void RefreshToolTip() {
         UIInventoryUsageHint hint = hintTextObject.GetComponent<UIInventoryUsageHint>();
-        if (draggedObject != null && hoveredItem != null) {
-            string hoveredName = hoveredItem.GetComponent<UIInventoryItem>().item.itemName;
-            hint.SetItem(draggedObject.GetComponent<UIInventoryItem>().item);
-            hint.SetTarget(hoveredName);
-        } else if (draggedObject == null && hoveredItem != null) {
-            hint.SetItem(hoveredItem.GetComponent<UIInventoryItem>().item);
-            hint.SetTarget(null);
-        } else if (draggedObject != null && hoveredItem == null) {
-            hint.SetItem(draggedObject.GetComponent<UIInventoryItem>().item);
-            hint.SetTarget(null);
-        } else {
-            hint.SetItem(null);
-            hint.SetTarget(null);
-        }
-        hint.SetActive(draggedObject != null);
+        hint.HoveredInventoryItem = hoveredItem?.GetComponent<UIInventoryItem>().item;
+        hint.DraggedInventoryItem = draggedObject?.GetComponent<UIInventoryItem>().item;
     }
 
     public void AddToInventory(InventoryItem item) {
