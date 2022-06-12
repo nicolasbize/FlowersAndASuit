@@ -50,7 +50,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5e0de45c59ee94f41bb355c09cef05c0, type: 2}
+  m_Motion: {fileID: 7400000, guid: 880e0509e0811fd449d61296cdf5d58e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -187,7 +187,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 91d7661674ba59f4aa0ef907d11d49e7, type: 2}
+  m_Motion: {fileID: 7400000, guid: 9231b0a6a48fae2498f60a3bf53324d8, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -201,7 +201,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: sandy-idle
-  m_Speed: 1
+  m_Speed: 0.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 4679730857845803350}
@@ -214,7 +214,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ad0566f60a91e0345b3571841fd2bf3a, type: 2}
+  m_Motion: {fileID: 7400000, guid: e2b04d91f2096fb458bcb96f1e245e2b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

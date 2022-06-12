@@ -11,6 +11,7 @@ public class PixelPerfectUtils : MonoBehaviour
         foreach (SpriteRenderer sr in FindObjectsOfType<SpriteRenderer>()) {
             sr.transform.position = SnapVector(sr.transform.position);
         }
+        FindObjectOfType<CameraFollow>().transform.position = FindObjectOfType<PlayerController>().gameObject.transform.position;
     }
 
     // Return a new vector snapped to the pixel grid

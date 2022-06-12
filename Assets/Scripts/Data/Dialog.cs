@@ -16,6 +16,7 @@ public class Dialog : ScriptableObject
         public string reaction;
         public bool visited;
         public InventoryItem objectGained;
+        public InventoryItem requiresObject;
         public bool final; // will close the discussion
         public Branch[] branches;
         public Branch parent;

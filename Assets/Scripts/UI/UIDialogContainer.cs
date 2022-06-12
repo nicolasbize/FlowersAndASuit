@@ -14,6 +14,7 @@ public class UIDialogContainer : MonoBehaviour, IPointerClickHandler
     [SerializeField] Color newTextColor;
     [SerializeField] Color visitedColor;
     [SerializeField] string backText = "(Back)";
+    [SerializeField] Transform inventory;
 
     Action<string> onClickCallback = null;
     Branch[] currentBranches = null;
@@ -39,7 +40,8 @@ public class UIDialogContainer : MonoBehaviour, IPointerClickHandler
 
     private void AddContents(Branch[] branches) {
         bool hasFinalOption = false;
-        foreach(var branch in branches) {
+        List<Branch> validBranches = new List<Branch>(branches).FindAll(b => b.requiresObject == null || inventory.GetComponent<UIInventoryManager>().HasItemInInventory(b.requiresObject));
+        foreach(var branch in validBranches) {
             var option = Instantiate(dialogOptionPrefab, transform);
             option.GetComponent<RectTransform>().localScale = Vector3.one;
             option.GetComponent<TextMeshProUGUI>().text = branch.question;

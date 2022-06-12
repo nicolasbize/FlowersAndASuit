@@ -12,6 +12,7 @@ public class Interactive : MonoBehaviour
     public string observation = "";
     public string observationAfterTakingObject = "";
     public InventoryItem itemGained;
+    public bool destroyAfterPickup;
     public Dialog dialog;
     public Transform dialogContainer;
     public FloatingTextManager floatingTextManager;
@@ -93,6 +94,9 @@ public class Interactive : MonoBehaviour
         if (itemGainedFromDialog != null) {
             currentPlayer.GetComponent<PlayerController>().AddToInventory(itemGainedFromDialog);
             itemGainedFromDialog = null;
+            if (destroyAfterPickup) {
+                Destroy(gameObject);
+            }
         }
     }
 
