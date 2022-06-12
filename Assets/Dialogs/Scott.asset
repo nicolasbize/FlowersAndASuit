@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87183926066d904ab1fd24c3f2d31aa, type: 3}
+  m_Name: Scott
+  m_EditorClassIdentifier: 
+  greeting: Hello there!
+  reply: Ugh, what do you want?!
+  branches:
+  - question: You have a really nice suit!
+    answer: What are you, the suit police?
+    reaction: 
+    visited: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
+    final: 0
+    branches:
+    - question: That's right! Detective Holmes from the Suit police!   May I take
+        a closer look?
+      answer: No! Get lost!
+      reaction: 
+      visited: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
+      final: 1
+      branches: []
+    - question: Maybe? Mind if I borrow it for just a bit?
+      answer: I do mind, get lost!
+      reaction: 
+      visited: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
+      final: 1
+      branches: []
+  - question: You seem to be waiting for a phone call
+    answer: Why don't you mind your own business?
+    reaction: 
+    visited: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
+    final: 0
+    branches: []
+  - question: You look like someone I could really be friends with!
+    answer: Get out of my face!
+    reaction: 
+    visited: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
+    final: 1
+    branches: []
+  - question: Gotta go!
+    answer: Good
+    reaction: 
+    visited: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
+    final: 1
+    branches: []
