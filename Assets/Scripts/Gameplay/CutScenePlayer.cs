@@ -114,6 +114,16 @@ public class CutScenePlayer : MonoBehaviour
                 }
                 Advance();
                 break;
+            case StepType.Destroy:
+                currentCharacter = GameObject.Find(step.character);
+                Destroy(currentCharacter);
+                Advance();
+                break;
+            case StepType.Create:
+                Transform newObject = Instantiate(step.objectCreatedPrefab, GameObject.Find("Entities").transform);
+                newObject.position = step.targetLocation;
+                Advance();
+                break;
             case StepType.Wait:
                 StartCoroutine(WaitFor(step.interactionDuration));
                 break;

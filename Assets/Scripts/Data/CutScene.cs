@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New CutScene", menuName = "CutScene")]
 public class CutScene : ScriptableObject
 {
-    public enum StepType { Intro, MoveCharacter, CameraPan, AnimateCharacter, Wait, Outro, Teleport }
+    public enum StepType { Intro, MoveCharacter, CameraPan, AnimateCharacter, Wait, Outro, Teleport, Destroy, Create }
 
     [System.Serializable]
     public class Step
@@ -18,6 +18,7 @@ public class CutScene : ScriptableObject
         public bool animationValue;
         public string animationTrigger;
         public bool flipValue;
+        public Transform objectCreatedPrefab;
         public string text;
     }
 

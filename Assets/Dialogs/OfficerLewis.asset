@@ -116,20 +116,20 @@ MonoBehaviour:
     cutscene: {fileID: 0}
     final: 0
     branches:
-    - question: Illegal substance in a jacket?
+    - question: (Accompany officer)
       answer: Show me the way young man!
       reaction: 
       visited: 1
       requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
       requiresObject: {fileID: 0}
-      cutscene: {fileID: 0}
+      cutscene: {fileID: 11400000, guid: f6a31f75a9419774982e391b7d44fd72, type: 2}
       final: 1
       branches: []
   - question: Sorry I have to go
     answer: Stay out of trouble!
     reaction: 
-    visited: 1
+    visited: 0
     requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}

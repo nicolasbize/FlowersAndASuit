@@ -21,6 +21,7 @@ MonoBehaviour:
     animationValue: 0
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: TransitionCanvas
@@ -30,6 +31,7 @@ MonoBehaviour:
     animationValue: 0
     animationTrigger: EnterDoor
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 4
     character: 
@@ -39,33 +41,37 @@ MonoBehaviour:
     animationValue: 0
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 6
     character: Enzo
-    targetLocation: {x: 1.02, y: 0, z: 0}
+    targetLocation: {x: -2.7222223, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 6
     character: Camera
-    targetLocation: {x: 1.02, y: 0, z: 0}
+    targetLocation: {x: -2.7222223, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 6
     character: Officer Lewis
-    targetLocation: {x: 3.72, y: 0.59375, z: 0}
+    targetLocation: {x: 0.1, y: 0.375, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: TransitionCanvas
@@ -75,6 +81,7 @@ MonoBehaviour:
     animationValue: 0
     animationTrigger: ExitDoor
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 2
     character: 
@@ -84,6 +91,7 @@ MonoBehaviour:
     animationValue: 0
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: Officer Lewis
@@ -93,15 +101,17 @@ MonoBehaviour:
     animationValue: 1
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 1
     character: Officer Lewis
-    targetLocation: {x: 8.75, y: 0.59375, z: 0}
+    targetLocation: {x: 4.5, y: 0.375, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: Officer Lewis
@@ -111,6 +121,7 @@ MonoBehaviour:
     animationValue: 0
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 6
     character: Scott
@@ -120,6 +131,7 @@ MonoBehaviour:
     animationValue: 0
     animationTrigger: 
     flipValue: 1
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: Scott
@@ -129,6 +141,7 @@ MonoBehaviour:
     animationValue: 1
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: Officer Lewis
@@ -138,6 +151,7 @@ MonoBehaviour:
     animationValue: 1
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: Sir! You're under arrest!
   - type: 3
     character: Officer Lewis
@@ -147,6 +161,7 @@ MonoBehaviour:
     animationValue: 0
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: Scott
@@ -156,6 +171,7 @@ MonoBehaviour:
     animationValue: 1
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: For what exactly?
   - type: 3
     character: Scott
@@ -165,15 +181,17 @@ MonoBehaviour:
     animationValue: 0
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
+    interactionDuration: 2
     animationProperty: mouth_open
     animationValue: 1
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: What's in your jacket?
   - type: 3
     character: Officer Lewis
@@ -183,6 +201,7 @@ MonoBehaviour:
     animationValue: 0
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: Scott
@@ -192,7 +211,8 @@ MonoBehaviour:
     animationValue: 1
     animationTrigger: 
     flipValue: 0
-    text: I don't have anything in my...   Wait, what's this?
+    objectCreatedPrefab: {fileID: 0}
+    text: There's nothing in...   Wait, what's this?
   - type: 3
     character: Scott
     targetLocation: {x: 0, y: 0, z: 0}
@@ -201,4 +221,155 @@ MonoBehaviour:
     animationValue: 0
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+  - type: 3
+    character: Officer Lewis
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 3
+    animationProperty: mouth_open
+    animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: Well, well well...
+  - type: 3
+    character: Officer Lewis
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: mouth_open
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+  - type: 3
+    character: Officer Lewis
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 3
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: is_checking
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: snif snif
+  - type: 3
+    character: Officer Lewis
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 4
+    animationProperty: mouth_open
+    animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: I knew it!   You're the sugar thief!
+  - type: 3
+    character: Officer Lewis
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: mouth_open
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+  - type: 3
+    character: Scott
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 2
+    animationProperty: mouth_open
+    animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: The what?!
+  - type: 3
+    character: Scott
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: mouth_open
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+  - type: 3
+    character: Officer Lewis
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 4
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: is_arresting
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: Take off your clothes!   To the station we go!
+  - type: 3
+    character: TransitionCanvas
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: EnterDoor
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+  - type: 4
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 1
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+  - type: 7
+    character: Scott
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+  - type: 7
+    character: Officer Lewis
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+  - type: 8
+    character: 
+    targetLocation: {x: 11.87, y: -1.81, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 4563076318826903845, guid: 37db0433d315b664d957e4e971c40db8, type: 3}
+    text: 
+  - type: 3
+    character: TransitionCanvas
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: ExitDoor
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+  - type: 5
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 

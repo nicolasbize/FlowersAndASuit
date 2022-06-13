@@ -19,6 +19,9 @@ MonoBehaviour:
     interactionDuration: 1
     animationProperty: 
     animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: Enzo
@@ -26,13 +29,19 @@ MonoBehaviour:
     interactionDuration: 0
     animationProperty: is_moving
     animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 1
     character: Enzo
-    targetLocation: {x: 21.85, y: 0, z: 0}
+    targetLocation: {x: 19.24, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: Enzo
@@ -40,6 +49,9 @@ MonoBehaviour:
     interactionDuration: 0
     animationProperty: is_moving
     animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: Enzo
@@ -47,13 +59,19 @@ MonoBehaviour:
     interactionDuration: 2
     animationProperty: is_interacting
     animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 2
     character: 
-    targetLocation: {x: 15.35, y: 0, z: 0}
+    targetLocation: {x: 11.75, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: Phone Booth
@@ -61,6 +79,9 @@ MonoBehaviour:
     interactionDuration: 3
     animationProperty: is_ringing
     animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: ring ring
   - type: 3
     character: Phone Booth
@@ -68,6 +89,9 @@ MonoBehaviour:
     interactionDuration: 1
     animationProperty: is_ringing
     animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: Phone Booth
@@ -75,6 +99,9 @@ MonoBehaviour:
     interactionDuration: 3
     animationProperty: is_ringing
     animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: ring ring
   - type: 3
     character: Phone Booth
@@ -82,6 +109,9 @@ MonoBehaviour:
     interactionDuration: 0
     animationProperty: is_ringing
     animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: Scott
@@ -89,13 +119,19 @@ MonoBehaviour:
     interactionDuration: 0
     animationProperty: is_moving
     animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 1
     character: Scott
-    targetLocation: {x: 8.56, y: 0.46875, z: 0}
+    targetLocation: {x: 5.73, y: 0.25, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: Scott
@@ -103,20 +139,28 @@ MonoBehaviour:
     interactionDuration: 0
     animationProperty: is_moving
     animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3
     character: Scott
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 6
+    interactionDuration: 12
     animationProperty: on_phone
     animationValue: 1
-    text: Hello?   Hello?   Hellooo!!   Who is this?!   Do you think this is funny?  
-      Come on, I know who you are.   I'm coming to get you!   Hello??   Why are you
-      not hanging up?   Grrr, must be kids again!
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: Hello?   Hellooo!!   Who is this?!   Think this is funny?   I won't hang
+      up!   You hang up!!
   - type: 5
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 1
     animationProperty: 
     animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
     text: 

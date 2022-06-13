@@ -24,7 +24,9 @@ public class FloatingTextManager : MonoBehaviour
     public void AddText(GameObject target, string text) {
         string[] phrases = text.Split(new[] { "   " }, StringSplitOptions.None);
         foreach (string phrase in phrases) {
-            messageQueue.Enqueue(new Tuple<GameObject, string>(target, phrase));
+            if (phrase.Trim().Length > 0) {
+                messageQueue.Enqueue(new Tuple<GameObject, string>(target, phrase));
+            }
         }
     }
 
@@ -34,6 +36,10 @@ public class FloatingTextManager : MonoBehaviour
 
     public bool HasMessagesInQueue() {
         return messageQueue.Count > 0;
+    }
+
+    public int NbMessagesInQueue() {
+        return messageQueue.Count;
     }
 
     public void RemoveMessagesFor(GameObject target) {

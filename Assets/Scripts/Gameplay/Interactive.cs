@@ -34,6 +34,9 @@ public class Interactive : MonoBehaviour
             SetBranchParent(dialog.branches, null);
         }
         currentPlayer = GameObject.Find("Enzo");
+        if (floatingTextManager == null) {
+            floatingTextManager = GameObject.Find("GameLogicManager").GetComponent<FloatingTextManager>();
+        }
     }
 
     private void Update() {
