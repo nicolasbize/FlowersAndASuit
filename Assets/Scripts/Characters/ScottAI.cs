@@ -10,7 +10,7 @@ public class ScottAI : MonoBehaviour
     [SerializeField] public float margin = 0.1f;
     private Vector3 originalPosition;
     private Vector3 destination = Vector3.zero;
-    private bool drugsPlanted = false;
+    [SerializeField] public bool drugsPlanted = false;
 
 
     private void Start() {
@@ -26,6 +26,10 @@ public class ScottAI : MonoBehaviour
         drugsPlanted = true;
         GetComponent<Animator>().SetBool("on_phone", false);
         destination = originalPosition;
+    }
+
+    public bool IsDrugsPlanted() {
+        return drugsPlanted;
     }
 
     public bool IsPlanted() {

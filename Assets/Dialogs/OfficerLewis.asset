@@ -19,84 +19,120 @@ MonoBehaviour:
     answer: Easy! Ask me anything!
     reaction: 
     visited: 0
-    objectGained: 
+    requiresPlantedDrugs: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
     final: 0
     branches:
     - question: What's twelve times twelve?
       answer: Easy!   78!
       reaction: Well that partially proves it.
       visited: 0
-      objectGained: 
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
       final: 0
       branches: []
     - question: Which is worse, apathy or ignorance?
       answer: I don't know and I really don't care!
       reaction: Apathy then.
       visited: 0
-      objectGained: 
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
       final: 0
       branches: []
     - question: What weighs more, a pound of metal or a pound of feathers?
       answer: Metal is heavier for sure!
       reaction: Right...
       visited: 0
-      objectGained: 
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
       final: 0
       branches: []
   - question: How many people have you arrested?
     answer: No one yet!   I'm still waiting for a crime worthy of my time!
     reaction: 
-    visited: 1
-    objectGained: 
+    visited: 0
+    requiresPlantedDrugs: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
     final: 0
     branches:
     - question: So, you've never arrested anybody?
       answer: I don't have time for petty crimes...   Like bank robberies!
       reaction: 
-      visited: 1
-      objectGained: 
+      visited: 0
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
       final: 0
       branches:
       - question: Aren't you just waiting here though?
         answer: Of course I'm not just waiting!   I'm mentally preparing for the
           perfect crime!
         reaction: 
-        visited: 1
-        objectGained: 
+        visited: 0
+        requiresPlantedDrugs: 0
+        objectGained: {fileID: 0}
+        requiresObject: {fileID: 0}
+        cutscene: {fileID: 0}
         final: 0
         branches: []
       - question: Maybe you're just scared of the action?
         answer: Officer Lewis was born for hardcore action!
         reaction: 
-        visited: 1
-        objectGained: 
+        visited: 0
+        requiresPlantedDrugs: 0
+        objectGained: {fileID: 0}
+        requiresObject: {fileID: 0}
+        cutscene: {fileID: 0}
         final: 0
         branches: []
     - question: You think it's going to happen in this park?
       answer: You'd be surprised what we find in the recycling bin!
       reaction: 
-      visited: 1
-      objectGained: 
+      visited: 0
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
       final: 0
       branches: []
   - question: I'd like to report a crime!
-    answer: Finally, my time has come!
+    answer: I hope it's worth my time!
     reaction: 
     visited: 1
-    objectGained: 
+    requiresPlantedDrugs: 1
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
     final: 0
     branches:
-    - question: You should check this person's jacket!
-      answer: Ah ha! Time for Officer Lewis to shine!
+    - question: Illegal substance in a jacket?
+      answer: Show me the way young man!
       reaction: 
       visited: 1
-      objectGained: 
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
       final: 0
       branches: []
   - question: Sorry I have to go
     answer: Stay out of trouble!
     reaction: 
     visited: 1
-    objectGained: 
+    requiresPlantedDrugs: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
     final: 1
     branches: []

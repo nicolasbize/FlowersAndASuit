@@ -21,7 +21,8 @@ public class Interactive : MonoBehaviour
     public float overrideTextDistanceAboveHead;
     public Transform warpTo;
     public bool busy;
-    GameObject currentPlayer;
+    public bool facePlayer;
+    private GameObject currentPlayer;
     GameObject currentTarget;
     Branch[] currentBranches;
     InventoryItem itemGainedFromDialog = null;
@@ -31,6 +32,13 @@ public class Interactive : MonoBehaviour
         if (dialog != null) {
             ClearVisitedFlag(dialog.branches);
             SetBranchParent(dialog.branches, null);
+        }
+        currentPlayer = GameObject.Find("Enzo");
+    }
+
+    private void Update() {
+        if (!busy && facePlayer) {
+            GetComponent<SpriteRenderer>().flipX = currentPlayer.transform.position.x < transform.position.x;
         }
     }
 
@@ -48,8 +56,7 @@ public class Interactive : MonoBehaviour
         }
     }
 
-    public void StartDialog(GameObject player, GameObject target) {
-        currentPlayer = player;
+    public void StartDialog(GameObject target) {
         currentTarget = target;
         if (dialog != null) {
             currentBranches = dialog.branches;
@@ -90,7 +97,6 @@ public class Interactive : MonoBehaviour
         currentPlayer.GetComponent<Animator>().SetBool("mouth_open", false);
         CheckForGainedObject();
         CheckForCutScene();
-        currentPlayer = null;
         currentTarget = null;
     }
 

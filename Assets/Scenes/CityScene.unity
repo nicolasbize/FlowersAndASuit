@@ -379,6 +379,7 @@ MonoBehaviour:
   gamelogicManager: {fileID: 1073724685}
   speed: 3
   margin: 0.1
+  drugsPlanted: 1
 --- !u!1 &370346333 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5605873756938622306, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
@@ -586,6 +587,10 @@ PrefabInstance:
       value: Jane
       objectReference: {fileID: 0}
     - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: facePlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: floatingText
       value: 
       objectReference: {fileID: 0}
@@ -768,8 +773,16 @@ PrefabInstance:
       value: 5.23
       objectReference: {fileID: 0}
     - target: {fileID: 5605873756938622311, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622311, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622311, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.7777777
+      value: 6.25
       objectReference: {fileID: 0}
     - target: {fileID: 5605873756938622311, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -887,7 +900,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.65625, y: 0, z: 0}
+  m_LocalPosition: {x: -31.375, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1681,7 +1694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143019893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.39, y: 0, z: 0}
+  m_LocalPosition: {x: -31.375, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1732,6 +1745,7 @@ MonoBehaviour:
   overrideTextDistanceAboveHead: 0
   warpTo: {fileID: 0}
   busy: 0
+  facePlayer: 0
 --- !u!1001 &1144238556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1830,6 +1844,10 @@ PrefabInstance:
     - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: hintText
       value: Officer Lewis
+      objectReference: {fileID: 0}
+    - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: facePlayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: floatingText
@@ -2009,6 +2027,10 @@ PrefabInstance:
     - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: hintText
       value: Shady Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: facePlayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: floatingText
@@ -3521,7 +3543,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 837462971036866138, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: m_FlipX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 837462971036866138, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: m_Size.x
@@ -3606,6 +3628,10 @@ PrefabInstance:
     - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: hintText
       value: Little Jim
+      objectReference: {fileID: 0}
+    - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: facePlayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 837462971036866140, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: floatingText

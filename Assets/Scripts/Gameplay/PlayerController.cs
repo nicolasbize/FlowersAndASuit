@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour
                     transitioner.GetComponent<Animator>().SetTrigger("EnterDoor");
                     StartCoroutine(WarpTo(interactiveTarget.GetComponent<Interactive>().warpTo));
                 } else {
-                    interactiveTarget.GetComponent<Interactive>().StartDialog(gameObject, interactiveTarget);
+                    interactiveTarget.GetComponent<Interactive>().StartDialog(interactiveTarget);
                     inventoryManager.GetComponent<UIInventoryManager>().active = false;
                 }
             }

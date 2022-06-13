@@ -42,6 +42,13 @@ public class UIDialogContainer : MonoBehaviour, IPointerClickHandler
         bool hasFinalOption = false;
         List<Branch> validBranches = new List<Branch>(branches).FindAll(b => b.requiresObject == null || inventory.GetComponent<UIInventoryManager>().HasItemInInventory(b.requiresObject));
         foreach(var branch in validBranches) {
+            // not generic at all...
+            if (branch.requiresPlantedDrugs) {
+                ScottAI scott = FindObjectOfType<ScottAI>();
+                if (!scott.IsDrugsPlanted()) {
+                    continue;
+                }
+            }
             var option = Instantiate(dialogOptionPrefab, transform);
             option.GetComponent<RectTransform>().localScale = Vector3.one;
             option.GetComponent<TextMeshProUGUI>().text = branch.question;

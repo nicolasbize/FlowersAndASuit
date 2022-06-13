@@ -15,6 +15,7 @@ public class Dialog : ScriptableObject
         public string answer;
         public string reaction;
         public bool visited;
+        public bool requiresPlantedDrugs;
         public InventoryItem objectGained;
         public InventoryItem requiresObject;
         public CutScene cutscene;
