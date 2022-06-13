@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550190b613b059847a0369437fd85f19, type: 3}
+  m_Name: Hook
+  m_EditorClassIdentifier: 
+  itemName: Fishing Hook
+  texture: {fileID: 2800000, guid: aae4961b015463a488a0e8109d9cc492, type: 3}
+  combinations:
+  - combineWith: {fileID: 11400000, guid: 55dc5f801885aa548bc891d4eb045325, type: 2}
+    result: {fileID: 11400000, guid: ee608c0667f29224ab2945d2d4e70a6a, type: 2}
+    thought: Nice! This will be pretty handy!
+  interactions: []

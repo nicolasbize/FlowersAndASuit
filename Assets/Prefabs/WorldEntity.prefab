@@ -96,11 +96,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7390a51b2ba61d14aadd42dcc0ab62ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceToInteraction: 0
+  distanceToInteraction: 3
   observation: Maybe I can find a nice gift in here   Hmm no.
   dialog: {fileID: 0}
   dialogContainer: {fileID: 0}
   floatingTextManager: {fileID: 0}
+  overrideThickness: 0
 --- !u!61 &5605873756938622311
 BoxCollider2D:
   m_ObjectHideFlags: 0

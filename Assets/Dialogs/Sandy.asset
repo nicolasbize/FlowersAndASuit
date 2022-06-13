@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87183926066d904ab1fd24c3f2d31aa, type: 3}
+  m_Name: Sandy
+  m_EditorClassIdentifier: 
+  greeting: Hi there!
+  reply: Hey hon, what can I get you?
+  branches:
+  - question: Could I please use your phone?
+    answer: Sure, but don't stay too long!
+    reaction: 
+    visited: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
+    final: 0
+    branches:
+    - question: I can't seem to remember any number!
+      answer: You're getting old sweetie!
+      reaction: 
+      visited: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
+      final: 0
+      branches: []
+    - question: (Call phone booth)
+      answer: 
+      reaction: Thanks
+      visited: 1
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 11400000, guid: 68052d24f4aaf4c41a03b86c82c27033, type: 2}
+      cutscene: {fileID: 11400000, guid: f7330bbb82415f44cb8e8e4ff9f100c1, type: 2}
+      final: 1
+      branches: []
+  - question: Any news around town?
+    answer: Oh, everyone is pretty excited   about the upcoming mashed potato wrestling
+      competition
+    reaction: 
+    visited: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
+    final: 0
+    branches:
+    - question: I keep having deja-vu moments!
+      answer: Wait, didn't you just ask me that?
+      reaction: 
+      visited: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
+      final: 0
+      branches: []
+  - question: I'm late for a date.   Any advice for me?
+    answer: Being sorry is all about intent.   And gifts of course, lots of them!
+    reaction: 
+    visited: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
+    final: 0
+    branches: []
+  - question: I have to go!
+    answer: Take care now
+    reaction: 
+    visited: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
+    final: 1
+    branches: []

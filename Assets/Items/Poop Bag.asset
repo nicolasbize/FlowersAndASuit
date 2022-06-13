@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550190b613b059847a0369437fd85f19, type: 3}
+  m_Name: Poop Bag
+  m_EditorClassIdentifier: 
+  itemName: Poop Bag
+  texture: {fileID: 2800000, guid: a15c16d28f2656d46a9d02b48fb8dfa1, type: 3}
+  combinations:
+  - combineWith: {fileID: 11400000, guid: 92441e9e8dbce334c8ec205c63b7efbc, type: 2}
+    result: {fileID: 11400000, guid: d92145ee464f07f4faafe65bd62117b9, type: 2}
+    thought: Well this doesn't looks suspicious at all!
+  interactions: []

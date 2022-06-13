@@ -17,93 +17,108 @@ MonoBehaviour:
   branches:
   - question: Hey I'm not that old!
     answer: Cool! So did you know Benjamin Franklin?   He had a kite too!
+    reaction: 
     visited: 0
-    objectGained: 
+    objectGained: {fileID: 0}
     final: 0
     branches:
     - question: No, he lived 200 years ago...
       answer: That's why I'm asking you!
+      reaction: 
       visited: 0
-      objectGained: 
+      objectGained: {fileID: 0}
       final: 0
       branches: []
     - question: Actually he's a great friend of mine
       answer: Wow, you're ancient!
+      reaction: 
       visited: 0
-      objectGained: 
+      objectGained: {fileID: 0}
       final: 0
       branches: []
   - question: Do you know where I could find flowers?
     answer: There's a flower shop down the street.   If you had a brain, you'd look
       there!
+    reaction: 
     visited: 0
-    objectGained: 
+    objectGained: {fileID: 0}
     final: 0
     branches:
     - question: Does your brain ever teach you to be polite?
       answer: It does around smart people!
+      reaction: 
       visited: 0
-      objectGained: 
+      objectGained: {fileID: 0}
       final: 0
       branches: []
     - question: Is that what flower shops sell?
       answer: I think that's why it's called a "flower shop"
-      visited: 1
-      objectGained: 
+      reaction: 
+      visited: 0
+      objectGained: {fileID: 0}
       final: 0
       branches: []
   - question: Can I play with your kite?
     answer: No way, you're gonna break it!
+    reaction: 
     visited: 0
-    objectGained: 
+    objectGained: {fileID: 0}
     final: 0
     branches:
     - question: Come on, just once!
       answer: Let me think about it.   No!
+      reaction: 
       visited: 0
-      objectGained: 
+      objectGained: {fileID: 0}
       final: 0
       branches: []
     - question: How could I break your kite?
       answer: If you looked at it for too long with your ugly face!
+      reaction: 
       visited: 0
-      objectGained: 
+      objectGained: {fileID: 0}
       final: 0
       branches:
       - question: You better watch your language!
         answer: Hey you're not my mom!
+        reaction: 
         visited: 0
-        objectGained: 
+        objectGained: {fileID: 0}
         final: 0
         branches: []
       - question: Maybe I should break you in half!
         answer: You can't catch me, you're too old!
+        reaction: 
         visited: 0
-        objectGained: 
+        objectGained: {fileID: 0}
         final: 0
         branches: []
     - question: Aren't you supposed to be in school?
       answer: School is for losers.   I'm not a loser!
+      reaction: 
       visited: 0
-      objectGained: 
+      objectGained: {fileID: 0}
       final: 0
       branches:
       - question: Seems like some education would be good for you!
         answer: That's exactly what a loser would say!
+        reaction: 
         visited: 0
-        objectGained: 
+        objectGained: {fileID: 0}
         final: 0
         branches: []
       - question: It's important if you want to be successful!
         answer: Are you calling yourself successful?     Now I definitely don't want
           to go!
+        reaction: 
         visited: 0
-        objectGained: 
+        objectGained: {fileID: 0}
         final: 0
         branches: []
   - question: I have to go.
-    answer: Finally!
+    answer: It's about time!
+    reaction: 
     visited: 1
-    objectGained: 
+    objectGained: {fileID: 0}
     final: 1
     branches: []
