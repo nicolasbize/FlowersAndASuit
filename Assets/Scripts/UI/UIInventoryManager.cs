@@ -57,8 +57,16 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
 
     private void RefreshToolTip() {
         UIInventoryUsageHint hint = hintTextObject.GetComponent<UIInventoryUsageHint>();
-        hint.HoveredInventoryItem = hoveredItem?.GetComponent<UIInventoryItem>().item;
-        hint.DraggedInventoryItem = draggedObject?.GetComponent<UIInventoryItem>().item;
+        if (hoveredItem != null) {
+            hint.HoveredInventoryItem = hoveredItem.GetComponent<UIInventoryItem>().item;
+        } else {
+            hint.HoveredInventoryItem = null;
+        }
+        if (draggedObject != null) {
+            hint.DraggedInventoryItem = draggedObject.GetComponent<UIInventoryItem>().item;
+        } else {
+            hint.DraggedInventoryItem = null;
+        }
     }
 
     public void AddToInventory(InventoryItem item) {
@@ -72,6 +80,11 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
 
     public bool HasItemInInventory(InventoryItem item) {
         return new List<InventoryItem>(inventoryItems).Find(i => i.itemName == item.itemName) != null;
+    }
+
+    public void RemoveFromInventory(string itemName) {
+        inventoryItems = new List<InventoryItem>(inventoryItems).FindAll(i => i.itemName != itemName).ToArray();
+        RefreshInventory();
     }
 
     private void RefreshInventory() {
@@ -130,8 +143,7 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
                         RefreshInventory();
                         player.GetComponent<PlayerController>().ShowCombinationResult(thought);
                     } else {
-                        feedbackIndex = (feedbackIndex + 1) % negativeCombinationFeedbacks.Length;
-                        player.GetComponent<PlayerController>().ShowCombinationResult(negativeCombinationFeedbacks[feedbackIndex]);
+                        player.GetComponent<PlayerController>().ShowCombinationResult(GetNextNegativeUseFeedback());
                     }
                 }
                 Destroy(draggedObject);
@@ -140,6 +152,11 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
             }
             RefreshToolTip();
         }
+    }
+
+    public string GetNextNegativeUseFeedback() {
+        feedbackIndex = (feedbackIndex + 1) % negativeCombinationFeedbacks.Length;
+        return negativeCombinationFeedbacks[feedbackIndex];
     }
 
 }

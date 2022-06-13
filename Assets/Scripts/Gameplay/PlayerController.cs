@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static InventoryItem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class PlayerController : MonoBehaviour
     GameObject interactiveTarget = null;
     GameObject hovered = null;
     InventoryItem currentItemDragged = null;
+
+    // non generic... but not a lot of time left for the jam
+    bool isPlantingDrugs = false;
 
     public enum State { Talking, Moving, Idle, Interacting }
     State state = State.Idle;
@@ -91,26 +95,50 @@ public class PlayerController : MonoBehaviour
                 float z = Mathf.Round(transform.position.z);
                 transform.position = new Vector3(x, y, z);
                 state = State.Idle;
+                if (isPlantingDrugs) {
+                    state = State.Interacting;
+                    isPlantingDrugs = false;
+                    StartCoroutine(PlantDrugs());
+                }
             }
         }
         if (state == State.Idle && interactiveTarget != null) {
             // have the player point towards the target before interacting
             direction = transform.position.x < interactiveTarget.transform.position.x ? Vector2.right : Vector2.left;
             spriteRenderer.flipX = direction == Vector2.left;
-            if (interactiveTarget.GetComponent<Interactive>().distanceToInteraction == 0) {
-                state = State.Interacting;
+            if (interactiveTarget.GetComponent<Interactive>().busy) {
+                GetComponent<Interactive>().floatingTextManager.AddText(gameObject, "Seems busy at the moment...");
+                interactiveTarget = null;
             } else {
-                state = State.Talking;
-            }
-            CleanTipsAndOutline();
-            if (interactiveTarget.GetComponent<Interactive>().warpTo != null) {
-                transitioner.GetComponent<Animator>().SetTrigger("EnterDoor");
-                StartCoroutine(WarpTo(interactiveTarget.GetComponent<Interactive>().warpTo));
-            } else {
-                interactiveTarget.GetComponent<Interactive>().StartDialog(gameObject, interactiveTarget);
-                inventoryManager.GetComponent<UIInventoryManager>().active = false;
+                if (interactiveTarget.GetComponent<Interactive>().distanceToInteraction == 0) {
+                    state = State.Interacting;
+                } else {
+                    state = State.Talking;
+                }
+                CleanTipsAndOutline();
+                if (interactiveTarget.GetComponent<Interactive>().warpTo != null) {
+                    transitioner.GetComponent<Animator>().SetTrigger("EnterDoor");
+                    StartCoroutine(WarpTo(interactiveTarget.GetComponent<Interactive>().warpTo));
+                } else {
+                    interactiveTarget.GetComponent<Interactive>().StartDialog(gameObject, interactiveTarget);
+                    inventoryManager.GetComponent<UIInventoryManager>().active = false;
+                }
             }
         }
+    }
+
+    IEnumerator PlantDrugs() {
+        yield return new WaitForSeconds(1f);
+        ScottAI scott = GameObject.Find("Scott").GetComponent<ScottAI>();
+        inventoryManager.GetComponent<UIInventoryManager>().RemoveFromInventory("Fake Drugs");
+        target.x = transform.position.x - 3f;
+        direction = transform.position.x < target.x ? Vector2.right : Vector2.left;
+        spriteRenderer.flipX = direction == Vector2.left;
+        state = State.Moving;
+        yield return new WaitForSeconds(2f);
+        scott.PlantDrugs();
+        SetIdle();
+        GetComponent<Interactive>().floatingTextManager.AddText(gameObject, "I wouldn't want to be caught with this!");
     }
 
     IEnumerator WarpTo(Transform warp) {
@@ -143,7 +171,29 @@ public class PlayerController : MonoBehaviour
     }
 
     public void RemoveDraggedInventoryItem() {
+        // we just stopped dragging the object, check if we're trying to do an action first
+        if (hovered != null) {
+            Interaction interaction = new List<Interaction>(currentItemDragged.interactions).Find(i => i.objectName == hovered.name);
+            if (interaction != null) {
+                Invoke(interaction.callbackName, 0);
+            } else {
+                GetComponent<Interactive>().floatingTextManager.AddText(gameObject, inventoryManager.GetComponent<UIInventoryManager>().GetNextNegativeUseFeedback());
+            }
+        }
         currentItemDragged = null;
+    }
+
+    private void TryPlantDrugs() {
+        ScottAI scott = GameObject.Find("Scott").GetComponent<ScottAI>();
+        if (scott.CanPlantDrugs()) {
+            target.x = scott.transform.position.x + 0.2f;
+            isPlantingDrugs = true;
+            direction = transform.position.x < target.x ? Vector2.right : Vector2.left;
+            spriteRenderer.flipX = direction == Vector2.left;
+            state = State.Moving;
+        } else {
+            GetComponent<Interactive>().floatingTextManager.AddText(gameObject, "I need to distract him first");
+        }
     }
 
     private void HandleClickInteractions() {

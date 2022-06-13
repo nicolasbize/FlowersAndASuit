@@ -12,7 +12,7 @@ public class InventoryItem : ScriptableObject
     public class Interaction
     {
         public string objectName;
-        public string playerThought;
+        public string callbackName;
     }
 
     [System.Serializable]

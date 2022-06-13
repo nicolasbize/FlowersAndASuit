@@ -20,6 +20,7 @@ public class Interactive : MonoBehaviour
     public float overrideThickness;
     public float overrideTextDistanceAboveHead;
     public Transform warpTo;
+    public bool busy;
     GameObject currentPlayer;
     GameObject currentTarget;
     Branch[] currentBranches;

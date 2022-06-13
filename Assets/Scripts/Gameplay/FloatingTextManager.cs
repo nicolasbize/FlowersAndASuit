@@ -28,6 +28,26 @@ public class FloatingTextManager : MonoBehaviour
         }
     }
 
+    public bool HasEnquedMessagesForOtherThan(GameObject target) {
+        return new List<Tuple<GameObject, string>>(messageQueue.ToArray()).Find(t => t.Item1.name != target.name) != null;
+    }
+
+    public bool HasMessagesInQueue() {
+        return messageQueue.Count > 0;
+    }
+
+    public void RemoveMessagesFor(GameObject target) {
+        Queue<Tuple<GameObject, string>> newQueue = new Queue<Tuple<GameObject, string>>();
+        while (messageQueue.Count > 0) {
+            Tuple<GameObject, string> tuple = messageQueue.Dequeue();
+            if (tuple.Item1.name != target.name) {
+                newQueue.Enqueue(tuple);
+            }
+        }
+        messageQueue = newQueue;
+    }
+
+
     private void Update() {
         if (!isShowing && messageQueue.Count > 0) {
             Tuple<GameObject, string> message = messageQueue.Dequeue();
