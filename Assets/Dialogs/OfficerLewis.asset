@@ -124,7 +124,7 @@ MonoBehaviour:
       objectGained: {fileID: 0}
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
-      final: 0
+      final: 1
       branches: []
   - question: Sorry I have to go
     answer: Stay out of trouble!

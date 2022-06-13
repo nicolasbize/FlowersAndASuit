@@ -37,7 +37,7 @@ public class Interactive : MonoBehaviour
     }
 
     private void Update() {
-        if (!busy && facePlayer) {
+        if (!busy && facePlayer && !cutsceneManager.GetComponent<CutScenePlayer>().IsPlayingCutScene()) {
             GetComponent<SpriteRenderer>().flipX = currentPlayer.transform.position.x < transform.position.x;
         }
     }

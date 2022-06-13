@@ -90,9 +90,9 @@ public class PlayerController : MonoBehaviour
         if (state == State.Moving && target != Vector3.zero) {
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
             if (Mathf.Abs(transform.position.x - target.x) < marginTarget) {
-                float x = Mathf.Round(transform.position.x);
-                float y = Mathf.Round(transform.position.y);
-                float z = Mathf.Round(transform.position.z);
+                float x = Mathf.Round(transform.position.x * 72) / 72;
+                float y = Mathf.Round(transform.position.y * 72) / 72;
+                float z = Mathf.Round(transform.position.z * 72) / 72;
                 transform.position = new Vector3(x, y, z);
                 state = State.Idle;
                 if (isPlantingDrugs) {

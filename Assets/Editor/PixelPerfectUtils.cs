@@ -17,8 +17,8 @@ public class PixelPerfectUtils : MonoBehaviour
     // Return a new vector snapped to the pixel grid
     public static Vector3 SnapVector(Vector3 v) {
         return new Vector3(
-            Mathf.Round(v.x * 32) / 32,
-            Mathf.Round(v.y * 32) / 32,
+            Mathf.Round(v.x * 72) / 72,
+            Mathf.Round(v.y * 72) / 72,
             v.z);
     }
 }

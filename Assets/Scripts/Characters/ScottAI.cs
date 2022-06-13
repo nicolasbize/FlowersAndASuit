@@ -52,9 +52,9 @@ public class ScottAI : MonoBehaviour
         if (destination != Vector3.zero) {
             transform.position = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
             if (Mathf.Abs(transform.position.x - destination.x) < margin) {
-                float x = Mathf.Round(transform.position.x);
-                float y = Mathf.Round(transform.position.y);
-                float z = Mathf.Round(transform.position.z);
+                float x = Mathf.Round(transform.position.x * 72) / 72;
+                float y = Mathf.Round(transform.position.y * 72) / 72;
+                float z = Mathf.Round(transform.position.z * 72) / 72;
                 transform.position = new Vector3(x, y, z);
                 destination = Vector3.zero;
             }

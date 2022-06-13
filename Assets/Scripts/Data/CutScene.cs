@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New CutScene", menuName = "CutScene")]
 public class CutScene : ScriptableObject
 {
-    public enum StepType { Intro, MoveCharacter, CameraPan, AnimateCharacter, Wait, Outro }
+    public enum StepType { Intro, MoveCharacter, CameraPan, AnimateCharacter, Wait, Outro, Teleport }
 
     [System.Serializable]
     public class Step
@@ -16,8 +16,9 @@ public class CutScene : ScriptableObject
         public float interactionDuration; // also add sound event?
         public string animationProperty;
         public bool animationValue;
+        public string animationTrigger;
+        public bool flipValue;
         public string text;
-        
     }
 
     public Step[] steps;

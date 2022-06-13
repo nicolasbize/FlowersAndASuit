@@ -1,0 +1,204 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0e67aaeb89ebd147a3058ec3cb4dae6, type: 3}
+  m_Name: Arrest of Scott
+  m_EditorClassIdentifier: 
+  steps:
+  - type: 0
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 2
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    text: 
+  - type: 3
+    character: TransitionCanvas
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: EnterDoor
+    flipValue: 0
+    text: 
+  - type: 4
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 1
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    text: 
+  - type: 6
+    character: Enzo
+    targetLocation: {x: 1.02, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    text: 
+  - type: 6
+    character: Camera
+    targetLocation: {x: 1.02, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    text: 
+  - type: 6
+    character: Officer Lewis
+    targetLocation: {x: 3.72, y: 0.59375, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    text: 
+  - type: 3
+    character: TransitionCanvas
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: ExitDoor
+    flipValue: 0
+    text: 
+  - type: 2
+    character: 
+    targetLocation: {x: 6.35, y: 0, z: 0}
+    interactionDuration: 2
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    text: 
+  - type: 3
+    character: Officer Lewis
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: is_moving
+    animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    text: 
+  - type: 1
+    character: Officer Lewis
+    targetLocation: {x: 8.75, y: 0.59375, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    text: 
+  - type: 3
+    character: Officer Lewis
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: is_moving
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    text: 
+  - type: 6
+    character: Scott
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 1
+    text: 
+  - type: 3
+    character: Scott
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: is_talking
+    animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    text: 
+  - type: 3
+    character: Officer Lewis
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 2
+    animationProperty: is_talking
+    animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    text: Sir! You're under arrest!
+  - type: 3
+    character: Officer Lewis
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: mouth_open
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    text: 
+  - type: 3
+    character: Scott
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 2
+    animationProperty: mouth_open
+    animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    text: For what exactly?
+  - type: 3
+    character: Scott
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: mouth_open
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    text: 
+  - type: 3
+    character: Officer Lewis
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 3
+    animationProperty: mouth_open
+    animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    text: What's in your jacket?
+  - type: 3
+    character: Officer Lewis
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: mouth_open
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    text: 
+  - type: 3
+    character: Scott
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 4
+    animationProperty: mouth_open
+    animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    text: I don't have anything in my...   Wait, what's this?
+  - type: 3
+    character: Scott
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: mouth_open
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    text: 
