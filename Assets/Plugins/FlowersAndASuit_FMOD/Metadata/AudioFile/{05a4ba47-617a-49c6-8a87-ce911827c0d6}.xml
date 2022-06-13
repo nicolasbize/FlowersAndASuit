@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{05a4ba47-617a-49c6-8a87-ce911827c0d6}">
 		<property name="assetPath">
-			<value>FOLYFeet_Footsteps Group Running and Walking_PSE_OE_cA4bo.wav</value>
+			<value>SFX/FOLYFeet_Footsteps Group Running and Walking_PSE_OE_cA4bo.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
