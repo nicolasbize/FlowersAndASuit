@@ -10,6 +10,8 @@ public class CutScenePlayer : MonoBehaviour
     [SerializeField] CutScene currentCutscene;
     [SerializeField] float margin = 0.01f;
     [SerializeField] float moveSpeed = 2f;
+    [SerializeField] Transform topMovieStrip;
+    [SerializeField] Transform bottomMovieStrip;
     Queue<Step> remainingSteps = new Queue<Step>();
     Step currentStep = null;
     GameObject currentCharacter;
@@ -72,22 +74,44 @@ public class CutScenePlayer : MonoBehaviour
     private void PlayStep(Step step) {
         currentStep = step;
         switch (step.type) {
+            case StepType.Intro:
+                topMovieStrip.GetComponent<Animator>().SetTrigger("EnterMovie");
+                bottomMovieStrip.GetComponent<Animator>().SetTrigger("EnterMovie");
+                Camera.main.GetComponent<Animator>().SetTrigger("EnterMovie");
+                StartCoroutine(WaitFor(step.interactionDuration));
+                break;
+            case StepType.Outro:
+                topMovieStrip.GetComponent<Animator>().SetTrigger("ExitMovie");
+                bottomMovieStrip.GetComponent<Animator>().SetTrigger("ExitMovie");
+                Camera.main.GetComponent<Animator>().SetTrigger("ExitMovie");
+                StartCoroutine(WaitFor(step.interactionDuration));
+                break;
             case StepType.MoveCharacter:
                 currentCharacter = GameObject.Find(step.character);
                 break;
             case StepType.AnimateCharacter:
                 currentCharacter = GameObject.Find(step.character);
                 currentCharacter.GetComponent<Animator>().SetBool(step.animationProperty, step.animationValue);
+                if (step.text != "") {
+                    GetComponent<FloatingTextManager>().AddText(currentCharacter, step.text);
+                }
                 StartCoroutine(WaitFor(step.interactionDuration));
                 break;
             case StepType.CameraPan:
                 currentDestination = step.targetLocation;
                 break;
+            case StepType.Wait:
+                StartCoroutine(WaitFor(step.interactionDuration));
+                break;
+
         }
     }
 
     IEnumerator WaitFor(float duration) {
         yield return new WaitForSeconds(duration);
+        if (currentStep?.type == StepType.AnimateCharacter && currentStep.text != "") {
+            GetComponent<FloatingTextManager>().AddText(currentCharacter, "");
+        }
         Advance();
     }
 

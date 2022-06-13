@@ -24,6 +24,7 @@ public class Interactive : MonoBehaviour
     GameObject currentTarget;
     Branch[] currentBranches;
     InventoryItem itemGainedFromDialog = null;
+    CutScene cutsceneToBePlayed = null;
 
     public void Start() {
         if (dialog != null) {
@@ -87,6 +88,7 @@ public class Interactive : MonoBehaviour
         currentPlayer.GetComponent<Animator>().SetBool("is_talking", false);
         currentPlayer.GetComponent<Animator>().SetBool("mouth_open", false);
         CheckForGainedObject();
+        CheckForCutScene();
         currentPlayer = null;
         currentTarget = null;
     }
@@ -101,6 +103,13 @@ public class Interactive : MonoBehaviour
         }
     }
 
+    private void CheckForCutScene() {
+        if (cutsceneToBePlayed != null) {
+            cutsceneManager.GetComponent<CutScenePlayer>().PlayCutscene(cutsceneToBePlayed);
+            cutsceneToBePlayed = null;
+        }
+    }
+
     public void ShowDialogOptions() {
         CheckForGainedObject();
         dialogContainer.gameObject.GetComponent<UIDialogContainer>().Activate(dialog, currentBranches, OnOptionSelected);
@@ -109,12 +118,12 @@ public class Interactive : MonoBehaviour
     public void OnOptionSelected(string option) {
         Branch branch = FindBranch(option, dialog.branches);
         if (branch.cutscene != null) {
-
+            cutsceneToBePlayed = branch.cutscene;
         }
         if (branch.objectGained != null) {
             itemGainedFromDialog = branch.objectGained;
         }
-        if (branch.question.Length != 0) {
+        if (branch.question.Length != 0 && branch.cutscene == null) {
             floatingTextManager.AddText(currentPlayer, branch.question);
             //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Interactions/Enzo-Jim", Enzo.position, Jim.position, 3);
 

@@ -33,6 +33,7 @@ public class FloatingTextManager : MonoBehaviour
             Tuple<GameObject, string> message = messageQueue.Dequeue();
             StartCoroutine(ShowMessage(message.Item1, message.Item2));
         }
+        // FIXME: this forces every animator to have a mouth_open property, even animated objects in the game.
         if (isShowing) {
             currentTarget.GetComponent<Animator>().SetBool("mouth_open", isMouthOpen);
         }

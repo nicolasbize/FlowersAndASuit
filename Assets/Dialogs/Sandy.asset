@@ -27,7 +27,7 @@ MonoBehaviour:
     - question: I can't seem to remember any number!
       answer: You're getting old sweetie!
       reaction: 
-      visited: 1
+      visited: 0
       objectGained: {fileID: 0}
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
@@ -35,12 +35,12 @@ MonoBehaviour:
       branches: []
     - question: (Call phone booth)
       answer: 
-      reaction: 
-      visited: 0
+      reaction: Thanks
+      visited: 1
       objectGained: {fileID: 0}
       requiresObject: {fileID: 11400000, guid: 68052d24f4aaf4c41a03b86c82c27033, type: 2}
       cutscene: {fileID: 11400000, guid: f7330bbb82415f44cb8e8e4ff9f100c1, type: 2}
-      final: 0
+      final: 1
       branches: []
   - question: Any news around town?
     answer: Oh, everyone is pretty excited   about the upcoming mashed potato wrestling
@@ -73,7 +73,7 @@ MonoBehaviour:
   - question: I have to go!
     answer: Take care now
     reaction: 
-    visited: 1
+    visited: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}

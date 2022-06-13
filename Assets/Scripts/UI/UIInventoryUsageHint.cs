@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class UIInventoryUsageHint : MonoBehaviour
 {
-    [SerializeField] Transform player = null;
+    [SerializeField] Transform player;
+    [SerializeField] Transform gameplayManager;
 
     public InventoryItem DraggedInventoryItem { get; set; }
     public InventoryItem HoveredInventoryItem { get; set; }
@@ -14,7 +15,9 @@ public class UIInventoryUsageHint : MonoBehaviour
 
     void Update()
     {
-        if (player.GetComponent<PlayerController>().GetState() == PlayerController.State.Idle) {
+        bool isPlayerIdle = player.GetComponent<PlayerController>().GetState() == PlayerController.State.Idle;
+        bool isCutscenePlaying = gameplayManager.GetComponent<CutScenePlayer>().IsPlayingCutScene();
+        if (isPlayerIdle && !isCutscenePlaying) {
             string currentHint = "";
             if (HoveredInteractive != null && DraggedInventoryItem != null) {
                 currentHint = "Use " + DraggedInventoryItem.itemName + " on " + HoveredInteractive.hintText;
