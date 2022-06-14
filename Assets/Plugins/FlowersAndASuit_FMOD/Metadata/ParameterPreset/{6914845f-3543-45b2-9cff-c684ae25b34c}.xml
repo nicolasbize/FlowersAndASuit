@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{6914845f-3543-45b2-9cff-c684ae25b34c}">
+		<property name="name">
+			<value>Fisherman Dialogue</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b8c6e295-5690-4391-8362-192fcc77476a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{37971db2-29e7-46dd-8491-967a3680c63e}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{37971db2-29e7-46dd-8491-967a3680c63e}">
+		<property name="maximum">
+			<value>11</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
