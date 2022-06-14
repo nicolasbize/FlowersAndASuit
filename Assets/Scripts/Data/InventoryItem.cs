@@ -13,6 +13,7 @@ public class InventoryItem : ScriptableObject
     {
         public string objectName;
         public string callbackName;
+        public CutScene cutscene;
     }
 
     [System.Serializable]

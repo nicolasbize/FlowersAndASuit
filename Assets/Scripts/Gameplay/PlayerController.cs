@@ -51,6 +51,9 @@ public class PlayerController : MonoBehaviour
     public void AddToInventory(InventoryItem item) {
         inventoryManager.GetComponent<UIInventoryManager>().AddToInventory(item);
     }
+    public void RemoveFromInventory(string itemName) {
+        inventoryManager.GetComponent<UIInventoryManager>().RemoveFromInventory(itemName);
+    }
 
     public bool HasItemInInventory(InventoryItem item) {
         return inventoryManager.GetComponent<UIInventoryManager>().HasItemInInventory(item);
@@ -77,6 +80,8 @@ public class PlayerController : MonoBehaviour
                     hovered.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", 0f);
                     hovered = null;
                 }
+            } else {
+                CleanTipsAndOutline();
             }
         }
     }
@@ -175,7 +180,12 @@ public class PlayerController : MonoBehaviour
         if (hovered != null) {
             Interaction interaction = new List<Interaction>(currentItemDragged.interactions).Find(i => i.objectName == hovered.name);
             if (interaction != null) {
-                Invoke(interaction.callbackName, 0);
+                if (interaction.callbackName.Length > 0) {
+                    Invoke(interaction.callbackName, 0);
+                } else if (interaction.cutscene != null) {
+                    CleanTipsAndOutline();
+                    cutsceneManager.GetComponent<CutScenePlayer>().PlayCutscene(interaction.cutscene);
+                }
             } else {
                 GetComponent<Interactive>().floatingTextManager.AddText(gameObject, inventoryManager.GetComponent<UIInventoryManager>().GetNextNegativeUseFeedback());
             }

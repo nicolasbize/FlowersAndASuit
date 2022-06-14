@@ -40,7 +40,11 @@ public class CutScenePlayer : MonoBehaviour
         if (currentStep != null) {
             switch (currentStep.type) {
                 case StepType.MoveCharacter:
-                    currentCharacter.transform.position = Vector3.MoveTowards(currentCharacter.transform.position, currentStep.targetLocation, moveSpeed * Time.deltaTime);
+                    float speed = moveSpeed;
+                    if (currentStep.interactionDuration > 0) {
+                        speed = currentStep.interactionDuration;
+                    }
+                    currentCharacter.transform.position = Vector3.MoveTowards(currentCharacter.transform.position, currentStep.targetLocation, speed * Time.deltaTime);
                     if (Mathf.Abs(currentCharacter.transform.position.x - currentStep.targetLocation.x) < margin) {
                         float x = Mathf.Round(currentCharacter.transform.position.x * 72) / 72;
                         float y = Mathf.Round(currentCharacter.transform.position.y * 72) / 72;
@@ -88,6 +92,9 @@ public class CutScenePlayer : MonoBehaviour
                 break;
             case StepType.MoveCharacter:
                 currentCharacter = GameObject.Find(step.character);
+                if (currentCharacter.GetComponent<SpriteRenderer>() != null) {
+                    currentCharacter.GetComponent<SpriteRenderer>().flipX = step.flipValue;
+                }
                 break;
             case StepType.AnimateCharacter:
                 currentCharacter = GameObject.Find(step.character);
@@ -124,7 +131,15 @@ public class CutScenePlayer : MonoBehaviour
                 newObject.position = step.targetLocation;
                 Advance();
                 break;
+            case StepType.RemoveFromInventory:
+                GameObject.Find("Enzo").GetComponent<PlayerController>().RemoveFromInventory(step.character);
+                Advance();
+                break;
             case StepType.Wait:
+                currentCharacter = GameObject.Find(step.character);
+                if (step.text != "") {
+                    GetComponent<FloatingTextManager>().AddText(currentCharacter, step.text);
+                }
                 StartCoroutine(WaitFor(step.interactionDuration));
                 break;
 
