@@ -1,0 +1,217 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87183926066d904ab1fd24c3f2d31aa, type: 3}
+  m_Name: Paulo
+  m_EditorClassIdentifier: 
+  greeting: Hello there!
+  reply: Ah, welcome to Paulo's handcrafted suits!   The most beautiful italian suits  
+    in the entire world!
+  fmodEvent: 0
+  branches:
+  - question: That's great, I'm actually looking for a suit!
+    answer: Well then, just look around   and pick a suit you want!
+    reaction: 
+    visited: 0
+    requiresPlantedDrugs: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
+    final: 0
+    fmodQuestionId: 0
+    fmodAnswerId: 0
+    fmodReactionId: 0
+    branches:
+    - question: Hmm.. I don't see any suits.
+      answer: That's right my friend!   The suits are so beautiful they sold out!
+      reaction: 
+      visited: 0
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
+      final: 0
+      fmodQuestionId: 0
+      fmodAnswerId: 0
+      fmodReactionId: 0
+      branches:
+      - question: Soo... When will you have some more?
+        answer: This is not MacDonalds!   A suit takes time and love!   It is a work
+          of art!   Like the Cappella Sistina!
+        reaction: 
+        visited: 0
+        requiresPlantedDrugs: 0
+        objectGained: {fileID: 0}
+        requiresObject: {fileID: 0}
+        cutscene: {fileID: 0}
+        final: 0
+        fmodQuestionId: 0
+        fmodAnswerId: 0
+        fmodReactionId: 0
+        branches:
+        - question: Are you really comparing yourself to Michelangelo?
+          answer: Oh grazie for the compliment amico!   But I feel closer to Leonardo
+            Di Vinci!
+          reaction: 
+          visited: 0
+          requiresPlantedDrugs: 0
+          objectGained: {fileID: 0}
+          requiresObject: {fileID: 0}
+          cutscene: {fileID: 0}
+          final: 0
+          fmodQuestionId: 0
+          fmodAnswerId: 0
+          fmodReactionId: 0
+          branches: []
+        - question: Soo... Could you make me one then?
+          answer: Did Rome get built in one day?   No signore!
+          reaction: 
+          visited: 0
+          requiresPlantedDrugs: 0
+          objectGained: {fileID: 0}
+          requiresObject: {fileID: 0}
+          cutscene: {fileID: 0}
+          final: 0
+          fmodQuestionId: 0
+          fmodAnswerId: 0
+          fmodReactionId: 0
+          branches: []
+      - question: That's not helpful.   Anything in storage?
+        answer: In a storage box?   Are you out of your mind?   These suits do not
+          fold!
+        reaction: 
+        visited: 0
+        requiresPlantedDrugs: 0
+        objectGained: {fileID: 0}
+        requiresObject: {fileID: 0}
+        cutscene: {fileID: 0}
+        final: 0
+        fmodQuestionId: 0
+        fmodAnswerId: 0
+        fmodReactionId: 0
+        branches: []
+    - question: How much does a suit cost?
+      answer: Oh money doesn't matter!   These are the best suits in the world!
+      reaction: 
+      visited: 0
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
+      final: 0
+      fmodQuestionId: 0
+      fmodAnswerId: 0
+      fmodReactionId: 0
+      branches:
+      - question: Are you saying they're free?
+        answer: Twelve thousand dollars.
+        reaction: 
+        visited: 0
+        requiresPlantedDrugs: 0
+        objectGained: {fileID: 0}
+        requiresObject: {fileID: 0}
+        cutscene: {fileID: 0}
+        final: 0
+        fmodQuestionId: 0
+        fmodAnswerId: 0
+        fmodReactionId: 0
+        branches: []
+      - question: Probably costs an arm and a leg
+        answer: Yes, yes! But for the pants only.   The jacket costs a bit a more.
+        reaction: 
+        visited: 0
+        requiresPlantedDrugs: 0
+        objectGained: {fileID: 0}
+        requiresObject: {fileID: 0}
+        cutscene: {fileID: 0}
+        final: 0
+        fmodQuestionId: 0
+        fmodAnswerId: 0
+        fmodReactionId: 0
+        branches: []
+  - question: Any good pizza around here?
+    answer: Ah si! My cousin Marco    makes the best pizza in the world!
+    reaction: 
+    visited: 0
+    requiresPlantedDrugs: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
+    final: 0
+    fmodQuestionId: 0
+    fmodAnswerId: 0
+    fmodReactionId: 0
+    branches:
+    - question: You guys are very modest
+      answer: Si, si, very true!   Very honest!
+      reaction: 
+      visited: 0
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
+      final: 0
+      fmodQuestionId: 0
+      fmodAnswerId: 0
+      fmodReactionId: 0
+      branches:
+      - question: That's not what I said
+        answer: Hahaha you're funny!   So you buy a suit from Paulo?
+        reaction: 
+        visited: 0
+        requiresPlantedDrugs: 0
+        objectGained: {fileID: 0}
+        requiresObject: {fileID: 0}
+        cutscene: {fileID: 0}
+        final: 0
+        fmodQuestionId: 0
+        fmodAnswerId: 0
+        fmodReactionId: 0
+        branches: []
+      - question: Do you like pineapple on pizza?
+        answer: Mama mia!   What a horrible, horrible thing to say!
+        reaction: 
+        visited: 0
+        requiresPlantedDrugs: 0
+        objectGained: {fileID: 0}
+        requiresObject: {fileID: 0}
+        cutscene: {fileID: 0}
+        final: 0
+        fmodQuestionId: 0
+        fmodAnswerId: 0
+        fmodReactionId: 0
+        branches: []
+    - question: Great, where can I get some?
+      answer: Oh he's not here!   He medidates for the next pizza!
+      reaction: 
+      visited: 0
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
+      final: 0
+      fmodQuestionId: 0
+      fmodAnswerId: 0
+      fmodReactionId: 0
+      branches: []
+  - question: I guess I'll go now
+    answer: Addio!
+    reaction: 
+    visited: 0
+    requiresPlantedDrugs: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
+    final: 1
+    fmodQuestionId: 0
+    fmodAnswerId: 0
+    fmodReactionId: 0
+    branches: []
