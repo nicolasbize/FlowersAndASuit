@@ -14,6 +14,30 @@ TextureImporter:
   - first:
       213: -1381831316383719903
     second: sandy_3
+  - first:
+      213: 4495967927007057926
+    second: sandy_4
+  - first:
+      213: -7609330149227445567
+    second: sandy_5
+  - first:
+      213: -8379735579371703910
+    second: sandy_6
+  - first:
+      213: -6144185626071497023
+    second: sandy_7
+  - first:
+      213: -6034234772898607258
+    second: sandy_8
+  - first:
+      213: 8792839899734103489
+    second: sandy_9
+  - first:
+      213: -3307023048178714695
+    second: sandy_10
+  - first:
+      213: 659899094121946935
+    second: sandy_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -119,7 +143,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
+        y: 768
         width: 384
         height: 384
       alignment: 0
@@ -140,7 +164,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 384
+        y: 768
         width: 384
         height: 384
       alignment: 0
@@ -160,8 +184,8 @@ TextureImporter:
       name: sandy_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 768
+        y: 768
         width: 384
         height: 384
       alignment: 0
@@ -181,8 +205,8 @@ TextureImporter:
       name: sandy_3
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
+        x: 1152
+        y: 768
         width: 384
         height: 384
       alignment: 0
@@ -194,6 +218,174 @@ TextureImporter:
       bones: []
       spriteID: 12e107f2dbfb2dce0800000000000000
       internalID: -1381831316383719903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandy_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6081eca4203e46e30800000000000000
+      internalID: 4495967927007057926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandy_5
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2c0a49b8a366690800000000000000
+      internalID: -7609330149227445567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandy_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91f8d763e235bb80800000000000000
+      internalID: -8379735579371703910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandy_7
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c682f3f9b77bbaa0800000000000000
+      internalID: -6144185626071497023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandy_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f811ed177124ca0800000000000000
+      internalID: -6034234772898607258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandy_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c558866d41760a70800000000000000
+      internalID: 8792839899734103489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandy_10
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7374d1f081b12d0800000000000000
+      internalID: -3307023048178714695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandy_11
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f9db4dabe682900800000000000000
+      internalID: 659899094121946935
       vertices: []
       indices: 
       edges: []

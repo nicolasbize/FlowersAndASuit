@@ -57,7 +57,7 @@ MonoBehaviour:
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 2
-    animationProperty: is_interacting
+    animationProperty: is_calling
     animationValue: 1
     animationTrigger: 
     flipValue: 0
@@ -141,6 +141,16 @@ MonoBehaviour:
     animationValue: 0
     animationTrigger: 
     flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+  - type: 3
+    character: Enzo
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: is_calling
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 1
     objectCreatedPrefab: {fileID: 0}
     text: 
   - type: 3

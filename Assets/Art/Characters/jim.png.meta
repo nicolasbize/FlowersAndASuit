@@ -80,6 +80,36 @@ TextureImporter:
   - first:
       213: -3657427417312755123
     second: jim_11
+  - first:
+      213: 5508206808857051875
+    second: jim_12
+  - first:
+      213: 2063942679078337893
+    second: jim_13
+  - first:
+      213: 2859314484097631971
+    second: jim_14
+  - first:
+      213: -3634688030891676607
+    second: jim_15
+  - first:
+      213: -2788005835643274788
+    second: jim_16
+  - first:
+      213: 9189437105102830796
+    second: jim_17
+  - first:
+      213: -2500511398934981492
+    second: jim_18
+  - first:
+      213: -5187986573783135854
+    second: jim_19
+  - first:
+      213: 7254048938226457770
+    second: jim_20
+  - first:
+      213: 3436869727025569393
+    second: jim_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -185,7 +215,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 768
+        y: 1152
         width: 384
         height: 384
       alignment: 0
@@ -206,7 +236,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 768
+        y: 1152
         width: 384
         height: 384
       alignment: 0
@@ -226,8 +256,8 @@ TextureImporter:
       name: jim_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 384
+        x: 768
+        y: 1152
         width: 384
         height: 384
       alignment: 0
@@ -247,8 +277,8 @@ TextureImporter:
       name: jim_3
       rect:
         serializedVersion: 2
-        x: 384
-        y: 384
+        x: 1152
+        y: 1152
         width: 384
         height: 384
       alignment: 0
@@ -268,8 +298,8 @@ TextureImporter:
       name: jim_4
       rect:
         serializedVersion: 2
-        x: 768
-        y: 384
+        x: 1536
+        y: 1152
         width: 384
         height: 384
       alignment: 0
@@ -289,8 +319,8 @@ TextureImporter:
       name: jim_5
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 384
+        x: 1920
+        y: 1152
         width: 384
         height: 384
       alignment: 0
@@ -311,7 +341,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 768
         width: 384
         height: 384
       alignment: 0
@@ -332,7 +362,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 0
+        y: 768
         width: 384
         height: 384
       alignment: 0
@@ -353,7 +383,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 768
-        y: 0
+        y: 768
         width: 384
         height: 384
       alignment: 0
@@ -374,7 +404,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1152
-        y: 0
+        y: 768
         width: 384
         height: 384
       alignment: 0
@@ -395,7 +425,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1536
-        y: 0
+        y: 768
         width: 384
         height: 384
       alignment: 0
@@ -416,7 +446,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1920
-        y: 0
+        y: 768
         width: 384
         height: 384
       alignment: 0
@@ -428,6 +458,216 @@ TextureImporter:
       bones: []
       spriteID: d428c4f44253e3dc0800000000000000
       internalID: -3657427417312755123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2005fa8e4117c40800000000000000
+      internalID: 5508206808857051875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d7b3f6ee894ac10800000000000000
+      internalID: 2063942679078337893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6c4cdbf535ea720800000000000000
+      internalID: 2859314484097631971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_15
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c66594e7efe8dc0800000000000000
+      internalID: -3634688030891676607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_16
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd934c6c6730f49d0800000000000000
+      internalID: -2788005835643274788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_17
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cccb27ffb50778f70800000000000000
+      internalID: 9189437105102830796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c845aa581266c4dd0800000000000000
+      internalID: -2500511398934981492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2990922c2b19008b0800000000000000
+      internalID: -5187986573783135854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_20
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac9942631f8ba460800000000000000
+      internalID: 7254048938226457770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jim_21
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e17a2bec632bf20800000000000000
+      internalID: 3436869727025569393
       vertices: []
       indices: 
       edges: []
