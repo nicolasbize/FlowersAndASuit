@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="ParameterPreset" id="{b2698005-dce4-4c39-b8da-f69e14881c7c}">
 		<property name="name">
-			<value>Coffee Shop Dialogue Line</value>
+			<value>Dialog Line</value>
 		</property>
 		<relationship name="folder">
 			<destination>{b8c6e295-5690-4391-8362-192fcc77476a}</destination>

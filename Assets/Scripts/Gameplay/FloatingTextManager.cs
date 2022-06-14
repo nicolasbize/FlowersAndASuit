@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static Dialog;
 
 public class FloatingTextManager : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class FloatingTextManager : MonoBehaviour
     bool isShowing = false;
     bool isMouthOpen = false;
     GameObject currentTarget = null;
-    Queue<Tuple<GameObject, string>> messageQueue = new Queue<Tuple<GameObject, string>>();
+    Queue<SingleDialogText> messageQueue = new Queue<SingleDialogText>();
 
     public delegate void OnQueueEmpty();
     public event OnQueueEmpty onEmptyQueue;
@@ -21,17 +22,24 @@ public class FloatingTextManager : MonoBehaviour
         Invoke("MoveMouth", 0f);
     }
 
-    public void AddText(GameObject target, string text) {
+    public void AddText(GameObject target, string text, AudioUtils.DialogConversation fmodEvent = AudioUtils.DialogConversation.None, int fmodId = 0) {
         string[] phrases = text.Split(new[] { "   " }, StringSplitOptions.None);
-        foreach (string phrase in phrases) {
-            if (phrase.Trim().Length > 0) {
-                messageQueue.Enqueue(new Tuple<GameObject, string>(target, phrase));
+        for (int i=0; i<phrases.Length; i++) {
+            if (phrases[i].Trim().Length > 0) {
+                SingleDialogText sentence = new SingleDialogText();
+                sentence.speaker = target;
+                sentence.text = phrases[i];
+                if (i == 0) { // even though we break down long sentences into several displayed strings, we only have a single audio event
+                    sentence.fmodEvent = fmodEvent;
+                    sentence.fmodId = fmodId;
+                }
+                messageQueue.Enqueue(sentence);
             }
         }
     }
 
     public bool HasEnquedMessagesForOtherThan(GameObject target) {
-        return new List<Tuple<GameObject, string>>(messageQueue.ToArray()).Find(t => t.Item1.name != target.name) != null;
+        return new List<SingleDialogText>(messageQueue.ToArray()).Find(t => t.speaker.name != target.name) != null;
     }
 
     public bool HasMessagesInQueue() {
@@ -43,11 +51,11 @@ public class FloatingTextManager : MonoBehaviour
     }
 
     public void RemoveMessagesFor(GameObject target) {
-        Queue<Tuple<GameObject, string>> newQueue = new Queue<Tuple<GameObject, string>>();
+        Queue<SingleDialogText> newQueue = new Queue<SingleDialogText>();
         while (messageQueue.Count > 0) {
-            Tuple<GameObject, string> tuple = messageQueue.Dequeue();
-            if (tuple.Item1.name != target.name) {
-                newQueue.Enqueue(tuple);
+            SingleDialogText message = messageQueue.Dequeue();
+            if (message.speaker.name != target.name) {
+                newQueue.Enqueue(message);
             }
         }
         messageQueue = newQueue;
@@ -56,8 +64,7 @@ public class FloatingTextManager : MonoBehaviour
 
     private void Update() {
         if (!isShowing && messageQueue.Count > 0) {
-            Tuple<GameObject, string> message = messageQueue.Dequeue();
-            StartCoroutine(ShowMessage(message.Item1, message.Item2));
+            StartCoroutine(ShowMessage(messageQueue.Dequeue()));
         }
         // FIXME: this forces every animator to have a mouth_open property, even animated objects in the game.
         if (isShowing) {
@@ -65,17 +72,20 @@ public class FloatingTextManager : MonoBehaviour
         }
     }
 
-    IEnumerator ShowMessage(GameObject target, string text) {
-        textElement.GetComponent<TextMeshPro>().text = text;
+    IEnumerator ShowMessage(SingleDialogText message) {
+        textElement.GetComponent<TextMeshPro>().text = message.text;
         float overrideDistAbove = 0f;
-        if (target.GetComponent<Interactive>() != null) {
-            overrideDistAbove = target.GetComponent<Interactive>().overrideTextDistanceAboveHead;
+        if (message.speaker.GetComponent<Interactive>() != null) {
+            overrideDistAbove = message.speaker.GetComponent<Interactive>().overrideTextDistanceAboveHead;
         }
-        float distAbove = target.GetComponent<SpriteRenderer>().sprite.bounds.extents.y + (overrideDistAbove == 0 ? distanceAboveHead : overrideDistAbove);
-        textElement.position = target.transform.position + Vector3.up * distAbove;
+        float distAbove = message.speaker.GetComponent<SpriteRenderer>().sprite.bounds.extents.y + (overrideDistAbove == 0 ? distanceAboveHead : overrideDistAbove);
+        textElement.position = message.speaker.transform.position + Vector3.up * distAbove;
         textElement.GetComponent<MeshRenderer>().enabled = true;
         isShowing = true;
-        currentTarget = target;
+        currentTarget = message.speaker;
+        if (message.fmodEvent != AudioUtils.DialogConversation.None) {
+            AudioUtils.PlaySound(message.fmodEvent, Camera.main.transform.position, message.fmodId);
+        }
 
         yield return new WaitForSeconds(speedDisplay);
         isShowing = false;

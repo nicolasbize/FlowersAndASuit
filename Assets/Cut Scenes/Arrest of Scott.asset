@@ -85,7 +85,7 @@ MonoBehaviour:
     text: 
   - type: 2
     character: 
-    targetLocation: {x: 6.35, y: 0, z: 0}
+    targetLocation: {x: 4.070837, y: 0, z: 0}
     interactionDuration: 2
     animationProperty: 
     animationValue: 0

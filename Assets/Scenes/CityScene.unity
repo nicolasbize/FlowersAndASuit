@@ -900,7 +900,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7222223, y: 0, z: 0}
+  m_LocalPosition: {x: -45.416668, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1281,7 +1281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 837462971036866139, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -62.72222
+      value: -62.583332
       objectReference: {fileID: 0}
     - target: {fileID: 837462971036866139, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1387,6 +1387,38 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b1b55d7e5eaf0e4468b862d3b9c11d6e, type: 2}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: PlayEvent
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: Params.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Dialogue/Coffee Shop Owner
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: -1908833754
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1322185598
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: -982760819
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: 864951921
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: Params.Array.data[0].Name
+      value: Coffee Shop Dialogue Line
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
 --- !u!1 &1073724684
@@ -1461,7 +1493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c43cca0cf4620a44b41fd05fbfbf8dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCutscene: {fileID: 11400000, guid: f7330bbb82415f44cb8e8e4ff9f100c1, type: 2}
+  currentCutscene: {fileID: 0}
   margin: 0.01
   moveSpeed: 2
   topMovieStrip: {fileID: 1493240897}
@@ -1557,9 +1589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1765d67ab664d0d45bf9cd45d2bb3c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryItems:
-  - {fileID: 11400000, guid: 106b82d89c1a1fe46a1f049a453789a5, type: 2}
-  - {fileID: 11400000, guid: 68052d24f4aaf4c41a03b86c82c27033, type: 2}
+  inventoryItems: []
   prefabInventoryItem: {fileID: 2292758150037689329, guid: 2254fb5401578ff4ebb6fa9c3a827cc0, type: 3}
   UI: {fileID: 1717708911}
   hintTextObject: {fileID: 600736688}
@@ -1694,7 +1724,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143019893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7222223, y: 0, z: 0}
+  m_LocalPosition: {x: -45.416668, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2266,6 +2296,42 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 801efb0d4dba8ec45994991c983aa544, type: 2}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: PlayEvent
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: Params.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Dialogue/Coffee Shop Owner
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: -1908833754
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1322185598
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: -982760819
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: 864951921
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952496779697110412, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
+      propertyPath: Params.Array.data[0].Name
+      value: Coffee Shop Dialogue Line
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6015f1aaafceda1419f3f3d339ad6c56, type: 3}
 --- !u!4 &1173659576 stripped

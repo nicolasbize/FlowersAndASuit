@@ -67,10 +67,10 @@ public class Interactive : MonoBehaviour
             currentTarget.GetComponent<Animator>().SetBool("is_talking", true);
             currentPlayer.GetComponent<Animator>().SetBool("is_talking", true);
             if (!String.IsNullOrEmpty(dialog.greeting)) {
-                floatingTextManager.AddText(currentPlayer, dialog.greeting);
+                floatingTextManager.AddText(currentPlayer, dialog.greeting, dialog.fmodEvent, 0);
             }
             if (!String.IsNullOrEmpty(dialog.reply)) {
-                floatingTextManager.AddText(currentTarget, dialog.reply);
+                floatingTextManager.AddText(currentTarget, dialog.reply, dialog.fmodEvent, 1);
             }
         } else {
             string text = observation;
@@ -134,15 +134,13 @@ public class Interactive : MonoBehaviour
             itemGainedFromDialog = branch.objectGained;
         }
         if (branch.question.Length != 0 && branch.cutscene == null) {
-            floatingTextManager.AddText(currentPlayer, branch.question);
-            //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Interactions/Enzo-Jim", Enzo.position, Jim.position, 3);
-
+            floatingTextManager.AddText(currentPlayer, branch.question, dialog.fmodEvent, branch.fmodQuestionId);
         }
         if (branch.answer.Length != 0) {
-            floatingTextManager.AddText(currentTarget, branch.answer);
+            floatingTextManager.AddText(currentTarget, branch.answer, dialog.fmodEvent, branch.fmodAnswerId);
         }
         if (branch.reaction.Length != 0) {
-            floatingTextManager.AddText(currentPlayer, branch.reaction);
+            floatingTextManager.AddText(currentPlayer, branch.reaction, dialog.fmodEvent, branch.fmodReactionId);
         }
         if (branch.branches.Length == 0) {
             if (branch.final) {

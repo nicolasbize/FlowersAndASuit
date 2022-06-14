@@ -14,68 +14,97 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greeting: Hi there!
   reply: Hey hon, what can I get you?
+  fmodEvent: 1
   branches:
   - question: Could I please use your phone?
     answer: Sure, but don't stay too long!
     reaction: 
     visited: 0
+    requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 0
+    fmodQuestionId: 2
+    fmodAnswerId: 3
+    fmodReactionId: 0
     branches:
     - question: I can't seem to remember any number!
       answer: You're getting old sweetie!
       reaction: 
       visited: 0
+      requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
+      fmodQuestionId: 0
+      fmodAnswerId: 0
+      fmodReactionId: 0
       branches: []
     - question: (Call phone booth)
       answer: 
       reaction: Thanks
-      visited: 1
+      visited: 0
+      requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
       requiresObject: {fileID: 11400000, guid: 68052d24f4aaf4c41a03b86c82c27033, type: 2}
       cutscene: {fileID: 11400000, guid: f7330bbb82415f44cb8e8e4ff9f100c1, type: 2}
       final: 1
+      fmodQuestionId: 0
+      fmodAnswerId: 0
+      fmodReactionId: 0
       branches: []
   - question: Any news around town?
     answer: Oh, everyone is pretty excited   about the upcoming mashed potato wrestling
       competition
     reaction: 
     visited: 0
+    requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 0
+    fmodQuestionId: 6
+    fmodAnswerId: 7
+    fmodReactionId: 0
     branches:
     - question: I keep having deja-vu moments!
       answer: Wait, didn't you just ask me that?
       reaction: 
       visited: 0
+      requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
+      fmodQuestionId: 10
+      fmodAnswerId: 11
+      fmodReactionId: 0
       branches: []
   - question: I'm late for a date.   Any advice for me?
     answer: Being sorry is all about intent.   And gifts of course, lots of them!
     reaction: 
     visited: 0
+    requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 0
+    fmodQuestionId: 8
+    fmodAnswerId: 9
+    fmodReactionId: 0
     branches: []
   - question: I have to go!
     answer: Take care now
     reaction: 
-    visited: 0
+    visited: 1
+    requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 1
+    fmodQuestionId: 12
+    fmodAnswerId: 13
+    fmodReactionId: 0
     branches: []

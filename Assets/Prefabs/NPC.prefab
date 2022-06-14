@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 837462971036866141}
   - component: {fileID: 837462971036866140}
   - component: {fileID: 3046872180791428536}
-  - component: {fileID: 5952496779697110412}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -124,13 +123,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7390a51b2ba61d14aadd42dcc0ab62ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintText: 
   distanceToInteraction: 3
   observation: 
+  observationAfterTakingObject: 
+  itemGained: {fileID: 0}
+  destroyAfterPickup: 0
   dialog: {fileID: 11400000, guid: f8b4cb20bf6c30f4791650e84b2e693c, type: 2}
   dialogContainer: {fileID: 0}
+  cutsceneManager: {fileID: 0}
   floatingTextManager: {fileID: 0}
   overrideThickness: 0
   overrideTextDistanceAboveHead: 0
+  warpTo: {fileID: 0}
+  busy: 0
+  facePlayer: 0
 --- !u!95 &3046872180791428536
 Animator:
   serializedVersion: 3
@@ -150,33 +157,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5952496779697110412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837462971036866143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  Event: 
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
