@@ -22,7 +22,7 @@ public class Interactive : MonoBehaviour
     public Transform warpTo;
     public bool busy;
     public bool facePlayer;
-    public bool floorPickup;
+    public bool isPickup;
     private GameObject currentPlayer;
     GameObject currentTarget;
     Branch[] currentBranches;

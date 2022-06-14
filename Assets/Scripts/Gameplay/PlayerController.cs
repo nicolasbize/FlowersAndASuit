@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
 
         animator.SetBool("is_moving", state == State.Moving);
-        animator.SetBool("is_interacting", state == State.Interacting);
         animator.SetBool("is_talking", state == State.Talking);
         
 
@@ -101,27 +100,30 @@ public class PlayerController : MonoBehaviour
                 transform.position = new Vector3(x, y, z);
                 state = State.Idle;
                 if (isPlantingDrugs) {
-                    state = State.Interacting;
+                    GetComponent<Animator>().SetTrigger("interact_background");
                     isPlantingDrugs = false;
+                    state = State.Interacting;
                     StartCoroutine(PlantDrugs());
                 }
             }
         }
         if (state == State.Idle && interactiveTarget != null) {
+            state = State.Interacting;
+            Interactive interactive = interactiveTarget.GetComponent<Interactive>();
             // have the player point towards the target before interacting
             direction = transform.position.x < interactiveTarget.transform.position.x ? Vector2.right : Vector2.left;
             spriteRenderer.flipX = direction == Vector2.left;
-            if (interactiveTarget.GetComponent<Interactive>().busy) {
+            if (interactive.busy) {
                 GetComponent<Interactive>().floatingTextManager.AddText(gameObject, "Seems busy at the moment...");
-                interactiveTarget = null;
             } else {
-                if (interactiveTarget.GetComponent<Interactive>().distanceToInteraction == 0) {
-                    state = State.Interacting;
+                if (interactive.distanceToInteraction == 0) {
+                    GetComponent<Animator>().SetTrigger(interactive.isPickup ? "pick_up" : "interact_background");
                 } else {
                     state = State.Talking;
                 }
                 CleanTipsAndOutline();
                 if (interactiveTarget.GetComponent<Interactive>().warpTo != null) {
+                    GetComponent<Animator>().SetTrigger("interact_background");
                     transitioner.GetComponent<Animator>().SetTrigger("EnterDoor");
                     StartCoroutine(WarpTo(interactiveTarget.GetComponent<Interactive>().warpTo));
                 } else {
@@ -129,6 +131,7 @@ public class PlayerController : MonoBehaviour
                     inventoryManager.GetComponent<UIInventoryManager>().active = false;
                 }
             }
+            interactiveTarget = null;
         }
     }
 

@@ -64,6 +64,10 @@ PrefabInstance:
       value: Fancy Suit
       objectReference: {fileID: 0}
     - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
+      propertyPath: isPickup
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605873756938622310, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
       propertyPath: itemGained
       value: 
       objectReference: {fileID: 11400000, guid: caf8ab49be5b48f4ca55a8f0386bb921, type: 2}
