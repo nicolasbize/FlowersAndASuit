@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{cecf49cf-fc1d-4bd0-8d0f-499317d9aed1}">
+		<property name="name">
+			<value>Flower Shop Dialogue</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b8c6e295-5690-4391-8362-192fcc77476a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{95d37251-f261-493e-81dd-288e3cf7c84b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{95d37251-f261-493e-81dd-288e3cf7c84b}">
+		<property name="maximum">
+			<value>36</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="ParameterPreset" id="{6914845f-3543-45b2-9cff-c684ae25b34c}">
 		<property name="name">
-			<value>Fisherman Dialogue</value>
+			<value>Fisherman Dialogue Line</value>
 		</property>
 		<relationship name="folder">
 			<destination>{b8c6e295-5690-4391-8362-192fcc77476a}</destination>
