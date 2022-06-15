@@ -9,15 +9,17 @@ public static class AudioUtils
 
     public enum DialogConversation
     {
-        None, Sandy
+        None, Sandy, Al
     }
 
     private static readonly Dictionary<DialogConversation, FMOD.Studio.EventInstance> FmodEvents = new Dictionary<DialogConversation, FMOD.Studio.EventInstance>();
     private static readonly Dictionary<DialogConversation, string> eventNames = new Dictionary<DialogConversation, string>() { 
-        { DialogConversation.Sandy, "event:/Dialogue/Coffee Shop Owner" }
+        { DialogConversation.Sandy, "event:/Dialogue/Coffee Shop Owner" },
+        { DialogConversation.Al, "event:/Dialogue/Fisherman" },
     };
     private static readonly Dictionary<DialogConversation, string> parameterNames = new Dictionary<DialogConversation, string>() {
-        { DialogConversation.Sandy, "Coffee Shop Dialogue Line" }
+        { DialogConversation.Sandy, "Coffee Shop Dialogue Line" },
+        { DialogConversation.Al, "Fisherman Dialogue" },
     };
 
     public static void PlaySound(DialogConversation conversation, Vector3 position, int conversationId) {

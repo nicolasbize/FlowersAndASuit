@@ -12,10 +12,11 @@ public class CutScenePlayer : MonoBehaviour
     [SerializeField] float moveSpeed = 2f;
     [SerializeField] Transform topMovieStrip;
     [SerializeField] Transform bottomMovieStrip;
+    [SerializeField] Transform UI;
     Queue<Step> remainingSteps = new Queue<Step>();
     Step currentStep = null;
     GameObject currentCharacter;
-    Vector3 currentDestination;
+    Vector3 currentDestination = Vector3.zero;
 
     public bool IsPlayingCutScene() {
         return remainingSteps.Count > 0;
@@ -55,7 +56,8 @@ public class CutScenePlayer : MonoBehaviour
                     break;
                 case StepType.CameraPan:
                     Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position, currentStep.targetLocation, moveSpeed * Time.deltaTime);
-                    if (Mathf.Abs(Camera.main.transform.position.x - currentStep.targetLocation.x) < margin) {
+                    if (Mathf.Abs(Camera.main.transform.position.x - currentStep.targetLocation.x) < margin &&
+                        Mathf.Abs(Camera.main.transform.position.y - currentStep.targetLocation.y) < margin) {
                         float x = Mathf.Round(Camera.main.transform.position.x * 72) / 72;
                         float y = Mathf.Round(Camera.main.transform.position.y * 72) / 72;
                         float z = Mathf.Round(Camera.main.transform.position.z * 72) / 72;
@@ -63,13 +65,24 @@ public class CutScenePlayer : MonoBehaviour
                         Advance();
                     }
                     break;
+                case StepType.WaitForClick:
+                    if (Input.GetMouseButtonDown(0)) {
+                        Advance();
+                    }
+                    break;
+                case StepType.ActivateUI:
+                    UI.gameObject.SetActive(true);
+                    Advance();
+                    break;
             }
         }
 
     }
 
     private void Advance() {
-        remainingSteps.Dequeue();
+        if (remainingSteps.Count > 0) {
+            remainingSteps.Dequeue();
+        }
         if (remainingSteps.Count > 0) {
             PlayStep(remainingSteps.Peek());
         }

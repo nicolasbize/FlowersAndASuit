@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New CutScene", menuName = "CutScene")]
 public class CutScene : ScriptableObject
 {
-    public enum StepType { Intro, MoveCharacter, CameraPan, AnimateCharacter, Wait, Outro, Teleport, Destroy, Create, RemoveFromInventory }
+    public enum StepType { Intro, MoveCharacter, CameraPan, AnimateCharacter, Wait, Outro, Teleport, Destroy, Create, RemoveFromInventory, WaitForClick, ActivateUI }
 
     [System.Serializable]
     public class Step

@@ -14,40 +14,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greeting: Catching anything good?
   reply: Ah fish no bite!
+  fmodEvent: 2
   branches:
   - question: Did you try talking nicely to them?
     answer: Fishy, fishy!! Come here fishy fishy!!   Not work!
     reaction: 
     visited: 1
-    objectGained: 
+    requiresPlantedDrugs: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
     final: 0
+    fmodQuestionId: 2
+    fmodAnswerId: 3
+    fmodReactionId: 0
     branches:
     - question: Did you try throwing food in the water?
-      answer: No, I want catch food from water, why throw food in water?
+      answer: No, I want catch food from water!   Why throw food in water?
       reaction: 
       visited: 1
-      objectGained: 
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
       final: 0
+      fmodQuestionId: 9
+      fmodAnswerId: 10
+      fmodReactionId: 0
       branches: []
   - question: Maybe the water is too cold?
     answer: Oh I took care of that, I warm the water!
     reaction: Wait how did you...   Nevermind, I don't think I want to know.
     visited: 1
-    objectGained: 
+    requiresPlantedDrugs: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
     final: 0
+    fmodQuestionId: 4
+    fmodAnswerId: 5
+    fmodReactionId: 0
     branches: []
   - question: Maybe it's too late in the day?
     answer: 'Ha, you no smart, fish don''t know how read clock for time!   I don''t
       even know how read clock! '
     reaction: 
     visited: 1
-    objectGained: 
+    requiresPlantedDrugs: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
     final: 0
+    fmodQuestionId: 7
+    fmodAnswerId: 8
+    fmodReactionId: 0
     branches: []
   - question: I think I need to go
     answer: Allrighty!
     reaction: 
     visited: 1
-    objectGained: 
+    requiresPlantedDrugs: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
     final: 1
+    fmodQuestionId: 11
+    fmodAnswerId: 0
+    fmodReactionId: 0
     branches: []

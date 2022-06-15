@@ -1,13 +1,13 @@
 [LOG] System::create                           : Header version = 2.02.05. Current version = 2.02.05.
-[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0x0.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20205 (123444), maxchannels=256, flags=0x00020000
-[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
-[LOG] OutputCoreAudio::init                    : Output running 2 channels at 44100Hz sample rate.
-[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 512 samples, Software buffer size: 512 samples, Number of software buffers: 4.
-[LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7fc667189608 isAsync 0 updatePeriod 0.02
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 0000017F3FC8EBE8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,8 +16,749 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 141)
 [LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 141)
-[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 141)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB1682D98 : node = 0000017E8B3B8D50
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB1682D98
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8E60
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 513250
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB1682D98
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB16830F8 : node = 0000017E8B3B8710
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB16830F8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8820
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 512000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB16830F8
+[LOG] SoundI::release                          : Enzo_VO (0000017FB1682D98)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F418A6598)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB1688DC8)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168CC38 : node = 0000017F3F13E0B0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168CC38
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F3F13E1C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 515250
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168CC38
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168ADD8 : node = 0000017F3F13ED30
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168ADD8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F3F13EE40
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 512000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168ADD8
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB16830F8)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F0E4FB6F8)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB1683E78)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB1688DC8 : node = 0000017E8EBBAED0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB1688DC8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8EBBAFE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 517165
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB1688DC8
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168CC38)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F3E16AF78)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168A718)
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB168ADD8)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F3E16BAD8)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB168BD08)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168DD18 : node = 0000017E8B3B8AD0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168DD18
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8BE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 518000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168DD18
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB1689EA8 : node = 0000017F3F13E330
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB1689EA8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F3F13E440
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 520426
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB1689EA8
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168B7F8 : node = 0000017E8B3B8710
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168B7F8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8820
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 519648
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168B7F8
+[LOG] SoundI::release                          : Enzo_VO (0000017FB1688DC8)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F418A5898)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB1682D98)
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB168DD18)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F418A5A38)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB168CA88)
+[LOG] SoundI::release                          : Enzo_VO (0000017FB1689EA8)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F3E16C978)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168CC38)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168E8E8 : node = 0000017E8B3B8D50
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168E8E8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8E60
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 522000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168E8E8
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB168B7F8)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F3E169098)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB16897E8)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168F668 : node = 0000017E8B3B8710
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168F668
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8820
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 524115
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168F668
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168E8E8)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F418A63F8)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168FB78)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168CA88 : node = 0000017E8EBBAED0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168CA88
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8EBBAFE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 525500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168CA88
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168F668)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F3E16AF78)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168DD18)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168F158 : node = 0000017E8B3B8710
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168F158
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8820
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 527103
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168F158
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB168CA88)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F0E4FB078)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB168E078)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168E078 : node = 0000017E8B3B8AD0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168E078
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8BE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 525500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168E078
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB1689EA8 : node = 0000017F3F13E470
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB1689EA8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F3F13E580
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 526907
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB1689EA8
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168F158)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F418A68D8)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168F668)
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB168E078)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F418A5898)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB1689488)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168D148 : node = 0000017E8EBBA110
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168D148
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8EBBA220
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 528500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168D148
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB1689EA8)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F418A63F8)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB168EC48)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168F158 : node = 0000017E8EBBA610
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168F158
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8EBBA720
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 530750
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168F158
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168D148)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F418A68D8)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168D4A8)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168E588 : node = 0000017E8EBB8F90
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168E588
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8EBB90A0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 528500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168E588
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB168F158)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F418A6C18)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB168BD08)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168F158 : node = 0000017F0DB72E10
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168F158
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F0DB72F20
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 530750
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168F158
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168E588)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F418A5898)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168E078)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168AA78 : node = 0000017F3F13ED30
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168AA78
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F3F13EE40
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 528500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168AA78
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB168F158)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F418A53B8)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB168A718)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168CA88 : node = 0000017E8EBBA110
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168CA88
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8EBBA220
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 530750
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168CA88
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168AA78)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F418A5898)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168E588)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168B498 : node = 0000017E8EBB8810
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168B498
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8EBB8920
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 528500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168B498
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB168CA88)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F0E4FB6F8)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB168ADD8)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB16897E8 : node = 0000017E8B3B8710
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB16897E8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8820
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 530750
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB16897E8
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168B498)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F418A6598)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168A718)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168BD08 : node = 0000017F3F13ED30
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168BD08
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F3F13EE40
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 528500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168BD08
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB16897E8)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F418A5898)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB168B7F8)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168CC38 : node = 0000017F3F13E0B0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168CC38
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F3F13E1C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 530750
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168CC38
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168D148 : node = 0000017E8EBB8F90
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168D148
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8EBB90A0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 530442
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168D148
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168BD08)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F418A68D8)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168CA88)
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB168CC38)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F418A6C18)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB168FB78)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168A208 : node = 0000017E8B3B8710
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168A208
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8820
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 533750
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168A208
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168D148)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F418A5898)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168F818)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168D148 : node = 0000017E8B3B8AD0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168D148
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8BE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 533750
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168D148
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168A208)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F3E16A5B8)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168E078)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168D4A8 : node = 0000017E8B3B8710
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168D4A8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8820
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 532946
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168D4A8
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168D148)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F418A63F8)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168D658)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168B498 : node = 0000017E8B3B8AD0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168B498
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8BE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 536000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168B498
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB168D4A8)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F6BBB4548)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB168F668)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168ADD8 : node = 0000017E8B3B8710
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168ADD8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8820
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 540589
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168ADD8
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168B498)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F3E169F38)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB1689998)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168B498 : node = 0000017E8B3B8AD0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168B498
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8BE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 541500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168B498
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168F158 : node = 0000017E8EBB95D0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168F158
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8EBB96E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 544426
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168F158
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168ADD8)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F0E4FB078)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168EDF8)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB16897E8 : node = 0000017E8EBB9710
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB16897E8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8EBB9820
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 514909
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB16897E8
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB168B498)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F418A5A38)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB168B7F8)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168D148 : node = 0000017E8B3B8710
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168D148
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017E8B3B8820
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 543115
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168D148
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168F158)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F418A6598)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168F818)
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB16897E8)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F418A5898)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB168EC48)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168CA88 : node = 0000017F0DB74990
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168CA88
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F0DB74AA0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 546000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168CA88
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB168D148)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F418A5A38)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB168EDF8)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168A718 : node = 0000017F3F13ED30
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168A718
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F3F13EE40
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 514909
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Fisherman_VO', format=5, channels=2, frequency=48000, lengthbytes=289184, lengthpcm=26329945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.341064.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168A718
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000017FB168EC48 : node = 0000017F3F13E330
+[LOG] SystemI::createSound                     : add node to async list : head = 0000017E8BD27508.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000017FB168EC48
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10123296
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 65120
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F3F13E440
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 549351
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Enzo_VO', format=5, channels=2, frequency=48000, lengthbytes=2072192, lengthpcm=26428236, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.353638.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000017FB168EC48
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168CA88)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F418A63F8)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB1689998)
+[LOG] SoundI::release                          : Fisherman_VO (0000017FB168A718)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017F10BB5AA8)
+[LOG] SoundI::release                          :     Fisherman_VO (0000017FB1689488)
+[LOG] SoundI::release                          : Enzo_VO (0000017FB168EC48)
+[LOG] SoundI::release                          :     Enzo_VO (0000017F0E4FB218)
+[LOG] SoundI::release                          :     Enzo_VO (0000017FB168E588)
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -25,3 +766,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.

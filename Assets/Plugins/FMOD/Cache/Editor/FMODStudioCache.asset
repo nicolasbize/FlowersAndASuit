@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7905963837519779302
+--- !u!114 &-8550190584811594073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Jim/Footsteps
+  m_Name: event:/SFX/UI/Pocket
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Jim/Footsteps
+  Path: event:/SFX/UI/Pocket
   Guid:
-    Data1: -1907342375
-    Data2: 1179724849
-    Data3: 368276914
-    Data4: -734840583
+    Data1: -183468082
+    Data2: 1191217649
+    Data3: 400403862
+    Data4: 1112617238
   Banks:
   - {fileID: 4205306280637274764}
   IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
+  Is3D: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2290
+  Length: 790
 --- !u!114 &-7143344706812892456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,6 +55,111 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 282500
+--- !u!114 &-4712192809565577931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phonecall Cutscene/Phone Ring
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phonecall Cutscene/Phone Ring
+  Guid:
+    Data1: 881349787
+    Data2: 1222980597
+    Data3: 1428279457
+    Data4: -512786511
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3500
+--- !u!114 &-3298069025539174168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/Mouse Click
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/Mouse Click
+  Guid:
+    Data1: 1392157193
+    Data2: 1331246783
+    Data3: 1400644028
+    Data4: 391971197
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 176
+--- !u!114 &-2065084814122447616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambiences/Interior
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambiences/Interior
+  Guid:
+    Data1: -678330796
+    Data2: 1075923984
+    Data3: 1498393749
+    Data4: 367774415
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 59704
+--- !u!114 &-1345689092047218970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Outdoor/Location
+  m_EditorClassIdentifier: 
+  Name: Location
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2503909532
+    data2: 1125687331
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-1119252936495129812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,6 +184,85 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-841724360688063940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 670139307
+    data2: 3014052201
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-305781423099866301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Fisherman
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Fisherman
+  Guid:
+    Data1: -2101340368
+    Data2: 1265721295
+    Data3: 765141943
+    Data4: -191123335
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 460228559419828986}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 75302
+--- !u!114 &-11489083154556470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Fisherman/Fish
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Fisherman/Fish
+  Guid:
+    Data1: -2033829185
+    Data2: 1160357427
+    Data3: -198671690
+    Data4: 829859377
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4013
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,19 +279,28 @@ MonoBehaviour:
   - {fileID: 2346158573358980646}
   - {fileID: 4205306280637274764}
   EditorEvents:
-  - {fileID: -7905963837519779302}
-  - {fileID: 708493249341917311}
   - {fileID: 7083370896466928834}
   - {fileID: 4653169154470494749}
   - {fileID: -7143344706812892456}
+  - {fileID: -3298069025539174168}
+  - {fileID: 7470300451398982070}
+  - {fileID: -305781423099866301}
+  - {fileID: -2065084814122447616}
+  - {fileID: 5283598114121629958}
+  - {fileID: -4712192809565577931}
+  - {fileID: 6015639440193561595}
+  - {fileID: 7224496205294935554}
+  - {fileID: -11489083154556470}
+  - {fileID: -8550190584811594073}
+  - {fileID: 3612508283910555207}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4205306280637274764}
   StringsBanks:
   - {fileID: 2346158573358980646}
-  cacheTime: 637907365780000000
+  cacheTime: 637908103257847570
   cacheVersion: 10
---- !u!114 &708493249341917311
+--- !u!114 &460228559419828986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,24 +309,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Ambiences/Garden
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fisherman/Fisherman Dialogue
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Ambiences/Garden
-  Guid:
-    Data1: -1334241881
-    Data2: 1225188354
-    Data3: 877987712
-    Data4: 720293592
-  Banks:
-  - {fileID: 4205306280637274764}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 293817
+  Name: Fisherman Dialogue
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 2669339074
+    data2: 3157385774
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &964179419400726625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,9 +334,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Coffee Shop Owner/Coffee Shop Dialogue Line
+  m_Name: parameter:/Coffee Shop Owner/Dialog Line
   m_EditorClassIdentifier: 
-  Name: Coffee Shop Dialogue Line
+  Name: Dialog Line
   StudioPath: 
   Min: 0
   Max: 12
@@ -173,11 +363,39 @@ MonoBehaviour:
   Path: Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637907365780000000
+  lastModified: 637908103257847570
   FileSizes:
   - Name: Desktop
-    Value: 1142
+    Value: 1686
   Exists: 1
+--- !u!114 &3612508283910555207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enzo/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enzo/Footsteps
+  Guid:
+    Data1: -1907342375
+    Data2: 1179724849
+    Data3: 368276914
+    Data4: -734840583
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -841724360688063940}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8876
 --- !u!114 &4205306280637274764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,10 +411,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637907365780000000
+  lastModified: 637908103257827622
   FileSizes:
   - Name: Desktop
-    Value: 6912672
+    Value: 10188416
   Exists: 1
 --- !u!114 &4653169154470494749
 MonoBehaviour:
@@ -225,6 +443,61 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 128000
+--- !u!114 &5283598114121629958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Fisherman/Splash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Fisherman/Splash
+  Guid:
+    Data1: -1105616270
+    Data2: 1179357818
+    Data3: -1808058207
+    Data4: 856283837
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1254
+--- !u!114 &6015639440193561595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambiences/Outdoor
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambiences/Outdoor
+  Guid:
+    Data1: -1334241881
+    Data2: 1225188354
+    Data3: 877987712
+    Data4: 720293592
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1345689092047218970}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 293817
 --- !u!114 &7083370896466928834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,3 +526,57 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 70177
+--- !u!114 &7224496205294935554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phonecall Cutscene/Phone Dial
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phonecall Cutscene/Phone Dial
+  Guid:
+    Data1: -1617740877
+    Data2: 1160969418
+    Data3: -1428208750
+    Data4: 993726263
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7572
+--- !u!114 &7470300451398982070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Jane/Jane Dog
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Jane/Jane Dog
+  Guid:
+    Data1: -1843118809
+    Data2: 1172687121
+    Data3: 649366455
+    Data4: 1631961759
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 301
