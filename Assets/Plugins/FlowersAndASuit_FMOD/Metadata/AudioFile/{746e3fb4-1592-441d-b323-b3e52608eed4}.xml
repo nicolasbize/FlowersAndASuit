@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{746e3fb4-1592-441d-b323-b3e52608eed4}">
+		<property name="assetPath">
+			<value>MX/MelodySolve_EnzosDate.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>6.4615419501133786</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9e84caaf-3346-4f2a-b3d4-5c82be4f5de1}</destination>
+		</relationship>
+	</object>
+</objects>

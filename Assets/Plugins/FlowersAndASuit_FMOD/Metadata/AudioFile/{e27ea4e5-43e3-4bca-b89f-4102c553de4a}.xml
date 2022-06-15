@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e27ea4e5-43e3-4bca-b89f-4102c553de4a}">
+		<property name="assetPath">
+			<value>MX/Rhythm_PaulosZoots.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>49.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9e84caaf-3346-4f2a-b3d4-5c82be4f5de1}</destination>
+		</relationship>
+	</object>
+</objects>
