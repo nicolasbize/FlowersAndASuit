@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: scott-talk-on
+  m_Name: scott-arrested-talk-off
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 6568159343767551108, guid: a3d240a3500dea948900699c1ed6b3c3, type: 3}
+      value: {fileID: -7598813922296340058, guid: a3d240a3500dea948900699c1ed6b3c3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -40,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 6568159343767551108, guid: a3d240a3500dea948900699c1ed6b3c3, type: 3}
+    - {fileID: -7598813922296340058, guid: a3d240a3500dea948900699c1ed6b3c3, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

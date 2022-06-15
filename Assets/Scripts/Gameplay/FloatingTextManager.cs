@@ -90,7 +90,7 @@ public class FloatingTextManager : MonoBehaviour
         if (message.fmodEvent != AudioUtils.DialogConversation.None) {
             AudioUtils.PlaySound(message.fmodEvent, Camera.main.transform.position, message.fmodId);
         }
-        float waitTime = Mathf.Min(3, message.text.Split(' ').Length / 1.5f);
+        float waitTime = Mathf.Max(2, message.text.Split(' ').Length / 1.5f);
         yield return new WaitForSeconds(waitTime);
         currentTarget.GetComponent<Animator>().SetBool("mouth_open", false);
         isShowing = false;

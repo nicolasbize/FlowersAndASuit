@@ -17,14 +17,9 @@ public class ScottAI : MonoBehaviour
         originalPosition = transform.position;
     }
 
-    public bool CanPlantDrugs() {
-        return GetComponent<Animator>().GetBool("on_phone");
-    }
-
     public void PlantDrugs() {
         // maybe wait for a few seconds before?
         drugsPlanted = true;
-        GetComponent<Animator>().SetBool("on_phone", false);
         destination = originalPosition;
     }
 
@@ -36,10 +31,14 @@ public class ScottAI : MonoBehaviour
         return drugsPlanted;
     }
 
+    public bool IsOnPhone() {
+        return GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("scott-idle-phone");
+    }
+
     // Update is called once per frame
     void Update()
     {
-        bool isOnPhone = GetComponent<Animator>().GetBool("on_phone");
+        bool isOnPhone = IsOnPhone();
         GetComponent<Interactive>().busy = isOnPhone;
         if (isOnPhone) {
             bool playerStartedOtherInteraction = gamelogicManager.GetComponent<FloatingTextManager>().HasEnquedMessagesForOtherThan(gameObject);

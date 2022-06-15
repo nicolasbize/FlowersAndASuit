@@ -18,7 +18,7 @@ public static class AudioUtils
         { DialogConversation.Al, "event:/Dialogue/Fisherman" },
     };
     private static readonly Dictionary<DialogConversation, string> parameterNames = new Dictionary<DialogConversation, string>() {
-        { DialogConversation.Sandy, "Coffee Shop Dialogue Line" },
+        { DialogConversation.Sandy, "Dialog Line" },
         { DialogConversation.Al, "Fisherman Dialogue" },
     };
 

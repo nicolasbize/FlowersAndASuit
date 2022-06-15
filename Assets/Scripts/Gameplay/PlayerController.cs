@@ -201,7 +201,7 @@ public class PlayerController : MonoBehaviour
 
     private void TryPlantDrugs() {
         ScottAI scott = GameObject.Find("Scott").GetComponent<ScottAI>();
-        if (scott.CanPlantDrugs()) {
+        if (scott.IsOnPhone()) {
             target.x = scott.transform.position.x + 0.2f;
             isPlantingDrugs = true;
             direction = transform.position.x < target.x ? Vector2.right : Vector2.left;
