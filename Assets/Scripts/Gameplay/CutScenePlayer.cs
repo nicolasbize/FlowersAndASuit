@@ -7,9 +7,7 @@ using static CutScene;
 public class CutScenePlayer : MonoBehaviour
 {
 
-    [SerializeField] bool startNewGame;
-    [SerializeField] CutScene startGameCutscene;
-    [SerializeField] CutScene currentCutscene;
+    public CutScene currentCutscene;
     [SerializeField] float margin = 0.01f;
     [SerializeField] float moveSpeed = 2f;
     [SerializeField] Transform topMovieStrip;
@@ -25,17 +23,9 @@ public class CutScenePlayer : MonoBehaviour
         return remainingSteps.Count > 0;
     }
 
-
-    private void Start() {
-        if (currentCutscene != null) {
-            PlayCutscene(currentCutscene);
-        } else if (startNewGame) {
-            PlayCutscene(startGameCutscene);
-        }
-    }
-
     public void PlayCutscene(CutScene scene) {
         remainingSteps.Clear();
+        GameObject.Find("Enzo").GetComponent<PlayerController>().CleanTipsAndOutline();
         foreach (Step step in scene.steps) {
             remainingSteps.Enqueue(step);
         }
@@ -46,17 +36,22 @@ public class CutScenePlayer : MonoBehaviour
         if (currentStep != null) {
             switch (currentStep.type) {
                 case StepType.MoveCharacter:
-                    float speed = moveSpeed;
-                    if (currentStep.interactionDuration > 0) {
-                        speed = currentStep.interactionDuration;
-                    }
-                    currentCharacter.transform.position = Vector3.MoveTowards(currentCharacter.transform.position, currentStep.targetLocation, speed * Time.deltaTime);
-                    if (Mathf.Abs(currentCharacter.transform.position.x - currentStep.targetLocation.x) < margin) {
-                        float x = Mathf.Round(currentCharacter.transform.position.x * 72) / 72;
-                        float y = Mathf.Round(currentCharacter.transform.position.y * 72) / 72;
-                        float z = Mathf.Round(currentCharacter.transform.position.z * 72) / 72;
-                        currentCharacter.transform.position = new Vector3(x, y, z);
+                    if (currentStep.targetLocation == Vector3.zero) {
                         Advance();
+                    } else {
+
+                        float speed = moveSpeed;
+                        if (currentStep.interactionDuration > 0) {
+                            speed = currentStep.interactionDuration;
+                        }
+                        currentCharacter.transform.position = Vector3.MoveTowards(currentCharacter.transform.position, currentStep.targetLocation, speed * Time.deltaTime);
+                        if (Mathf.Abs(currentCharacter.transform.position.x - currentStep.targetLocation.x) < margin) {
+                            float x = Mathf.Round(currentCharacter.transform.position.x * 72) / 72;
+                            float y = Mathf.Round(currentCharacter.transform.position.y * 72) / 72;
+                            float z = Mathf.Round(currentCharacter.transform.position.z * 72) / 72;
+                            currentCharacter.transform.position = new Vector3(x, y, z);
+                            Advance();
+                        }
                     }
                     break;
                 case StepType.CameraPan:
@@ -114,7 +109,17 @@ public class CutScenePlayer : MonoBehaviour
             case StepType.MoveCharacter:
                 currentCharacter = GameObject.Find(step.character);
                 if (currentCharacter.GetComponent<SpriteRenderer>() != null) {
-                    currentCharacter.GetComponent<SpriteRenderer>().flipX = step.flipValue;
+                    bool isFlipped = false;
+                    if (currentStep.targetLocation == Vector3.zero) {
+                        isFlipped = step.flipValue;
+                    } else {
+                        // by default, the character will face the target where they are going, but we can override this with the flip value
+                        isFlipped = currentCharacter.transform.position.x > currentStep.targetLocation.x;
+                        if (step.flipValue) {
+                            isFlipped = !isFlipped;
+                        }
+                    }
+                    currentCharacter.GetComponent<SpriteRenderer>().flipX = isFlipped;
                 }
                 break;
             case StepType.AnimateCharacter:

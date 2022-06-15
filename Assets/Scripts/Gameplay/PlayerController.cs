@@ -165,10 +165,10 @@ public class PlayerController : MonoBehaviour
         transitioner.GetComponent<Animator>().Play("TransitionIdle");
     }
 
-    private void CleanTipsAndOutline() {
+    public void CleanTipsAndOutline() {
         foreach (SpriteRenderer sr in FindObjectsOfType<SpriteRenderer>()) {
             sr.material.SetFloat("_Thickness", 0f);
-            sr.material.SetColor("_OutlineColor", new Color(230, 230, 230, 1));
+            sr.material.SetColor("_OutlineColor", new Color(0, 0, 0, 1));
         }
 
     }
@@ -209,6 +209,15 @@ public class PlayerController : MonoBehaviour
             state = State.Moving;
         } else {
             GetComponent<Interactive>().floatingTextManager.AddText(gameObject, "I need to distract him first");
+        }
+    }
+
+    private void TryCutString() {
+        JimAI jim = GameObject.Find("Jim").GetComponent<JimAI>();
+        if (jim.CanCutKite()) {
+            jim.CutKite();
+        } else {
+            GetComponent<Interactive>().floatingTextManager.AddText(gameObject, "I can't do that.   I need to get rid of the police officer first.");
         }
     }
 
