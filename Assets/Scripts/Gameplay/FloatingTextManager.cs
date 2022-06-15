@@ -82,12 +82,17 @@ public class FloatingTextManager : MonoBehaviour
         textElement.position = message.speaker.transform.position + Vector3.up * distAbove;
         textElement.GetComponent<MeshRenderer>().enabled = true;
         isShowing = true;
+        // before switching targets, close the previous target's mouth
+        if (currentTarget != null) {
+            currentTarget.GetComponent<Animator>().SetBool("mouth_open", false);
+        }
         currentTarget = message.speaker;
         if (message.fmodEvent != AudioUtils.DialogConversation.None) {
             AudioUtils.PlaySound(message.fmodEvent, Camera.main.transform.position, message.fmodId);
         }
         float waitTime = Mathf.Min(3, message.text.Split(' ').Length / 1.5f);
         yield return new WaitForSeconds(waitTime);
+        currentTarget.GetComponent<Animator>().SetBool("mouth_open", false);
         isShowing = false;
         textElement.GetComponent<MeshRenderer>().enabled = false;
         if (messageQueue.Count == 0 && onEmptyQueue != null) {

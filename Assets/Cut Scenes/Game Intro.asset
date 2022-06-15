@@ -44,8 +44,7 @@ MonoBehaviour:
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
-    text: Oh no, I overslept!   Today's our wedding anniversary!   I need some flowers
-      and a suit!
+    text: 
     objectGained: {fileID: 0}
   - type: 3
     character: Enzo
@@ -100,7 +99,7 @@ MonoBehaviour:
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
-    text: Oh no I overslept!   Today's our wedding anniversary!   I need flowers
+    text: Oh no, I overslept!   Today's our wedding anniversary!   I need some flowers
       and a suit!
     objectGained: {fileID: 0}
   - type: 11
