@@ -7,12 +7,15 @@ using static CutScene;
 public class CutScenePlayer : MonoBehaviour
 {
 
+    [SerializeField] bool startNewGame;
+    [SerializeField] CutScene startGameCutscene;
     [SerializeField] CutScene currentCutscene;
     [SerializeField] float margin = 0.01f;
     [SerializeField] float moveSpeed = 2f;
     [SerializeField] Transform topMovieStrip;
     [SerializeField] Transform bottomMovieStrip;
     [SerializeField] Transform UI;
+    
     Queue<Step> remainingSteps = new Queue<Step>();
     Step currentStep = null;
     GameObject currentCharacter;
@@ -26,6 +29,8 @@ public class CutScenePlayer : MonoBehaviour
     private void Start() {
         if (currentCutscene != null) {
             PlayCutscene(currentCutscene);
+        } else if (startNewGame) {
+            PlayCutscene(startGameCutscene);
         }
     }
 

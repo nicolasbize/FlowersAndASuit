@@ -23,6 +23,7 @@ MonoBehaviour:
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
+    objectGained: {fileID: 0}
   - type: 6
     character: Camera
     targetLocation: {x: -52.49, y: 20, z: 0}
@@ -33,6 +34,7 @@ MonoBehaviour:
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
+    objectGained: {fileID: 0}
   - type: 10
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
@@ -42,8 +44,9 @@ MonoBehaviour:
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
-    text: Oh no I overslept!   Today's our wedding anniversary!   I need flowers
+    text: Oh no, I overslept!   Today's our wedding anniversary!   I need some flowers
       and a suit!
+    objectGained: {fileID: 0}
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
@@ -54,6 +57,18 @@ MonoBehaviour:
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
+    objectGained: {fileID: 0}
+  - type: 6
+    character: Enzo
+    targetLocation: {x: -52.49, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
   - type: 2
     character: 
     targetLocation: {x: -52.49, y: 0, z: 0}
@@ -64,6 +79,7 @@ MonoBehaviour:
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
+    objectGained: {fileID: 0}
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
@@ -74,6 +90,7 @@ MonoBehaviour:
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
+    objectGained: {fileID: 0}
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
@@ -85,6 +102,7 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: Oh no I overslept!   Today's our wedding anniversary!   I need flowers
       and a suit!
+    objectGained: {fileID: 0}
   - type: 11
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
@@ -95,3 +113,4 @@ MonoBehaviour:
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
+    objectGained: {fileID: 0}

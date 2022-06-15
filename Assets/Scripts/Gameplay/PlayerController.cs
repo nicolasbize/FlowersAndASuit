@@ -71,12 +71,14 @@ public class PlayerController : MonoBehaviour
                         if (thickness == 0) { // TODO: fix this, right now I can't properly get the right outline on spritesheets
                             thickness = 1f / (18 * targetObject.GetComponent<SpriteRenderer>().bounds.size.x);
                         }
-                        targetObject.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", thickness);
+                        targetObject.GetComponent<SpriteRenderer>().material.SetFloat("_Thickness", thickness);
+                        targetObject.GetComponent<SpriteRenderer>().material.SetColor("_OutlineColor", new Color(230, 230, 230, 1));
                         hovered = targetObject;
                         hintText.GetComponent<UIInventoryUsageHint>().HoveredInteractive = hovered.GetComponent<Interactive>();
                     }
                 } else if (hovered != null) {
-                    hovered.GetComponent<SpriteRenderer>().material.SetFloat("Thickness", 0f);
+                    hovered.GetComponent<SpriteRenderer>().material.SetFloat("_Thickness", 0f);
+                    hovered.GetComponent<SpriteRenderer>().material.SetColor("_OutlineColor", new Color(0,0,0,1));
                     hovered = null;
                 }
             } else {
@@ -165,7 +167,8 @@ public class PlayerController : MonoBehaviour
 
     private void CleanTipsAndOutline() {
         foreach (SpriteRenderer sr in FindObjectsOfType<SpriteRenderer>()) {
-            sr.material.SetFloat("Thickness", 0f);   
+            sr.material.SetFloat("_Thickness", 0f);
+            sr.material.SetColor("_OutlineColor", new Color(230, 230, 230, 1));
         }
 
     }

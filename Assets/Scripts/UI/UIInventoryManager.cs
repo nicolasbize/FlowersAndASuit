@@ -30,6 +30,7 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
         if (active) {
             foreach (Transform child in transform) {
                 child.gameObject.GetComponent<RawImage>().material.SetFloat("Thickness", 0f);
+                child.gameObject.GetComponent<RawImage>().material.SetColor("_OutlineColor", new Color(0, 0, 0, 1));
             }
 
             PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
@@ -50,6 +51,7 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
 
             foreach (RaycastResult result in results) {
                 result.gameObject.GetComponent<RawImage>().material.SetFloat("Thickness", 0.04f);
+                result.gameObject.GetComponent<RawImage>().material.SetColor("_OutlineColor", new Color(230, 230, 230, 1));
             }
             RefreshToolTip();
         }
@@ -104,6 +106,7 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
             currentInventoryTarget = hoveredItem.gameObject;
             draggedObject = Instantiate(currentInventoryTarget, UI);
             draggedObject.GetComponent<RawImage>().material.SetFloat("Thickness", 0.04f);
+            draggedObject.GetComponent<RawImage>().material.SetColor("_OutlineColor", new Color(230, 230, 230, 1));
             draggedObject.GetComponent<UIInventoryItem>().DuplicateInfoFrom(hoveredItem.GetComponent<UIInventoryItem>());
             currentInventoryTarget.GetComponent<RawImage>().enabled = false;
             player.GetComponent<PlayerController>().SetDraggedInventoryItem(hoveredItem.GetComponent<UIInventoryItem>().item);

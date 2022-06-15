@@ -38,6 +38,8 @@ Material:
     m_Floats:
     - Thickness: 0
     - Vector1_48b46b1cdd8b4d4c8a7a44857a9f6db0: 0
+    - _Thickness: 0
     m_Colors:
-    - Color_a7e31900563e46a79b4abb571bdc0bd1: {r: 0.7490196, g: 0.54901963, b: 0, a: 1}
+    - Color_a7e31900563e46a79b4abb571bdc0bd1: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

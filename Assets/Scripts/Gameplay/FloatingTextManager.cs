@@ -86,8 +86,8 @@ public class FloatingTextManager : MonoBehaviour
         if (message.fmodEvent != AudioUtils.DialogConversation.None) {
             AudioUtils.PlaySound(message.fmodEvent, Camera.main.transform.position, message.fmodId);
         }
-
-        yield return new WaitForSeconds(speedDisplay);
+        float waitTime = Mathf.Min(3, message.text.Split(' ').Length / 1.5f);
+        yield return new WaitForSeconds(waitTime);
         isShowing = false;
         textElement.GetComponent<MeshRenderer>().enabled = false;
         if (messageQueue.Count == 0 && onEmptyQueue != null) {
