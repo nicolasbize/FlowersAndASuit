@@ -13,6 +13,16 @@ MonoBehaviour:
   m_Name: Game Intro
   m_EditorClassIdentifier: 
   steps:
+  - type: 11
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
   - type: 6
     character: Camera
     targetLocation: {x: -52.49, y: 20, z: 0}
@@ -80,7 +90,7 @@ MonoBehaviour:
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 
-    animationValue: 0
+    animationValue: 1
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}

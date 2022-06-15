@@ -20,6 +20,7 @@ public class CutScene : ScriptableObject
         public bool flipValue;
         public Transform objectCreatedPrefab;
         public string text;
+        public InventoryItem objectGained;
     }
 
     public Step[] steps;

@@ -71,7 +71,7 @@ public class CutScenePlayer : MonoBehaviour
                     }
                     break;
                 case StepType.ActivateUI:
-                    UI.gameObject.SetActive(true);
+                    UI.gameObject.SetActive(currentStep.animationValue);
                     Advance();
                     break;
             }
@@ -80,6 +80,9 @@ public class CutScenePlayer : MonoBehaviour
     }
 
     private void Advance() {
+        if (currentStep.objectGained != null) {
+            GameObject.Find("Enzo").GetComponent<PlayerController>().AddToInventory(currentStep.objectGained);
+        }
         if (remainingSteps.Count > 0) {
             remainingSteps.Dequeue();
         }

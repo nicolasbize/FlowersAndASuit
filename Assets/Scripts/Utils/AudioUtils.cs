@@ -28,7 +28,6 @@ public static class AudioUtils
 
         FMOD.Studio.EventInstance instance = LoadInstance(conversation);
         instance.setParameterByName(parameterNames[conversation], (float) conversationId);
-        Debug.Log(instance);
         instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
         instance.start();
         instance.release();

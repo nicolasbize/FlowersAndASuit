@@ -134,7 +134,7 @@ public class Interactive : MonoBehaviour
         if (branch.objectGained != null) {
             itemGainedFromDialog = branch.objectGained;
         }
-        if (branch.question.Length != 0 && branch.cutscene == null) {
+        if (branch.question.Length != 0 && !branch.question.StartsWith("(")) {
             floatingTextManager.AddText(currentPlayer, branch.question, dialog.fmodEvent, branch.fmodQuestionId);
         }
         if (branch.answer.Length != 0) {

@@ -1,0 +1,228 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87183926066d904ab1fd24c3f2d31aa, type: 3}
+  m_Name: Lily
+  m_EditorClassIdentifier: 
+  greeting: Good day madam!
+  reply: No no no!   There's nothing good about today!
+  fmodEvent: 0
+  branches:
+  - question: Something wrong?
+    answer: Oh, where to start?   Do you even care?
+    reaction: 
+    visited: 0
+    requiresPlantedDrugs: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
+    final: 0
+    fmodQuestionId: 0
+    fmodAnswerId: 0
+    fmodReactionId: 0
+    branches:
+    - question: Actually I don't.   I just need some flowers.
+      answer: Well go plant them yourself!
+      reaction: 
+      visited: 0
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 11400000, guid: b435184a87777a242b664914424d1f81, type: 2}
+      final: 1
+      fmodQuestionId: 0
+      fmodAnswerId: 0
+      fmodReactionId: 0
+      branches: []
+    - question: Sure, I have all the time in the world!
+      answer: Oh great!   So this morning my neighbor's rooster woke me up!
+      reaction: 
+      visited: 0
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
+      final: 0
+      fmodQuestionId: 0
+      fmodAnswerId: 0
+      fmodReactionId: 0
+      branches:
+      - question: That seems nice...
+        answer: And so I thought I was late for work!
+        reaction: 
+        visited: 0
+        requiresPlantedDrugs: 0
+        objectGained: {fileID: 0}
+        requiresObject: {fileID: 0}
+        cutscene: {fileID: 0}
+        final: 0
+        fmodQuestionId: 0
+        fmodAnswerId: 0
+        fmodReactionId: 0
+        branches:
+        - question: Ah right...
+          answer: But when I looked at the clock   it was too early!
+          reaction: 
+          visited: 0
+          requiresPlantedDrugs: 0
+          objectGained: {fileID: 0}
+          requiresObject: {fileID: 0}
+          cutscene: {fileID: 0}
+          final: 0
+          fmodQuestionId: 0
+          fmodAnswerId: 0
+          fmodReactionId: 0
+          branches:
+          - question: Sure, sure...
+            answer: And then the alarm clock fell on the ground and broke!
+            reaction: 
+            visited: 0
+            requiresPlantedDrugs: 0
+            objectGained: {fileID: 0}
+            requiresObject: {fileID: 0}
+            cutscene: {fileID: 0}
+            final: 0
+            fmodQuestionId: 0
+            fmodAnswerId: 0
+            fmodReactionId: 0
+            branches:
+            - question: Ah yes...   the famous alarm that breaks!
+              answer: So then I started counting time in my head!
+              reaction: 
+              visited: 0
+              requiresPlantedDrugs: 0
+              objectGained: {fileID: 0}
+              requiresObject: {fileID: 0}
+              cutscene: {fileID: 0}
+              final: 0
+              fmodQuestionId: 0
+              fmodAnswerId: 0
+              fmodReactionId: 0
+              branches:
+              - question: Of course, what else would you do
+                answer: six twenty-three...   six twenty-four... six twenty-five...  
+                  six twenty-six...
+                reaction: 
+                visited: 0
+                requiresPlantedDrugs: 0
+                objectGained: {fileID: 0}
+                requiresObject: {fileID: 0}
+                cutscene: {fileID: 0}
+                final: 0
+                fmodQuestionId: 0
+                fmodAnswerId: 0
+                fmodReactionId: 0
+                branches:
+                - question: Ok wait! wait! wait!
+                  answer: What? I'm not done!
+                  reaction: 
+                  visited: 0
+                  requiresPlantedDrugs: 0
+                  objectGained: {fileID: 0}
+                  requiresObject: {fileID: 0}
+                  cutscene: {fileID: 0}
+                  final: 0
+                  fmodQuestionId: 0
+                  fmodAnswerId: 0
+                  fmodReactionId: 0
+                  branches:
+                  - question: I actually really don't care.
+                    answer: I knew it! Just like my neighbor!
+                    reaction: 
+                    visited: 0
+                    requiresPlantedDrugs: 0
+                    objectGained: {fileID: 0}
+                    requiresObject: {fileID: 0}
+                    cutscene: {fileID: 0}
+                    final: 0
+                    fmodQuestionId: 0
+                    fmodAnswerId: 0
+                    fmodReactionId: 0
+                    branches: []
+                  - question: Can I just get some flowers?
+                    answer: No! My keys just fell through the drain!
+                    reaction: 
+                    visited: 0
+                    requiresPlantedDrugs: 0
+                    objectGained: {fileID: 0}
+                    requiresObject: {fileID: 0}
+                    cutscene: {fileID: 0}
+                    final: 0
+                    fmodQuestionId: 0
+                    fmodAnswerId: 0
+                    fmodReactionId: 0
+                    branches:
+                    - question: Oh no! I really, really need some flowers!
+                      answer: Well why don't you go plant some!
+                      reaction: 
+                      visited: 0
+                      requiresPlantedDrugs: 0
+                      objectGained: {fileID: 0}
+                      requiresObject: {fileID: 0}
+                      cutscene: {fileID: 11400000, guid: b435184a87777a242b664914424d1f81, type: 2}
+                      final: 1
+                      fmodQuestionId: 0
+                      fmodAnswerId: 0
+                      fmodReactionId: 0
+                      branches: []
+  - question: Look at the bright side!   You're alive and healthy!
+    answer: You have a dark sense of humor!
+    reaction: 
+    visited: 0
+    requiresPlantedDrugs: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
+    final: 0
+    fmodQuestionId: 0
+    fmodAnswerId: 0
+    fmodReactionId: 0
+    branches: []
+  - question: Sometimes bad things leads to good things!
+    answer: I guess that's true!   My neighbor was awful    and then he fell in the
+      stairs!
+    reaction: 
+    visited: 0
+    requiresPlantedDrugs: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
+    final: 0
+    fmodQuestionId: 0
+    fmodAnswerId: 0
+    fmodReactionId: 0
+    branches:
+    - question: Wait, that's not quite what I meant!
+      answer: Oh, bless those stairs!
+      reaction: 
+      visited: 0
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
+      final: 0
+      fmodQuestionId: 0
+      fmodAnswerId: 0
+      fmodReactionId: 0
+      branches: []
+  - question: I'll see you around!
+    answer: Maybe not, who knows...
+    reaction: 
+    visited: 0
+    requiresPlantedDrugs: 0
+    objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
+    final: 1
+    fmodQuestionId: 0
+    fmodAnswerId: 0
+    fmodReactionId: 0
+    branches: []
