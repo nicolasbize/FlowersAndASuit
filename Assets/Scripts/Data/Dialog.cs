@@ -21,9 +21,9 @@ public class Dialog : ScriptableObject
         public InventoryItem requiresObject;
         public CutScene cutscene;
         public bool final; // will close the discussion
-        public int fmodQuestionId;
-        public int fmodAnswerId;
-        public int fmodReactionId;
+        public int fmodQuestionId = -1;
+        public int fmodAnswerId = -1;
+        public int fmodReactionId = -1;
         public Branch[] branches;
         public Branch parent;
     }

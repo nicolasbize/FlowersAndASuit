@@ -74,6 +74,10 @@ public class CutScenePlayer : MonoBehaviour
                     UI.gameObject.SetActive(currentStep.animationValue);
                     Advance();
                     break;
+                case StepType.PlayMusic:
+                    AudioUtils.PlayMusic((AudioUtils.Music) currentStep.interactionDuration, Camera.main.transform.position);
+                    Advance();
+                    break;
             }
         }
 
@@ -126,7 +130,7 @@ public class CutScenePlayer : MonoBehaviour
                 currentCharacter = GameObject.Find(step.character);
                 if (step.animationTrigger != "") {
                     currentCharacter.GetComponent<Animator>().SetTrigger(step.animationTrigger);
-                } else {
+                } else if (step.animationProperty != "") {
                     currentCharacter.GetComponent<Animator>().SetBool(step.animationProperty, step.animationValue);
                 }
                 if (step.text != "") {

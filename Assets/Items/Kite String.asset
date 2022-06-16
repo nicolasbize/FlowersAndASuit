@@ -18,4 +18,7 @@ MonoBehaviour:
   - combineWith: {fileID: 11400000, guid: 1c1bc0d48b9879343b56c41802dc592e, type: 2}
     result: {fileID: 11400000, guid: ee608c0667f29224ab2945d2d4e70a6a, type: 2}
     thought: Nice! This will be pretty handy!
-  interactions: []
+  interactions:
+  - objectName: Grate
+    callbackName: 
+    cutscene: {fileID: 11400000, guid: 60c17bc0866cc634ebb6407979b5ccd1, type: 2}
