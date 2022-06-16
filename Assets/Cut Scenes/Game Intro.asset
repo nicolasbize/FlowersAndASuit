@@ -90,10 +90,32 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+  - type: 12
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 7
+    interactionDuration: 0
+    animationProperty: is_talking
+    animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+  - type: 3
+    character: Enzo
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 9
     animationProperty: 
     animationValue: 0
     animationTrigger: 
@@ -101,6 +123,17 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: Oh no, I overslept!   Today's our wedding anniversary!   I need some flowers
       and a suit!
+    objectGained: {fileID: 0}
+  - type: 3
+    character: Enzo
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: is_talking
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
     objectGained: {fileID: 0}
   - type: 11
     character: 
@@ -113,3 +146,4 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+  playPuzzleMusic: 0

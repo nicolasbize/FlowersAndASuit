@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Key Retrieval
   m_EditorClassIdentifier: 
   steps:
-  - type: 0
+  - type: 12
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 0
@@ -57,6 +57,17 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+  - type: 12
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 3
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
@@ -66,7 +77,7 @@ MonoBehaviour:
     animationTrigger: retrieve_key
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
-    text: Let's see...
+    text: Let's see here...
     objectGained: {fileID: 0}
   - type: 9
     character: Hooked String
@@ -79,6 +90,17 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 11400000, guid: f99ed0abc8d3b8a4e830f9fd70f16024, type: 2}
+  - type: 12
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
   - type: 5
     character: 
     targetLocation: {x: 0, y: 0, z: 0}

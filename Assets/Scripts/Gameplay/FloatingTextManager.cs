@@ -7,7 +7,6 @@ using static Dialog;
 
 public class FloatingTextManager : MonoBehaviour
 {
-    [SerializeField] float speedDisplay = 4f;
     [SerializeField] float distanceAboveHead = 3f;
     public Transform textElement;
     bool isShowing = false;
@@ -88,9 +87,9 @@ public class FloatingTextManager : MonoBehaviour
         }
         currentTarget = message.speaker;
         if (message.fmodEvent != AudioUtils.DialogConversation.None) {
-            AudioUtils.PlaySound(message.fmodEvent, Camera.main.transform.position, message.fmodId);
+            AudioUtils.PlayDialog(message.fmodEvent, Camera.main.transform.position, message.fmodId);
         }
-        float waitTime = Mathf.Max(2, message.text.Split(' ').Length / 1.5f);
+        float waitTime = Mathf.Max(2, message.text.Split(' ').Length / 1.8f);
         yield return new WaitForSeconds(waitTime);
         currentTarget.GetComponent<Animator>().SetBool("mouth_open", false);
         isShowing = false;

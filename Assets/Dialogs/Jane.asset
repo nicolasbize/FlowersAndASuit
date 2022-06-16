@@ -14,111 +14,202 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greeting: Hello there miss!
   reply: Good day, sir!
+  fmodEvent: 4
   branches:
   - question: Do you know the young man with the kite by any chance?
     answer: Yes, he comes here every day!   Such a sweet little kid!
     reaction: 
     visited: 0
+    requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
     final: 0
+    fmodQuestionId: 2
+    fmodAnswerId: 3
+    fmodReactionId: 0
     branches:
     - question: Sweet isn't exactly the adjective I would have used!
       answer: Haha, I know, he is also very funny!
       reaction: 
       visited: 0
+      requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
       final: 0
+      fmodQuestionId: 4
+      fmodAnswerId: 5
+      fmodReactionId: 0
       branches: []
     - question: Seems to me that he has an attitude problem!
       answer: Oh, he just misses his grandpa, that's all!
       reaction: 
       visited: 0
+      requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
       final: 0
+      fmodQuestionId: 6
+      fmodAnswerId: 7
+      fmodReactionId: 0
       branches: []
   - question: Where could I find a nice suit?
     answer: There's a men's clothing store right by the park   You can't miss it!  
       Unless you're blind of course.
     reaction: 
     visited: 0
+    requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
     final: 0
+    fmodQuestionId: 8
+    fmodAnswerId: 9
+    fmodReactionId: 0
     branches: []
   - question: Your cat is very cute, what's her name?
     answer: Oh no that's a dog. His name is Max.
     reaction: 
     visited: 0
+    requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
     final: 0
+    fmodQuestionId: 10
+    fmodAnswerId: 11
+    fmodReactionId: 0
     branches:
     - question: What a coincidence!   I have an ugly dog called Max too!
       answer: Oh really? Max is such an uncommon name for a dog!
       reaction: 
       visited: 0
+      requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
       final: 0
+      fmodQuestionId: 12
+      fmodAnswerId: 13
+      fmodReactionId: 0
       branches: []
     - question: That explains the leash!
       answer: Do you really think he looks like a cat?
       reaction: 
       visited: 0
+      requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
       final: 0
+      fmodQuestionId: 16
+      fmodAnswerId: 17
+      fmodReactionId: 0
       branches:
       - question: He walks a bit funny
         answer: Oh he's just walking and posing at the same time.
         reaction: 
         visited: 0
+        requiresPlantedDrugs: 0
         objectGained: {fileID: 0}
+        requiresObject: {fileID: 0}
+        cutscene: {fileID: 0}
         final: 0
+        fmodQuestionId: 30
+        fmodAnswerId: 31
+        fmodReactionId: 0
         branches: []
       - question: Sure likes to mark his territory a lot!
         answer: Yes! He just tried some mexican treats for the first time!   They're
           going right through him
         reaction: 
         visited: 0
+        requiresPlantedDrugs: 0
         objectGained: {fileID: 0}
+        requiresObject: {fileID: 0}
+        cutscene: {fileID: 0}
         final: 0
+        fmodQuestionId: 18
+        fmodAnswerId: 19
+        fmodReactionId: 0
         branches:
         - question: You're right, it just keeps coming out!
           answer: Don't worry, I have an entire box full of trashbags!
           reaction: 
           visited: 0
+          requiresPlantedDrugs: 0
           objectGained: {fileID: 0}
+          requiresObject: {fileID: 0}
+          cutscene: {fileID: 0}
           final: 0
+          fmodQuestionId: 20
+          fmodAnswerId: 21
+          fmodReactionId: 0
           branches:
           - question: Really? Could I have one?
             answer: Uuh it depends.   What are you going to do with it?
             reaction: 
             visited: 0
+            requiresPlantedDrugs: 0
             objectGained: {fileID: 0}
+            requiresObject: {fileID: 0}
+            cutscene: {fileID: 0}
             final: 0
+            fmodQuestionId: 22
+            fmodAnswerId: 23
+            fmodReactionId: 0
             branches:
             - question: Let's just say I had some mexican food yesterday.
               answer: Say no more!
               reaction: 
               visited: 0
+              requiresPlantedDrugs: 0
               objectGained: {fileID: 11400000, guid: 07600f1057d29ad41b213f6f2368f4fe, type: 2}
+              requiresObject: {fileID: 0}
+              cutscene: {fileID: 0}
               final: 1
+              fmodQuestionId: 24
+              fmodAnswerId: 25
+              fmodReactionId: 0
               branches: []
             - question: There's this kid with a kite I need to take care of
               answer: Oh that's nice, here you go!
               reaction: 
               visited: 0
+              requiresPlantedDrugs: 0
               objectGained: {fileID: 11400000, guid: 07600f1057d29ad41b213f6f2368f4fe, type: 2}
+              requiresObject: {fileID: 0}
+              cutscene: {fileID: 0}
               final: 1
+              fmodQuestionId: 26
+              fmodAnswerId: 27
+              fmodReactionId: 0
               branches: []
         - question: What a great way to lose weight!
           answer: That's what I thought too!   But my stomach is handling them fine!
           reaction: 
           visited: 0
+          requiresPlantedDrugs: 0
           objectGained: {fileID: 0}
+          requiresObject: {fileID: 0}
+          cutscene: {fileID: 0}
           final: 0
+          fmodQuestionId: 28
+          fmodAnswerId: 29
+          fmodReactionId: 0
           branches: []
   - question: Unfortunately, I must leave
-    answer: 
+    answer: Bye now
     reaction: 
     visited: 0
+    requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
+    requiresObject: {fileID: 0}
+    cutscene: {fileID: 0}
     final: 1
+    fmodQuestionId: 32
+    fmodAnswerId: -1
+    fmodReactionId: 0
     branches: []

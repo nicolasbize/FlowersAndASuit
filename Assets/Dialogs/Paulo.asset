@@ -15,7 +15,7 @@ MonoBehaviour:
   greeting: Hello there!
   reply: Ah, welcome to Paulo's handcrafted suits!   The most beautiful italian suits  
     in the entire world!
-  fmodEvent: 0
+  fmodEvent: 5
   branches:
   - question: That's great, I'm actually looking for a suit!
     answer: Well then, just look around   and pick a suit you want!
@@ -26,8 +26,8 @@ MonoBehaviour:
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 0
-    fmodQuestionId: 0
-    fmodAnswerId: 0
+    fmodQuestionId: 2
+    fmodAnswerId: 3
     fmodReactionId: 0
     branches:
     - question: Hmm.. I don't see any suits.
@@ -39,8 +39,8 @@ MonoBehaviour:
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
-      fmodQuestionId: 0
-      fmodAnswerId: 0
+      fmodQuestionId: 4
+      fmodAnswerId: 5
       fmodReactionId: 0
       branches:
       - question: Soo... When will you have some more?
@@ -53,8 +53,8 @@ MonoBehaviour:
         requiresObject: {fileID: 0}
         cutscene: {fileID: 0}
         final: 0
-        fmodQuestionId: 0
-        fmodAnswerId: 0
+        fmodQuestionId: 6
+        fmodAnswerId: 7
         fmodReactionId: 0
         branches:
         - question: Are you really comparing yourself to Michelangelo?
@@ -67,8 +67,8 @@ MonoBehaviour:
           requiresObject: {fileID: 0}
           cutscene: {fileID: 0}
           final: 0
-          fmodQuestionId: 0
-          fmodAnswerId: 0
+          fmodQuestionId: 8
+          fmodAnswerId: 9
           fmodReactionId: 0
           branches: []
         - question: Soo... Could you make me one then?
@@ -80,8 +80,8 @@ MonoBehaviour:
           requiresObject: {fileID: 0}
           cutscene: {fileID: 0}
           final: 0
-          fmodQuestionId: 0
-          fmodAnswerId: 0
+          fmodQuestionId: 10
+          fmodAnswerId: 11
           fmodReactionId: 0
           branches: []
       - question: That's not helpful.   Anything in storage?
@@ -94,8 +94,8 @@ MonoBehaviour:
         requiresObject: {fileID: 0}
         cutscene: {fileID: 0}
         final: 0
-        fmodQuestionId: 0
-        fmodAnswerId: 0
+        fmodQuestionId: 12
+        fmodAnswerId: 13
         fmodReactionId: 0
         branches: []
     - question: How much does a suit cost?
@@ -107,8 +107,8 @@ MonoBehaviour:
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
-      fmodQuestionId: 0
-      fmodAnswerId: 0
+      fmodQuestionId: 14
+      fmodAnswerId: 15
       fmodReactionId: 0
       branches:
       - question: Are you saying they're free?
@@ -120,8 +120,8 @@ MonoBehaviour:
         requiresObject: {fileID: 0}
         cutscene: {fileID: 0}
         final: 0
-        fmodQuestionId: 0
-        fmodAnswerId: 0
+        fmodQuestionId: 16
+        fmodAnswerId: 17
         fmodReactionId: 0
         branches: []
       - question: Probably costs an arm and a leg
@@ -133,8 +133,8 @@ MonoBehaviour:
         requiresObject: {fileID: 0}
         cutscene: {fileID: 0}
         final: 0
-        fmodQuestionId: 0
-        fmodAnswerId: 0
+        fmodQuestionId: 18
+        fmodAnswerId: 19
         fmodReactionId: 0
         branches: []
   - question: Any good pizza around here?
@@ -146,8 +146,8 @@ MonoBehaviour:
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 0
-    fmodQuestionId: 0
-    fmodAnswerId: 0
+    fmodQuestionId: 20
+    fmodAnswerId: 21
     fmodReactionId: 0
     branches:
     - question: You guys are very modest
@@ -159,8 +159,8 @@ MonoBehaviour:
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
-      fmodQuestionId: 0
-      fmodAnswerId: 0
+      fmodQuestionId: 22
+      fmodAnswerId: 23
       fmodReactionId: 0
       branches:
       - question: That's not what I said
@@ -172,8 +172,8 @@ MonoBehaviour:
         requiresObject: {fileID: 0}
         cutscene: {fileID: 0}
         final: 0
-        fmodQuestionId: 0
-        fmodAnswerId: 0
+        fmodQuestionId: 24
+        fmodAnswerId: 25
         fmodReactionId: 0
         branches: []
       - question: Do you like pineapple on pizza?
@@ -185,8 +185,8 @@ MonoBehaviour:
         requiresObject: {fileID: 0}
         cutscene: {fileID: 0}
         final: 0
-        fmodQuestionId: 0
-        fmodAnswerId: 0
+        fmodQuestionId: 26
+        fmodAnswerId: 27
         fmodReactionId: 0
         branches: []
     - question: Great, where can I get some?
@@ -198,8 +198,8 @@ MonoBehaviour:
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
-      fmodQuestionId: 0
-      fmodAnswerId: 0
+      fmodQuestionId: 28
+      fmodAnswerId: 29
       fmodReactionId: 0
       branches: []
   - question: I guess I'll go now
@@ -211,7 +211,7 @@ MonoBehaviour:
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 1
-    fmodQuestionId: 0
-    fmodAnswerId: 0
+    fmodQuestionId: 30
+    fmodAnswerId: -1
     fmodReactionId: 0
     branches: []

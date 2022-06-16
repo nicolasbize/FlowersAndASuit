@@ -19,7 +19,7 @@ MonoBehaviour:
   - question: Did you try talking nicely to them?
     answer: Fishy, fishy!! Come here fishy fishy!!   Not work!
     reaction: 
-    visited: 1
+    visited: 0
     requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}
@@ -30,9 +30,9 @@ MonoBehaviour:
     fmodReactionId: 0
     branches:
     - question: Did you try throwing food in the water?
-      answer: No, I want catch food from water!   Why throw food in water?
+      answer: No, I want catch food from water!   Not throw food in water!
       reaction: 
-      visited: 1
+      visited: 0
       requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
       requiresObject: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
   - question: Maybe the water is too cold?
     answer: Oh I took care of that, I warm the water!
     reaction: Wait how did you...   Nevermind, I don't think I want to know.
-    visited: 1
+    visited: 0
     requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}
@@ -59,7 +59,7 @@ MonoBehaviour:
     answer: 'Ha, you no smart, fish don''t know how read clock for time!   I don''t
       even know how read clock! '
     reaction: 
-    visited: 1
+    visited: 0
     requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}
@@ -79,6 +79,6 @@ MonoBehaviour:
     cutscene: {fileID: 0}
     final: 1
     fmodQuestionId: 11
-    fmodAnswerId: 0
+    fmodAnswerId: -1
     fmodReactionId: 0
     branches: []

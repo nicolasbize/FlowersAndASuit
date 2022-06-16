@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static AudioUtils;
 using static Dialog;
 
 public class Interactive : MonoBehaviour
@@ -20,6 +21,7 @@ public class Interactive : MonoBehaviour
     public float overrideThickness;
     public float overrideTextDistanceAboveHead;
     public Transform warpTo;
+    public Music warpZoneMusic;
     public bool busy;
     public bool facePlayer;
     public bool isPickup;
@@ -73,6 +75,9 @@ public class Interactive : MonoBehaviour
             if (!String.IsNullOrEmpty(dialog.reply)) {
                 floatingTextManager.AddText(currentTarget, dialog.reply, dialog.fmodEvent, 1);
             }
+            if (AudioUtils.GetCurrentMusicPlaying() != Music.Wearhouse) { // not great but too close to deadline
+                AudioUtils.PlayMusic(AudioUtils.Music.Dialog, Camera.main.transform.position);
+            }
         } else {
             string text = observation;
             if (itemGained != null) {
@@ -99,6 +104,9 @@ public class Interactive : MonoBehaviour
         }
         currentPlayer.GetComponent<Animator>().SetBool("is_talking", false);
         currentPlayer.GetComponent<Animator>().SetBool("mouth_open", false);
+        if (AudioUtils.GetCurrentMusicPlaying() != Music.Wearhouse) { // not great but too close to deadline
+            AudioUtils.PlayMusic(AudioUtils.Music.MainTheme, Camera.main.transform.position);
+        }
         CheckForGainedObject();
         CheckForCutScene();
         currentTarget = null;

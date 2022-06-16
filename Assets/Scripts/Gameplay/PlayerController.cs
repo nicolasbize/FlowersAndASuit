@@ -107,7 +107,8 @@ public class PlayerController : MonoBehaviour
             direction = transform.position.x < interactiveTarget.transform.position.x ? Vector2.right : Vector2.left;
             spriteRenderer.flipX = direction == Vector2.left;
             if (interactive.busy) {
-                GetComponent<Interactive>().floatingTextManager.AddText(gameObject, "Seems busy at the moment...");
+                interactive.floatingTextManager.AddText(gameObject, "Seems busy at the moment...");
+                state = State.Idle;
             } else {
                 if (interactive.distanceToInteraction == 0) {
                     GetComponent<Animator>().SetTrigger(interactive.isPickup ? "pick_up" : "interact_background");
@@ -115,12 +116,12 @@ public class PlayerController : MonoBehaviour
                     state = State.Talking;
                 }
                 CleanTipsAndOutline();
-                if (interactiveTarget.GetComponent<Interactive>().warpTo != null) {
+                if (interactive.warpTo != null) {
                     GetComponent<Animator>().SetTrigger("interact_background");
                     transitioner.GetComponent<Animator>().SetTrigger("EnterDoor");
-                    StartCoroutine(WarpTo(interactiveTarget.GetComponent<Interactive>().warpTo));
+                    StartCoroutine(WarpTo(interactive.warpTo, interactive.warpZoneMusic));
                 } else {
-                    interactiveTarget.GetComponent<Interactive>().StartDialog(interactiveTarget);
+                    interactive.StartDialog(interactiveTarget);
                     inventoryManager.GetComponent<UIInventoryManager>().active = false;
                 }
             }
@@ -128,7 +129,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator WarpTo(Transform warp) {
+    IEnumerator WarpTo(Transform warp, AudioUtils.Music warpZoneMusic) {
+        AudioUtils.PlayMusic(warpZoneMusic, Camera.main.transform.position);
         yield return new WaitForSeconds(.5f);
         SpawnInformation spawn = warp.GetComponent<SpawnInformation>();
         transform.position = spawn.playerPosition;
