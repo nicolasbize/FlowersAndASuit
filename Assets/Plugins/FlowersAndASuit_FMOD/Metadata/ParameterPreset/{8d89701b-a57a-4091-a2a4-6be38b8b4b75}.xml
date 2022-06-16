@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{8d89701b-a57a-4091-a2a4-6be38b8b4b75}">
+		<property name="name">
+			<value>Scott Dialogue</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b8c6e295-5690-4391-8362-192fcc77476a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9aa5b804-2db9-43de-aa3c-4de502988c61}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9aa5b804-2db9-43de-aa3c-4de502988c61}">
+		<property name="maximum">
+			<value>16</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

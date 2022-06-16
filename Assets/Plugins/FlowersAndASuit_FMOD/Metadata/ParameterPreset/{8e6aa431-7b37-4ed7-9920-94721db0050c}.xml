@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{8e6aa431-7b37-4ed7-9920-94721db0050c}">
+		<property name="name">
+			<value>Enzo Dialogue</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b8c6e295-5690-4391-8362-192fcc77476a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{8dae4348-77c3-43a2-bd6d-22ed333a1f7e}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{8dae4348-77c3-43a2-bd6d-22ed333a1f7e}">
+		<property name="maximum">
+			<value>36</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
