@@ -10,8 +10,10 @@ public class ScottAI : MonoBehaviour
     private bool isDrugsPlanted = false;
 
     public void PlantDrugs() {
-        isDrugsPlanted = true;
-        gameLogicManager.GetComponent<CutScenePlayer>().PlayCutscene(plantDrugsCutScene);
+        if (!isDrugsPlanted) {
+            isDrugsPlanted = true;
+            gameLogicManager.GetComponent<CutScenePlayer>().PlayCutscene(plantDrugsCutScene);
+        }
     }
 
     public bool IsDrugsPlanted() {

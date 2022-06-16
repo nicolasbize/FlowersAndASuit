@@ -645,8 +645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9291cffe4c241343be764165b9f6343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantDrugsCutScene: {fileID: 0}
-  gameLogicManager: {fileID: 0}
+  plantDrugsCutScene: {fileID: 11400000, guid: 139210bb4be946042bf688b9c0b14c2d, type: 2}
+  gameLogicManager: {fileID: 1073724685}
 --- !u!1 &370346333 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5605873756938622306, guid: acbede7cf27e5e94a9659efebed10598, type: 3}
