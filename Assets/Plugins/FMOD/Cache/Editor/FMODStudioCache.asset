@@ -335,7 +335,7 @@ MonoBehaviour:
   - {fileID: 460228559419828986}
   MinDistance: 1
   MaxDistance: 20
-  Length: 75302
+  Length: 142464
 --- !u!114 &-11489083154556470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,7 +401,7 @@ MonoBehaviour:
   - {fileID: 4205306280637274764}
   StringsBanks:
   - {fileID: 2346158573358980646}
-  cacheTime: 637909036091304255
+  cacheTime: 637909736110000000
   cacheVersion: 10
 --- !u!114 &460228559419828986
 MonoBehaviour:
@@ -418,7 +418,7 @@ MonoBehaviour:
   Name: Fisherman Dialogue Line
   StudioPath: 
   Min: 0
-  Max: 11
+  Max: 19
   Default: 0
   ID:
     data1: 2669339074
@@ -466,7 +466,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637909036091304255
+  lastModified: 637909736110000000
   FileSizes:
   - Name: Desktop
     Value: 2012
@@ -542,10 +542,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637909036091284312
+  lastModified: 637909736110000000
   FileSizes:
   - Name: Desktop
-    Value: 14492768
+    Value: 14763904
   Exists: 1
 --- !u!114 &4653169154470494749
 MonoBehaviour:
