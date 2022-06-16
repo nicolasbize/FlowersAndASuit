@@ -22,9 +22,6 @@ public class PlayerController : MonoBehaviour
     GameObject hovered = null;
     InventoryItem currentItemDragged = null;
 
-    // non generic... but not a lot of time left for the jam
-    bool isPlantingDrugs = false;
-
     public enum State { Talking, Moving, Idle, Interacting }
     State state = State.Idle;
 
@@ -101,12 +98,6 @@ public class PlayerController : MonoBehaviour
                 float z = Mathf.Round(transform.position.z * 72) / 72;
                 transform.position = new Vector3(x, y, z);
                 state = State.Idle;
-                if (isPlantingDrugs) {
-                    GetComponent<Animator>().SetTrigger("interact_background");
-                    isPlantingDrugs = false;
-                    state = State.Interacting;
-                    StartCoroutine(PlantDrugs());
-                }
             }
         }
         if (state == State.Idle && interactiveTarget != null) {
@@ -135,20 +126,6 @@ public class PlayerController : MonoBehaviour
             }
             interactiveTarget = null;
         }
-    }
-
-    IEnumerator PlantDrugs() {
-        yield return new WaitForSeconds(1f);
-        ScottAI scott = GameObject.Find("Scott").GetComponent<ScottAI>();
-        inventoryManager.GetComponent<UIInventoryManager>().RemoveFromInventory("Fake Drugs");
-        target.x = transform.position.x - 3f;
-        direction = transform.position.x < target.x ? Vector2.right : Vector2.left;
-        spriteRenderer.flipX = direction == Vector2.left;
-        state = State.Moving;
-        yield return new WaitForSeconds(2f);
-        scott.PlantDrugs();
-        SetIdle();
-        GetComponent<Interactive>().floatingTextManager.AddText(gameObject, "I wouldn't want to be caught with this!");
     }
 
     IEnumerator WarpTo(Transform warp) {
@@ -202,11 +179,7 @@ public class PlayerController : MonoBehaviour
     private void TryPlantDrugs() {
         ScottAI scott = GameObject.Find("Scott").GetComponent<ScottAI>();
         if (scott.IsOnPhone()) {
-            target.x = scott.transform.position.x + 0.2f;
-            isPlantingDrugs = true;
-            direction = transform.position.x < target.x ? Vector2.right : Vector2.left;
-            spriteRenderer.flipX = direction == Vector2.left;
-            state = State.Moving;
+            scott.PlantDrugs();
         } else {
             GetComponent<Interactive>().floatingTextManager.AddText(gameObject, "I need to distract him first");
         }
