@@ -1,0 +1,322 @@
+[LOG] System::create                           : Header version = 2.02.05. Current version = 2.02.05.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0x0.
+[LOG] SystemI::init                            : Initialize version=20205 (123444), maxchannels=256, flags=0x00020000
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
+[LOG] OutputCoreAudio::init                    : Output running 2 channels at 44100Hz sample rate.
+[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 512 samples, Software buffer size: 512 samples, Number of software buffers: 4.
+[LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
+[LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 0x7fedbec31008 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : done
+[LOG] PlaybackSystem::init                     : 
+[LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] PlaybackSystem::init                     : done
+[LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] Manager::init                            : done.
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7fedc866a4c8 : node = 0x7fedc58d86d0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7fedc5ff1d68.  list count = 0
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc866a4c8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 18476384
+[LOG] SystemI::createSound                     : setdata soundi = 0x7fedc58f9fc8 : node = 0x7fedc5853760
+[LOG] SystemI::createSound                     :     add node to async list : head = 0x7fedc5ff1d68.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 211488
+[LOG] SystemI::createSound                     :     filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0x7fedc5bf4068 : node = 0x7fedc5bde560
+[LOG] SystemI::createSound                     :     add node to async list : head = 0x7fedc5ff1d68.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fedc58d87e0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Metallophones_EnzosDate', format=5, channels=2, frequency=48000, lengthbytes=600576, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076075.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc866a4c8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc58f9fc8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 18476384
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 211488
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fedc5853870
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Rhythm_EnzosDate', format=5, channels=2, frequency=48000, lengthbytes=739552, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.137073.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc58f9fc8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc5bf4068
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 18476384
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 211488
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fedc5bde670
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Melody_EnzosDate', format=5, channels=2, frequency=48000, lengthbytes=544096, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.084348.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc5bf4068
+[LOG] SoundI::release                          : Melody_EnzosDate (0x7fedc6d600f8)
+[LOG] SoundI::release                          :     Melody_EnzosDate (0x7fedc5b727a8)
+[LOG] SoundI::release                          :     Melody_EnzosDate (0x7fedc5bf01b8)
+[LOG] SoundI::release                          : Rhythm_EnzosDate (0x7fedc6df7a38)
+[LOG] SoundI::release                          :     Rhythm_EnzosDate (0x7fedc8102a98)
+[LOG] SoundI::release                          :     Rhythm_EnzosDate (0x7fedc5ba85f8)
+[LOG] SoundI::release                          : Metallophones_EnzosDate (0x7fedc9029e98)
+[LOG] SoundI::release                          :     Metallophones_EnzosDate (0x7fedc8175ca8)
+[LOG] SoundI::release                          :     Metallophones_EnzosDate (0x7fedc5bf1c98)
+[LOG] SystemI::mixerSuspend                    : Suspending output.
+[LOG] SystemI::mixerResume                     : Resuming output.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc5870c68
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc5870c68
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc58828f8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc58828f8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc5854128
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc5854128
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7fedc940f568 : node = 0x7fedc5a36f80
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7fedc5ff1d68.  list count = 0
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7fedc5a6e8a8 : node = 0x7fedc5a6ea60
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7fedc5ff1d68.  list count = 1
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7fedc940ee78 : node = 0x7fedc5a40fa0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7fedc5ff1d68.  list count = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc940f568
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 18476384
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 211488
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fedc5a37090
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Metallophones_EnzosDate', format=5, channels=2, frequency=48000, lengthbytes=600576, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076075.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc940f568
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc5a6e8a8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 18476384
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 211488
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fedc5a6eb70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Rhythm_EnzosDate', format=5, channels=2, frequency=48000, lengthbytes=739552, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.137073.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc5a6e8a8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc940ee78
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 18476384
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 211488
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fedc5a410b0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Melody_EnzosDate', format=5, channels=2, frequency=48000, lengthbytes=544096, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.084348.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc940ee78
+[LOG] SoundI::release                          : Melody_EnzosDate (0x7fedc5bf4068)
+[LOG] SoundI::release                          :     Melody_EnzosDate (0x7fedc5888998)
+[LOG] SoundI::release                          :     Melody_EnzosDate (0x7fedc58828f8)
+[LOG] SoundI::release                          : Rhythm_EnzosDate (0x7fedc58f9fc8)
+[LOG] SoundI::release                          :     Rhythm_EnzosDate (0x7fedc5cab3a8)
+[LOG] SoundI::release                          :     Rhythm_EnzosDate (0x7fedc5870c68)
+[LOG] SoundI::release                          : Metallophones_EnzosDate (0x7fedc866a4c8)
+[LOG] SoundI::release                          :     Metallophones_EnzosDate (0x7fedc5865578)
+[LOG] SoundI::release                          :     Metallophones_EnzosDate (0x7fedc5854128)
+[LOG] SystemI::mixerSuspend                    : Suspending output.
+[LOG] SystemI::mixerResume                     : Resuming output.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc5b9d158
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc5b9d158
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc5bf1c98
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc5bf1c98
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc8106868
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc8106868
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7fedc92015c8 : node = 0x7fedc92035e0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7fedc5ff1d68.  list count = 0
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7fedc9085278 : node = 0x7fedc9212150
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7fedc5ff1d68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc92015c8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0x7fedc6da8518 : node = 0x7fedc6dba4a0
+[LOG] SystemI::createSound                     :     add node to async list : head = 0x7fedc5ff1d68.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 18476384
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 211488
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fedc92036f0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Metallophones_EnzosDate', format=5, channels=2, frequency=48000, lengthbytes=600576, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076075.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc92015c8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc9085278
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 18476384
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 211488
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fedc9212260
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Rhythm_EnzosDate', format=5, channels=2, frequency=48000, lengthbytes=739552, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.137073.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc9085278
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc6da8518
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 18476384
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 211488
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fedc6dba5b0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Melody_EnzosDate', format=5, channels=2, frequency=48000, lengthbytes=544096, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.084348.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc6da8518
+[LOG] SoundI::release                          : Melody_EnzosDate (0x7fedc940ee78)
+[LOG] SoundI::release                          :     Melody_EnzosDate (0x7fedc5bf97d8)
+[LOG] SoundI::release                          :     Melody_EnzosDate (0x7fedc5bf1c98)
+[LOG] SoundI::release                          : Rhythm_EnzosDate (0x7fedc5a6e8a8)
+[LOG] SoundI::release                          :     Rhythm_EnzosDate (0x7fedc5b7f848)
+[LOG] SoundI::release                          :     Rhythm_EnzosDate (0x7fedc5b9d158)
+[LOG] SoundI::release                          : Metallophones_EnzosDate (0x7fedc940f568)
+[LOG] SoundI::release                          :     Metallophones_EnzosDate (0x7fedc5bd0ed8)
+[LOG] SoundI::release                          :     Metallophones_EnzosDate (0x7fedc8106868)
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7fedc5857558 : node = 0x7fedc5d38da0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7fedc5ff1d68.  list count = 0
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7fedc5844ba8 : node = 0x7fedc586fd90
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7fedc5ff1d68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc5857558
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 18476384
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 211488
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fedc5d38eb0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     : filename = Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0x7fedc5a06788 : node = 0x7fedc5a395a0
+[LOG] SystemI::createSound                     :     add node to async list : head = 0x7fedc5ff1d68.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Metallophones_EnzosDate', format=5, channels=2, frequency=48000, lengthbytes=600576, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076075.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc5857558
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc5844ba8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 18476384
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 211488
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fedc586fea0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Rhythm_EnzosDate', format=5, channels=2, frequency=48000, lengthbytes=739552, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.137073.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc5844ba8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fedc5a06788
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 18476384
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 211488
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fedc5a396b0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Melody_EnzosDate', format=5, channels=2, frequency=48000, lengthbytes=544096, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.084348.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fedc5a06788
+[LOG] SoundI::release                          : Melody_EnzosDate (0x7fedc6da8518)
+[LOG] SoundI::release                          :     Melody_EnzosDate (0x7fedc81aa308)
+[LOG] SoundI::release                          :     Melody_EnzosDate (0x7fedc5bb2048)
+[LOG] SoundI::release                          : Rhythm_EnzosDate (0x7fedc9085278)
+[LOG] SoundI::release                          :     Rhythm_EnzosDate (0x7fedc5b596c8)
+[LOG] SoundI::release                          :     Rhythm_EnzosDate (0x7fedc5b15d88)
+[LOG] SoundI::release                          : Metallophones_EnzosDate (0x7fedc92015c8)
+[LOG] SoundI::release                          :     Metallophones_EnzosDate (0x7fedc5bbf718)
+[LOG] SoundI::release                          :     Metallophones_EnzosDate (0x7fedc5b63d78)
+[LOG] SoundI::release                          :  (0x7fedc58a0288)
+[LOG] SoundI::release                          :     Foley_Sidewalk2 (0x7fedc58a0fb8)
+[LOG] SoundI::release                          :  (0x7fedc58c29d8)
+[LOG] SoundI::release                          :     Foley_Grass2 (0x7fedc5899ad8)
+[LOG] SoundI::release                          :  (0x7fedc58baa48)
+[LOG] SoundI::release                          :     Splash (0x7fedc58af8a8)
+[LOG] SoundI::release                          :  (0x7fedc91a2158)
+[LOG] SoundI::release                          :     Click1 (0x7fedc5889a18)
+[LOG] SoundI::release                          :  (0x7fedc58c3da8)
+[LOG] SoundI::release                          :     Click2 (0x7fedc58a4a58)
+[LOG] SoundI::release                          :  (0x7fedc582ca68)
+[LOG] SoundI::release                          :     RhythmSolve_EnzosDate_NoLoop (0x7fedc5828808)
+[LOG] SoundI::release                          :  (0x7fedc58973f8)
+[LOG] SoundI::release                          :     MetallophonesSolve_EnzosDate (0x7fedc582c288)
+[LOG] SoundI::release                          : Melody_EnzosDate (0x7fedc5a06788)
+[LOG] SoundI::release                          :     Melody_EnzosDate (0x7fedc5b462e8)
+[LOG] SoundI::release                          :     Melody_EnzosDate (0x7fedc5bbc6d8)
+[LOG] SoundI::release                          : Rhythm_EnzosDate (0x7fedc5844ba8)
+[LOG] SoundI::release                          :     Rhythm_EnzosDate (0x7fedc5b42e78)
+[LOG] SoundI::release                          :     Rhythm_EnzosDate (0x7fedc5b68c28)
+[LOG] SoundI::release                          : Metallophones_EnzosDate (0x7fedc5857558)
+[LOG] SoundI::release                          :     Metallophones_EnzosDate (0x7fedc5bd1f58)
+[LOG] SoundI::release                          :     Metallophones_EnzosDate (0x7fedc5ba2ce8)
+[LOG] SoundI::release                          :  (0x7fedc58501c8)
+[LOG] SoundI::release                          :     MelodySolve_EnzosDate (0x7fedc580f058)
+[LOG] SoundI::release                          :  (0x7fedc589a638)
+[LOG] SoundI::release                          :     Fish (0x7fedc5881058)
+[LOG] SoundI::release                          :  (0x7fedc58e0708)
+[LOG] SoundI::release                          :     ScissorCut (0x7fedc58cc7d8)
+[LOG] SoundI::release                          :  (0x7fedc58788f8)
+[LOG] SoundI::release                          :     Phone Dial (0x7fedc58f4948)
+[LOG] SoundI::release                          :  (0x7fedc580c998)
+[LOG] SoundI::release                          :     Bark1 (0x7fedc58edfb8)
+[LOG] SoundI::release                          :  (0x7fedc58a0778)
+[LOG] SoundI::release                          :     Bark2 (0x7fedc589a8f8)
+[LOG] SoundI::release                          :  (0x7fedc91a24a8)
+[LOG] SoundI::release                          :     Bark3 (0x7fedc58876a8)
+[LOG] SoundI::release                          :  (0x7fedc58d9688)
+[LOG] SoundI::release                          :     Bark4 (0x7fedc58cd7c8)
+[LOG] SoundI::release                          :  (0x7fedc91a2a78)
+[LOG] SoundI::release                          :     Phone_Ring (0x7fedc5823678)
+[LOG] SoundI::release                          :  (0x7fedc58dcbd8)
+[LOG] SoundI::release                          :     Pocket (0x7fedc58d4ae8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] ProfileClient::markForDead               : Closing client connection
+[ERR] FMOD_OS_Net_Read                         : read failed with errno 9
+[ERR] ProfileClient::recvThreadLoopFunction    : Recv thread loop returned 43
+[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 141)
+[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 141)
+[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 141)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{37c3dc82-8a6b-4ce9-8bee-9b124b6b37f4}">
+		<property name="assetPath">
+			<value>Dialogue/Jim.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>92.999297052154191</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9e84caaf-3346-4f2a-b3d4-5c82be4f5de1}</destination>
+		</relationship>
+	</object>
+</objects>

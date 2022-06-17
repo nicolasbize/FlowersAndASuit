@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c09e968f-ced4-469a-b5fb-e3d4cfdad168}">
+		<property name="assetPath">
+			<value>SFX/BusDepart.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>15.630090702947847</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9e84caaf-3346-4f2a-b3d4-5c82be4f5de1}</destination>
+		</relationship>
+	</object>
+</objects>

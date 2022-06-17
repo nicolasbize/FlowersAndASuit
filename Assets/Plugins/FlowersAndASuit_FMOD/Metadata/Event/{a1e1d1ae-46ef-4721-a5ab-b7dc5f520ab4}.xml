@@ -265,6 +265,8 @@
 			<destination>{827b23a1-5e05-4966-a406-2cdc70ae467d}</destination>
 			<destination>{1f605df8-3f04-4c8a-8ff2-c8a268f2dc54}</destination>
 			<destination>{5aa58089-98d9-4ad7-ac9e-110878d05426}</destination>
+			<destination>{32476059-f228-4317-bd28-eca3505f00c2}</destination>
+			<destination>{6d802f86-491d-433f-824d-6d188b880b21}</destination>
 		</relationship>
 	</object>
 	<object class="ActionSheet" id="{8d601cf6-a906-4db6-873d-50ac2f836667}">
@@ -2517,6 +2519,34 @@
 	<object class="LoopRegion" id="{5aa58089-98d9-4ad7-ac9e-110878d05426}">
 		<property name="position">
 			<value>191</value>
+		</property>
+		<property name="length">
+			<value>1</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{5ba58eba-2f26-4a6d-938d-458ec4911b62}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{cc9e3fd8-d9ce-42f1-9a36-3dd1dd44d915}</destination>
+		</relationship>
+	</object>
+	<object class="LoopRegion" id="{32476059-f228-4317-bd28-eca3505f00c2}">
+		<property name="position">
+			<value>77.5</value>
+		</property>
+		<property name="length">
+			<value>1</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{5ba58eba-2f26-4a6d-938d-458ec4911b62}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{cc9e3fd8-d9ce-42f1-9a36-3dd1dd44d915}</destination>
+		</relationship>
+	</object>
+	<object class="LoopRegion" id="{6d802f86-491d-433f-824d-6d188b880b21}">
+		<property name="position">
+			<value>101.5</value>
 		</property>
 		<property name="length">
 			<value>1</value>
