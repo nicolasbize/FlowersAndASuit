@@ -10,21 +10,48 @@ public class Game : MonoBehaviour
     [SerializeField] CutScene startGameCutscene;
     [SerializeField] Transform toolbar;
     [SerializeField] Texture2D cursorTexture;
+    private bool readyToStart = false;
+    private bool started = false;
+    private int attempted = 0;
 
     private void Start() {
         Cursor.SetCursor(cursorTexture, Vector2.one * 32, CursorMode.Auto);
-        CutScenePlayer player = GetComponent<CutScenePlayer>();
         foreach (SpriteRenderer sr in FindObjectsOfType<SpriteRenderer>()) {
             sr.transform.position = SnapVector(sr.transform.position);
         }
         FindObjectOfType<CameraFollow>().transform.position = FindObjectOfType<PlayerController>().gameObject.transform.position;
-        if (player.currentCutscene != null) {
-            player.PlayCutscene(player.currentCutscene);
-        } else if (startNewGame) {
-            toolbar.GetComponent<UIInventoryManager>().ClearInventory();
-            player.PlayCutscene(startGameCutscene);
+        if (startNewGame) {
+            Camera.main.transform.position = new Vector3(-52.4900017f, 20, 0);
         }
+
+    }
+
+    public bool IsBusy() {
+        return !readyToStart || GetComponent<CutScenePlayer>().IsPlayingCutScene();
+    }
+
+    private void Update() {
+        if (!readyToStart) {
+            readyToStart = FMODUnity.RuntimeManager.IsInitialized && FMODUnity.RuntimeManager.HasBankLoaded("Master");
+        } else if (!started) {
+            started = true;
+            CutScenePlayer player = GetComponent<CutScenePlayer>();
+            if (player.currentCutscene != null) {
+                player.PlayCutscene(player.currentCutscene);
+            } else if (startNewGame) {
+                toolbar.GetComponent<UIInventoryManager>().ClearInventory();
+                player.PlayCutscene(startGameCutscene);
+            }
+            Invoke("TryPlayMusic", 1);
+        }
+    }
+
+    private void TryPlayMusic() {
         AudioUtils.PlayMusic(Music.IntroCredits, Camera.main.transform.position);
+        attempted += 1;
+        if (attempted < 10) {
+            Invoke("TryPlayMusic", 1);
+        }
     }
 
     public static Vector3 SnapVector(Vector3 v) {

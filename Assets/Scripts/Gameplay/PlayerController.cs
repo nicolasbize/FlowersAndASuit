@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
             AudioUtils.StopWalkingSound();
         }
 
-        if (cutsceneManager.GetComponent<CutScenePlayer>().IsPlayingCutScene())
+        if (cutsceneManager.GetComponent<Game>().IsBusy())
             return;
 
         HighlightHoveredObjects();

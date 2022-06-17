@@ -16,7 +16,7 @@ public class UIInventoryUsageHint : MonoBehaviour
     void Update()
     {
         bool isPlayerIdle = player.GetComponent<PlayerController>().GetState() == PlayerController.State.Idle;
-        bool isCutscenePlaying = gameplayManager.GetComponent<CutScenePlayer>().IsPlayingCutScene();
+        bool isCutscenePlaying = gameplayManager.GetComponent<Game>().IsBusy();
         if (isPlayerIdle && !isCutscenePlaying) {
             string currentHint = "";
             if (HoveredInteractive != null && DraggedInventoryItem != null) {

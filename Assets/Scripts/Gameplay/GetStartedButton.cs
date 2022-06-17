@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GetStartedButton : MonoBehaviour
 {
 
     [SerializeField] float speed = 2f;
-    private bool enabled = true;
+    private bool clicked = false;
+    private bool ready = false;
     
     void Start()
     {
@@ -14,14 +16,18 @@ public class GetStartedButton : MonoBehaviour
     }
 
     private void Update() {
-        if (Input.GetMouseButtonDown(0)) {
-            enabled = false;
-            GetComponent<MeshRenderer>().enabled = false;
+        ready = FMODUnity.RuntimeManager.IsInitialized && FMODUnity.RuntimeManager.HasBankLoaded("Master");
+        if (ready) {
+            GetComponent<TextMeshPro>().text = "Click to start!";
+            if (Input.GetMouseButtonDown(0) && !clicked) {
+                clicked = true;
+                GetComponent<MeshRenderer>().enabled = false;
+            }
         }
     }
 
     private void Blink() {
-        if (enabled) {
+        if (ready && !clicked) {
             bool wasDisplayed = GetComponent<MeshRenderer>().enabled;
             GetComponent<MeshRenderer>().enabled = !wasDisplayed;
             float blinkSpeed = wasDisplayed ? 0.3f : speed;

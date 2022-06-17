@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour
     public float rightBorder = 16.5f;
 
     private void FixedUpdate() {
-        if (cutsceneManager.GetComponent<CutScenePlayer>().IsPlayingCutScene())
+        if (cutsceneManager.GetComponent<Game>().IsBusy())
             return;
         transform.position = Vector3.Lerp(transform.position, GetFinalPosition(), smoothness * Time.deltaTime);
     }
