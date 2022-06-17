@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e67aaeb89ebd147a3058ec3cb4dae6, type: 3}
   m_Name: Call Phone Booth
   m_EditorClassIdentifier: 
-  conversation: 0
+  conversation: 7
   steps:
   - type: 12
     character: 
@@ -261,6 +261,19 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
+  - type: 13
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 14
   - type: 4
     character: Scott
     targetLocation: {x: 0, y: 0, z: 0}
@@ -301,6 +314,19 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
+  - type: 13
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 15
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}

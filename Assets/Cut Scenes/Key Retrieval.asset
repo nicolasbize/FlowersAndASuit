@@ -12,8 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e67aaeb89ebd147a3058ec3cb4dae6, type: 3}
   m_Name: Key Retrieval
   m_EditorClassIdentifier: 
+  conversation: 9
   steps:
   - type: 12
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 1
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 0
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 0
@@ -24,6 +38,8 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 4
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
@@ -35,6 +51,8 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
@@ -46,6 +64,8 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 1
     character: Enzo
     targetLocation: {x: 36.53, y: 0, z: 0}
@@ -57,10 +77,25 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
-  - type: 12
+    sound: 0
+    fmodTextId: 0
+  - type: 3
+    character: Enzo
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: is_moving
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 13
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: 
@@ -68,6 +103,8 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 5
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
@@ -79,6 +116,8 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: Let's see here...
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 9
     character: Hooked String
     targetLocation: {x: 0, y: 0, z: 0}
@@ -90,6 +129,21 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 11400000, guid: f99ed0abc8d3b8a4e830f9fd70f16024, type: 2}
+    sound: 0
+    fmodTextId: 0
+  - type: 12
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 3
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 12
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
@@ -101,6 +155,8 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 5
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
@@ -112,3 +168,5 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0

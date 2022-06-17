@@ -52,6 +52,7 @@ public class CutScenePlayer : MonoBehaviour
                             float y = Mathf.Round(currentCharacter.transform.position.y * 72) / 72;
                             float z = Mathf.Round(currentCharacter.transform.position.z * 72) / 72;
                             currentCharacter.transform.position = new Vector3(x, y, z);
+                            currentCharacter.GetComponent<SpriteRenderer>().flipX = currentStep.flipValue;
                             Advance();
                         }
                     }
@@ -116,16 +117,7 @@ public class CutScenePlayer : MonoBehaviour
             case StepType.MoveCharacter:
                 currentCharacter = GameObject.Find(step.character);
                 if (currentCharacter.GetComponent<SpriteRenderer>() != null) {
-                    bool isFlipped = false;
-                    if (currentStep.targetLocation == Vector3.zero) {
-                        isFlipped = step.flipValue;
-                    } else {
-                        // by default, the character will face the target where they are going, but we can override this with the flip value
-                        isFlipped = currentCharacter.transform.position.x > currentStep.targetLocation.x;
-                        if (step.flipValue) {
-                            isFlipped = !isFlipped;
-                        }
-                    }
+                    bool isFlipped = currentCharacter.transform.position.x > currentStep.targetLocation.x;
                     currentCharacter.GetComponent<SpriteRenderer>().flipX = isFlipped;
                 }
                 break;
@@ -177,7 +169,11 @@ public class CutScenePlayer : MonoBehaviour
                 Advance();
                 break;
             case StepType.StopSound:
-                AudioUtils.StopSound(currentStep.sound);
+                if (currentStep.sound != AudioUtils.SoundType.None) {
+                    AudioUtils.StopSound(currentStep.sound);
+                } else {
+                    AudioUtils.StopDialog(currentCutScene.conversation, currentStep.fmodTextId);
+                }
                 Advance();
                 break;
             case StepType.Wait:

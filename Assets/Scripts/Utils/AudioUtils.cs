@@ -12,7 +12,7 @@ public static class AudioUtils
 
     public enum DialogConversation
     {
-        None, Sandy, Al, Lily, Jane, Paulo, OfficerLewis, Scott, Arrest
+        None, Sandy, Al, Lily, Jane, Paulo, OfficerLewis, Scott, Arrest, Enzo
     }
 
     private static readonly Dictionary<DialogConversation, FMOD.Studio.EventInstance> DialogFmodEvents = new Dictionary<DialogConversation, FMOD.Studio.EventInstance>();
@@ -25,6 +25,7 @@ public static class AudioUtils
         { DialogConversation.OfficerLewis, "event:/Dialogue/Officer Lewis" },
         { DialogConversation.Scott, "event:/Dialogue/Shady Guy" },
         { DialogConversation.Arrest, "event:/Dialogue/The Arrest" },
+        { DialogConversation.Enzo, "event:/Dialogue/Enzo Solo" },
     };
 
     private static readonly Dictionary<DialogConversation, string> dialogParameterNames = new Dictionary<DialogConversation, string>() {
@@ -36,6 +37,7 @@ public static class AudioUtils
         { DialogConversation.OfficerLewis, "Officer Lewis Dialogue" },
         { DialogConversation.Scott, "Scott Dialogue" },
         { DialogConversation.Arrest, "Arrest Dialogue" },
+        { DialogConversation.Enzo, "Enzo Dialogue" },
     };
 
     public enum Music
@@ -133,6 +135,14 @@ public static class AudioUtils
         return currentMusicPlayed;
     }
 
+    public static void StopDialog(DialogConversation conversation, int conversationId) {
+        if (conversation == DialogConversation.None || conversationId < 0)
+            return;
+
+        FMOD.Studio.EventInstance instance = LoadDialogInstance(conversation);
+        instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
     public static void PlayDialog(DialogConversation conversation, Vector3 position, int conversationId) {
         if (conversation == DialogConversation.None || conversationId < 0)
             return;
@@ -141,7 +151,7 @@ public static class AudioUtils
         instance.setParameterByName(dialogParameterNames[conversation], (float) conversationId);
         instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
         instance.start();
-        instance.release();
+        //instance.release();
     }
 
     private static FMOD.Studio.EventInstance LoadDialogInstance(DialogConversation conversation) {

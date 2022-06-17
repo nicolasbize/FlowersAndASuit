@@ -2391,7 +2391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c43cca0cf4620a44b41fd05fbfbf8dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCutscene: {fileID: 11400000, guid: f7330bbb82415f44cb8e8e4ff9f100c1, type: 2}
+  currentCutscene: {fileID: 11400000, guid: 139210bb4be946042bf688b9c0b14c2d, type: 2}
   margin: 0.01
   moveSpeed: 3
   topMovieStrip: {fileID: 1493240897}
@@ -2639,7 +2639,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143019893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.76, y: 0, z: 0}
+  m_LocalPosition: {x: 11.6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
