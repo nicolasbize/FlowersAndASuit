@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e67aaeb89ebd147a3058ec3cb4dae6, type: 3}
   m_Name: Game Intro
   m_EditorClassIdentifier: 
+  conversation: 9
   steps:
   - type: 11
     character: 
@@ -24,6 +25,8 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 6
     character: Camera
     targetLocation: {x: -52.49, y: 20, z: 0}
@@ -35,6 +38,8 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 10
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
@@ -46,6 +51,8 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
@@ -57,6 +64,8 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 6
     character: Enzo
     targetLocation: {x: -52.49, y: 0, z: 0}
@@ -68,6 +77,8 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 2
     character: 
     targetLocation: {x: -52.49, y: 0, z: 0}
@@ -79,6 +90,8 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
@@ -90,6 +103,8 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 12
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
@@ -101,6 +116,8 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
@@ -112,6 +129,21 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 13
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 4
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
@@ -124,6 +156,8 @@ MonoBehaviour:
     text: Oh no, I overslept!   Today's our wedding anniversary!   I need some flowers
       and a suit!
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
@@ -135,6 +169,8 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 11
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
@@ -146,4 +182,5 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
-  playPuzzleMusic: 0
+    sound: 0
+    fmodTextId: 0

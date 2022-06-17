@@ -45,7 +45,9 @@ public static class AudioUtils
         MainTheme = 0,
         Dialog = 1,
         Wearhouse = 2,
-        Puzzle = 3
+        Puzzle = 3,
+        IntroCredits = 4,
+        BusGraveyard = 5,
     }
     public enum Surface { Ground = 0, Grass = 1}
     private static FMOD.Studio.EventInstance musicInstance = new FMOD.Studio.EventInstance();

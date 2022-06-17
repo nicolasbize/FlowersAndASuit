@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static AudioUtils;
 
 public class Game : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class Game : MonoBehaviour
             toolbar.GetComponent<UIInventoryManager>().ClearInventory();
             player.PlayCutscene(startGameCutscene);
         }
+        AudioUtils.PlayMusic(Music.IntroCredits, Camera.main.transform.position);
     }
 
     public static Vector3 SnapVector(Vector3 v) {
