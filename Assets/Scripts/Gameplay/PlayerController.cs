@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     GameObject interactiveTarget = null;
     GameObject hovered = null;
     InventoryItem currentItemDragged = null;
+    public bool isInLiving = false;
 
     public enum State { Talking, Moving, Idle, Interacting }
     State state = State.Idle;
@@ -31,8 +32,10 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update() {
-        if (animator.GetBool("is_moving")) {
-            AudioUtils.PlayWalkingSound(transform.position.x < -47 ? AudioUtils.Surface.Grass : AudioUtils.Surface.Ground, transform.position);
+        isInLiving = transform.position.y > -100;
+        if (animator.GetBool("is_moving") && isInLiving) {
+            bool isOnGrass = transform.position.x < -47;
+            AudioUtils.PlayWalkingSound(isOnGrass ? AudioUtils.Surface.Grass : AudioUtils.Surface.Ground, transform.position);
         } else {
             AudioUtils.StopWalkingSound();
         }
@@ -44,7 +47,11 @@ public class PlayerController : MonoBehaviour
         HandleClickInteractions();
         MovePlayer();
 
-        animator.SetBool("is_moving", state == State.Moving);
+        if (isInLiving) {
+            animator.SetBool("is_moving", state == State.Moving);
+        } else {
+            animator.SetBool("is_walking_flowers", state == State.Moving);
+        }
         animator.SetBool("is_talking", state == State.Talking);
         
         
@@ -60,6 +67,9 @@ public class PlayerController : MonoBehaviour
 
     public bool HasItemInInventory(InventoryItem item) {
         return inventoryManager.GetComponent<UIInventoryManager>().HasItemInInventory(item);
+    }
+    public bool HasItemInInventory(string itemName) {
+        return inventoryManager.GetComponent<UIInventoryManager>().HasItemInInventory(itemName);
     }
 
     private void HighlightHoveredObjects() {

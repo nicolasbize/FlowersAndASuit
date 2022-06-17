@@ -10,14 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0e67aaeb89ebd147a3058ec3cb4dae6, type: 3}
-  m_Name: Cutting the Kite
+  m_Name: TakingTheBus
   m_EditorClassIdentifier: 
-  conversation: 10
+  conversation: 0
   steps:
+  - type: 3
+    character: Enzo
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: is_moving
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 12
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
+    interactionDuration: 5
     animationProperty: 
     animationValue: 0
     animationTrigger: 
@@ -40,9 +53,22 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
+  - type: 6
+    character: Bus
+    targetLocation: {x: 16.3, y: 1.09, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
   - type: 2
     character: 
-    targetLocation: {x: -40.24, y: 0, z: 0}
+    targetLocation: {x: 52, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
@@ -68,137 +94,7 @@ MonoBehaviour:
     fmodTextId: 0
   - type: 1
     character: Enzo
-    targetLocation: {x: -39.15278, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 1
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 1
-    character: Jim
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Jim
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
-    animationProperty: is_moving
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 32
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 4
-    animationProperty: is_talking
-    animationValue: 1
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: You know what would do you some good?   Some exercise!!
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
-    animationProperty: is_talking
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 7
-    fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: cut_kite
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 7
-    character: Kite String
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 1
-    character: Kite
-    targetLocation: {x: -35.49, y: 6.03, z: 0}
+    targetLocation: {x: 53.23, y: 0, z: 0}
     interactionDuration: 4
     animationProperty: 
     animationValue: 0
@@ -210,20 +106,20 @@ MonoBehaviour:
     sound: 0
     fmodTextId: 0
   - type: 3
-    character: Jim
+    character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0.8
-    animationProperty: 
+    interactionDuration: 0
+    animationProperty: is_moving
     animationValue: 0
-    animationTrigger: cut_kite
+    animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
-    text: Uh?
+    text: 
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
   - type: 3
-    character: Jim
+    character: Bus
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: is_moving
@@ -235,61 +131,9 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 8
-    character: 
-    targetLocation: {x: -42.148663, y: -2.34, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 4563076318826903845, guid: f019769e5b243c54e8a8d0dafa6fa1df, type: 3}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 9
-    character: Scissors
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 12
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 33
   - type: 1
-    character: Jim
-    targetLocation: {x: -24.13, y: -0.9722222, z: 0}
+    character: Bus
+    targetLocation: {x: 46.802975, y: 1.09, z: 0}
     interactionDuration: 5
     animationProperty: 
     animationValue: 0
@@ -300,9 +144,35 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 7
-    character: Jim
+  - type: 3
+    character: Bus
     targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: is_moving
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 4
+    character: Bus
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 4
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 15
+    character: Enzo
+    targetLocation: {x: 0, y: -60, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
@@ -313,11 +183,193 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 12
-    character: 
+  - type: 3
+    character: Bus
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: is_moving
+    animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 1
+    character: Bus
+    targetLocation: {x: 80.59835, y: 1.0882691, z: 0}
+    interactionDuration: 4
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 3
+    character: TransitionCanvas
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 
+    animationValue: 0
+    animationTrigger: EnterDoor
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 4
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 1
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 6
+    character: Bus
+    targetLocation: {x: -40.4, y: -103.88, z: 0}
+    interactionDuration: 1
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 6
+    character: Camera
+    targetLocation: {x: -9.65, y: -105.041664, z: 0}
+    interactionDuration: 1
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 3
+    character: TransitionCanvas
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 1
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: ExitDoor
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 1
+    character: Bus
+    targetLocation: {x: -22.9, y: -103.88, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 3
+    character: Bus
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: is_moving
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 4
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 2
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 6
+    character: Enzo
+    targetLocation: {x: -13.2, y: -105.041664, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 15
+    character: Enzo
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 3
+    character: Enzo
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: is_walking_flowers
+    animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 1
+    character: Enzo
+    targetLocation: {x: -8, y: -105.041664, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 3
+    character: Enzo
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: is_walking_flowers
     animationValue: 0
     animationTrigger: 
     flipValue: 0

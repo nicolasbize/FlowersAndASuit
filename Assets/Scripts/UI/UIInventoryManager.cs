@@ -84,6 +84,10 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
         return new List<InventoryItem>(inventoryItems).Find(i => i.itemName == item.itemName) != null;
     }
 
+    public bool HasItemInInventory(string itemName) {
+        return new List<InventoryItem>(inventoryItems).Find(i => i.itemName == itemName) != null;
+    }
+
     public void RemoveFromInventory(string itemName) {
         inventoryItems = new List<InventoryItem>(inventoryItems).FindAll(i => i.itemName != itemName).ToArray();
         RefreshInventory();

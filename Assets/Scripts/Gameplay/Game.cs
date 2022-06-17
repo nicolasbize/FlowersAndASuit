@@ -19,9 +19,15 @@ public class Game : MonoBehaviour
         foreach (SpriteRenderer sr in FindObjectsOfType<SpriteRenderer>()) {
             sr.transform.position = SnapVector(sr.transform.position);
         }
-        FindObjectOfType<CameraFollow>().transform.position = FindObjectOfType<PlayerController>().gameObject.transform.position;
         if (startNewGame) {
             Camera.main.transform.position = new Vector3(-52.4900017f, 20, 0);
+        } else {
+            readyToStart = true;
+            Camera.main.transform.position = FindObjectOfType<PlayerController>().gameObject.transform.position;
+            CutScenePlayer player = GetComponent<CutScenePlayer>();
+            if (player.currentCutscene != null) {
+                player.PlayCutscene(player.currentCutscene);
+            }
         }
 
     }
@@ -31,18 +37,16 @@ public class Game : MonoBehaviour
     }
 
     private void Update() {
-        if (!readyToStart) {
-            readyToStart = FMODUnity.RuntimeManager.IsInitialized && FMODUnity.RuntimeManager.HasBankLoaded("Master");
-        } else if (!started) {
-            started = true;
-            CutScenePlayer player = GetComponent<CutScenePlayer>();
-            if (player.currentCutscene != null) {
-                player.PlayCutscene(player.currentCutscene);
-            } else if (startNewGame) {
+        CutScenePlayer player = GetComponent<CutScenePlayer>();
+        if (startNewGame) {
+            if (!readyToStart) {
+                readyToStart = FMODUnity.RuntimeManager.IsInitialized && FMODUnity.RuntimeManager.HasBankLoaded("Master");
+            } else if (!started) {
+                started = true;
                 toolbar.GetComponent<UIInventoryManager>().ClearInventory();
                 player.PlayCutscene(startGameCutscene);
+                Invoke("TryPlayMusic", 1);
             }
-            Invoke("TryPlayMusic", 1);
         }
     }
 

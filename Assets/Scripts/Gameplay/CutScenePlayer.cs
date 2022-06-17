@@ -151,6 +151,11 @@ public class CutScenePlayer : MonoBehaviour
                 Destroy(currentCharacter);
                 Advance();
                 break;
+            case StepType.ShowRenderer:
+                currentCharacter = GameObject.Find(step.character);
+                currentCharacter.GetComponent<SpriteRenderer>().enabled = currentStep.animationValue;
+                Advance();
+                break;
             case StepType.Create:
                 Transform newObject = Instantiate(step.objectCreatedPrefab, GameObject.Find("Entities").transform);
                 newObject.position = step.targetLocation;

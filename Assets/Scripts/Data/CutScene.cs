@@ -6,7 +6,7 @@ using static AudioUtils;
 [CreateAssetMenu(fileName = "New CutScene", menuName = "CutScene")]
 public class CutScene : ScriptableObject
 {
-    public enum StepType { Intro, MoveCharacter, CameraPan, AnimateCharacter, Wait, Outro, Teleport, Destroy, Create, RemoveFromInventory, WaitForClick, ActivateUI, PlayMusic, PlaySound, StopSound }
+    public enum StepType { Intro, MoveCharacter, CameraPan, AnimateCharacter, Wait, Outro, Teleport, Destroy, Create, RemoveFromInventory, WaitForClick, ActivateUI, PlayMusic, PlaySound, StopSound, ShowRenderer }
 
     [System.Serializable]
     public class Step

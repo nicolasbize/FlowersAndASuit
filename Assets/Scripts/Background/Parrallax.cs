@@ -11,6 +11,6 @@ public class Parrallax : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(-player.position.x / zoom, transform.position.y, transform.position.z);
+        transform.position = new Vector3(-Camera.main.transform.position.x / zoom, transform.position.y, transform.position.z);
     }
 }
