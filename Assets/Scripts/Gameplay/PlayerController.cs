@@ -31,6 +31,12 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update() {
+        if (animator.GetBool("is_moving")) {
+            AudioUtils.PlayWalkingSound(transform.position.x < -47 ? AudioUtils.Surface.Grass : AudioUtils.Surface.Ground, transform.position);
+        } else {
+            AudioUtils.StopWalkingSound();
+        }
+
         if (cutsceneManager.GetComponent<CutScenePlayer>().IsPlayingCutScene())
             return;
 
@@ -40,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
         animator.SetBool("is_moving", state == State.Moving);
         animator.SetBool("is_talking", state == State.Talking);
+        
         
 
     }

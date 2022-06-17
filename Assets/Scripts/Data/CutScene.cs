@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static AudioUtils;
 
 [CreateAssetMenu(fileName = "New CutScene", menuName = "CutScene")]
 public class CutScene : ScriptableObject
 {
-    public enum StepType { Intro, MoveCharacter, CameraPan, AnimateCharacter, Wait, Outro, Teleport, Destroy, Create, RemoveFromInventory, WaitForClick, ActivateUI, PlayMusic }
+    public enum StepType { Intro, MoveCharacter, CameraPan, AnimateCharacter, Wait, Outro, Teleport, Destroy, Create, RemoveFromInventory, WaitForClick, ActivateUI, PlayMusic, PlaySound, StopSound }
 
     [System.Serializable]
     public class Step
@@ -21,8 +22,11 @@ public class CutScene : ScriptableObject
         public Transform objectCreatedPrefab;
         public string text;
         public InventoryItem objectGained;
+        public SoundType sound;
+        public int fmodTextId;
     }
 
+    public AudioUtils.DialogConversation conversation;
     public Step[] steps;
 
 }

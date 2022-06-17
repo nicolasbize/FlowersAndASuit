@@ -15,4 +15,7 @@ MonoBehaviour:
   itemName: Shop Key
   texture: {fileID: 2800000, guid: 4f0fc2c548895a345ba83a339dad95ad, type: 3}
   combinations: []
-  interactions: []
+  interactions:
+  - objectName: Lily
+    callbackName: 
+    cutscene: {fileID: 11400000, guid: e50edb53cbfea9f42ad75bd9060bc4e5, type: 2}

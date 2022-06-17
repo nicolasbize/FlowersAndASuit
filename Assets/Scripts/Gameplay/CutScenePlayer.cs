@@ -16,6 +16,7 @@ public class CutScenePlayer : MonoBehaviour
     
     Queue<Step> remainingSteps = new Queue<Step>();
     Step currentStep = null;
+    CutScene currentCutScene = null;
     GameObject currentCharacter;
     Vector3 currentDestination = Vector3.zero;
 
@@ -24,6 +25,7 @@ public class CutScenePlayer : MonoBehaviour
     }
 
     public void PlayCutscene(CutScene scene) {
+        currentCutScene = scene;
         remainingSteps.Clear();
         GameObject.Find("Enzo").GetComponent<PlayerController>().CleanTipsAndOutline();
         foreach (Step step in scene.steps) {
@@ -67,6 +69,7 @@ public class CutScenePlayer : MonoBehaviour
                     break;
                 case StepType.WaitForClick:
                     if (Input.GetMouseButtonDown(0)) {
+                        AudioUtils.PlaySound(AudioUtils.SoundType.UIClick, Camera.main.transform.position);
                         Advance();
                     }
                     break;
@@ -163,6 +166,18 @@ public class CutScenePlayer : MonoBehaviour
                 break;
             case StepType.RemoveFromInventory:
                 GameObject.Find("Enzo").GetComponent<PlayerController>().RemoveFromInventory(step.character);
+                Advance();
+                break;
+            case StepType.PlaySound:
+                if (currentStep.sound != AudioUtils.SoundType.None) {
+                    AudioUtils.PlaySound(currentStep.sound, Camera.main.transform.position);
+                } else {
+                    AudioUtils.PlayDialog(currentCutScene.conversation, Camera.main.transform.position, currentStep.fmodTextId);
+                }
+                Advance();
+                break;
+            case StepType.StopSound:
+                AudioUtils.StopSound(currentStep.sound);
                 Advance();
                 break;
             case StepType.Wait:

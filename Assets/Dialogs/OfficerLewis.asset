@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greeting: Hello Sir!
   reply: Officer Lewis, armed and ready!
-  fmodEvent: 0
+  fmodEvent: 6
   branches:
   - question: How do I know you're a real police officer?
     answer: Easy! Ask me anything!
@@ -25,8 +25,8 @@ MonoBehaviour:
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 0
-    fmodQuestionId: 0
-    fmodAnswerId: 0
+    fmodQuestionId: 2
+    fmodAnswerId: 3
     fmodReactionId: 0
     branches:
     - question: What's eight times seven?
@@ -38,9 +38,9 @@ MonoBehaviour:
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
-      fmodQuestionId: 0
-      fmodAnswerId: 0
-      fmodReactionId: 0
+      fmodQuestionId: 4
+      fmodAnswerId: 5
+      fmodReactionId: 6
       branches: []
     - question: Which is worse, apathy or ignorance?
       answer: I don't know and I really don't care!
@@ -51,9 +51,9 @@ MonoBehaviour:
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
-      fmodQuestionId: 0
-      fmodAnswerId: 0
-      fmodReactionId: 0
+      fmodQuestionId: 7
+      fmodAnswerId: 8
+      fmodReactionId: 9
       branches: []
     - question: What weighs more, a pound of metal or a pound of feathers?
       answer: Well metal, duh!
@@ -64,9 +64,9 @@ MonoBehaviour:
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
-      fmodQuestionId: 0
-      fmodAnswerId: 0
-      fmodReactionId: 0
+      fmodQuestionId: 10
+      fmodAnswerId: 11
+      fmodReactionId: 12
       branches: []
   - question: How many people have you arrested?
     answer: No one yet, still waiting for a real crime!
@@ -77,8 +77,8 @@ MonoBehaviour:
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 0
-    fmodQuestionId: 0
-    fmodAnswerId: 0
+    fmodQuestionId: 13
+    fmodAnswerId: 14
     fmodReactionId: 0
     branches:
     - question: Wait... you've never arrested anybody?
@@ -90,11 +90,11 @@ MonoBehaviour:
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
-      fmodQuestionId: 0
-      fmodAnswerId: 0
+      fmodQuestionId: 15
+      fmodAnswerId: 16
       fmodReactionId: 0
       branches:
-      - question: Aren't you just waiting here though?
+      - question: But you're just waiting here!?
         answer: I'm not "just" waiting...   I'm... focusing!
         reaction: 
         visited: 0
@@ -103,11 +103,11 @@ MonoBehaviour:
         requiresObject: {fileID: 0}
         cutscene: {fileID: 0}
         final: 0
-        fmodQuestionId: 0
-        fmodAnswerId: 0
+        fmodQuestionId: 17
+        fmodAnswerId: 18
         fmodReactionId: 0
         branches: []
-      - question: What kind of felony is worthy of your time?
+      - question: What kind of felony is worth your time?
         answer: The usual... Murderers, Drug Dealers, Jaywalkers...
         reaction: 
         visited: 0
@@ -116,8 +116,8 @@ MonoBehaviour:
         requiresObject: {fileID: 0}
         cutscene: {fileID: 0}
         final: 0
-        fmodQuestionId: 0
-        fmodAnswerId: 0
+        fmodQuestionId: 19
+        fmodAnswerId: 20
         fmodReactionId: 0
         branches: []
     - question: Aaand you think it'll be in this park?
@@ -129,8 +129,8 @@ MonoBehaviour:
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
-      fmodQuestionId: 0
-      fmodAnswerId: 0
+      fmodQuestionId: 21
+      fmodAnswerId: 22
       fmodReactionId: 0
       branches: []
   - question: I'd like to report a crime!
@@ -142,8 +142,8 @@ MonoBehaviour:
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 0
-    fmodQuestionId: 0
-    fmodAnswerId: 0
+    fmodQuestionId: 23
+    fmodAnswerId: 24
     fmodReactionId: 0
     branches:
     - question: (Bring Officer Lewis to the Phone Booth)
@@ -156,7 +156,7 @@ MonoBehaviour:
       cutscene: {fileID: 11400000, guid: f6a31f75a9419774982e391b7d44fd72, type: 2}
       final: 1
       fmodQuestionId: 0
-      fmodAnswerId: 0
+      fmodAnswerId: 25
       fmodReactionId: 0
       branches: []
   - question: Sorry I have to go
@@ -168,7 +168,7 @@ MonoBehaviour:
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 1
-    fmodQuestionId: 0
-    fmodAnswerId: 0
+    fmodQuestionId: 26
+    fmodAnswerId: 27
     fmodReactionId: 0
     branches: []

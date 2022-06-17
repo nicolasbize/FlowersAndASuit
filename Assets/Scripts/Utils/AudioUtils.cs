@@ -6,10 +6,13 @@ using UnityEngine;
 
 public static class AudioUtils
 {
+    public enum SoundType { None, ParkOutdoor, CityOutdoor, EnzoFootsteps, AlFish, AlSplash, Dog, ScissorCut, PhoneDial, PhoneRing, UIClick, UIPocket}
+    private static readonly Dictionary<SoundType, FMOD.Studio.EventInstance> soundFmodEvents = new Dictionary<SoundType, FMOD.Studio.EventInstance>();
+    
 
     public enum DialogConversation
     {
-        None, Sandy, Al, Lily, Jane, Paulo
+        None, Sandy, Al, Lily, Jane, Paulo, OfficerLewis, Scott, Arrest
     }
 
     private static readonly Dictionary<DialogConversation, FMOD.Studio.EventInstance> DialogFmodEvents = new Dictionary<DialogConversation, FMOD.Studio.EventInstance>();
@@ -19,13 +22,20 @@ public static class AudioUtils
         { DialogConversation.Lily, "event:/Dialogue/Flower Shop Owner" },
         { DialogConversation.Jane, "event:/Dialogue/Lady at the Park" },
         { DialogConversation.Paulo, "event:/Dialogue/Mens Warehouse Owner" },
+        { DialogConversation.OfficerLewis, "event:/Dialogue/Officer Lewis" },
+        { DialogConversation.Scott, "event:/Dialogue/Shady Guy" },
+        { DialogConversation.Arrest, "event:/Dialogue/The Arrest" },
     };
+
     private static readonly Dictionary<DialogConversation, string> dialogParameterNames = new Dictionary<DialogConversation, string>() {
         { DialogConversation.Sandy, "Dialog Line" },
         { DialogConversation.Al, "Fisherman Dialogue Line" },
         { DialogConversation.Lily, "Flower Shop Dialogue" },
         { DialogConversation.Jane, "Lady at the Park Dialogue" },
         { DialogConversation.Paulo, "Mens Warehouse Dialogue Line" },
+        { DialogConversation.OfficerLewis, "Officer Lewis Dialogue" },
+        { DialogConversation.Scott, "Scott Dialogue" },
+        { DialogConversation.Arrest, "Arrest Dialogue" },
     };
 
     public enum Music
@@ -35,10 +45,73 @@ public static class AudioUtils
         Wearhouse = 2,
         Puzzle = 3
     }
+    public enum Surface { Ground = 0, Grass = 1}
     private static FMOD.Studio.EventInstance musicInstance = new FMOD.Studio.EventInstance();
     private static bool musicLoaded = false;
     private static bool musicPlaying = false;
     private static Music currentMusicPlayed = Music.MainTheme;
+    private static SoundType currentAtmosphericPlayed = SoundType.ParkOutdoor;
+    private static bool walkingSoundPlaying = false;
+
+    private static void LoadSounds() {
+        if (soundFmodEvents.Count == 0) {
+            soundFmodEvents.Add(SoundType.CityOutdoor, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Ambiences/Interior"));
+            soundFmodEvents.Add(SoundType.ParkOutdoor, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Ambiences/Outdoor"));
+            soundFmodEvents.Add(SoundType.EnzoFootsteps, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Enzo/Footsteps"));
+            soundFmodEvents.Add(SoundType.AlFish, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Fisherman/Fish"));
+            soundFmodEvents.Add(SoundType.AlSplash, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Fisherman/Splash"));
+            soundFmodEvents.Add(SoundType.Dog, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Jane/Jane Dog"));
+            soundFmodEvents.Add(SoundType.ScissorCut, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Kite/ScissorCut"));
+            soundFmodEvents.Add(SoundType.PhoneDial, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Phonecall Cutscene/Phone Dial"));
+            soundFmodEvents.Add(SoundType.PhoneRing, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Phonecall Cutscene/Phone Ring"));
+            soundFmodEvents.Add(SoundType.UIClick, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/Mouse Click"));
+            soundFmodEvents.Add(SoundType.UIPocket, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/Pocket"));
+        }
+    }
+
+    public static void PlayAtmospheric(SoundType soundPlayed, Vector3 position) {
+        LoadSounds();
+        if (soundPlayed == SoundType.None) return;
+        if (currentAtmosphericPlayed != soundPlayed) {
+            currentAtmosphericPlayed = soundPlayed;
+            SoundType soundToStop = soundPlayed == SoundType.ParkOutdoor ? SoundType.CityOutdoor : SoundType.ParkOutdoor;
+            soundFmodEvents[soundToStop].stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            soundFmodEvents[soundPlayed].set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
+            soundFmodEvents[soundPlayed].start();
+            soundFmodEvents[soundPlayed].release();
+        }
+    }
+
+    public static void PlayWalkingSound(Surface surface, Vector3 position) {
+        LoadSounds();
+        soundFmodEvents[SoundType.EnzoFootsteps].setParameterByName("Surface", (int) surface);
+        if (!walkingSoundPlaying) {
+            walkingSoundPlaying = true;
+            soundFmodEvents[SoundType.EnzoFootsteps].set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
+            soundFmodEvents[SoundType.EnzoFootsteps].start();
+        }
+
+    }
+
+    public static void StopWalkingSound() {
+        LoadSounds();
+        soundFmodEvents[SoundType.EnzoFootsteps].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        walkingSoundPlaying = false;
+    }
+
+    public static void PlaySound(SoundType sound, Vector3 position) {
+        LoadSounds();
+        if (sound == SoundType.None) return;
+        soundFmodEvents[sound].set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
+        soundFmodEvents[sound].start();
+    }
+
+    public static void StopSound(SoundType sound) {
+        LoadSounds();
+        if (sound == SoundType.None) return;
+        soundFmodEvents[sound].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
 
     public static void PlayMusic(Music music, Vector3 position) {
         if (!musicLoaded) {
@@ -53,7 +126,6 @@ public static class AudioUtils
             musicPlaying = true;
             musicInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
             musicInstance.start();
-            musicInstance.release();
         }
     }
 

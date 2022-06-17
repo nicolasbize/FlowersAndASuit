@@ -16,8 +16,8 @@ MonoBehaviour:
   reply: Ah fish no bite!
   fmodEvent: 2
   branches:
-  - question: Did you try talking nicely to them?
-    answer: Fishy, fishy!! Come here fishy fishy!!   Not work!
+  - question: I'm quite the fisherman myself!   Can I give you some advice?
+    answer: Well you're here mate, go on now!
     reaction: 
     visited: 0
     requiresPlantedDrugs: 0
@@ -29,8 +29,8 @@ MonoBehaviour:
     fmodAnswerId: 3
     fmodReactionId: 0
     branches:
-    - question: Did you try throwing food in the water?
-      answer: No, I want catch food from water!   Not throw food in water!
+    - question: Did you try talking nicely to them?
+      answer: Come here fishy fishy!!   Nooot working!!
       reaction: 
       visited: 0
       requiresPlantedDrugs: 0
@@ -38,26 +38,51 @@ MonoBehaviour:
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
-      fmodQuestionId: 9
-      fmodAnswerId: 10
+      fmodQuestionId: 4
+      fmodAnswerId: 5
       fmodReactionId: 0
       branches: []
-  - question: Maybe the water is too cold?
-    answer: Oh I took care of that, I warm the water!
-    reaction: Wait how did you...   Nevermind, I don't think I want to know.
-    visited: 0
-    requiresPlantedDrugs: 0
-    objectGained: {fileID: 0}
-    requiresObject: {fileID: 0}
-    cutscene: {fileID: 0}
-    final: 0
-    fmodQuestionId: 4
-    fmodAnswerId: 5
-    fmodReactionId: 0
-    branches: []
-  - question: Maybe it's too late in the day?
-    answer: 'Ha, you no smart, fish don''t know how read clock for time!   I don''t
-      even know how read clock! '
+    - question: Maybe the water is too cold!
+      answer: Oh I took care of that!   I warmed the water!
+      reaction: 
+      visited: 0
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
+      final: 0
+      fmodQuestionId: 6
+      fmodAnswerId: 7
+      fmodReactionId: 0
+      branches:
+      - question: Eww... I don't think I wanna know how you did that.
+        answer: I pee in water!! That's how I did it!!   It's all warm now!
+        reaction: Great... now I've got that image engraved in my head...
+        visited: 0
+        requiresPlantedDrugs: 0
+        objectGained: {fileID: 0}
+        requiresObject: {fileID: 0}
+        cutscene: {fileID: 0}
+        final: 0
+        fmodQuestionId: 0
+        fmodAnswerId: 0
+        fmodReactionId: 0
+        branches: []
+    - question: Fish love sunflower seeds!
+      answer: Hey I love sunflower seeds too!   Hmmm does that mean I'm a fish?
+      reaction: 
+      visited: 0
+      requiresPlantedDrugs: 0
+      objectGained: {fileID: 0}
+      requiresObject: {fileID: 0}
+      cutscene: {fileID: 0}
+      final: 0
+      fmodQuestionId: 6
+      fmodAnswerId: 7
+      fmodReactionId: 0
+      branches: []
+  - question: Could I borrow your fishing rod?   I need it for something important...
+    answer: Not more important than food for Good Old Al!
     reaction: 
     visited: 0
     requiresPlantedDrugs: 0
@@ -65,12 +90,12 @@ MonoBehaviour:
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 0
-    fmodQuestionId: 7
-    fmodAnswerId: 8
+    fmodQuestionId: 13
+    fmodAnswerId: 14
     fmodReactionId: 0
     branches: []
   - question: I think I need to go
-    answer: Allrighty!
+    answer: All right mate!
     reaction: 
     visited: 1
     requiresPlantedDrugs: 0
@@ -78,7 +103,7 @@ MonoBehaviour:
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 1
-    fmodQuestionId: 11
-    fmodAnswerId: -1
+    fmodQuestionId: 15
+    fmodAnswerId: 16
     fmodReactionId: 0
     branches: []

@@ -210,6 +210,6 @@ MonoBehaviour:
     cutscene: {fileID: 0}
     final: 1
     fmodQuestionId: 32
-    fmodAnswerId: -1
+    fmodAnswerId: 33
     fmodReactionId: 0
     branches: []

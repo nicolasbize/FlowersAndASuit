@@ -8,8 +8,10 @@ public class Game : MonoBehaviour
     [SerializeField] bool startNewGame;
     [SerializeField] CutScene startGameCutscene;
     [SerializeField] Transform toolbar;
+    [SerializeField] Texture2D cursorTexture;
 
     private void Start() {
+        Cursor.SetCursor(cursorTexture, Vector2.one * 32, CursorMode.Auto);
         CutScenePlayer player = GetComponent<CutScenePlayer>();
         foreach (SpriteRenderer sr in FindObjectsOfType<SpriteRenderer>()) {
             sr.transform.position = SnapVector(sr.transform.position);

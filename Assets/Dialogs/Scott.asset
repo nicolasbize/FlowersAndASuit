@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greeting: Hello there!
   reply: Ugh, what do you want?!
-  fmodEvent: 0
+  fmodEvent: 7
   branches:
   - question: You have a really nice suit!
     answer: What are you, the suit police?
@@ -25,8 +25,8 @@ MonoBehaviour:
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 0
-    fmodQuestionId: 0
-    fmodAnswerId: 0
+    fmodQuestionId: 2
+    fmodAnswerId: 3
     fmodReactionId: 0
     branches:
     - question: That's right! Detective Holmes from the Suit police!   May I take
@@ -39,8 +39,8 @@ MonoBehaviour:
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
-      fmodQuestionId: 0
-      fmodAnswerId: 0
+      fmodQuestionId: 4
+      fmodAnswerId: 5
       fmodReactionId: 0
       branches: []
     - question: Maybe? Mind if I borrow it for just a bit?
@@ -52,8 +52,8 @@ MonoBehaviour:
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
-      fmodQuestionId: 0
-      fmodAnswerId: 0
+      fmodQuestionId: 6
+      fmodAnswerId: 7
       fmodReactionId: 0
       branches: []
   - question: You seem to be waiting for a phone call
@@ -65,8 +65,8 @@ MonoBehaviour:
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 0
-    fmodQuestionId: 0
-    fmodAnswerId: 0
+    fmodQuestionId: 8
+    fmodAnswerId: 9
     fmodReactionId: 0
     branches: []
   - question: You look like someone I could really be friends with!
@@ -78,11 +78,11 @@ MonoBehaviour:
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 0
-    fmodQuestionId: 0
-    fmodAnswerId: 0
+    fmodQuestionId: 10
+    fmodAnswerId: 11
     fmodReactionId: 0
     branches: []
-  - question: Gotta go!
+  - question: I'll go
     answer: Good
     reaction: 
     visited: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
     requiresObject: {fileID: 0}
     cutscene: {fileID: 0}
     final: 1
-    fmodQuestionId: 0
+    fmodQuestionId: 12
     fmodAnswerId: 0
     fmodReactionId: 0
     branches: []
