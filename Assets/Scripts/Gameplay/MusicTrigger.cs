@@ -6,6 +6,8 @@ using static AudioUtils;
 public class MusicTrigger : MonoBehaviour
 {
     [SerializeField] SoundType soundPlayed;
+    [SerializeField] bool switchMusic;
+    [SerializeField] Music music;
     private bool entered;
 
     void Update()
@@ -24,6 +26,9 @@ public class MusicTrigger : MonoBehaviour
     private void PlaySound() {
         if (soundPlayed == SoundType.CityOutdoor || soundPlayed == SoundType.ParkOutdoor) {
             AudioUtils.PlayAtmospheric(soundPlayed, Camera.main.transform.position);
+        }
+        if (switchMusic) {
+            AudioUtils.PlayMusic(music, Camera.main.transform.position);
         }
     }
 

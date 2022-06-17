@@ -12,7 +12,7 @@ public static class AudioUtils
 
     public enum DialogConversation
     {
-        None, Sandy, Al, Lily, Jane, Paulo, OfficerLewis, Scott, Arrest, Enzo
+        None, Sandy, Al, Lily, Jane, Paulo, OfficerLewis, Scott, Arrest, Enzo, Jim
     }
 
     private static readonly Dictionary<DialogConversation, FMOD.Studio.EventInstance> DialogFmodEvents = new Dictionary<DialogConversation, FMOD.Studio.EventInstance>();
@@ -26,6 +26,7 @@ public static class AudioUtils
         { DialogConversation.Scott, "event:/Dialogue/Shady Guy" },
         { DialogConversation.Arrest, "event:/Dialogue/The Arrest" },
         { DialogConversation.Enzo, "event:/Dialogue/Enzo Solo" },
+        { DialogConversation.Jim, "event:/Dialogue/Kid at the Park" },
     };
 
     private static readonly Dictionary<DialogConversation, string> dialogParameterNames = new Dictionary<DialogConversation, string>() {
@@ -38,6 +39,7 @@ public static class AudioUtils
         { DialogConversation.Scott, "Scott Dialogue" },
         { DialogConversation.Arrest, "Arrest Dialogue" },
         { DialogConversation.Enzo, "Enzo Dialogue" },
+        { DialogConversation.Jim, "Jim Dialogue" },
     };
 
     public enum Music

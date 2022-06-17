@@ -27,6 +27,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 790
+--- !u!114 &-7430742231831705264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Kid at the Park/Jim Dialogue
+  m_EditorClassIdentifier: 
+  Name: Jim Dialogue
+  StudioPath: 
+  Min: 0
+  Max: 33
+  Default: 0
+  ID:
+    data1: 3893470271
+    data2: 505194890
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-7309051599087815900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,7 +264,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1840
+  Length: 2402
 --- !u!114 &-3769648100592577245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +289,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3705593012003363510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Bus/Bus Arrive
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Bus/Bus Arrive
+  Guid:
+    Data1: 448617276
+    Data2: 1308566275
+    Data3: 196290432
+    Data4: 2124214197
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12058
 --- !u!114 &-3298069025539174168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,6 +367,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-2709299515113515251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Phonecall Cutscene/Phone Hangup
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Phonecall Cutscene/Phone Hangup
+  Guid:
+    Data1: -1808546465
+    Data2: 1090370175
+    Data3: 1947349662
+    Data4: -1905199345
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1285
 --- !u!114 &-2065084814122447616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,12 +586,17 @@ MonoBehaviour:
   - {fileID: 1900484058338267564}
   - {fileID: 6132498809836987631}
   - {fileID: -6631515390234103422}
+  - {fileID: -3705593012003363510}
+  - {fileID: -2709299515113515251}
+  - {fileID: 6102421731247722828}
+  - {fileID: 6777248091013617402}
+  - {fileID: 1741133336043274774}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4205306280637274764}
   StringsBanks:
   - {fileID: 2346158573358980646}
-  cacheTime: 637909955682281535
+  cacheTime: 637910555968701308
   cacheVersion: 10
 --- !u!114 &460228559419828986
 MonoBehaviour:
@@ -611,6 +694,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &1741133336043274774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Key Retrieval/Key Retrieval
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Key Retrieval/Key Retrieval
+  Guid:
+    Data1: 959995344
+    Data2: 1132950979
+    Data3: 1417929137
+    Data4: -1106130330
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6107
 --- !u!114 &1900484058338267564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,10 +764,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637909955682281535
+  lastModified: 637910555968701308
   FileSizes:
   - Name: Desktop
-    Value: 2422
+    Value: 2720
   Exists: 1
 --- !u!114 &2380465853709728324
 MonoBehaviour:
@@ -754,10 +864,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637909955682261586
+  lastModified: 637910555968691333
   FileSizes:
   - Name: Desktop
-    Value: 17952384
+    Value: 18685760
   Exists: 1
 --- !u!114 &4653169154470494749
 MonoBehaviour:
@@ -781,11 +891,12 @@ MonoBehaviour:
   - {fileID: 4205306280637274764}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
-  Parameters: []
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7430742231831705264}
   MinDistance: 1
   MaxDistance: 20
-  Length: 128000
+  Length: 143998
 --- !u!114 &5283598114121629958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -841,6 +952,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 293817
+--- !u!114 &6102421731247722828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Bus/Bus Depart
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Bus/Bus Depart
+  Guid:
+    Data1: -1447592338
+    Data2: 1101722200
+    Data3: 1980864681
+    Data4: -1672403560
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 9950
 --- !u!114 &6132498809836987631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -869,6 +1007,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 146500
+--- !u!114 &6777248091013617402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/The Arrest/Police Whistle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/The Arrest/Police Whistle
+  Guid:
+    Data1: 1771311268
+    Data2: 1205762252
+    Data3: -330394750
+    Data4: 274647944
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1285
 --- !u!114 &7083370896466928834
 MonoBehaviour:
   m_ObjectHideFlags: 0

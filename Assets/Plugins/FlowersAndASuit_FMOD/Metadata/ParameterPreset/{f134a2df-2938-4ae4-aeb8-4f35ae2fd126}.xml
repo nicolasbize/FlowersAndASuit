@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{f134a2df-2938-4ae4-aeb8-4f35ae2fd126}">
+		<property name="name">
+			<value>Jim Dialogue</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b8c6e295-5690-4391-8362-192fcc77476a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{ccb8505a-2806-48bc-9226-73ea6e414a06}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{ccb8505a-2806-48bc-9226-73ea6e414a06}">
+		<property name="maximum">
+			<value>33</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
