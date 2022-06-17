@@ -42,7 +42,7 @@ MonoBehaviour:
   Name: Lady at the Park Dialogue
   StudioPath: 
   Min: 0
-  Max: 32
+  Max: 33
   Default: 0
   ID:
     data1: 3120016433
@@ -79,6 +79,62 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 282500
+--- !u!114 &-7130587049552396399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Officer Lewis
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Officer Lewis
+  Guid:
+    Data1: 1883920449
+    Data2: 1314905652
+    Data3: 1670426755
+    Data4: -1113576805
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1725626591874539863}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 122903
+--- !u!114 &-6631515390234103422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Shady Guy
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Shady Guy
+  Guid:
+    Data1: -1554305797
+    Data2: 1251952046
+    Data3: -358372991
+    Data4: 1771158486
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -2866469214177630691}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 78001
 --- !u!114 &-6285868573028979185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,7 +162,7 @@ MonoBehaviour:
   - {fileID: -7309051599087815900}
   MinDistance: 1
   MaxDistance: 20
-  Length: 186500
+  Length: 190000
 --- !u!114 &-4712192809565577931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +214,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-4297074419908992783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Kite/ScissorCut
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Kite/ScissorCut
+  Guid:
+    Data1: -890964992
+    Data2: 1236239682
+    Data3: -1693139057
+    Data4: -359782314
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1840
 --- !u!114 &-3769648100592577245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +256,7 @@ MonoBehaviour:
   Name: Game Stage
   StudioPath: 
   Min: 0
-  Max: 3
+  Max: 5
   Default: 0
   ID:
     data1: 47604654
@@ -209,6 +292,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 176
+--- !u!114 &-2866469214177630691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Shady Guy/Scott Dialogue
+  m_EditorClassIdentifier: 
+  Name: Scott Dialogue
+  StudioPath: 
+  Min: 0
+  Max: 16
+  Default: 0
+  ID:
+    data1: 3510370080
+    data2: 4069467416
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2065084814122447616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,7 +442,7 @@ MonoBehaviour:
   - {fileID: 460228559419828986}
   MinDistance: 1
   MaxDistance: 20
-  Length: 142464
+  Length: 146089
 --- !u!114 &-11489083154556470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,12 +503,17 @@ MonoBehaviour:
   - {fileID: 3365539933866330016}
   - {fileID: 8166757156466014485}
   - {fileID: -6285868573028979185}
+  - {fileID: -4297074419908992783}
+  - {fileID: -7130587049552396399}
+  - {fileID: 1900484058338267564}
+  - {fileID: 6132498809836987631}
+  - {fileID: -6631515390234103422}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4205306280637274764}
   StringsBanks:
   - {fileID: 2346158573358980646}
-  cacheTime: 637909736110000000
+  cacheTime: 637909955682281535
   cacheVersion: 10
 --- !u!114 &460228559419828986
 MonoBehaviour:
@@ -427,6 +539,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &748263833453205277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/The Arrest/Arrest Dialogue
+  m_EditorClassIdentifier: 
+  Name: Arrest Dialogue
+  StudioPath: 
+  Min: 0
+  Max: 12
+  Default: 0
+  ID:
+    data1: 767970825
+    data2: 1389362485
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &964179419400726625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,7 +578,7 @@ MonoBehaviour:
   Name: Dialog Line
   StudioPath: 
   Min: 0
-  Max: 12
+  Max: 13
   Default: 0
   ID:
     data1: 3997382347
@@ -451,6 +587,58 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &1725626591874539863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Officer Lewis/Officer Lewis Dialogue
+  m_EditorClassIdentifier: 
+  Name: Officer Lewis Dialogue
+  StudioPath: 
+  Min: 0
+  Max: 27
+  Default: 0
+  ID:
+    data1: 1155924418
+    data2: 3037687475
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1900484058338267564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/The Arrest
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/The Arrest
+  Guid:
+    Data1: -359652941
+    Data2: 1152901224
+    Data3: -1691739465
+    Data4: -1980821091
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 748263833453205277}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 43520
 --- !u!114 &2346158573358980646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,10 +654,34 @@ MonoBehaviour:
   Path: Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637909736110000000
+  lastModified: 637909955682281535
   FileSizes:
   - Name: Desktop
-    Value: 2012
+    Value: 2422
+  Exists: 1
+--- !u!114 &2380465853709728324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Enzo Solo/Enzo Dialogue
+  m_EditorClassIdentifier: 
+  Name: Enzo Dialogue
+  StudioPath: 
+  Min: 0
+  Max: 36
+  Default: 0
+  ID:
+    data1: 683249672
+    data2: 1361900913
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &3365539933866330016
 MonoBehaviour:
@@ -498,7 +710,7 @@ MonoBehaviour:
   - {fileID: -3769648100592577245}
   MinDistance: 1
   MaxDistance: 20
-  Length: 193500
+  Length: 278000
 --- !u!114 &3612508283910555207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,10 +754,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637909736110000000
+  lastModified: 637909955682261586
   FileSizes:
   - Name: Desktop
-    Value: 14763904
+    Value: 17952384
   Exists: 1
 --- !u!114 &4653169154470494749
 MonoBehaviour:
@@ -629,6 +841,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 293817
+--- !u!114 &6132498809836987631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Enzo Solo
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Enzo Solo
+  Guid:
+    Data1: -1707449378
+    Data2: 1177336301
+    Data3: 165830038
+    Data4: -1697929304
+  Banks:
+  - {fileID: 4205306280637274764}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2380465853709728324}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 146500
 --- !u!114 &7083370896466928834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,7 +896,7 @@ MonoBehaviour:
   - {fileID: 964179419400726625}
   MinDistance: 1
   MaxDistance: 20
-  Length: 70177
+  Length: 72855
 --- !u!114 &7224496205294935554
 MonoBehaviour:
   m_ObjectHideFlags: 0
