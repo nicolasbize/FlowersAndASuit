@@ -30,7 +30,7 @@ MonoBehaviour:
     fmodReactionId: 0
     branches:
     - question: Did you try talking nicely to them?
-      answer: Come here fishy fishy!!   Nooot working!!
+      answer: fishy fishy, come here fishy!!   Nooot working!!
       reaction: 
       visited: 0
       requiresPlantedDrugs: 0
@@ -64,9 +64,9 @@ MonoBehaviour:
         requiresObject: {fileID: 0}
         cutscene: {fileID: 0}
         final: 0
-        fmodQuestionId: 0
-        fmodAnswerId: 0
-        fmodReactionId: 0
+        fmodQuestionId: 8
+        fmodAnswerId: 9
+        fmodReactionId: 10
         branches: []
     - question: Fish love sunflower seeds!
       answer: Hey I love sunflower seeds too!   Hmmm does that mean I'm a fish?
@@ -77,8 +77,8 @@ MonoBehaviour:
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
-      fmodQuestionId: 6
-      fmodAnswerId: 7
+      fmodQuestionId: 11
+      fmodAnswerId: 12
       fmodReactionId: 0
       branches: []
   - question: Could I borrow your fishing rod?   I need it for something important...
@@ -97,7 +97,7 @@ MonoBehaviour:
   - question: I think I need to go
     answer: All right mate!
     reaction: 
-    visited: 1
+    visited: 0
     requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}

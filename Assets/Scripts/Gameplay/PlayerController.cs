@@ -128,6 +128,7 @@ public class PlayerController : MonoBehaviour
                 state = State.Idle;
             } else {
                 if (interactive.distanceToInteraction == 0) {
+                    state = State.Idle;
                     GetComponent<Animator>().SetTrigger(interactive.isPickup ? "pick_up" : "interact_background");
                 } else {
                     state = State.Talking;
@@ -223,7 +224,7 @@ public class PlayerController : MonoBehaviour
                 target.y = transform.position.y; // stay on same horizontal strip
                 if (hit.collider != null) {
                     var targetObject = hit.collider.gameObject;
-                    if (targetObject.GetComponent<Interactive>() != null) {
+                    if (targetObject.GetComponent<Interactive>() != null && targetObject.tag != "Player") {
                         Interactive interactive = targetObject.GetComponent<Interactive>();
                         interactiveTarget = targetObject;
                         float distToLeft = Mathf.Abs(targetObject.transform.position.x - interactive.distanceToInteraction - transform.position.x);

@@ -19,3 +19,6 @@ MonoBehaviour:
   - objectName: Jim
     callbackName: TryCutString
     cutscene: {fileID: 0}
+  - objectName: Kite String
+    callbackName: TryCutString
+    cutscene: {fileID: 0}

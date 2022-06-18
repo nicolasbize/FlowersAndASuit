@@ -153,7 +153,11 @@ public class CutScenePlayer : MonoBehaviour
                 break;
             case StepType.ShowRenderer:
                 currentCharacter = GameObject.Find(step.character);
-                currentCharacter.GetComponent<SpriteRenderer>().enabled = currentStep.animationValue;
+                if (currentCharacter.GetComponent<SpriteRenderer>() != null) {
+                    currentCharacter.GetComponent<SpriteRenderer>().enabled = currentStep.animationValue;
+                } else if (currentCharacter.GetComponent<MeshRenderer>() != null) {
+                    currentCharacter.GetComponent<MeshRenderer>().enabled = currentStep.animationValue;
+                }
                 Advance();
                 break;
             case StepType.Create:

@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0e67aaeb89ebd147a3058ec3cb4dae6, type: 3}
+  m_Name: Final
+  m_EditorClassIdentifier: 
+  conversation: 0
+  steps:
+  - type: 0
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 3
+    character: Enzo
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: is_walking_flowers
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 2
+    character: Enzo
+    targetLocation: {x: 35.5, y: -105.041664, z: 0}
+    interactionDuration: 0
+    animationProperty: is_walking_flowers
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 3
+    character: Enzo
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: is_walking_flowers
+    animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 1
+    character: Enzo
+    targetLocation: {x: 30.48, y: -104.8, z: 0}
+    interactionDuration: 3
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 3
+    character: Enzo
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: is_walking_flowers
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 4
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 3
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 2
+    character: 
+    targetLocation: {x: 35.5, y: -85.61, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 15
+    character: Credits
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 1
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 3
+    character: Credits
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 200
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: roll
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 4
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 200
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
