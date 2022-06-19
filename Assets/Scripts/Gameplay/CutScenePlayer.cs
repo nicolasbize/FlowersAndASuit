@@ -14,12 +14,17 @@ public class CutScenePlayer : MonoBehaviour
     [SerializeField] Transform bottomMovieStrip;
     [SerializeField] Transform UI;
     [SerializeField] UIInventoryManager inventory;
-    
+
+    FloatingTextManager floatingText;
     Queue<Step> remainingSteps = new Queue<Step>();
     Step currentStep = null;
     CutScene currentCutScene = null;
     GameObject currentCharacter;
     Vector3 currentDestination = Vector3.zero;
+
+    private void Start() {
+        floatingText = GetComponent<FloatingTextManager>();
+    }
 
     public bool IsPlayingCutScene() {
         return remainingSteps.Count > 0;
@@ -65,7 +70,7 @@ public class CutScenePlayer : MonoBehaviour
                     break;
                 case StepType.WaitForClick:
                     if (Input.GetMouseButtonDown(0)) {
-                        AudioUtils.PlaySound(AudioUtils.SoundType.UIClick, Camera.main.transform.position);
+                        AudioUtils.PlaySound(AudioUtils.SoundType.UIClick);
                         Advance();
                     }
                     break;
@@ -74,7 +79,7 @@ public class CutScenePlayer : MonoBehaviour
                     Advance();
                     break;
                 case StepType.PlayMusic:
-                    AudioUtils.PlayMusic((AudioUtils.Music) currentStep.interactionDuration, Camera.main.transform.position);
+                    AudioUtils.PlayMusic((AudioUtils.Music) currentStep.interactionDuration, 0.5f);
                     Advance();
                     break;
             }
@@ -143,6 +148,8 @@ public class CutScenePlayer : MonoBehaviour
                 break;
             case StepType.Destroy:
                 currentCharacter = GameObject.Find(step.character);
+                // the character may be parent to the floating text, save it
+                floatingText.textElement.parent = transform;
                 Destroy(currentCharacter);
                 Advance();
                 break;
@@ -166,9 +173,9 @@ public class CutScenePlayer : MonoBehaviour
                 break;
             case StepType.PlaySound:
                 if (currentStep.sound != AudioUtils.SoundType.None) {
-                    AudioUtils.PlaySound(currentStep.sound, Camera.main.transform.position);
+                    AudioUtils.PlaySound(currentStep.sound);
                 } else {
-                    AudioUtils.PlayDialog(currentCutScene.conversation, Camera.main.transform.position, currentStep.fmodTextId);
+                    AudioUtils.PlayDialog(currentCutScene.conversation, currentStep.fmodTextId);
                 }
                 Advance();
                 break;

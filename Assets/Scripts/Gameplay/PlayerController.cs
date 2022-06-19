@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         isInLiving = transform.position.y > -100;
         if (animator.GetBool("is_moving") && isInLiving) {
             bool isOnGrass = transform.position.x < -47;
-            AudioUtils.PlayWalkingSound(isOnGrass ? AudioUtils.Surface.Grass : AudioUtils.Surface.Ground, transform.position);
+            AudioUtils.PlayWalkingSound(isOnGrass ? AudioUtils.Surface.Grass : AudioUtils.Surface.Ground);
         } else {
             AudioUtils.StopWalkingSound();
         }
@@ -111,7 +111,6 @@ public class PlayerController : MonoBehaviour
         } else if (pickable != null) {
             State = PlayerState.Talking;
             conversationManager.ThinkOutLoud(pickable.TextBeforePickup, () => {
-                SetIdle();
                 pickable.PickUp(this, SetIdle);
             });
         } else if (talkable != null) {
@@ -126,10 +125,6 @@ public class PlayerController : MonoBehaviour
     private void LookTowards(Vector3 position) {
         Vector2 direction = transform.position.x < position.x ? Vector2.right : Vector2.left;
         spriteRenderer.flipX = direction == Vector2.left;
-    }
-
-    private void PickUp(GameObject interactiveTarget) {
-        Debug.Log("Pick up object");
     }
 
     public void SetDraggedInventoryItem(InventoryItem item) {
@@ -159,6 +154,7 @@ public class PlayerController : MonoBehaviour
         if (scott.IsOnPhone()) {
             scott.PlantDrugs();
         } else {
+            State = PlayerState.Talking;
             conversationManager.ThinkOutLoud(new SpokenLine("I need to distract him first", 7), SetIdle);
         }
     }
@@ -168,6 +164,7 @@ public class PlayerController : MonoBehaviour
         if (jim.CanCutKite()) {
             jim.CutKite();
         } else {
+            State = PlayerState.Talking;
             conversationManager.ThinkOutLoud(new SpokenLine("I can't do that.   I need to get rid of the police officer first", 8), SetIdle);
         }
     }

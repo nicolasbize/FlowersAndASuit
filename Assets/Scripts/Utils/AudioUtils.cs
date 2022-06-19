@@ -4,8 +4,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class AudioUtils
+public class AudioUtils : MonoBehaviour
 {
+
+    public static AudioUtils audioUtils;
+    private void Awake() {
+        if (audioUtils != null) {
+            GameObject.Destroy(audioUtils);
+        } else {
+            audioUtils = this;
+        }
+        DontDestroyOnLoad(this);
+    }
+
     public enum SoundType { None, ParkOutdoor, CityOutdoor, EnzoFootsteps, AlFish, AlSplash, Dog, ScissorCut, PhoneDial, PhoneRing, UIClick, UIPocket}
     private static readonly Dictionary<SoundType, FMOD.Studio.EventInstance> soundFmodEvents = new Dictionary<SoundType, FMOD.Studio.EventInstance>();
     
@@ -42,6 +53,20 @@ public static class AudioUtils
         { DialogConversation.Jim, "Jim Dialogue" },
     };
 
+    private static readonly Dictionary<SoundType, string> soundPaths = new Dictionary<SoundType, string>() {
+        { SoundType.CityOutdoor, "event:/SFX/Ambiences/Interior" },
+        { SoundType.ParkOutdoor, "event:/SFX/Ambiences/Outdoor" },
+        { SoundType.EnzoFootsteps, "event:/SFX/Enzo/Footsteps" },
+        { SoundType.AlFish, "event:/SFX/Fisherman/Fish" },
+        { SoundType.AlSplash, "event:/SFX/Fisherman/Splash" },
+        { SoundType.Dog, "event:/SFX/Jane/Jane Dog" },
+        { SoundType.ScissorCut, "event:/SFX/Kite/ScissorCut" },
+        { SoundType.PhoneDial, "event:/SFX/Phonecall Cutscene/Phone Dial" },
+        { SoundType.PhoneRing, "event:/SFX/Phonecall Cutscene/Phone Ring" },
+        { SoundType.UIClick, "event:/SFX/UI/Mouse Click" },
+        { SoundType.UIPocket, "event:/SFX/UI/Pocket" },
+    };
+
     public enum Music
     {
         MainTheme = 0,
@@ -55,92 +80,119 @@ public static class AudioUtils
     private static FMOD.Studio.EventInstance musicInstance = new FMOD.Studio.EventInstance();
     private static bool musicLoaded = false;
     private static bool musicPlaying = false;
+    private static float musicVolume = 1f;
     private static Music currentMusicPlayed = Music.MainTheme;
     private static SoundType currentAtmosphericPlayed = SoundType.ParkOutdoor;
     private static bool walkingSoundPlaying = false;
+    private static FMOD.Studio.EventInstance currentDialogInstance = new FMOD.Studio.EventInstance();
+    //private static DialogConversation currentDialogConversation = DialogConversation.None;
+    //private static Action currentDialogCallback;
+    //private static int currentDialogConversationId = -1;
+    //private static int conversationCaret = -1;
 
-    private static void LoadSounds() {
-        if (soundFmodEvents.Count == 0) {
-            soundFmodEvents.Add(SoundType.CityOutdoor, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Ambiences/Interior"));
-            soundFmodEvents.Add(SoundType.ParkOutdoor, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Ambiences/Outdoor"));
-            soundFmodEvents.Add(SoundType.EnzoFootsteps, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Enzo/Footsteps"));
-            soundFmodEvents.Add(SoundType.AlFish, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Fisherman/Fish"));
-            soundFmodEvents.Add(SoundType.AlSplash, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Fisherman/Splash"));
-            soundFmodEvents.Add(SoundType.Dog, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Jane/Jane Dog"));
-            soundFmodEvents.Add(SoundType.ScissorCut, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Kite/ScissorCut"));
-            soundFmodEvents.Add(SoundType.PhoneDial, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Phonecall Cutscene/Phone Dial"));
-            soundFmodEvents.Add(SoundType.PhoneRing, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Phonecall Cutscene/Phone Ring"));
-            soundFmodEvents.Add(SoundType.UIClick, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/Mouse Click"));
-            soundFmodEvents.Add(SoundType.UIPocket, FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/Pocket"));
+    private void Update() {
+        FMOD.ATTRIBUTES_3D position = FMODUnity.RuntimeUtils.To3DAttributes(Camera.main.transform.position);
+        if (currentAtmosphericPlayed != SoundType.None) {
+            GetSoundInstance(currentAtmosphericPlayed).set3DAttributes(position);
         }
+        if (walkingSoundPlaying) {
+            GetSoundInstance(SoundType.EnzoFootsteps).set3DAttributes(position);
+        }
+        if (musicPlaying) {
+            musicInstance.set3DAttributes(position);
+            switch (currentMusicPlayed) {
+                case Music.MainTheme:
+                    musicInstance.setVolume(0.6f);
+                    break;
+                case Music.Wearhouse:
+                    musicInstance.setVolume(0.8f);
+                    break;
+                default:
+                    musicInstance.setVolume(0.4f);
+                    break;
+            }
+        }
+
+        //if (currentDialogConversation != DialogConversation.None) {
+        //    int newCaretPosition;
+        //    currentDialogInstance.getTimelinePosition(out newCaretPosition);
+        //    if (newCaretPosition > conversationCaret) {
+        //        conversationCaret = newCaretPosition;
+        //    } else { // we encountered a loop, meaning the conversation is over
+        //        StopDialog(currentDialogConversation, currentDialogConversationId);
+        //    }
+        //}
     }
 
-    public static void PlayAtmospheric(SoundType soundPlayed, Vector3 position) {
-        LoadSounds();
+    private static FMOD.Studio.EventInstance GetSoundInstance(SoundType sound) {
+        if (!soundFmodEvents.ContainsKey(sound)) {
+            soundFmodEvents[sound] = FMODUnity.RuntimeManager.CreateInstance(soundPaths[sound]);
+        }
+        return soundFmodEvents[sound];
+    }
+
+    public static void PlayAtmospheric(SoundType soundPlayed) {
         if (soundPlayed == SoundType.None) return;
         if (currentAtmosphericPlayed != soundPlayed) {
             currentAtmosphericPlayed = soundPlayed;
             SoundType soundToStop = soundPlayed == SoundType.ParkOutdoor ? SoundType.CityOutdoor : SoundType.ParkOutdoor;
-            soundFmodEvents[soundToStop].stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            soundFmodEvents[soundPlayed].set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
-            soundFmodEvents[soundPlayed].start();
-            soundFmodEvents[soundPlayed].release();
+            GetSoundInstance(soundToStop).stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            GetSoundInstance(soundPlayed).start();
+            GetSoundInstance(soundPlayed).release();
         }
     }
 
-    public static void PlayWalkingSound(Surface surface, Vector3 position) {
-        LoadSounds();
-        soundFmodEvents[SoundType.EnzoFootsteps].setParameterByName("Surface", (int) surface);
+    public static void PlayWalkingSound(Surface surface) {
+        GetSoundInstance(SoundType.EnzoFootsteps).setParameterByName("Surface", (int) surface);
         if (!walkingSoundPlaying) {
             walkingSoundPlaying = true;
-            soundFmodEvents[SoundType.EnzoFootsteps].set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
-            soundFmodEvents[SoundType.EnzoFootsteps].start();
+            GetSoundInstance(SoundType.EnzoFootsteps).start();
         }
 
-    }
-
-    public static void Test(DialogConversation conversation) {
-        if (conversation != DialogConversation.None) {
-            FMOD.Studio.EventInstance instance = LoadDialogInstance(conversation);
-            FMOD.Studio.PLAYBACK_STATE state;
-            instance.getPlaybackState(out state);
-            //Debug.Log(state);
-        }
     }
 
     public static void StopWalkingSound() {
-        LoadSounds();
-        soundFmodEvents[SoundType.EnzoFootsteps].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        if (soundFmodEvents.ContainsKey(SoundType.EnzoFootsteps)) {
+            GetSoundInstance(SoundType.EnzoFootsteps).stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        }
         walkingSoundPlaying = false;
     }
 
-    public static void PlaySound(SoundType sound, Vector3 position) {
-        LoadSounds();
+    public static void PlaySound(SoundType sound) {
         if (sound == SoundType.None) return;
-        soundFmodEvents[sound].set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
-        soundFmodEvents[sound].start();
+        FMOD.ATTRIBUTES_3D position = FMODUnity.RuntimeUtils.To3DAttributes(Camera.main.transform.position);
+        GetSoundInstance(sound).set3DAttributes(position);
+        GetSoundInstance(sound).start();
     }
 
     public static void StopSound(SoundType sound) {
-        LoadSounds();
         if (sound == SoundType.None) return;
-        soundFmodEvents[sound].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        GetSoundInstance(sound).stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
-
-    public static void PlayMusic(Music music, Vector3 position) {
+    public static void PlayMusic(Music music, float volume = 1f) {
         if (!musicLoaded) {
             musicInstance = FMODUnity.RuntimeManager.CreateInstance("event:/MX/Main Themes");
             musicLoaded = true;
         }
-
+        musicVolume = volume;
         musicInstance.setParameterByName("Game Stage", (int) music);
         currentMusicPlayed = music;
+        FMOD.ATTRIBUTES_3D position = FMODUnity.RuntimeUtils.To3DAttributes(Camera.main.transform.position);
 
         if (!musicPlaying) {
             musicPlaying = true;
-            musicInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
+            musicInstance.set3DAttributes(position);
             musicInstance.start();
+            musicInstance.setVolume(musicVolume);
+        }
+    }
+
+    public static void RestoreMainTrackOrVolume() {
+        if (currentMusicPlayed == Music.Wearhouse) {
+            musicInstance.setVolume(0.9f);
+        } else {
+            PlayMusic(Music.MainTheme, 0.9f);
         }
     }
 
@@ -154,18 +206,39 @@ public static class AudioUtils
 
         FMOD.Studio.EventInstance instance = LoadDialogInstance(conversation);
         instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        //currentDialogConversation = DialogConversation.None;
+        //currentDialogConversationId = -1;
+        //conversationCaret = -1;
+        //currentDialogCallback();
     }
 
-    public static void PlayDialog(DialogConversation conversation, Vector3 position, int conversationId) {
+    //public static void PlayDialog(DialogConversation conversation, int conversationId, Action onDialogEnd) {
+    public static void PlayDialog(DialogConversation conversation, int conversationId) {
         if (conversation == DialogConversation.None || conversationId < 0)
             return;
 
-        FMOD.Studio.EventInstance instance = LoadDialogInstance(conversation);
-        instance.setParameterByName(dialogParameterNames[conversation], (float) conversationId);
-        instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
-        instance.start();
-        instance.release();
+        currentDialogInstance = LoadDialogInstance(conversation);
+        //currentDialogConversation = conversation;
+        //currentDialogCallback = onDialogEnd;
+        //currentDialogConversationId = conversationId;
+        FMOD.ATTRIBUTES_3D position = FMODUnity.RuntimeUtils.To3DAttributes(Camera.main.transform.position);
+        currentDialogInstance.setParameterByName(dialogParameterNames[conversation], (float) conversationId);
+        currentDialogInstance.set3DAttributes(position);
+        currentDialogInstance.start();
+        currentDialogInstance.release();
+        //conversationCaret = -1;
     }
+
+    //public static void Test(DialogConversation conversation) {
+    //    if (conversation != DialogConversation.None) {
+    //        FMOD.Studio.EventInstance instance = LoadDialogInstance(conversation);
+    //        FMOD.Studio.PLAYBACK_STATE state;
+    //        int position;
+    //        instance.getTimelinePosition(out position);
+    //        instance.getPlaybackState(out state);
+    //        //Debug.Log(state);
+    //    }
+    //}
 
     private static FMOD.Studio.EventInstance LoadDialogInstance(DialogConversation conversation) {
         FMOD.Studio.EventInstance instance;
@@ -174,7 +247,7 @@ public static class AudioUtils
         } else {
             try {
                 instance = FMODUnity.RuntimeManager.CreateInstance(dialogEventNames[conversation]);
-                instance.setCallback(new FMOD.Studio.EVENT_CALLBACK(DialogEventCallback), FMOD.Studio.EVENT_CALLBACK_TYPE.ALL);
+                //instance.setCallback(new FMOD.Studio.EVENT_CALLBACK(DialogEventCallback), FMOD.Studio.EVENT_CALLBACK_TYPE.ALL);
                 DialogFmodEvents[conversation] = instance;
             } catch (EventNotFoundException e) {
                 Debug.Log("fmod event not found: " + e.Message);
@@ -184,24 +257,20 @@ public static class AudioUtils
         return instance;
     }
 
-    static FMOD.RESULT DialogEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, IntPtr instancePtr, IntPtr parameterPtr) {
-        FMOD.Studio.EventInstance instance = new FMOD.Studio.EventInstance(instancePtr);
-        IntPtr timelineInfoPtr;
-        FMOD.RESULT result = instance.getUserData(out timelineInfoPtr);
-        if (type == FMOD.Studio.EVENT_CALLBACK_TYPE.SOUND_PLAYED) {
-            int pos;
-            instance.getTimelinePosition(out pos);
-            //Debug.Log(pos);
-            FMOD.Studio.PLAYBACK_STATE state;
-            instance.getPlaybackState(out state);
-            //Debug.Log(state);
-            if (result != FMOD.RESULT.OK) {
-                Debug.LogError("Timeline Callback error: " + result);
-            } else if (timelineInfoPtr != IntPtr.Zero) {
-                Debug.Log("yep");
-            }
-        }
+    //static FMOD.RESULT DialogEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, IntPtr instancePtr, IntPtr parameterPtr) {
+    //    FMOD.Studio.EventInstance instance = new FMOD.Studio.EventInstance(instancePtr);
+    //    IntPtr timelineInfoPtr;
+    //    FMOD.RESULT result = instance.getUserData(out timelineInfoPtr);
+    //    if (type == FMOD.Studio.EVENT_CALLBACK_TYPE.SOUND_PLAYED) {
+    //        int newCaretPosition;
+    //        instance.getTimelinePosition(out newCaretPosition);
+    //        if (newCaretPosition > conversationCaret) {
+    //            conversationCaret = newCaretPosition;
+    //        } else { // we encountered a loop, meaning the conversation is over
+    //            StopDialog(currentDialogConversation, currentDialogConversationId);
+    //        }
+    //    }
 
-        return FMOD.RESULT.OK;
-    }
+    //    return FMOD.RESULT.OK;
+    //}
 }

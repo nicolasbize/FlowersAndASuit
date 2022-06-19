@@ -2,14 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static AudioUtils;
 using static Dialog;
 
 public class Talkable : MonoBehaviour
 {
     [field: SerializeField] public Dialog Dialog { get; private set; }
-    [field: SerializeField] public bool Busy { get; private set; }
+    [field: SerializeField] public bool Busy { get; set; }
     [field: SerializeField] public bool FacePlayer { get; private set; }
     [field: SerializeField] public float DistanceAboveHead { get; private set; }
+    [field: SerializeField] public Music music { get; private set; }
     [SerializeField] PlayerController player;
     [SerializeField] UIDialogContainer dialogContainer;
     [SerializeField] FloatingTextManager floatingText;

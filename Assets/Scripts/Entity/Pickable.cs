@@ -15,6 +15,12 @@ public class Pickable : MonoBehaviour
     Animator animator;
     Action callbackAfterPicked;
 
+    private void Awake() {
+        if (inventory == null) {
+            inventory = GameObject.Find("Inventory").GetComponent<UIInventoryManager>();
+        }
+    }
+
     public void PickUp(PlayerController player, Action callback) {
         callbackAfterPicked = callback;
         animator = player.GetComponent<Animator>();
@@ -37,9 +43,15 @@ public class Pickable : MonoBehaviour
         }
     }
 
+    // objects can always be picked up only once
+    // sometimes they'll be completely destroyed after pickup
+    // other times they provided the ability to gain a single item
+    // removing pickable in that case allows to continue to observe it
     private void CompletePickup() {
         if (DestroyAfterPickup) {
             GameObject.Destroy(gameObject);
+        } else {
+            Destroy(GetComponent<Pickable>());
         }
         callbackAfterPicked();
     }

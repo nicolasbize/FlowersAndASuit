@@ -18,3 +18,4 @@ MonoBehaviour:
   interactions:
   - objectName: Scott
     callbackName: TryPlantDrugs
+    cutscene: {fileID: 0}

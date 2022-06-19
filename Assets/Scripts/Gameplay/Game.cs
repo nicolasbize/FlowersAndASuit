@@ -51,7 +51,7 @@ public class Game : MonoBehaviour
     }
 
     private void TryPlayMusic() {
-        AudioUtils.PlayMusic(Music.IntroCredits, Camera.main.transform.position);
+        AudioUtils.PlayMusic(Music.IntroCredits);
         attempted += 1;
         if (attempted < 10) {
             Invoke("TryPlayMusic", 1);

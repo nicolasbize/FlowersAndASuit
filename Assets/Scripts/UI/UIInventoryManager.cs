@@ -125,7 +125,7 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
             currentInventoryTarget.GetComponent<RawImage>().enabled = false;
             player.GetComponent<PlayerController>().SetDraggedInventoryItem(hoveredItem.GetComponent<UIInventoryItem>().item);
             RefreshToolTip();
-            AudioUtils.PlaySound(AudioUtils.SoundType.UIClick, Camera.main.transform.position);
+            AudioUtils.PlaySound(AudioUtils.SoundType.UIClick);
         }
     }
 
@@ -155,7 +155,7 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
                                 }
                             }
                             inventoryItems = newInventory.ToArray();
-                            AudioUtils.PlaySound(AudioUtils.SoundType.UIClick, Camera.main.transform.position);
+                            AudioUtils.PlaySound(AudioUtils.SoundType.UIClick);
                         }
                     }
                     if (foundCombination) {

@@ -91,8 +91,7 @@ public class FloatingTextManager : MonoBehaviour
         currentTarget = message.speaker;
         currentTarget.GetComponent<Animator>().SetBool("is_talking", true);
         if (message.fmodEvent != AudioUtils.DialogConversation.None) {
-            AudioUtils.PlayDialog(message.fmodEvent, Camera.main.transform.position, message.fmodId);
-            //latestConversation = message.fmodEvent;
+            AudioUtils.PlayDialog(message.fmodEvent, message.fmodId);
         }
         float waitTime = Mathf.Max(2, message.text.Split(' ').Length / 1.8f);
         yield return new WaitForSeconds(waitTime);

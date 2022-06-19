@@ -22,29 +22,16 @@ MonoBehaviour:
     visited: 0
     requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
-    requiresObject: {fileID: 0}
+    requiresObject: {fileID: 11400000, guid: 68052d24f4aaf4c41a03b86c82c27033, type: 2}
     cutscene: {fileID: 0}
     final: 0
     fmodQuestionId: 2
     fmodAnswerId: 3
     fmodReactionId: 0
     branches:
-    - question: I can't seem to remember any number!
-      answer: You're getting old sweetie!
-      reaction: 
-      visited: 1
-      requiresPlantedDrugs: 0
-      objectGained: {fileID: 0}
-      requiresObject: {fileID: 0}
-      cutscene: {fileID: 0}
-      final: 0
-      fmodQuestionId: -1
-      fmodAnswerId: -1
-      fmodReactionId: 0
-      branches: []
     - question: (Call phone booth)
       answer: 
-      reaction: Thanks
+      reaction: Thanks!
       visited: 0
       requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
@@ -96,9 +83,9 @@ MonoBehaviour:
     fmodReactionId: 0
     branches: []
   - question: I have to go!
-    answer: Take care now
+    answer: Take care now!
     reaction: 
-    visited: 1
+    visited: 0
     requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}

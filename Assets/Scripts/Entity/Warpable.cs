@@ -32,7 +32,7 @@ public class Warpable : MonoBehaviour
     }
 
     IEnumerator WarpTo(SpawnInformation spawn, AudioUtils.Music warpZoneMusic) {
-        AudioUtils.PlayMusic(warpZoneMusic, Camera.main.transform.position);
+        AudioUtils.PlayMusic(warpZoneMusic);
         yield return new WaitForSeconds(.5f);
         playerWarped.transform.position = spawn.transform.position;
         Camera.main.GetComponent<CameraFollow>().leftBorder = spawn.limitCameraLeft;

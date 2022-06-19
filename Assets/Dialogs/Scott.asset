@@ -82,10 +82,10 @@ MonoBehaviour:
     fmodAnswerId: 11
     fmodReactionId: 0
     branches: []
-  - question: I'll go
+  - question: I'll go...
     answer: Good
     reaction: 
-    visited: 1
+    visited: 0
     requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}

@@ -7,7 +7,7 @@ public class ScottAI : MonoBehaviour
 
     [SerializeField] public CutScene plantDrugsCutScene;
     [SerializeField] Transform gameLogicManager;
-    private bool isDrugsPlanted = false;
+    private bool isDrugsPlanted;
 
     public void PlantDrugs() {
         if (!isDrugsPlanted) {
@@ -21,12 +21,15 @@ public class ScottAI : MonoBehaviour
     }
 
     public bool IsOnPhone() {
+        if (isDrugsPlanted) {
+            return false;
+        }
         return GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("scott-idle-phone");
     }
 
     // Update is called once per frame
     void Update()
     {
-        //GetComponent<Talkable>().busy = IsOnPhone();
+        GetComponent<Talkable>().Busy = IsOnPhone();
     }
 }

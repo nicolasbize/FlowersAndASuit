@@ -176,7 +176,7 @@ MonoBehaviour:
     interactionDuration: 2
     animationProperty: 
     animationValue: 0
-    animationTrigger: interact_background
+    animationTrigger: interact-background
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
@@ -251,22 +251,9 @@ MonoBehaviour:
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
+    interactionDuration: 4
     animationProperty: is_talking
     animationValue: 1
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 4
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 4
-    animationProperty: 
-    animationValue: 0
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}

@@ -191,7 +191,6 @@
 			<destination>{d426b1ed-4a45-417d-a770-7dbd1732774a}</destination>
 			<destination>{82a44fbe-6f0a-48e9-8549-0992cb087e3a}</destination>
 			<destination>{5eaa71f6-a356-4f63-b4a7-7067899cf941}</destination>
-			<destination>{44b1bf12-a560-4e8e-8706-c920e3557b14}</destination>
 			<destination>{c5c1433b-a075-4758-b43d-10493d84f27d}</destination>
 			<destination>{9431348e-e061-46fd-89d6-0d217760a71a}</destination>
 			<destination>{68a5de4d-5dbb-46ba-aa99-b4294183a04d}</destination>
@@ -229,7 +228,6 @@
 			<destination>{1207d301-717f-4c49-b4f9-9e0733ea1e77}</destination>
 			<destination>{e9455b71-69bf-461e-8fef-6cb461b0270a}</destination>
 			<destination>{ee8f3f7b-d95b-45d7-9826-e45930a17636}</destination>
-			<destination>{e92a329e-3b94-4d6f-a355-8c748f441503}</destination>
 			<destination>{2b9cf8d7-52e4-4c82-801b-914eaddcc7e8}</destination>
 			<destination>{6435a224-a9a8-469e-9868-281b3da32605}</destination>
 			<destination>{36b2bd93-d2d3-4e69-a859-cec5d09bc837}</destination>
@@ -264,6 +262,8 @@
 			<destination>{c4ebd5d4-cffc-4e7f-a37e-6cc19ccb3113}</destination>
 			<destination>{c7ad914a-a80f-46e3-86e9-9f2bc068c524}</destination>
 			<destination>{9c990ff6-c1e4-42fe-ad15-ab4bcbaa6868}</destination>
+			<destination>{df15d115-c978-400a-be22-434bcc9cfc2c}</destination>
+			<destination>{75115e03-9d17-4007-989d-1605bf928ec0}</destination>
 		</relationship>
 	</object>
 	<object class="ActionSheet" id="{dbd381fa-6356-4d3f-87a2-66cf322e4357}">
@@ -1362,20 +1362,6 @@
 			<destination>{1eb7a308-2366-4ad1-a2d7-2e95a4b5a319}</destination>
 		</relationship>
 	</object>
-	<object class="LoopRegion" id="{44b1bf12-a560-4e8e-8706-c920e3557b14}">
-		<property name="position">
-			<value>3</value>
-		</property>
-		<property name="length">
-			<value>2</value>
-		</property>
-		<relationship name="timeline">
-			<destination>{f44ed505-9b38-4acc-8e0a-fd1cb44f2072}</destination>
-		</relationship>
-		<relationship name="markerTrack">
-			<destination>{73047c6c-65f6-466a-ad65-55cc28fd5121}</destination>
-		</relationship>
-	</object>
 	<object class="LoopRegion" id="{c5c1433b-a075-4758-b43d-10493d84f27d}">
 		<property name="position">
 			<value>5.7693167649675017</value>
@@ -1563,7 +1549,6 @@
 		<property name="length">
 			<value>4.0669499963726947</value>
 		</property>
-		<property name="name" />
 		<property name="looping">
 			<value>2</value>
 		</property>
@@ -2024,7 +2009,6 @@
 		<property name="length">
 			<value>3.319206279845079</value>
 		</property>
-		<property name="name" />
 		<property name="looping">
 			<value>2</value>
 		</property>
@@ -2107,20 +2091,6 @@
 		</relationship>
 		<relationship name="markerTrack">
 			<destination>{c2b4331e-a92e-4a92-8bd7-7db20fd4be0c}</destination>
-		</relationship>
-	</object>
-	<object class="LoopRegion" id="{e92a329e-3b94-4d6f-a355-8c748f441503}">
-		<property name="position">
-			<value>8.5</value>
-		</property>
-		<property name="length">
-			<value>1.238449034748248</value>
-		</property>
-		<relationship name="timeline">
-			<destination>{f44ed505-9b38-4acc-8e0a-fd1cb44f2072}</destination>
-		</relationship>
-		<relationship name="markerTrack">
-			<destination>{73047c6c-65f6-466a-ad65-55cc28fd5121}</destination>
 		</relationship>
 	</object>
 	<object class="LoopRegion" id="{2b9cf8d7-52e4-4c82-801b-914eaddcc7e8}">
@@ -2591,6 +2561,28 @@
 		</property>
 		<property name="length">
 			<value>0.73844903474824797</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{f44ed505-9b38-4acc-8e0a-fd1cb44f2072}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{73047c6c-65f6-466a-ad65-55cc28fd5121}</destination>
+		</relationship>
+	</object>
+	<object class="SustainPoint" id="{df15d115-c978-400a-be22-434bcc9cfc2c}">
+		<property name="position">
+			<value>1.5</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{f44ed505-9b38-4acc-8e0a-fd1cb44f2072}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{73047c6c-65f6-466a-ad65-55cc28fd5121}</destination>
+		</relationship>
+	</object>
+	<object class="SustainPoint" id="{75115e03-9d17-4007-989d-1605bf928ec0}">
+		<property name="position">
+			<value>7.5</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{f44ed505-9b38-4acc-8e0a-fd1cb44f2072}</destination>

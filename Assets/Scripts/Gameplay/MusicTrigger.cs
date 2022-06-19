@@ -25,10 +25,10 @@ public class MusicTrigger : MonoBehaviour
 
     private void PlaySound() {
         if (soundPlayed == SoundType.CityOutdoor || soundPlayed == SoundType.ParkOutdoor) {
-            AudioUtils.PlayAtmospheric(soundPlayed, Camera.main.transform.position);
+            AudioUtils.PlayAtmospheric(soundPlayed);
         }
         if (switchMusic) {
-            AudioUtils.PlayMusic(music, Camera.main.transform.position);
+            AudioUtils.PlayMusic(music);
         }
     }
 

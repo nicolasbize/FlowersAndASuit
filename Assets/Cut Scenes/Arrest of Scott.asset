@@ -620,7 +620,7 @@ MonoBehaviour:
     animationValue: 0
     animationTrigger: 
     flipValue: 0
-    objectCreatedPrefab: {fileID: 4563076318826903845, guid: 37db0433d315b664d957e4e971c40db8, type: 3}
+    objectCreatedPrefab: {fileID: 2686793002859168074, guid: 37db0433d315b664d957e4e971c40db8, type: 3}
     text: 
     objectGained: {fileID: 0}
     sound: 0
