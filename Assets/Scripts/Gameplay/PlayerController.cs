@@ -11,24 +11,26 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float marginTarget = 0.1f;
     [SerializeField] Transform hintText;
     [SerializeField] float toolbarY = -2.8f;
-    [SerializeField] Transform inventoryManager;
-    [SerializeField] Transform transitioner;
-    [SerializeField] Transform cutsceneManager;
+    [SerializeField] UIInventoryManager inventoryManager;
+    [SerializeField] Game game;
+
+    ConversationManager conversationManager;
     Vector3 target = Vector3.zero;
     Animator animator = null;
     SpriteRenderer spriteRenderer = null;
-    Vector2 direction = Vector2.right;
     GameObject interactiveTarget = null;
     GameObject hovered = null;
     InventoryItem currentItemDragged = null;
+    Vector2 screenBounds = new Vector2(-61.5f, 65f);
     public bool isInLiving = false;
 
-    public enum State { Talking, Moving, Idle, Interacting }
-    State state = State.Idle;
+    public enum PlayerState { Idle, Talking, Moving, PickingUpItem, InteractingBackground }
+    public PlayerState State { get; private set; }
 
     private void Start() {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        conversationManager = game.GetComponent<ConversationManager>();
     }
 
     void Update() {
@@ -40,7 +42,7 @@ public class PlayerController : MonoBehaviour
             AudioUtils.StopWalkingSound();
         }
 
-        if (cutsceneManager.GetComponent<Game>().IsBusy())
+        if (game.IsBusy())
             return;
 
         HighlightHoveredObjects();
@@ -48,28 +50,12 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
 
         if (isInLiving) {
-            animator.SetBool("is_moving", state == State.Moving);
+            animator.SetBool("is_moving", State == PlayerState.Moving);
         } else {
-            animator.SetBool("is_walking_flowers", state == State.Moving);
+            animator.SetBool("is_walking_flowers", State == PlayerState.Moving);
         }
-        animator.SetBool("is_talking", state == State.Talking);
-        
-        
+        animator.SetBool("is_talking", State == PlayerState.Talking);
 
-    }
-
-    public void AddToInventory(InventoryItem item) {
-        inventoryManager.GetComponent<UIInventoryManager>().AddToInventory(item);
-    }
-    public void RemoveFromInventory(string itemName) {
-        inventoryManager.GetComponent<UIInventoryManager>().RemoveFromInventory(itemName);
-    }
-
-    public bool HasItemInInventory(InventoryItem item) {
-        return inventoryManager.GetComponent<UIInventoryManager>().HasItemInInventory(item);
-    }
-    public bool HasItemInInventory(string itemName) {
-        return inventoryManager.GetComponent<UIInventoryManager>().HasItemInInventory(itemName);
     }
 
     private void HighlightHoveredObjects() {
@@ -81,97 +67,69 @@ public class PlayerController : MonoBehaviour
                 if (hit.collider != null) {
                     var targetObject = hit.collider.gameObject;
                     if (targetObject.GetComponent<Interactive>() != null) {
-                        float thickness = targetObject.GetComponent<Interactive>().overrideThickness;
-                        if (thickness == 0) { // TODO: fix this, right now I can't properly get the right outline on spritesheets
-                            thickness = 1f / (18 * targetObject.GetComponent<SpriteRenderer>().bounds.size.x);
-                        }
-                        targetObject.GetComponent<SpriteRenderer>().material.SetFloat("_Thickness", thickness);
-                        targetObject.GetComponent<SpriteRenderer>().material.SetColor("_OutlineColor", new Color(230, 230, 230, 1));
+                        SpriteUtils.RemoveOutlines();
+                        SpriteUtils.AddOutline(targetObject);
                         hovered = targetObject;
                         hintText.GetComponent<UIInventoryUsageHint>().HoveredInteractive = hovered.GetComponent<Interactive>();
                     }
                 } else if (hovered != null) {
-                    hovered.GetComponent<SpriteRenderer>().material.SetFloat("_Thickness", 0f);
-                    hovered.GetComponent<SpriteRenderer>().material.SetColor("_OutlineColor", new Color(0,0,0,1));
+                    SpriteUtils.RemoveOutline(hovered);
                     hovered = null;
                 }
             } else {
-                CleanTipsAndOutline();
+                SpriteUtils.RemoveOutlines();
             }
         }
-    }
-
-    public void ShowCombinationResult(string thought) {
-        state = State.Idle;
-        GetComponent<Interactive>().floatingTextManager.AddText(gameObject, thought);
     }
 
     private void MovePlayer() {
-        if (state == State.Moving && target != Vector3.zero) {
+        if (State == PlayerState.Moving && target != Vector3.zero) {
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
             if (Mathf.Abs(transform.position.x - target.x) < marginTarget) {
-                float x = Mathf.Round(transform.position.x * 72) / 72;
-                float y = Mathf.Round(transform.position.y * 72) / 72;
-                float z = Mathf.Round(transform.position.z * 72) / 72;
-                transform.position = new Vector3(x, y, z);
-                state = State.Idle;
-            }
-        }
-        if (state == State.Idle && interactiveTarget != null) {
-            state = State.Interacting;
-            Interactive interactive = interactiveTarget.GetComponent<Interactive>();
-            // have the player point towards the target before interacting
-            direction = transform.position.x < interactiveTarget.transform.position.x ? Vector2.right : Vector2.left;
-            spriteRenderer.flipX = direction == Vector2.left;
-            if (interactive.busy) {
-                interactive.floatingTextManager.AddText(gameObject, "Seems busy at the moment...");
-                state = State.Idle;
-            } else {
-                if (interactive.distanceToInteraction == 0) {
-                    state = State.Idle;
-                    GetComponent<Animator>().SetTrigger(interactive.isPickup ? "pick_up" : "interact_background");
-                } else {
-                    state = State.Talking;
-                }
-                CleanTipsAndOutline();
-                if (interactive.warpTo != null) {
-                    GetComponent<Animator>().SetTrigger("interact_background");
-                    transitioner.GetComponent<Animator>().SetTrigger("EnterDoor");
-                    StartCoroutine(WarpTo(interactive.warpTo, interactive.warpZoneMusic));
-                } else {
-                    interactive.StartDialog(interactiveTarget);
-                    inventoryManager.GetComponent<UIInventoryManager>().active = false;
+                transform.position = SpriteUtils.PixelAlign(transform.position);
+                State = PlayerState.Idle;
+                if (interactiveTarget != null) {
+                    InteractWith(interactiveTarget);
+                    interactiveTarget = null;
                 }
             }
-            interactiveTarget = null;
         }
     }
 
-    IEnumerator WarpTo(Transform warp, AudioUtils.Music warpZoneMusic) {
-        AudioUtils.PlayMusic(warpZoneMusic, Camera.main.transform.position);
-        yield return new WaitForSeconds(.5f);
-        SpawnInformation spawn = warp.GetComponent<SpawnInformation>();
-        transform.position = spawn.playerPosition;
-        Camera.main.GetComponent<CameraFollow>().leftBorder = spawn.limitCameraLeft;
-        Camera.main.GetComponent<CameraFollow>().rightBorder = spawn.limitCameraRight;
-        Camera.main.GetComponent<CameraFollow>().GoToFinalPosition();
-        yield return new WaitForSeconds(.5f);
-        transitioner.GetComponent<Animator>().SetTrigger("ExitDoor");
-        SetIdle();
-        yield return new WaitForSeconds(1f);
-        transitioner.GetComponent<Animator>().Play("TransitionIdle");
-    }
+    private void InteractWith(GameObject target) {
+        Interactive interactive = target.GetComponent<Interactive>();
+        Warpable warpable = target.GetComponent<Warpable>();
+        Observable observable = target.GetComponent<Observable>();
+        Talkable talkable = target.GetComponent<Talkable>();
+        Pickable pickable = target.GetComponent<Pickable>();
+        LookTowards(target.transform.position);
+        SpriteUtils.RemoveOutlines();
 
-    public void CleanTipsAndOutline() {
-        foreach (SpriteRenderer sr in FindObjectsOfType<SpriteRenderer>()) {
-            sr.material.SetFloat("_Thickness", 0f);
-            sr.material.SetColor("_OutlineColor", new Color(0, 0, 0, 1));
+        if (warpable != null) {
+            State = PlayerState.InteractingBackground;
+            warpable.Warp(this, SetIdle);
+        } else if (pickable != null) {
+            State = PlayerState.Talking;
+            conversationManager.ThinkOutLoud(pickable.TextBeforePickup, () => {
+                SetIdle();
+                pickable.PickUp(this, SetIdle);
+            });
+        } else if (talkable != null) {
+            State = PlayerState.Talking;
+            conversationManager.TalkTo(talkable, SetIdle);
+        } else if (observable != null) {
+            State = PlayerState.Talking;
+            conversationManager.ThinkOutLoud(observable.Observation, SetIdle);
         }
-
     }
 
-    public State GetState() {
-        return state;
+    private void LookTowards(Vector3 position) {
+        Vector2 direction = transform.position.x < position.x ? Vector2.right : Vector2.left;
+        spriteRenderer.flipX = direction == Vector2.left;
+    }
+
+    private void PickUp(GameObject interactiveTarget) {
+        Debug.Log("Pick up object");
     }
 
     public void SetDraggedInventoryItem(InventoryItem item) {
@@ -186,11 +144,11 @@ public class PlayerController : MonoBehaviour
                 if (interaction.callbackName.Length > 0) {
                     Invoke(interaction.callbackName, 0);
                 } else if (interaction.cutscene != null) {
-                    CleanTipsAndOutline();
-                    cutsceneManager.GetComponent<CutScenePlayer>().PlayCutscene(interaction.cutscene);
+                    SpriteUtils.RemoveOutlines();
+                    game.GetComponent<CutScenePlayer>().PlayCutscene(interaction.cutscene);
                 }
             } else {
-                GetComponent<Interactive>().floatingTextManager.AddText(gameObject, inventoryManager.GetComponent<UIInventoryManager>().GetNextNegativeUseFeedback());
+                conversationManager.ThinkOutLoud(inventoryManager.GetNextNegativeUseFeedback(), SetIdle);
             }
         }
         currentItemDragged = null;
@@ -201,7 +159,7 @@ public class PlayerController : MonoBehaviour
         if (scott.IsOnPhone()) {
             scott.PlantDrugs();
         } else {
-            GetComponent<Interactive>().floatingTextManager.AddText(gameObject, "I need to distract him first");
+            conversationManager.ThinkOutLoud(new SpokenLine("I need to distract him first", 7), SetIdle);
         }
     }
 
@@ -210,7 +168,7 @@ public class PlayerController : MonoBehaviour
         if (jim.CanCutKite()) {
             jim.CutKite();
         } else {
-            GetComponent<Interactive>().floatingTextManager.AddText(gameObject, "I can't do that.   I need to get rid of the police officer first.");
+            conversationManager.ThinkOutLoud(new SpokenLine("I can't do that.   I need to get rid of the police officer first", 8), SetIdle);
         }
     }
 
@@ -227,34 +185,34 @@ public class PlayerController : MonoBehaviour
                     if (targetObject.GetComponent<Interactive>() != null && targetObject.tag != "Player") {
                         Interactive interactive = targetObject.GetComponent<Interactive>();
                         interactiveTarget = targetObject;
-                        float distToLeft = Mathf.Abs(targetObject.transform.position.x - interactive.distanceToInteraction - transform.position.x);
-                        float distToRight = Mathf.Abs(targetObject.transform.position.x + interactive.distanceToInteraction - transform.position.x);
+                        float distToLeft = Mathf.Abs(targetObject.transform.position.x - interactive.DistanceToInteraction - transform.position.x);
+                        float distToRight = Mathf.Abs(targetObject.transform.position.x + interactive.DistanceToInteraction - transform.position.x);
                         if (distToLeft < distToRight) {
-                            target.x = targetObject.transform.position.x - interactive.distanceToInteraction;
+                            target.x = targetObject.transform.position.x - interactive.DistanceToInteraction;
                         } else {
-                            target.x = targetObject.transform.position.x + interactive.distanceToInteraction;
+                            target.x = targetObject.transform.position.x + interactive.DistanceToInteraction;
                         }
                     } else {
                         interactiveTarget = null;
                     }
                 } else {
+                    // we're just moving, let's box it up
+                    target.x = Mathf.Clamp(target.x, screenBounds.x, screenBounds.y);
                     interactiveTarget = null;
                 }
-                direction = transform.position.x < target.x ? Vector2.right : Vector2.left;
-                spriteRenderer.flipX = direction == Vector2.left;
-                state = State.Moving;
+                LookTowards(target);
+                State = PlayerState.Moving;
             }
         }
     }
 
     public void SetIdle() {
         interactiveTarget = null;
-        state = State.Idle;
-        inventoryManager.GetComponent<UIInventoryManager>().active = true;
+        State = PlayerState.Idle;
     }
 
     bool CanMove() {
-        return state == State.Idle || state == State.Moving;
+        return State == PlayerState.Idle || State == PlayerState.Moving;
     }
 
 }

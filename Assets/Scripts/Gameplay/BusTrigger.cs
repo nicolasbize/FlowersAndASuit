@@ -7,10 +7,10 @@ public class BusTrigger : MonoBehaviour
     public enum TriggerType { BusStop, Ending }
 
     [SerializeField] Transform gameplayManager;
-    [SerializeField] Transform inventory;
     [SerializeField] CutScene finalCutscene;
     [SerializeField] CutScene endCutscene;
     [SerializeField] TriggerType type;
+    [SerializeField] UIInventoryManager inventory;
     private bool entered;
 
     void Update() {
@@ -30,10 +30,10 @@ public class BusTrigger : MonoBehaviour
     }
 
     private void CheckForBus(GameObject player) {
-        if (player.GetComponent<PlayerController>().HasItemInInventory("Flowers") && player.GetComponent<PlayerController>().HasItemInInventory("Fancy Suit")) {
+        if (inventory.HasItemInInventory("Flowers") && inventory.HasItemInInventory("Fancy Suit")) {
             GameObject.Find("Enzo").GetComponent<PlayerController>().SetIdle();
             gameplayManager.GetComponent<CutScenePlayer>().PlayCutscene(finalCutscene);
-            inventory.GetComponent<UIInventoryManager>().ClearInventory();
+            inventory.ClearInventory();
             Camera.main.GetComponent<CameraFollow>().leftBorder = -9.65f;
             Camera.main.GetComponent<CameraFollow>().rightBorder = 35.5f;
         }

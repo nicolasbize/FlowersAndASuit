@@ -13,21 +13,26 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
     [SerializeField] Transform prefabInventoryItem;
     [SerializeField] Transform UI;
     [SerializeField] Transform hintTextObject;
-    [SerializeField] Transform player;
-    [SerializeField] string[] negativeCombinationFeedbacks;
+    [SerializeField] PlayerController player;
+    [SerializeField] ConversationManager conversationManager;
+    [SerializeField] SpokenLine[] negativeCombinationFeedbacks;
 
     private int feedbackIndex = 0;
     private GameObject hoveredItem = null;
     private GameObject draggedObject = null;
     private GameObject currentInventoryTarget = null;
-    public bool active = true;
+    //public bool active = true;
 
     private void Start() {
         RefreshInventory();
     }
 
+    public bool IsActive { get {
+        return player.State == PlayerController.PlayerState.Idle;
+    } }
+
     private void Update() {
-        if (active) {
+        if (IsActive) {
             foreach (Transform child in transform) {
                 child.gameObject.GetComponent<RawImage>().material.SetFloat("_Thickness", 0f);
                 child.gameObject.GetComponent<RawImage>().material.SetColor("_OutlineColor", new Color(0, 0, 0, 1));
@@ -111,7 +116,7 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
     }
 
     public void OnPointerDown(PointerEventData eventData) {
-        if (active && hoveredItem != null) {
+        if (IsActive && hoveredItem != null) {
             currentInventoryTarget = hoveredItem.gameObject;
             draggedObject = Instantiate(currentInventoryTarget, UI);
             draggedObject.GetComponent<RawImage>().material.SetFloat("_Thickness", 0.04f);
@@ -125,7 +130,7 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
     }
 
     public void OnPointerUp(PointerEventData eventData) {
-        if (active) {
+        if (IsActive) {
 
             if (currentInventoryTarget != null) {
                 currentInventoryTarget.GetComponent<RawImage>().enabled = true;
@@ -136,7 +141,7 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
                     InventoryItem hovered = hoveredItem.GetComponent<UIInventoryItem>().item;
                     InventoryItem dragged = draggedObject.GetComponent<UIInventoryItem>().item;
                     bool foundCombination = false;
-                    string thought = "";
+                    SpokenLine thought = null;
                     foreach (Combination combination in hovered.combinations) {
                         if (combination.combineWith.itemName == dragged.itemName) { // valid combination
                             thought = combination.thought;
@@ -155,9 +160,9 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
                     }
                     if (foundCombination) {
                         RefreshInventory();
-                        player.GetComponent<PlayerController>().ShowCombinationResult(thought);
+                        conversationManager.ThinkOutLoud(thought, player.SetIdle);
                     } else {
-                        player.GetComponent<PlayerController>().ShowCombinationResult(GetNextNegativeUseFeedback());
+                        conversationManager.ThinkOutLoud(GetNextNegativeUseFeedback(), player.SetIdle);
                     }
                 }
                 Destroy(draggedObject);
@@ -168,7 +173,7 @@ public class UIInventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUp
         }
     }
 
-    public string GetNextNegativeUseFeedback() {
+    public SpokenLine GetNextNegativeUseFeedback() {
         feedbackIndex = (feedbackIndex + 1) % negativeCombinationFeedbacks.Length;
         return negativeCombinationFeedbacks[feedbackIndex];
     }

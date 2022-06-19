@@ -32,20 +32,20 @@ MonoBehaviour:
     - question: I can't seem to remember any number!
       answer: You're getting old sweetie!
       reaction: 
-      visited: 0
+      visited: 1
       requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
       requiresObject: {fileID: 0}
       cutscene: {fileID: 0}
       final: 0
-      fmodQuestionId: 0
-      fmodAnswerId: 0
+      fmodQuestionId: -1
+      fmodAnswerId: -1
       fmodReactionId: 0
       branches: []
     - question: (Call phone booth)
       answer: 
       reaction: Thanks
-      visited: 1
+      visited: 0
       requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
       requiresObject: {fileID: 11400000, guid: 68052d24f4aaf4c41a03b86c82c27033, type: 2}
@@ -98,7 +98,7 @@ MonoBehaviour:
   - question: I have to go!
     answer: Take care now
     reaction: 
-    visited: 0
+    visited: 1
     requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}

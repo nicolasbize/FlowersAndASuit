@@ -99,6 +99,15 @@ public static class AudioUtils
 
     }
 
+    public static void Test(DialogConversation conversation) {
+        if (conversation != DialogConversation.None) {
+            FMOD.Studio.EventInstance instance = LoadDialogInstance(conversation);
+            FMOD.Studio.PLAYBACK_STATE state;
+            instance.getPlaybackState(out state);
+            //Debug.Log(state);
+        }
+    }
+
     public static void StopWalkingSound() {
         LoadSounds();
         soundFmodEvents[SoundType.EnzoFootsteps].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
@@ -155,7 +164,7 @@ public static class AudioUtils
         instance.setParameterByName(dialogParameterNames[conversation], (float) conversationId);
         instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
         instance.start();
-        //instance.release();
+        instance.release();
     }
 
     private static FMOD.Studio.EventInstance LoadDialogInstance(DialogConversation conversation) {
@@ -165,6 +174,7 @@ public static class AudioUtils
         } else {
             try {
                 instance = FMODUnity.RuntimeManager.CreateInstance(dialogEventNames[conversation]);
+                instance.setCallback(new FMOD.Studio.EVENT_CALLBACK(DialogEventCallback), FMOD.Studio.EVENT_CALLBACK_TYPE.ALL);
                 DialogFmodEvents[conversation] = instance;
             } catch (EventNotFoundException e) {
                 Debug.Log("fmod event not found: " + e.Message);
@@ -172,5 +182,26 @@ public static class AudioUtils
             }
         }
         return instance;
+    }
+
+    static FMOD.RESULT DialogEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, IntPtr instancePtr, IntPtr parameterPtr) {
+        FMOD.Studio.EventInstance instance = new FMOD.Studio.EventInstance(instancePtr);
+        IntPtr timelineInfoPtr;
+        FMOD.RESULT result = instance.getUserData(out timelineInfoPtr);
+        if (type == FMOD.Studio.EVENT_CALLBACK_TYPE.SOUND_PLAYED) {
+            int pos;
+            instance.getTimelinePosition(out pos);
+            //Debug.Log(pos);
+            FMOD.Studio.PLAYBACK_STATE state;
+            instance.getPlaybackState(out state);
+            //Debug.Log(state);
+            if (result != FMOD.RESULT.OK) {
+                Debug.LogError("Timeline Callback error: " + result);
+            } else if (timelineInfoPtr != IntPtr.Zero) {
+                Debug.Log("yep");
+            }
+        }
+
+        return FMOD.RESULT.OK;
     }
 }

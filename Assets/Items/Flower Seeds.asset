@@ -16,6 +16,6 @@ MonoBehaviour:
   texture: {fileID: 2800000, guid: bc61d45b7c24ea94b959c2fe6ce1e6d2, type: 3}
   combinations: []
   interactions:
-  - objectName: Pond
+  - objectName: Water Plants
     callbackName: 
     cutscene: {fileID: 11400000, guid: 8495c0882aa32ba4bba12caca642eb68, type: 2}

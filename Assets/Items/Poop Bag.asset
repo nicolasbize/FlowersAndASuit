@@ -17,5 +17,7 @@ MonoBehaviour:
   combinations:
   - combineWith: {fileID: 11400000, guid: 92441e9e8dbce334c8ec205c63b7efbc, type: 2}
     result: {fileID: 11400000, guid: d92145ee464f07f4faafe65bd62117b9, type: 2}
-    thought: Well this doesn't looks suspicious at all!
+    thought:
+      <Text>k__BackingField: Let's see here...
+      <FmodId>k__BackingField: 5
   interactions: []

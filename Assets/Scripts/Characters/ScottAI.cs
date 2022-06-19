@@ -27,6 +27,6 @@ public class ScottAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Interactive>().busy = IsOnPhone();
+        //GetComponent<Talkable>().busy = IsOnPhone();
     }
 }

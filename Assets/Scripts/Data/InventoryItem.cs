@@ -21,7 +21,7 @@ public class InventoryItem : ScriptableObject
     {
         public InventoryItem combineWith;
         public InventoryItem result;
-        public string thought;
+        public SpokenLine thought;
     }
 
 

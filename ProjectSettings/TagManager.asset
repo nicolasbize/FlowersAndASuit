@@ -42,3 +42,36 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Sky
+    uniqueID: 386657783
+    locked: 0
+  - name: Parrallax
+    uniqueID: 3039928117
+    locked: 0
+  - name: Background
+    uniqueID: 4081374353
+    locked: 0
+  - name: Entities
+    uniqueID: 4022774087
+    locked: 0
+  - name: Characters
+    uniqueID: 626224843
+    locked: 0
+  - name: Player
+    uniqueID: 2730642919
+    locked: 0
+  - name: Foreground
+    uniqueID: 1201276019
+    locked: 0
+  - name: UI
+    uniqueID: 2870149451
+    locked: 0
+  - name: DraggedItems
+    uniqueID: 2774058559
+    locked: 0
+  - name: TextPrompts
+    uniqueID: 1457694757
+    locked: 0
+  - name: TopOverlay
+    uniqueID: 3456864133
+    locked: 0

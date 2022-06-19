@@ -30,7 +30,7 @@ MonoBehaviour:
     fmodReactionId: 0
     branches:
     - question: Did you try talking nicely to them?
-      answer: fishy fishy, come here fishy!!   Nooot working!!
+      answer: fishy fishy, come here fishy!!   Not work!
       reaction: 
       visited: 0
       requiresPlantedDrugs: 0

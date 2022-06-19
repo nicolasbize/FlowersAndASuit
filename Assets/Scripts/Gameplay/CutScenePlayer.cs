@@ -13,6 +13,7 @@ public class CutScenePlayer : MonoBehaviour
     [SerializeField] Transform topMovieStrip;
     [SerializeField] Transform bottomMovieStrip;
     [SerializeField] Transform UI;
+    [SerializeField] UIInventoryManager inventory;
     
     Queue<Step> remainingSteps = new Queue<Step>();
     Step currentStep = null;
@@ -27,7 +28,7 @@ public class CutScenePlayer : MonoBehaviour
     public void PlayCutscene(CutScene scene) {
         currentCutScene = scene;
         remainingSteps.Clear();
-        GameObject.Find("Enzo").GetComponent<PlayerController>().CleanTipsAndOutline();
+        SpriteUtils.RemoveOutlines();
         foreach (Step step in scene.steps) {
             remainingSteps.Enqueue(step);
         }
@@ -48,10 +49,7 @@ public class CutScenePlayer : MonoBehaviour
                         }
                         currentCharacter.transform.position = Vector3.MoveTowards(currentCharacter.transform.position, currentStep.targetLocation, speed * Time.deltaTime);
                         if (Mathf.Abs(currentCharacter.transform.position.x - currentStep.targetLocation.x) < margin) {
-                            float x = Mathf.Round(currentCharacter.transform.position.x * 72) / 72;
-                            float y = Mathf.Round(currentCharacter.transform.position.y * 72) / 72;
-                            float z = Mathf.Round(currentCharacter.transform.position.z * 72) / 72;
-                            currentCharacter.transform.position = new Vector3(x, y, z);
+                            currentCharacter.transform.position = SpriteUtils.PixelAlign(currentCharacter.transform.position);
                             currentCharacter.GetComponent<SpriteRenderer>().flipX = currentStep.flipValue;
                             Advance();
                         }
@@ -61,10 +59,7 @@ public class CutScenePlayer : MonoBehaviour
                     Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position, currentStep.targetLocation, moveSpeed * Time.deltaTime);
                     if (Mathf.Abs(Camera.main.transform.position.x - currentStep.targetLocation.x) < margin &&
                         Mathf.Abs(Camera.main.transform.position.y - currentStep.targetLocation.y) < margin) {
-                        float x = Mathf.Round(Camera.main.transform.position.x * 72) / 72;
-                        float y = Mathf.Round(Camera.main.transform.position.y * 72) / 72;
-                        float z = Mathf.Round(Camera.main.transform.position.z * 72) / 72;
-                        Camera.main.transform.position = new Vector3(x, y, z);
+                        Camera.main.transform.position = SpriteUtils.PixelAlign(Camera.main.transform.position);
                         Advance();
                     }
                     break;
@@ -89,7 +84,7 @@ public class CutScenePlayer : MonoBehaviour
 
     private void Advance() {
         if (currentStep.objectGained != null) {
-            GameObject.Find("Enzo").GetComponent<PlayerController>().AddToInventory(currentStep.objectGained);
+            inventory.AddToInventory(currentStep.objectGained);
         }
         if (remainingSteps.Count > 0) {
             remainingSteps.Dequeue();
@@ -166,7 +161,7 @@ public class CutScenePlayer : MonoBehaviour
                 Advance();
                 break;
             case StepType.RemoveFromInventory:
-                GameObject.Find("Enzo").GetComponent<PlayerController>().RemoveFromInventory(step.character);
+                inventory.RemoveFromInventory(step.character);
                 Advance();
                 break;
             case StepType.PlaySound:

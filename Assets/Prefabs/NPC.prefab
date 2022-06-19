@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 837462971036866139}
   - component: {fileID: 837462971036866138}
   - component: {fileID: 837462971036866141}
-  - component: {fileID: 837462971036866140}
+  - component: {fileID: 209315584253886980}
+  - component: {fileID: 1237899643031945158}
   - component: {fileID: 3046872180791428536}
   m_Layer: 0
   m_Name: NPC
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837462971036866143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.1, y: -0.81, z: 0}
-  m_LocalScale: {x: 0.9756806, y: 3.9957075, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -53,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b2c5268bee0510d48b3d9d7928501853, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -71,9 +72,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: 626224843
+  m_SortingLayer: 5
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -111,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0.18
---- !u!114 &837462971036866140
+--- !u!114 &209315584253886980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,21 +124,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7390a51b2ba61d14aadd42dcc0ab62ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hintText: 
-  distanceToInteraction: 3
-  observation: 
-  observationAfterTakingObject: 
-  itemGained: {fileID: 0}
-  destroyAfterPickup: 0
-  dialog: {fileID: 11400000, guid: f8b4cb20bf6c30f4791650e84b2e693c, type: 2}
+  outlineThickness: 0
+  dialog: {fileID: 0}
   dialogContainer: {fileID: 0}
   cutsceneManager: {fileID: 0}
   floatingTextManager: {fileID: 0}
   overrideThickness: 0
   overrideTextDistanceAboveHead: 0
-  warpTo: {fileID: 0}
   busy: 0
   facePlayer: 0
+--- !u!114 &1237899643031945158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837462971036866143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8418bf39738d1514a987035b28ec612e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog: {fileID: 0}
+  busy: 0
+  dialogOptionsContainer: {fileID: 0}
 --- !u!95 &3046872180791428536
 Animator:
   serializedVersion: 3
@@ -148,7 +158,7 @@ Animator:
   m_GameObject: {fileID: 837462971036866143}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cb801667cbc70db4ca8a2054348f9519, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
