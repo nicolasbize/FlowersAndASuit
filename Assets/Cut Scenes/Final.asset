@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Final
   m_EditorClassIdentifier: 
   conversation: 0
+  controlMusic: 0
   steps:
   - type: 0
     character: 
@@ -27,38 +28,12 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_walking_flowers
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
   - type: 2
-    character: Enzo
+    character: 
     targetLocation: {x: 35.5, y: -105.041664, z: 0}
     interactionDuration: 0
-    animationProperty: is_walking_flowers
+    animationProperty: 
     animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_walking_flowers
-    animationValue: 1
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
@@ -69,21 +44,8 @@ MonoBehaviour:
   - type: 1
     character: Enzo
     targetLocation: {x: 30.48, y: -104.8, z: 0}
-    interactionDuration: 3
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 0
-    animationProperty: is_walking_flowers
+    animationProperty: 
     animationValue: 0
     animationTrigger: 
     flipValue: 0
@@ -118,23 +80,10 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 15
-    character: Credits
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 1
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
   - type: 3
     character: Credits
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 200
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: roll

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversation: 2
   steps:
-  - type: 12
+  - type: 0
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: 
@@ -27,14 +27,14 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 0
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2
+  - type: 1
+    character: Enzo
+    targetLocation: {x: -60.38, y: 0, z: 0}
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: 
-    flipValue: 0
+    flipValue: 1
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
@@ -56,59 +56,20 @@ MonoBehaviour:
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 1
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 1
-    character: Enzo
-    targetLocation: {x: -60.38, y: 0, z: 0}
-    interactionDuration: 4
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 1
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 1
-    animationProperty: is_moving
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2
     animationProperty: 
     animationValue: 0
-    animationTrigger: throw_seeds
+    animationTrigger: throw-seeds
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 13
+  - type: 4
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
+    interactionDuration: 1
     animationProperty: 
     animationValue: 0
     animationTrigger: 
@@ -118,21 +79,8 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 5
     fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: is_staring
-    flipValue: 1
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
   - type: 4
-    character: Enzo
+    character: 
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 3
     animationProperty: 
@@ -147,7 +95,7 @@ MonoBehaviour:
   - type: 13
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
+    interactionDuration: 1
     animationProperty: 
     animationValue: 0
     animationTrigger: 
@@ -163,30 +111,17 @@ MonoBehaviour:
     interactionDuration: 3
     animationProperty: 
     animationValue: 0
-    animationTrigger: catch_fish
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: Ooooh...
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
+    animationTrigger: catch-fish
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 18
+    fmodTextId: 0
   - type: 4
     character: Al
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: 
@@ -195,46 +130,7 @@ MonoBehaviour:
     text: I got one?! I got one!!
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: Al
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 19
-  - type: 3
-    character: Al
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: run_away
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 12
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
+    fmodTextId: 18
   - type: 1
     character: Al
     targetLocation: {x: -46.5, y: -0.3472222, z: 0}
@@ -244,38 +140,12 @@ MonoBehaviour:
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
-    text: 
+    text: Ha ha ha!
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 0
+    fmodTextId: 19
   - type: 7
     character: Al
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_staring
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 12
-    character: 
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 

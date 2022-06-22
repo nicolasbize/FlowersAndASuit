@@ -29,8 +29,8 @@ MonoBehaviour:
     fmodAnswerId: 3
     fmodReactionId: 0
     branches:
-    - question: That's right! Detective Holmes from the Suit police!   May I take
-        a closer look?
+    - question: That's right! Detective Holmes from the Suit police! May I take a
+        closer look?
       answer: No! Get lost!
       reaction: 
       visited: 0

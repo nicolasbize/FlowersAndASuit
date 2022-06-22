@@ -19,7 +19,7 @@ MonoBehaviour:
   - question: How do I know you're a real police officer?
     answer: Easy! Ask me anything!
     reaction: 
-    visited: 1
+    visited: 0
     requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}
@@ -32,7 +32,7 @@ MonoBehaviour:
     - question: What's eight times seven?
       answer: That would be forty-six!
       reaction: Well that partially proves it...
-      visited: 1
+      visited: 0
       requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
       requiresObject: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
     - question: Which is worse, apathy or ignorance?
       answer: I don't know and I really don't care!
       reaction: Apathy then.
-      visited: 1
+      visited: 0
       requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
       requiresObject: {fileID: 0}
@@ -58,7 +58,7 @@ MonoBehaviour:
     - question: What weighs more, a pound of metal or a pound of feathers?
       answer: Well metal, duh!
       reaction: Right, of course!
-      visited: 1
+      visited: 0
       requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
       requiresObject: {fileID: 0}
@@ -71,7 +71,7 @@ MonoBehaviour:
   - question: How many people have you arrested?
     answer: No one yet, still waiting on a real crime!
     reaction: 
-    visited: 1
+    visited: 0
     requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}
@@ -84,7 +84,7 @@ MonoBehaviour:
     - question: So you've never arrested anybody?
       answer: I don't have time for those irrelevant bank robberies!
       reaction: 
-      visited: 1
+      visited: 0
       requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
       requiresObject: {fileID: 0}
@@ -95,9 +95,9 @@ MonoBehaviour:
       fmodReactionId: 0
       branches:
       - question: But you're just waiting here!?
-        answer: I'm not "just" waiting...   I'm... focusing!
+        answer: I'm not "just" waiting... I'm... focusing!
         reaction: 
-        visited: 1
+        visited: 0
         requiresPlantedDrugs: 0
         objectGained: {fileID: 0}
         requiresObject: {fileID: 0}
@@ -110,7 +110,7 @@ MonoBehaviour:
       - question: What kind of felony is worth your time?
         answer: The usual... Murderers, drug dealers, jaywalkers...
         reaction: 
-        visited: 1
+        visited: 0
         requiresPlantedDrugs: 0
         objectGained: {fileID: 0}
         requiresObject: {fileID: 0}
@@ -123,7 +123,7 @@ MonoBehaviour:
     - question: And you think it'll be in this park?
       answer: If it does, officer will be armed and ready!
       reaction: 
-      visited: 1
+      visited: 0
       requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
       requiresObject: {fileID: 0}
@@ -162,7 +162,7 @@ MonoBehaviour:
   - question: Sorry I have to go
     answer: Stay out of trouble!
     reaction: 
-    visited: 1
+    visited: 0
     requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}

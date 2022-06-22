@@ -14,23 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversation: 10
   steps:
-  - type: 12
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
   - type: 0
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
+    interactionDuration: 1
     animationProperty: 
     animationValue: 0
     animationTrigger: 
@@ -53,19 +40,6 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 1
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
   - type: 1
     character: Enzo
     targetLocation: {x: -39.15278, y: 0, z: 0}
@@ -79,109 +53,31 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 1
-    character: Jim
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Jim
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
+  - type: 4
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
-    animationProperty: is_moving
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
+    interactionDuration: 3
     animationProperty: 
     animationValue: 0
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
-    text: 
+    text: You know what would do you some good? Some exercise!!
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 32
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 4
-    animationProperty: is_talking
-    animationValue: 1
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: You know what would do you some good?   Some exercise!!
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 1
-    animationProperty: is_talking
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
     animationProperty: 
     animationValue: 0
-    animationTrigger: 
+    animationTrigger: cut-kite
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
     sound: 7
-    fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: cut_kite
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
     fmodTextId: 0
   - type: 7
     character: Kite String
@@ -189,45 +85,6 @@ MonoBehaviour:
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 1
-    character: Kite
-    targetLocation: {x: -35.49, y: 6.03, z: 0}
-    interactionDuration: 4
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Jim
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0.8
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: cut_kite
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: Uh?
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Jim
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 1
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
@@ -261,22 +118,9 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 12
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
+  - type: 1
+    character: Kite
+    targetLocation: {x: -35.49, y: 6.03, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
@@ -286,11 +130,24 @@ MonoBehaviour:
     text: 
     objectGained: {fileID: 0}
     sound: 0
+    fmodTextId: 0
+  - type: 3
+    character: Jim
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 0.5
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: cut-kite
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: AAAH
+    objectGained: {fileID: 0}
+    sound: 0
     fmodTextId: 33
   - type: 1
     character: Jim
     targetLocation: {x: -24.13, y: -0.9722222, z: 0}
-    interactionDuration: 5
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: 
@@ -302,19 +159,6 @@ MonoBehaviour:
     fmodTextId: 0
   - type: 7
     character: Jim
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 12
-    character: 
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 

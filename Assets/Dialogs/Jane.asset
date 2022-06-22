@@ -17,7 +17,7 @@ MonoBehaviour:
   fmodEvent: 4
   branches:
   - question: Do you know the young man with the kite by any chance?
-    answer: Yes, he comes here every day!   Such a sweet little kid!
+    answer: Yes, he comes here every day! Such a sweet little kid!
     reaction: 
     visited: 0
     requiresPlantedDrugs: 0
@@ -56,8 +56,8 @@ MonoBehaviour:
       fmodReactionId: 0
       branches: []
   - question: Where could I find a nice suit?
-    answer: There's a men's clothing store right by the park, you can't miss it!  
-      Unless you're blind of course.
+    answer: There's a clothing store right by the park, you can't miss it... unless
+      you're blind.
     reaction: 
     visited: 0
     requiresPlantedDrugs: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
     fmodAnswerId: 11
     fmodReactionId: 0
     branches:
-    - question: What a coincidence!   I have an ugly dog called Max too!
+    - question: What a coincidence! I have an ugly dog called Max too!
       answer: Oh really? Max is such an uncommon name for a dog!
       reaction: 
       visited: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
         fmodReactionId: 0
         branches: []
       - question: Well he sure seems to mark his territory a lot!
-        answer: Yes! He just tried some mexican treats for the first time!   They're
+        answer: Yes! He just tried some mexican treats for the first time! They're
           going right through him
         reaction: 
         visited: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
         fmodReactionId: 0
         branches:
         - question: What a great way to lose weight!
-          answer: That's what I thought too!   But my stomach is handling them fine!
+          answer: That's what I thought too! But my stomach is handling them fine!
           reaction: 
           visited: 0
           requiresPlantedDrugs: 0
@@ -162,7 +162,7 @@ MonoBehaviour:
           fmodReactionId: 0
           branches:
           - question: Really? Could I have one?
-            answer: Uuh it depends.   What are you going to do with it?
+            answer: Uuh it depends. What are you going to do with it?
             reaction: 
             visited: 0
             requiresPlantedDrugs: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
             - question: There's a kid with a kite I need to take care of
               answer: Oh that's nice, here you go!
               reaction: 
-              visited: 1
+              visited: 0
               requiresPlantedDrugs: 0
               objectGained: {fileID: 11400000, guid: 07600f1057d29ad41b213f6f2368f4fe, type: 2}
               requiresObject: {fileID: 0}

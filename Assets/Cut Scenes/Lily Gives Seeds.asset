@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e67aaeb89ebd147a3058ec3cb4dae6, type: 3}
   m_Name: Lily Gives Seeds
   m_EditorClassIdentifier: 
+  conversation: 0
   steps:
   - type: 3
     character: Lily
@@ -19,8 +20,10 @@ MonoBehaviour:
     interactionDuration: 4
     animationProperty: 
     animationValue: 0
-    animationTrigger: give_seeds
+    animationTrigger: give-seeds
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 11400000, guid: b9625f8ceb9058944bef83d1d4096864, type: 2}
+    sound: 0
+    fmodTextId: 0

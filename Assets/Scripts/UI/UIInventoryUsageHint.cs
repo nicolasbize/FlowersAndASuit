@@ -7,7 +7,7 @@ using static PlayerController;
 public class UIInventoryUsageHint : MonoBehaviour
 {
     [SerializeField] PlayerController player;
-    [SerializeField] Game gameplayManager;
+    //[SerializeField] Game gameplayManager;
 
     public InventoryItem DraggedInventoryItem { get; set; }
     public InventoryItem HoveredInventoryItem { get; set; }
@@ -16,9 +16,7 @@ public class UIInventoryUsageHint : MonoBehaviour
 
     void Update()
     {
-        bool isPlayerIdle = player.State == PlayerState.Idle;
-        bool isCutscenePlaying = gameplayManager.IsBusy();
-        if (isPlayerIdle && !isCutscenePlaying) {
+        if (ShouldDisplay()) {
             string currentHint = "";
             if (HoveredInteractive != null && DraggedInventoryItem != null) {
                 currentHint = "Use " + DraggedInventoryItem.itemName + " on " + HoveredInteractive.HintText;
@@ -34,5 +32,9 @@ public class UIInventoryUsageHint : MonoBehaviour
         } else {
             GetComponent<TextMeshProUGUI>().text = "";
         }
+    }
+
+    bool ShouldDisplay() {
+        return GameInitializer.Instance.IsReady && !CutSceneManager.Instance.IsPlayingCutScene();
     }
 }

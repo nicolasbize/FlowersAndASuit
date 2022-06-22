@@ -2,6 +2,7 @@ using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class AudioUtils : MonoBehaviour
@@ -85,10 +86,18 @@ public class AudioUtils : MonoBehaviour
     private static SoundType currentAtmosphericPlayed = SoundType.ParkOutdoor;
     private static bool walkingSoundPlaying = false;
     private static FMOD.Studio.EventInstance currentDialogInstance = new FMOD.Studio.EventInstance();
-    //private static DialogConversation currentDialogConversation = DialogConversation.None;
-    //private static Action currentDialogCallback;
-    //private static int currentDialogConversationId = -1;
+    private static Action currentDialogCallback;
     //private static int conversationCaret = -1;
+    private static GCHandle timelineHandle;
+    private static TimelineInfo timelineInfo;
+    private static bool isDone;
+    private static FMOD.Studio.EVENT_CALLBACK fmodEventCallback;
+
+    class TimelineInfo
+    {
+        public int currentMusicBar = 0;
+        public FMOD.StringWrapper lastMarker = new FMOD.StringWrapper();
+    }
 
     private void Update() {
         FMOD.ATTRIBUTES_3D position = FMODUnity.RuntimeUtils.To3DAttributes(Camera.main.transform.position);
@@ -113,15 +122,13 @@ public class AudioUtils : MonoBehaviour
             }
         }
 
-        //if (currentDialogConversation != DialogConversation.None) {
-        //    int newCaretPosition;
-        //    currentDialogInstance.getTimelinePosition(out newCaretPosition);
-        //    if (newCaretPosition > conversationCaret) {
-        //        conversationCaret = newCaretPosition;
-        //    } else { // we encountered a loop, meaning the conversation is over
-        //        StopDialog(currentDialogConversation, currentDialogConversationId);
-        //    }
-        //}
+        if (isDone && currentDialogCallback != null) {
+            isDone = false;
+            Debug.Log("about to call callback from audioutils");
+            currentDialogCallback();
+            Debug.Log("done withcallback (from audioutils)");
+            currentDialogCallback = null;
+        }
     }
 
     private static FMOD.Studio.EventInstance GetSoundInstance(SoundType sound) {
@@ -206,40 +213,20 @@ public class AudioUtils : MonoBehaviour
 
         FMOD.Studio.EventInstance instance = LoadDialogInstance(conversation);
         instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        //currentDialogConversation = DialogConversation.None;
-        //currentDialogConversationId = -1;
-        //conversationCaret = -1;
-        //currentDialogCallback();
     }
 
-    //public static void PlayDialog(DialogConversation conversation, int conversationId, Action onDialogEnd) {
-    public static void PlayDialog(DialogConversation conversation, int conversationId) {
+    public static void PlayDialog(DialogConversation conversation, int conversationId, Action onDialogEnd=null) {
         if (conversation == DialogConversation.None || conversationId < 0)
             return;
 
         currentDialogInstance = LoadDialogInstance(conversation);
-        //currentDialogConversation = conversation;
-        //currentDialogCallback = onDialogEnd;
-        //currentDialogConversationId = conversationId;
         FMOD.ATTRIBUTES_3D position = FMODUnity.RuntimeUtils.To3DAttributes(Camera.main.transform.position);
-        currentDialogInstance.setParameterByName(dialogParameterNames[conversation], (float) conversationId);
+        currentDialogInstance.setParameterByName(dialogParameterNames[conversation], (float)conversationId);
         currentDialogInstance.set3DAttributes(position);
         currentDialogInstance.start();
-        currentDialogInstance.release();
-        //conversationCaret = -1;
+        currentDialogCallback = onDialogEnd;
     }
-
-    //public static void Test(DialogConversation conversation) {
-    //    if (conversation != DialogConversation.None) {
-    //        FMOD.Studio.EventInstance instance = LoadDialogInstance(conversation);
-    //        FMOD.Studio.PLAYBACK_STATE state;
-    //        int position;
-    //        instance.getTimelinePosition(out position);
-    //        instance.getPlaybackState(out state);
-    //        //Debug.Log(state);
-    //    }
-    //}
-
+    
     private static FMOD.Studio.EventInstance LoadDialogInstance(DialogConversation conversation) {
         FMOD.Studio.EventInstance instance;
         if (DialogFmodEvents.ContainsKey(conversation)) {
@@ -247,7 +234,12 @@ public class AudioUtils : MonoBehaviour
         } else {
             try {
                 instance = FMODUnity.RuntimeManager.CreateInstance(dialogEventNames[conversation]);
-                //instance.setCallback(new FMOD.Studio.EVENT_CALLBACK(DialogEventCallback), FMOD.Studio.EVENT_CALLBACK_TYPE.ALL);
+                
+                timelineHandle = GCHandle.Alloc(timelineInfo);
+                instance.setUserData(GCHandle.ToIntPtr(timelineHandle));
+                fmodEventCallback = new FMOD.Studio.EVENT_CALLBACK(DialogEventCallback);
+                instance.setCallback(fmodEventCallback, FMOD.Studio.EVENT_CALLBACK_TYPE.SOUND_STOPPED);
+
                 DialogFmodEvents[conversation] = instance;
             } catch (EventNotFoundException e) {
                 Debug.Log("fmod event not found: " + e.Message);
@@ -257,20 +249,18 @@ public class AudioUtils : MonoBehaviour
         return instance;
     }
 
-    //static FMOD.RESULT DialogEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, IntPtr instancePtr, IntPtr parameterPtr) {
-    //    FMOD.Studio.EventInstance instance = new FMOD.Studio.EventInstance(instancePtr);
-    //    IntPtr timelineInfoPtr;
-    //    FMOD.RESULT result = instance.getUserData(out timelineInfoPtr);
-    //    if (type == FMOD.Studio.EVENT_CALLBACK_TYPE.SOUND_PLAYED) {
-    //        int newCaretPosition;
-    //        instance.getTimelinePosition(out newCaretPosition);
-    //        if (newCaretPosition > conversationCaret) {
-    //            conversationCaret = newCaretPosition;
-    //        } else { // we encountered a loop, meaning the conversation is over
-    //            StopDialog(currentDialogConversation, currentDialogConversationId);
-    //        }
-    //    }
+    [AOT.MonoPInvokeCallback(typeof(FMOD.Studio.EVENT_CALLBACK))]
+    static FMOD.RESULT DialogEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, IntPtr instancePtr, IntPtr parameterPtr) {
+        FMOD.Studio.EventInstance instance = new FMOD.Studio.EventInstance(instancePtr);
 
-    //    return FMOD.RESULT.OK;
-    //}
+        IntPtr timelineInfoPtr;
+        FMOD.RESULT result = instance.getUserData(out timelineInfoPtr);
+        if (result != FMOD.RESULT.OK) {
+            Debug.LogError("Timeline Callback error: " + result);
+        } else if (timelineInfoPtr != IntPtr.Zero) {
+            isDone = true;
+        }
+
+        return FMOD.RESULT.OK;
+    }
 }

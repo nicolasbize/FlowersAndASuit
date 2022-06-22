@@ -6,11 +6,9 @@ public class BusTrigger : MonoBehaviour
 {
     public enum TriggerType { BusStop, Ending }
 
-    [SerializeField] Transform gameplayManager;
     [SerializeField] CutScene finalCutscene;
     [SerializeField] CutScene endCutscene;
     [SerializeField] TriggerType type;
-    [SerializeField] UIInventoryManager inventory;
     private bool entered;
 
     void Update() {
@@ -22,7 +20,7 @@ public class BusTrigger : MonoBehaviour
             if (type == TriggerType.BusStop) {
                 CheckForBus(collidedWith[0].gameObject);
             } else {
-                gameplayManager.GetComponent<CutScenePlayer>().PlayCutscene(endCutscene);
+                CutSceneManager.Instance.PlayCutscene(endCutscene);
             }
         } else if (collidedWith.Count == 0 && entered) {
             entered = false;
@@ -30,10 +28,10 @@ public class BusTrigger : MonoBehaviour
     }
 
     private void CheckForBus(GameObject player) {
-        if (inventory.HasItemInInventory("Flowers") && inventory.HasItemInInventory("Fancy Suit")) {
+        if (InventoryManager.Instance.HasItemInInventory("Flowers") && InventoryManager.Instance.HasItemInInventory("Fancy Suit")) {
             GameObject.Find("Enzo").GetComponent<PlayerController>().SetIdle();
-            gameplayManager.GetComponent<CutScenePlayer>().PlayCutscene(finalCutscene);
-            inventory.ClearInventory();
+            CutSceneManager.Instance.PlayCutscene(finalCutscene);
+            InventoryManager.Instance.ClearInventory();
             Camera.main.GetComponent<CameraFollow>().leftBorder = -9.65f;
             Camera.main.GetComponent<CameraFollow>().rightBorder = 35.5f;
         }

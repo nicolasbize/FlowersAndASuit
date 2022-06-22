@@ -14,19 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversation: 3
   steps:
-  - type: 12
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
   - type: 0
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
@@ -53,19 +40,6 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 1
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
   - type: 1
     character: Enzo
     targetLocation: {x: 32.21, y: 0, z: 0}
@@ -79,22 +53,9 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
   - type: 1
     character: Lily
-    targetLocation: {x: 0, y: 0, z: 0}
+    targetLocation: {x: 34.194443, y: -0.41666666, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
@@ -105,75 +66,36 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 3
+  - type: 4
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 2
-    animationProperty: is_talking
-    animationValue: 1
+    animationProperty: 
+    animationValue: 0
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: Here!
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_talking
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 36
+    fmodTextId: -1
   - type: 3
     character: Lily
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 4
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
-    animationTrigger: thank_you
+    animationTrigger: thank-you
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: Oh thank you young man!   Here, that's for you!
     objectGained: {fileID: 11400000, guid: 1dcb1d1bc882c3f40adb6d000a9b9252, type: 2}
     sound: 0
-    fmodTextId: 0
-  - type: 12
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
+    fmodTextId: 36
   - type: 3
     character: Lily
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: happy
@@ -224,19 +146,6 @@ MonoBehaviour:
     fmodTextId: 0
   - type: 9
     character: Shop Key
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 12
-    character: 
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 

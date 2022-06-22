@@ -8,13 +8,14 @@ using static Dialog;
 
 public class UIDialogContainer : MonoBehaviour, IPointerClickHandler
 {
+
     RectTransform rect = null;
     [SerializeField] float speedAnimation = 10f;
     [SerializeField] Transform dialogOptionPrefab;
     [SerializeField] Color newTextColor;
     [SerializeField] Color visitedColor;
     [SerializeField] string backText = "(Back)";
-    [SerializeField] Transform inventory;
+    //[SerializeField] Transform inventory;
 
     Action<string> onClickCallback = null;
     Branch[] currentBranches = null;
@@ -40,7 +41,7 @@ public class UIDialogContainer : MonoBehaviour, IPointerClickHandler
 
     private void AddContents(Branch[] branches) {
         bool hasFinalOption = false;
-        List<Branch> validBranches = new List<Branch>(branches).FindAll(b => b.requiresObject == null || inventory.GetComponent<UIInventoryManager>().HasItemInInventory(b.requiresObject));
+        List<Branch> validBranches = new List<Branch>(branches).FindAll(b => b.requiresObject == null || InventoryManager.Instance.HasItemInInventory(b.requiresObject));
         foreach(var branch in validBranches) {
             // not generic at all...
             if (branch.requiresPlantedDrugs) {

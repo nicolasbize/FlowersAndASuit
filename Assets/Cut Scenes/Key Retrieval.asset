@@ -14,51 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversation: 9
   steps:
-  - type: 12
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
   - type: 0
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 4
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 1
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
@@ -83,38 +44,25 @@ MonoBehaviour:
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
     animationProperty: 
     animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 5
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 6
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: retrieve_key
+    animationTrigger: retrieve-key
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: Let's see here...
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 5
+  - type: 4
+    character: 
+    targetLocation: {x: 0, y: 0, z: 0}
+    interactionDuration: 2
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 0
+    objectCreatedPrefab: {fileID: 0}
+    text: 
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
@@ -129,32 +77,6 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 11400000, guid: f99ed0abc8d3b8a4e830f9fd70f16024, type: 2}
-    sound: 0
-    fmodTextId: 0
-  - type: 12
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 12
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
   - type: 5

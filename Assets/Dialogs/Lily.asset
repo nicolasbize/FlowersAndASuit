@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Lily
   m_EditorClassIdentifier: 
   greeting: Good day madam!
-  reply: No no no!   There's nothing good about today!
+  reply: No no no! There's nothing good about today!
   fmodEvent: 3
   branches:
   - question: Something wrong?
-    answer: Oh, where to start?   Do you even care?
+    answer: Oh, where to start? Do you even care?
     reaction: 
     visited: 0
     requiresPlantedDrugs: 0
@@ -29,10 +29,10 @@ MonoBehaviour:
     fmodAnswerId: 3
     fmodReactionId: 0
     branches:
-    - question: Actually... no.   I just wanted some flowers.
+    - question: Actually... no, I just wanted some flowers.
       answer: Well go plant them yourself!
       reaction: 
-      visited: 1
+      visited: 0
       requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
       requiresObject: {fileID: 0}
@@ -43,7 +43,7 @@ MonoBehaviour:
       fmodReactionId: 0
       branches: []
     - question: Sure, I have all the time in the world!
-      answer: Oh great!   So this morning my neighbor's rooster woke me up!
+      answer: Oh great! So this morning my neighbor's rooster woke me up!
       reaction: 
       visited: 0
       requiresPlantedDrugs: 0
@@ -108,8 +108,7 @@ MonoBehaviour:
               fmodReactionId: 0
               branches:
               - question: Of course, what else would you do
-                answer: six twenty three, six twenty four, six twenty five...   six
-                  twenty six! six twenty seven... six twenty eight...
+                answer: 6:23, 6:24, 6:25... 6:27, 6:28...
                 reaction: 
                 visited: 0
                 requiresPlantedDrugs: 0
@@ -150,7 +149,7 @@ MonoBehaviour:
                   - question: Can I just get some flowers?
                     answer: No! My keys just fell through the drain!
                     reaction: 
-                    visited: 1
+                    visited: 0
                     requiresPlantedDrugs: 0
                     objectGained: {fileID: 0}
                     requiresObject: {fileID: 0}
@@ -164,7 +163,7 @@ MonoBehaviour:
                         you?
                       answer: Well why don't you go plant some!
                       reaction: 
-                      visited: 1
+                      visited: 0
                       requiresPlantedDrugs: 0
                       objectGained: {fileID: 0}
                       requiresObject: {fileID: 0}
@@ -174,10 +173,10 @@ MonoBehaviour:
                       fmodAnswerId: 25
                       fmodReactionId: 0
                       branches: []
-  - question: Look at the bright side!   You're alive and healthy!
+  - question: Look at the bright side! You're alive and healthy!
     answer: You have a dark sense of humor!
     reaction: 
-    visited: 1
+    visited: 0
     requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}
@@ -188,10 +187,10 @@ MonoBehaviour:
     fmodReactionId: 0
     branches: []
   - question: Sometimes a bad thing leads to a good thing!
-    answer: I guess that's true!   My neighbor was awful    and then he fell down
-      the stairs!
+    answer: I guess that's true! My neighbor was awful and then he fell down the
+      stairs!
     reaction: 
-    visited: 1
+    visited: 0
     requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}
@@ -204,7 +203,7 @@ MonoBehaviour:
     - question: That's not quite what I had in mind!
       answer: Oh, bless those stairs!
       reaction: 
-      visited: 1
+      visited: 0
       requiresPlantedDrugs: 0
       objectGained: {fileID: 0}
       requiresObject: {fileID: 0}
@@ -217,7 +216,7 @@ MonoBehaviour:
   - question: I'll see you around!
     answer: Maybe not, who knows...
     reaction: 
-    visited: 1
+    visited: 0
     requiresPlantedDrugs: 0
     objectGained: {fileID: 0}
     requiresObject: {fileID: 0}

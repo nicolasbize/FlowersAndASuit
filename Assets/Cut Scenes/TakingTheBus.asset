@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: TakingTheBus
   m_EditorClassIdentifier: 
   conversation: 0
+  controlMusic: 0
   steps:
-  - type: 3
-    character: Enzo
+  - type: 0
+    character: 
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 0
-    animationProperty: is_moving
+    animationProperty: 
     animationValue: 0
     animationTrigger: 
     flipValue: 0
@@ -31,19 +32,6 @@ MonoBehaviour:
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 5
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 0
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: 
@@ -79,51 +67,12 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 1
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
   - type: 1
     character: Enzo
     targetLocation: {x: 53.23, y: 0, z: 0}
-    interactionDuration: 4
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Bus
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 1
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
@@ -144,21 +93,8 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 3
-    character: Bus
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
   - type: 4
-    character: Bus
+    character: 
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 4
     animationProperty: 
@@ -176,19 +112,6 @@ MonoBehaviour:
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Bus
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 1
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
@@ -215,7 +138,7 @@ MonoBehaviour:
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
-    animationTrigger: EnterDoor
+    animationTrigger: start
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
@@ -267,7 +190,7 @@ MonoBehaviour:
     interactionDuration: 1
     animationProperty: 
     animationValue: 0
-    animationTrigger: ExitDoor
+    animationTrigger: end
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
@@ -279,19 +202,6 @@ MonoBehaviour:
     targetLocation: {x: -22.9, y: -103.88, z: 0}
     interactionDuration: 0
     animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Bus
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
     animationValue: 0
     animationTrigger: 
     flipValue: 0
@@ -339,37 +249,11 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_walking_flowers
-    animationValue: 1
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
   - type: 1
     character: Enzo
     targetLocation: {x: -8, y: -105.041664, z: 0}
     interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_walking_flowers
+    animationProperty: is-moving-flowers
     animationValue: 0
     animationTrigger: 
     flipValue: 0

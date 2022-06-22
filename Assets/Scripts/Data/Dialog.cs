@@ -30,9 +30,9 @@ public class Dialog : ScriptableObject
 
     public class SingleDialogText
     {
-        public GameObject speaker;
-        public string text;
         public AudioUtils.DialogConversation fmodEvent;
+        public Speakable speaker;
+        public string text;
         public int fmodId;
     }
 

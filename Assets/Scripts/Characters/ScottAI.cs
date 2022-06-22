@@ -6,13 +6,12 @@ public class ScottAI : MonoBehaviour
 {
 
     [SerializeField] public CutScene plantDrugsCutScene;
-    [SerializeField] Transform gameLogicManager;
     private bool isDrugsPlanted;
 
     public void PlantDrugs() {
         if (!isDrugsPlanted) {
             isDrugsPlanted = true;
-            gameLogicManager.GetComponent<CutScenePlayer>().PlayCutscene(plantDrugsCutScene);
+            CutSceneManager.Instance.PlayCutscene(plantDrugsCutScene);
         }
     }
 
@@ -30,6 +29,6 @@ public class ScottAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Talkable>().Busy = IsOnPhone();
+        GetComponent<Speakable>().Busy = IsOnPhone();
     }
 }

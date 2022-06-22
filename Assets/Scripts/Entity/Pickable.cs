@@ -10,16 +10,9 @@ public class Pickable : MonoBehaviour
     [field: SerializeField] public bool OnGround { get; private set; }
     [field: SerializeField] public SpokenLine TextBeforePickup { get; private set; }
     [field: SerializeField] public bool DestroyAfterPickup { get; private set; }
-    [SerializeField] private UIInventoryManager inventory;
 
     Animator animator;
     Action callbackAfterPicked;
-
-    private void Awake() {
-        if (inventory == null) {
-            inventory = GameObject.Find("Inventory").GetComponent<UIInventoryManager>();
-        }
-    }
 
     public void PickUp(PlayerController player, Action callback) {
         callbackAfterPicked = callback;
@@ -34,7 +27,7 @@ public class Pickable : MonoBehaviour
     }
 
     private void AddItemToInventory() {
-        inventory.AddToInventory(Item);
+        InventoryManager.Instance.AddToInventory(Item);
         if (OnGround) {
             animator.SetTrigger("crouch-end");
             AnimatorUtils.Watch(animator, "enzo-pickup-rise", CompletePickup);

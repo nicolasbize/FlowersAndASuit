@@ -27,6 +27,7 @@ public class CutScene : ScriptableObject
     }
 
     public AudioUtils.DialogConversation conversation;
+    public bool controlMusic = true;
     public Step[] steps;
 
 }

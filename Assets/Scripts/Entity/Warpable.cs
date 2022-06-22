@@ -27,7 +27,7 @@ public class Warpable : MonoBehaviour
     }
 
     private void StartWarp() {
-        transitionCanvas.GetComponent<Animator>().SetTrigger("EnterDoor");
+        transitionCanvas.GetComponent<Animator>().SetTrigger("start");
         StartCoroutine(WarpTo(destination, warpMusic));
     }
 
@@ -35,11 +35,12 @@ public class Warpable : MonoBehaviour
         AudioUtils.PlayMusic(warpZoneMusic);
         yield return new WaitForSeconds(.5f);
         playerWarped.transform.position = spawn.transform.position;
+        playerWarped.GetComponent<Movable>().StopMoving();
         Camera.main.GetComponent<CameraFollow>().leftBorder = spawn.limitCameraLeft;
         Camera.main.GetComponent<CameraFollow>().rightBorder = spawn.limitCameraRight;
         Camera.main.GetComponent<CameraFollow>().GoToFinalPosition();
         yield return new WaitForSeconds(.5f);
-        transitionCanvas.GetComponent<Animator>().SetTrigger("ExitDoor");
+        transitionCanvas.GetComponent<Animator>().SetTrigger("end");
         //SetIdle(); // do we need an intermediary callback here?
         yield return new WaitForSeconds(1f);
         transitionCanvas.GetComponent<Animator>().Play("TransitionIdle");

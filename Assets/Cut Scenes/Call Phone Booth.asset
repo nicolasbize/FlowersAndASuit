@@ -14,19 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversation: 7
   steps:
-  - type: 12
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
   - type: 0
     character: 
     targetLocation: {x: 0, y: 0, z: 0}
@@ -40,23 +27,10 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 1
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
   - type: 1
     character: Enzo
     targetLocation: {x: 19.24, y: 0, z: 0}
-    interactionDuration: 3
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: 
@@ -69,49 +43,10 @@ MonoBehaviour:
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 2
     animationProperty: 
     animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 8
-    fmodTextId: 0
-  - type: 3
-    character: Enzo
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2
-    animationProperty: is_calling
-    animationValue: 1
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 14
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
+    animationTrigger: call
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
@@ -120,7 +55,7 @@ MonoBehaviour:
     fmodTextId: 0
   - type: 2
     character: 
-    targetLocation: {x: 10.98, y: 0, z: 0}
+    targetLocation: {x: 9.51, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
@@ -131,37 +66,24 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 13
-    character: 
+  - type: 3
+    character: Phone Booth
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
+    interactionDuration: 2
     animationProperty: 
-    animationValue: 1
-    animationTrigger: 
+    animationValue: 0
+    animationTrigger: ring
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
-    text: 
+    text: ring ring!
     objectGained: {fileID: 0}
     sound: 9
-    fmodTextId: 0
-  - type: 3
-    character: Phone Booth
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
-    animationProperty: is_ringing
-    animationValue: 1
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: ring ring!
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Phone Booth
+    fmodTextId: -1
+  - type: 4
+    character: 
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 1
-    animationProperty: is_ringing
+    animationProperty: 
     animationValue: 0
     animationTrigger: 
     flipValue: 0
@@ -173,42 +95,16 @@ MonoBehaviour:
   - type: 3
     character: Phone Booth
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
-    animationProperty: is_ringing
-    animationValue: 1
-    animationTrigger: 
+    interactionDuration: 2
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: ring
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: ring ring!
     objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Phone Booth
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_ringing
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Scott
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 1
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
+    sound: 9
+    fmodTextId: -1
   - type: 1
     character: Scott
     targetLocation: {x: 5.3, y: 0.55, z: 0}
@@ -226,71 +122,18 @@ MonoBehaviour:
     character: Scott
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 14
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
     animationProperty: 
     animationValue: 0
-    animationTrigger: 
+    animationTrigger: pickup-phone
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 9
-    fmodTextId: 0
-  - type: 3
-    character: Scott
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: answer_phone
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
+    text: Hello? Hello! Who's this? I won't hang up, you hang up!
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 14
-  - type: 4
-    character: Scott
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 12
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: Hello?   Hellooo!!   Who is this?!   Think this is funny?   I won't hang
-      up!   You hang up!!
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
   - type: 2
     character: 
-    targetLocation: {x: 14.04, y: 0, z: 0}
+    targetLocation: {x: 15, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
@@ -301,60 +144,21 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 12
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 15
   - type: 3
     character: Enzo
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 5
-    animationProperty: is_calling
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: Hmm, I wonder how long he'll stay on!
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 9
-    character: Phone Number
-    targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
-    animationTrigger: 
+    animationTrigger: hangup
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
-    text: 
+    text: Hmm... I wonder how long he'll stay on!
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 0
-  - type: 12
-    character: 
+    fmodTextId: 15
+  - type: 9
+    character: Phone Number
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 
