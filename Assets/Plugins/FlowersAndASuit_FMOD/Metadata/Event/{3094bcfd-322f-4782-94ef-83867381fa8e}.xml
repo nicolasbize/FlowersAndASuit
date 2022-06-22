@@ -5,7 +5,7 @@
 			<value>Lady at the Park</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{5feddce6-58a3-4f19-a673-0cfe181f54a0}</destination>
@@ -2206,7 +2206,6 @@
 	<object class="MixerBusEffectChain" id="{6c541662-391b-4b4e-b301-26be6311a403}">
 		<relationship name="effects">
 			<destination>{7dddb1a1-ff4e-49bc-8ea9-90c7e5fa21b5}</destination>
-			<destination>{1b4ad5bb-fd61-4ee3-b536-5b60801b6837}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c82defce-f445-44c0-b9c7-0c19510fb10f}" />
@@ -2576,7 +2575,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{7dddb1a1-ff4e-49bc-8ea9-90c7e5fa21b5}" />
-	<object class="SpatialiserEffect" id="{1b4ad5bb-fd61-4ee3-b536-5b60801b6837}" />
 	<object class="MixerBusFader" id="{63f432a8-3954-493f-b3e9-e602307c1e2a}" />
 	<object class="MixerBusFader" id="{8bd6d622-8fc2-46dc-b76f-ae26753d102b}" />
 </objects>

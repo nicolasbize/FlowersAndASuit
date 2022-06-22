@@ -164,7 +164,7 @@ public class InventoryManager : MonoBehaviour, IPointerDownHandler, IPointerUpHa
                             AudioUtils.PlaySound(AudioUtils.SoundType.UIClick);
                         }
                     }
-                    player.State = PlayerState.Talking;
+                    //player.State = PlayerState.Talking;
                     if (foundCombination) {
                         RefreshInventory();
                         player.GetComponent<Speakable>().Speak(thought);

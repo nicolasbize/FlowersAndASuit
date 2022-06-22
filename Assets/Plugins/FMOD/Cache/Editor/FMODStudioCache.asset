@@ -96,7 +96,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 4205306280637274764}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters:
   - {fileID: -1119252936495129812}
@@ -124,7 +124,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 4205306280637274764}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters:
   - {fileID: 1725626591874539863}
@@ -152,7 +152,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 4205306280637274764}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters:
   - {fileID: -2866469214177630691}
@@ -180,7 +180,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 4205306280637274764}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters:
   - {fileID: -7309051599087815900}
@@ -514,7 +514,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 4205306280637274764}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters:
   - {fileID: 460228559419828986}
@@ -596,7 +596,7 @@ MonoBehaviour:
   - {fileID: 4205306280637274764}
   StringsBanks:
   - {fileID: 2346158573358980646}
-  cacheTime: 637914341145845113
+  cacheTime: 637914625763403269
   cacheVersion: 10
 --- !u!114 &460228559419828986
 MonoBehaviour:
@@ -637,7 +637,7 @@ MonoBehaviour:
   Name: Arrest Dialogue
   StudioPath: 
   Min: 0
-  Max: 12
+  Max: 14
   Default: 0
   ID:
     data1: 767970825
@@ -742,13 +742,13 @@ MonoBehaviour:
   Banks:
   - {fileID: 4205306280637274764}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters:
   - {fileID: 748263833453205277}
   MinDistance: 1
   MaxDistance: 20
-  Length: 43000
+  Length: 46600
 --- !u!114 &2346158573358980646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -764,7 +764,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637914341145845113
+  lastModified: 637914625763403269
   FileSizes:
   - Name: Desktop
     Value: 2720
@@ -864,10 +864,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637914341145775298
+  lastModified: 637914625763343419
   FileSizes:
   - Name: Desktop
-    Value: 18659008
+    Value: 18656672
   Exists: 1
 --- !u!114 &4653169154470494749
 MonoBehaviour:
@@ -890,7 +890,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 4205306280637274764}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters:
   - {fileID: -7430742231831705264}
@@ -1000,7 +1000,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 4205306280637274764}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters:
   - {fileID: 2380465853709728324}
@@ -1055,7 +1055,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 4205306280637274764}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters:
   - {fileID: 964179419400726625}
@@ -1137,7 +1137,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 4205306280637274764}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters:
   - {fileID: -4486176923570468058}

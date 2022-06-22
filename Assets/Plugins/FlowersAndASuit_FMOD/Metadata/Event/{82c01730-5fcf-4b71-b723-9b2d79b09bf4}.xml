@@ -5,7 +5,7 @@
 			<value>Fisherman</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{5feddce6-58a3-4f19-a673-0cfe181f54a0}</destination>
@@ -1437,7 +1437,6 @@
 	<object class="MixerBusEffectChain" id="{7c661142-cd69-4dba-9bc7-bd7ae2a2b90d}">
 		<relationship name="effects">
 			<destination>{132c1478-0b4e-4272-ae72-45b2bb00636e}</destination>
-			<destination>{e9dc0f01-e28b-45db-a254-93bc6725f1be}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c190a9b6-6a5d-4837-ad9c-9648b655e5d7}" />
@@ -1676,7 +1675,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{132c1478-0b4e-4272-ae72-45b2bb00636e}" />
-	<object class="SpatialiserEffect" id="{e9dc0f01-e28b-45db-a254-93bc6725f1be}" />
 	<object class="MixerBusFader" id="{368a20ca-448b-4381-bbd8-f1408cb9b510}" />
 	<object class="PannerEffect" id="{51b3edb2-e7e0-46fc-a05f-bb85a800f5f2}">
 		<relationship name="automators">

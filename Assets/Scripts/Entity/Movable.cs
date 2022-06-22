@@ -16,6 +16,7 @@ public class Movable : MonoBehaviour
     private Animator animator;
     private Action onArrive;
     private bool justArrived;
+    private AudioUtils.Surface currentSurface = AudioUtils.Surface.Grass;
     private void Start() {
         animator = GetComponent<Animator>();
         StopMoving();
@@ -35,6 +36,11 @@ public class Movable : MonoBehaviour
         Destination = transform.position;
     }
 
+    public void FaceTowards(Vector3 position) {
+        Vector2 direction = transform.position.x < position.x ? Vector2.right : Vector2.left;
+        GetComponent<SpriteRenderer>().flipX = direction == Vector2.left;
+    }
+
     private void Update() {
         bool isMoving = IsMoving();
         animator.SetBool(MoveAnimBoolean, isMoving);
@@ -42,18 +48,31 @@ public class Movable : MonoBehaviour
         if (isMoving) {
             transform.position = Vector3.MoveTowards(transform.position, Destination, Speed * Time.deltaTime);
             bool isOnGrass = transform.position.x < -47;
-            Vector2 direction = transform.position.x < Destination.x ? Vector2.right : Vector2.left;
-            GetComponent<SpriteRenderer>().flipX = direction == Vector2.left;
-            // todo: check collider against ground collider and get sound from there directly.
+            FaceTowards(Destination);
+            CheckForGround();
             if (EmitSound) {
-                AudioUtils.PlayWalkingSound(isOnGrass ? AudioUtils.Surface.Grass : AudioUtils.Surface.Ground);
+                Debug.Log("playing " + currentSurface);
+                AudioUtils.PlayWalkingSound(currentSurface);
             }
         } else if (!justArrived) {
             justArrived = true;
             transform.position = SpriteUtils.PixelAlign(transform.position);
             if (onArrive != null) onArrive();
         } else {
-            AudioUtils.StopWalkingSound();
+            // note: if you have 2 movable entities that emit sound, any entity not moving will cancel the
+            // moving sound for the game as it is centralized.
+            if (EmitSound) {
+                AudioUtils.StopWalkingSound();
+            }
+        }
+    }
+
+    void CheckForGround() {
+        List<Collider2D> collidedWith = new List<Collider2D>();
+        GetComponent<Collider2D>().OverlapCollider(new ContactFilter2D(), collidedWith);
+        collidedWith = collidedWith.FindAll(c => c.gameObject.tag == "Ground");
+        if (collidedWith.Count > 0) {
+            currentSurface = collidedWith[0].GetComponent<Ground>().GroundSurface;
         }
     }
 

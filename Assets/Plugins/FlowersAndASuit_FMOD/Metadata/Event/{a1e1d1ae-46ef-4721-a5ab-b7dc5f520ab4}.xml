@@ -5,7 +5,7 @@
 			<value>Flower Shop Owner</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{5feddce6-58a3-4f19-a673-0cfe181f54a0}</destination>
@@ -2468,7 +2468,6 @@
 	<object class="MixerBusEffectChain" id="{7160ba2e-6d15-4a49-ac29-b6242f8c7ce1}">
 		<relationship name="effects">
 			<destination>{53988aef-0b2f-4d83-ac55-fddca0c3eada}</destination>
-			<destination>{b50a5938-667f-46f6-971d-184a5d221170}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{59267481-81e0-4459-a3b3-8fac00d932b8}" />
@@ -2890,7 +2889,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{53988aef-0b2f-4d83-ac55-fddca0c3eada}" />
-	<object class="SpatialiserEffect" id="{b50a5938-667f-46f6-971d-184a5d221170}" />
 	<object class="AutomationPoint" id="{e896f1f6-a2f0-4c22-98af-35d0a2aa1f10}">
 		<property name="position">
 			<value>115.02437500000001</value>

@@ -5,7 +5,7 @@
 			<value>Kid at the Park</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{5feddce6-58a3-4f19-a673-0cfe181f54a0}</destination>
@@ -2349,7 +2349,6 @@
 	<object class="MixerBusEffectChain" id="{563b5eaa-ecf4-4fec-8b55-81ffb2ca7022}">
 		<relationship name="effects">
 			<destination>{899cac6d-f87e-4e64-b400-4180a99f839b}</destination>
-			<destination>{23d22b53-67d3-49bc-80b1-b46b7f412b37}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{3a89c95c-ab61-4e01-bb9e-e95d7242e099}" />
@@ -2741,7 +2740,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{899cac6d-f87e-4e64-b400-4180a99f839b}" />
-	<object class="SpatialiserEffect" id="{23d22b53-67d3-49bc-80b1-b46b7f412b37}" />
 	<object class="MixerBusFader" id="{4087fb7a-0fd3-45c7-86c3-b932f332c687}" />
 	<object class="MixerBusFader" id="{70c45f96-cabb-4246-b66c-fb2f358ae3be}" />
 </objects>

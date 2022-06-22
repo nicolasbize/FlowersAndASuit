@@ -34,7 +34,7 @@ MonoBehaviour:
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
-    animationTrigger: enter
+    animationTrigger: start
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
@@ -81,6 +81,19 @@ MonoBehaviour:
     sound: 0
     fmodTextId: 0
   - type: 6
+    character: Scott
+    targetLocation: {x: 7.6666665, y: 0.33333334, z: 0}
+    interactionDuration: 0
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: 
+    flipValue: 1
+    objectCreatedPrefab: {fileID: 0}
+    text: 
+    objectGained: {fileID: 0}
+    sound: 0
+    fmodTextId: 0
+  - type: 6
     character: Officer Lewis
     targetLocation: {x: 0.1, y: 0.375, z: 0}
     interactionDuration: 0
@@ -99,7 +112,7 @@ MonoBehaviour:
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
-    animationTrigger: exit
+    animationTrigger: end
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
@@ -135,7 +148,7 @@ MonoBehaviour:
   - type: 3
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
+    interactionDuration: 1.5
     animationProperty: 
     animationValue: 0
     animationTrigger: blow-whistle
@@ -143,148 +156,83 @@ MonoBehaviour:
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
-    sound: 0
+    sound: 16
     fmodTextId: 0
-  - type: 3
+  - type: 4
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
-    animationTrigger: arrest_talk
+    animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: Sir! You're under arrest!
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 0
+    fmodTextId: 13
   - type: 3
     character: Scott
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2
+    interactionDuration: 3
     animationProperty: 
     animationValue: 0
-    animationTrigger: hands_up
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 1
-  - type: 3
-    character: Scott
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: arrest_talk
+    animationTrigger: hands-up
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: For what exactly?
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 2
+    fmodTextId: 1
   - type: 3
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 3
     animationProperty: 
     animationValue: 0
-    animationTrigger: point_jacket
+    animationTrigger: point-jacket
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: What's in your jacket?
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
+    fmodTextId: 2
+  - type: 4
+    character: Scott
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
+    interactionDuration: 2
     animationProperty: 
     animationValue: 0
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
-    text: 
+    text: There's nothing in...
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 3
   - type: 3
     character: Scott
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2
+    interactionDuration: 3
     animationProperty: 
     animationValue: 0
-    animationTrigger: arrest_talk
+    animationTrigger: find-drugs
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
-    text: There's nothing in...
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
+    text: Wait, what is this?
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 4
   - type: 3
-    character: Scott
+    character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2.5
+    interactionDuration: 2
     animationProperty: 
     animationValue: 0
-    animationTrigger: find_drugs
+    animationTrigger: well-well
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
-    text: Wait what's this?
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
+    text: Well, well well...
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 5
@@ -294,175 +242,84 @@ MonoBehaviour:
     interactionDuration: 2
     animationProperty: 
     animationValue: 0
-    animationTrigger: arrest_talk
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: Well, well well...
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Scott
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: hands_up
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 6
-  - type: 3
-    character: Officer Lewis
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: snif
+    animationTrigger: smell
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: snif snif
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
+    fmodTextId: 6
+  - type: 4
+    character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
+    interactionDuration: 2
     animationProperty: 
     animationValue: 0
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
-    text: 
+    text: I knew it!
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 7
   - type: 3
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: arrest_talk
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: I knew it!
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 8
-  - type: 3
-    character: Officer Lewis
-    targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 3
     animationProperty: 
     animationValue: 0
-    animationTrigger: point_jacket
+    animationTrigger: point-jacket
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: You're the sugar thief!
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 9
-  - type: 3
+    fmodTextId: 8
+  - type: 4
     character: Scott
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 2
     animationProperty: 
     animationValue: 0
-    animationTrigger: arrest_talk
+    animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: The what?!
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 10
+    fmodTextId: 9
   - type: 3
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 2
     animationProperty: 
     animationValue: 0
-    animationTrigger: take_clothes
+    animationTrigger: take-clothes
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: Take off your clothes!
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 0
-  - type: 1
+    fmodTextId: 10
+  - type: 4
     character: Scott
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
+    interactionDuration: 0.5
     animationProperty: 
     animationValue: 0
     animationTrigger: 
-    flipValue: 1
+    flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 3
-    character: Officer Lewis
-    targetLocation: {x: 0, y: 0, z: 0}
+  - type: 6
+    character: Scott
+    targetLocation: {x: 7.6666665, y: 0.33333334, z: 0}
     interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 1
+    animationProperty: 
+    animationValue: 0
     animationTrigger: 
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
@@ -486,46 +343,20 @@ MonoBehaviour:
   - type: 3
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: is_moving
-    animationValue: 1
-    animationTrigger: 
+    interactionDuration: 1
+    animationProperty: 
+    animationValue: 0
+    animationTrigger: handcuffs
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 12
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 11
   - type: 3
     character: Scott
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
+    interactionDuration: 1
     animationProperty: 
     animationValue: 0
     animationTrigger: handcuffs
@@ -534,7 +365,7 @@ MonoBehaviour:
     text: Grrr..
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 0
+    fmodTextId: 11
   - type: 8
     character: 
     targetLocation: {x: 7.7649856, y: -2.1206796, z: 0}
@@ -551,55 +382,16 @@ MonoBehaviour:
   - type: 3
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: handcuffs
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 13
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 12
-  - type: 3
-    character: Officer Lewis
-    targetLocation: {x: 0, y: 0, z: 0}
     interactionDuration: 3
     animationProperty: 
     animationValue: 0
-    animationTrigger: point_jacket
+    animationTrigger: point-jacket
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: To the station we go!
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 0
-  - type: 3
-    character: Scott
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: walk_naked
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
+    fmodTextId: 12
   - type: 1
     character: Scott
     targetLocation: {x: 15, y: 0.375, z: 0}
@@ -619,7 +411,7 @@ MonoBehaviour:
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
-    animationTrigger: EnterDoor
+    animationTrigger: start
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 
@@ -671,20 +463,7 @@ MonoBehaviour:
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
-    animationTrigger: ExitDoor
-    flipValue: 0
-    objectCreatedPrefab: {fileID: 0}
-    text: 
-    objectGained: {fileID: 0}
-    sound: 0
-    fmodTextId: 0
-  - type: 12
-    character: 
-    targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 0
-    animationProperty: 
-    animationValue: 0
-    animationTrigger: 
+    animationTrigger: end
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
     text: 

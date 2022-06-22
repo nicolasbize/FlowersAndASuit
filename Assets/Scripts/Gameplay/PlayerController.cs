@@ -13,8 +13,6 @@ public class PlayerController : MonoBehaviour
 
     //ConversationManager conversationManager;
     Vector3 target = Vector3.zero;
-    Animator animator = null;
-    SpriteRenderer spriteRenderer = null;
     GameObject interactiveTarget = null;
     GameObject hovered = null;
     InventoryItem currentItemDragged = null;
@@ -22,13 +20,8 @@ public class PlayerController : MonoBehaviour
     public bool isInLiving = false;
     int invalidActionFeedbackIndex = 0;
 
-    public enum PlayerState { Idle, Talking, Moving, PickingUpItem, InteractingBackground }
+    public enum PlayerState { Idle, InteractingBackground }
     public PlayerState State { get; set; }
-
-    private void Start() {
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
 
     void Update() {
         //isInLiving = transform.position.y > -100;
@@ -36,11 +29,11 @@ public class PlayerController : MonoBehaviour
         HighlightHoveredObjects();
         HandleClickInteractions();
 
-        if (isInLiving) {
-            animator.SetBool("is_moving", State == PlayerState.Moving);
-        } else {
-            animator.SetBool("is_walking_flowers", State == PlayerState.Moving);
-        }
+        //if (isInLiving) {
+        //    animator.SetBool("is_moving", State == PlayerState.Moving);
+        //} else {
+        //    animator.SetBool("is_walking_flowers", State == PlayerState.Moving);
+        //}
 
     }
 
@@ -74,7 +67,7 @@ public class PlayerController : MonoBehaviour
         Observable observable = target.GetComponent<Observable>();
         Speakable speakable = target.GetComponent<Speakable>();
         Pickable pickable = target.GetComponent<Pickable>();
-        LookTowards(target.transform.position);
+        GetComponent<Movable>().FaceTowards(target.transform.position);
         SpriteUtils.RemoveOutlines();
 
         if (warpable != null) {
@@ -94,11 +87,6 @@ public class PlayerController : MonoBehaviour
         } else if (observable != null) {
             GetComponent<Speakable>().Speak(observable.Observation);
         }
-    }
-
-    private void LookTowards(Vector3 position) {
-        Vector2 direction = transform.position.x < position.x ? Vector2.right : Vector2.left;
-        spriteRenderer.flipX = direction == Vector2.left;
     }
 
     public void SetDraggedInventoryItem(InventoryItem item) {
@@ -188,6 +176,7 @@ public class PlayerController : MonoBehaviour
         if (DialogManager.Instance.InConversation()) return false;
         if (GetComponent<Speakable>().IsSpeaking()) return false;
         if (State == PlayerState.InteractingBackground) return false;
+        if (CutSceneManager.Instance.IsPlayingCutScene()) return false;
         return true;
     }
 

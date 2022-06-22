@@ -5,7 +5,7 @@
 			<value>Shady Guy</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{5feddce6-58a3-4f19-a673-0cfe181f54a0}</destination>
@@ -1249,7 +1249,6 @@
 	<object class="MixerBusEffectChain" id="{5a34b43b-756f-48c1-b466-3aac79573a21}">
 		<relationship name="effects">
 			<destination>{10da8a02-28cc-40fc-80ca-1d47d4f90a16}</destination>
-			<destination>{f9e6b299-a7ca-46d9-99f3-e785f3eb0c1e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2d32c966-ffe9-4223-8b4e-6c26f2c2d3ce}" />
@@ -1455,7 +1454,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{10da8a02-28cc-40fc-80ca-1d47d4f90a16}" />
-	<object class="SpatialiserEffect" id="{f9e6b299-a7ca-46d9-99f3-e785f3eb0c1e}" />
 	<object class="MixerBusFader" id="{d9260fc8-dc65-4a44-bea2-27077be69bda}" />
 	<object class="MultibandEqEffect" id="{a800a5c7-f06c-4d61-86d0-54333f272b79}">
 		<property name="filterTypeA">

@@ -5,7 +5,7 @@
 			<value>Coffee Shop Owner</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{5feddce6-58a3-4f19-a673-0cfe181f54a0}</destination>
@@ -1017,7 +1017,6 @@
 	<object class="MixerBusEffectChain" id="{00004b12-4300-4da1-a945-64e48cfc564f}">
 		<relationship name="effects">
 			<destination>{773feb92-d4a6-488f-8956-3cd2a4dcc4f9}</destination>
-			<destination>{505cdc28-2e03-4d26-883c-806978c0a5c4}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{da2580b5-396f-48c5-8428-770addb5d813}" />
@@ -1189,7 +1188,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{773feb92-d4a6-488f-8956-3cd2a4dcc4f9}" />
-	<object class="SpatialiserEffect" id="{505cdc28-2e03-4d26-883c-806978c0a5c4}" />
 	<object class="MixerBusFader" id="{05170807-0aa1-4964-a406-7806cf23bceb}" />
 	<object class="MixerBusFader" id="{c13a7eb9-e39a-4764-ab8b-83df55994082}" />
 </objects>

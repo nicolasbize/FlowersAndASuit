@@ -5,7 +5,7 @@
 			<value>Officer Lewis</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{5feddce6-58a3-4f19-a673-0cfe181f54a0}</destination>
@@ -1962,7 +1962,6 @@
 	<object class="MixerBusEffectChain" id="{c253e834-e4e0-4953-bd01-b2cf422c9496}">
 		<relationship name="effects">
 			<destination>{98d80ee6-ec0f-4bdb-aebf-7aa10f132a45}</destination>
-			<destination>{1cdc0165-3431-4b48-9adb-20ef80f78e0b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{96532c75-7969-4afa-8c0b-b91898db7c51}" />
@@ -2288,7 +2287,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{98d80ee6-ec0f-4bdb-aebf-7aa10f132a45}" />
-	<object class="SpatialiserEffect" id="{1cdc0165-3431-4b48-9adb-20ef80f78e0b}" />
 	<object class="MixerBusFader" id="{d819fa66-e074-4ab5-a15e-9c0713204fdb}" />
 	<object class="MixerBusFader" id="{d5633ede-1bdd-4707-9667-148de729ed20}" />
 </objects>

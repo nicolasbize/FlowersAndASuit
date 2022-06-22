@@ -75,7 +75,7 @@ public class Speakable : MonoBehaviour
         animator.SetBool("is-speaking", IsSpeaking());
         Movable movable = GetComponent<Movable>();
         bool moving = movable == null ? true : movable.IsMoving();
-        if (facePlayer && !moving) {
+        if (facePlayer && !moving && !CutSceneManager.Instance.IsPlayingCutScene()) {
             GetComponent<SpriteRenderer>().flipX = player.transform.position.x < transform.position.x;
         }
     }

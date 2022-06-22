@@ -5,7 +5,7 @@
 			<value>Enzo Solo</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{5feddce6-58a3-4f19-a673-0cfe181f54a0}</destination>
@@ -2504,7 +2504,6 @@
 	<object class="MixerBusEffectChain" id="{063cc5d4-1c24-43f3-9d26-25af515a37e1}">
 		<relationship name="effects">
 			<destination>{c8c4203f-a58b-4699-9d25-e6b0d03f661e}</destination>
-			<destination>{c6a91054-3775-4ee5-8e83-2271151cb7b5}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c21aed87-e4a6-4e5a-99bd-00cced7c3666}" />
@@ -2923,6 +2922,5 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{c8c4203f-a58b-4699-9d25-e6b0d03f661e}" />
-	<object class="SpatialiserEffect" id="{c6a91054-3775-4ee5-8e83-2271151cb7b5}" />
 	<object class="MixerBusFader" id="{e4a7d4f8-0c0e-4c30-8362-07ddba7f90ad}" />
 </objects>

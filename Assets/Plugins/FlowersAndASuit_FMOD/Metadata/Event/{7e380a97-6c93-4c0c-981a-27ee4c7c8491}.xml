@@ -5,7 +5,7 @@
 			<value>Mens Warehouse Owner</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{5feddce6-58a3-4f19-a673-0cfe181f54a0}</destination>
@@ -2130,7 +2130,6 @@
 	<object class="MixerBusEffectChain" id="{f0efff8c-702d-4056-8a2b-0b4936d0513e}">
 		<relationship name="effects">
 			<destination>{d35af92e-521b-4a23-b0be-a6c20d1f84ae}</destination>
-			<destination>{c40de17d-740f-4953-93c5-b8f8f98a91f5}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{69abf27e-6466-4260-bd0c-a865a569d3c4}" />
@@ -2489,7 +2488,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{d35af92e-521b-4a23-b0be-a6c20d1f84ae}" />
-	<object class="SpatialiserEffect" id="{c40de17d-740f-4953-93c5-b8f8f98a91f5}" />
 	<object class="MixerBusFader" id="{4575f6f9-7cbe-4068-bb20-ef41c292c818}" />
 	<object class="MixerBusFader" id="{675bd485-edd4-4463-b4da-99cae684b2b3}" />
 </objects>

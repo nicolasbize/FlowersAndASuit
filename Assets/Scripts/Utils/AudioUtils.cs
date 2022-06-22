@@ -18,7 +18,7 @@ public class AudioUtils : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    public enum SoundType { None, ParkOutdoor, CityOutdoor, EnzoFootsteps, AlFish, AlSplash, Dog, ScissorCut, PhoneDial, PhoneRing, UIClick, UIPocket}
+    public enum SoundType { None, ParkOutdoor, CityOutdoor, EnzoFootsteps, AlFish, AlSplash, Dog, ScissorCut, PhoneDial, PhoneRing, UIClick, UIPocket, BusArrive, BusDepart, KeyRetrieval, PhoneHangup, Whistle}
     private static readonly Dictionary<SoundType, FMOD.Studio.EventInstance> soundFmodEvents = new Dictionary<SoundType, FMOD.Studio.EventInstance>();
     
 
@@ -66,6 +66,11 @@ public class AudioUtils : MonoBehaviour
         { SoundType.PhoneRing, "event:/SFX/Phonecall Cutscene/Phone Ring" },
         { SoundType.UIClick, "event:/SFX/UI/Mouse Click" },
         { SoundType.UIPocket, "event:/SFX/UI/Pocket" },
+        { SoundType.BusArrive, "event:/SFX/Bus/Bus Arrive" },
+        { SoundType.BusDepart, "event:/SFX/Bus/Bus Depart" },
+        { SoundType.KeyRetrieval, "event:/SFX/Key Retrieval/Key Retrieval" },
+        { SoundType.PhoneHangup, "event:/SFX/Phonecall Cutscene/Phone Hangup" },
+        { SoundType.Whistle, "event:/SFX/The Arrest/Police Whistle" },
     };
 
     public enum Music
@@ -77,7 +82,7 @@ public class AudioUtils : MonoBehaviour
         IntroCredits = 4,
         BusGraveyard = 5,
     }
-    public enum Surface { Ground = 0, Grass = 1}
+    public enum Surface { Asphalt = 0, Grass = 1}
     private static FMOD.Studio.EventInstance musicInstance = new FMOD.Studio.EventInstance();
     private static bool musicLoaded = false;
     private static bool musicPlaying = false;
@@ -87,6 +92,7 @@ public class AudioUtils : MonoBehaviour
     private static bool walkingSoundPlaying = false;
     private static FMOD.Studio.EventInstance currentDialogInstance = new FMOD.Studio.EventInstance();
     private static Action currentDialogCallback;
+    //private static int currentDialogConversationId = -1;
     //private static int conversationCaret = -1;
     private static GCHandle timelineHandle;
     private static TimelineInfo timelineInfo;
@@ -159,6 +165,7 @@ public class AudioUtils : MonoBehaviour
     }
 
     public static void StopWalkingSound() {
+        Debug.Log("done with walking sound");
         if (soundFmodEvents.ContainsKey(SoundType.EnzoFootsteps)) {
             GetSoundInstance(SoundType.EnzoFootsteps).stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }

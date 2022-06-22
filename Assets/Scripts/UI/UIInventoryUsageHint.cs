@@ -17,18 +17,7 @@ public class UIInventoryUsageHint : MonoBehaviour
     void Update()
     {
         if (ShouldDisplay()) {
-            string currentHint = "";
-            if (HoveredInteractive != null && DraggedInventoryItem != null) {
-                currentHint = "Use " + DraggedInventoryItem.itemName + " on " + HoveredInteractive.HintText;
-            } else if (HoveredInventoryItem != null && DraggedInventoryItem != null) {
-                currentHint = "Combine " + DraggedInventoryItem.itemName + " with " + HoveredInventoryItem.itemName;
-            } else if (HoveredInventoryItem != null && DraggedInventoryItem == null && HoveredInteractive == null) {
-                currentHint = HoveredInventoryItem.itemName;
-            } else if (HoveredInteractive != null && HoveredInventoryItem == null && DraggedInventoryItem == null) {
-                currentHint = HoveredInteractive.HintText;
-            }
-
-            GetComponent<TextMeshProUGUI>().text = currentHint;
+            GetComponent<TextMeshProUGUI>().text = GetHintText();
         } else {
             GetComponent<TextMeshProUGUI>().text = "";
         }
@@ -36,5 +25,19 @@ public class UIInventoryUsageHint : MonoBehaviour
 
     bool ShouldDisplay() {
         return GameInitializer.Instance.IsReady && !CutSceneManager.Instance.IsPlayingCutScene();
+    }
+
+    string GetHintText() {
+        string currentHint = "";
+        if (HoveredInteractive != null && DraggedInventoryItem != null) {
+            currentHint = "Use " + DraggedInventoryItem.itemName + " on " + HoveredInteractive.HintText;
+        } else if (HoveredInventoryItem != null && DraggedInventoryItem != null) {
+            currentHint = "Combine " + DraggedInventoryItem.itemName + " with " + HoveredInventoryItem.itemName;
+        } else if (HoveredInventoryItem != null && DraggedInventoryItem == null && HoveredInteractive == null) {
+            currentHint = HoveredInventoryItem.itemName;
+        } else if (HoveredInteractive != null && HoveredInventoryItem == null && DraggedInventoryItem == null) {
+            currentHint = HoveredInteractive.HintText;
+        }
+        return currentHint;
     }
 }
