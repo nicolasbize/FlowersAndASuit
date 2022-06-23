@@ -130,9 +130,7 @@ public class AudioUtils : MonoBehaviour
 
         if (isDone && currentDialogCallback != null) {
             isDone = false;
-            Debug.Log("about to call callback from audioutils");
             currentDialogCallback();
-            Debug.Log("done withcallback (from audioutils)");
             currentDialogCallback = null;
         }
     }
@@ -165,7 +163,6 @@ public class AudioUtils : MonoBehaviour
     }
 
     public static void StopWalkingSound() {
-        Debug.Log("done with walking sound");
         if (soundFmodEvents.ContainsKey(SoundType.EnzoFootsteps)) {
             GetSoundInstance(SoundType.EnzoFootsteps).stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
@@ -220,12 +217,16 @@ public class AudioUtils : MonoBehaviour
 
         FMOD.Studio.EventInstance instance = LoadDialogInstance(conversation);
         instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        isDone = true;
     }
 
     public static void PlayDialog(DialogConversation conversation, int conversationId, Action onDialogEnd=null) {
+        if (currentDialogCallback != null) {
+            Debug.Log("still playing another dialog");
+        }
         if (conversation == DialogConversation.None || conversationId < 0)
             return;
-
+        isDone = false;
         currentDialogInstance = LoadDialogInstance(conversation);
         FMOD.ATTRIBUTES_3D position = FMODUnity.RuntimeUtils.To3DAttributes(Camera.main.transform.position);
         currentDialogInstance.setParameterByName(dialogParameterNames[conversation], (float)conversationId);
@@ -267,7 +268,6 @@ public class AudioUtils : MonoBehaviour
         } else if (timelineInfoPtr != IntPtr.Zero) {
             isDone = true;
         }
-
         return FMOD.RESULT.OK;
     }
 }

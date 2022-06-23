@@ -54,9 +54,9 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 2
-    character: 
-    targetLocation: {x: 52, y: 0, z: 0}
+  - type: 1
+    character: Enzo
+    targetLocation: {x: 53.23, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0
@@ -67,9 +67,9 @@ MonoBehaviour:
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 0
-  - type: 1
-    character: Enzo
-    targetLocation: {x: 53.23, y: 0, z: 0}
+  - type: 2
+    character: 
+    targetLocation: {x: 52, y: 0, z: 0}
     interactionDuration: 0
     animationProperty: 
     animationValue: 0

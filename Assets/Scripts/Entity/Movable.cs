@@ -9,8 +9,10 @@ public class Movable : MonoBehaviour
 
     [field: SerializeField] public float Speed { get; private set; } = 3f;
     [field: SerializeField] public float Margin { get; private set; } = 0.1f;
-    [field: SerializeField] public bool EmitSound { get; private set; } = false;
+    [field: SerializeField] public bool EmitSound { get; set; } = false;
     [field: SerializeField] public string MoveAnimBoolean { get; set; } = "is-moving";
+    [field: SerializeField] public float LimitLeftX { get; set; } = -61.5f;
+    [field: SerializeField] public float LimitRightX { get; set; } = 65f;
     public Vector3 Destination { get; private set; }
 
     private Animator animator;
@@ -27,7 +29,7 @@ public class Movable : MonoBehaviour
     }
 
     public void MoveTo(Vector3 destination, Action onArriveCallback = null) {
-        Destination = destination;
+        Destination = new Vector3(Mathf.Clamp(destination.x, LimitLeftX, LimitRightX), destination.y, destination.z);
         onArrive = onArriveCallback;
         justArrived = false;
     }
@@ -43,15 +45,15 @@ public class Movable : MonoBehaviour
 
     private void Update() {
         bool isMoving = IsMoving();
-        animator.SetBool(MoveAnimBoolean, isMoving);
+        if (MoveAnimBoolean != "") {
+            animator.SetBool(MoveAnimBoolean, isMoving);
+        }
 
         if (isMoving) {
             transform.position = Vector3.MoveTowards(transform.position, Destination, Speed * Time.deltaTime);
-            bool isOnGrass = transform.position.x < -47;
             FaceTowards(Destination);
             CheckForGround();
             if (EmitSound) {
-                Debug.Log("playing " + currentSurface);
                 AudioUtils.PlayWalkingSound(currentSurface);
             }
         } else if (!justArrived) {
@@ -68,11 +70,13 @@ public class Movable : MonoBehaviour
     }
 
     void CheckForGround() {
-        List<Collider2D> collidedWith = new List<Collider2D>();
-        GetComponent<Collider2D>().OverlapCollider(new ContactFilter2D(), collidedWith);
-        collidedWith = collidedWith.FindAll(c => c.gameObject.tag == "Ground");
-        if (collidedWith.Count > 0) {
-            currentSurface = collidedWith[0].GetComponent<Ground>().GroundSurface;
+        if (GetComponent<Collider2D>() != null) {
+            List<Collider2D> collidedWith = new List<Collider2D>();
+            GetComponent<Collider2D>().OverlapCollider(new ContactFilter2D(), collidedWith);
+            collidedWith = collidedWith.FindAll(c => c.gameObject.tag == "Ground");
+            if (collidedWith.Count > 0) {
+                currentSurface = collidedWith[0].GetComponent<Ground>().GroundSurface;
+            }
         }
     }
 

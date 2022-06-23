@@ -148,7 +148,7 @@ MonoBehaviour:
   - type: 3
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1.5
+    interactionDuration: 1.2
     animationProperty: 
     animationValue: 0
     animationTrigger: blow-whistle
@@ -174,7 +174,7 @@ MonoBehaviour:
   - type: 3
     character: Scott
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: hands-up
@@ -187,7 +187,7 @@ MonoBehaviour:
   - type: 3
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: point-jacket
@@ -200,7 +200,7 @@ MonoBehaviour:
   - type: 4
     character: Scott
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: 
@@ -213,7 +213,7 @@ MonoBehaviour:
   - type: 3
     character: Scott
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: find-drugs
@@ -226,20 +226,20 @@ MonoBehaviour:
   - type: 3
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: well-well
     flipValue: 0
     objectCreatedPrefab: {fileID: 0}
-    text: Well, well well...
+    text: Well, well, well...
     objectGained: {fileID: 0}
     sound: 0
     fmodTextId: 5
   - type: 3
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: smell
@@ -252,7 +252,7 @@ MonoBehaviour:
   - type: 4
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: 
@@ -265,7 +265,7 @@ MonoBehaviour:
   - type: 3
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: point-jacket
@@ -278,7 +278,7 @@ MonoBehaviour:
   - type: 4
     character: Scott
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: 
@@ -291,7 +291,7 @@ MonoBehaviour:
   - type: 3
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 2
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: take-clothes
@@ -356,7 +356,7 @@ MonoBehaviour:
   - type: 3
     character: Scott
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 1
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: handcuffs
@@ -382,7 +382,7 @@ MonoBehaviour:
   - type: 3
     character: Officer Lewis
     targetLocation: {x: 0, y: 0, z: 0}
-    interactionDuration: 3
+    interactionDuration: 0
     animationProperty: 
     animationValue: 0
     animationTrigger: point-jacket

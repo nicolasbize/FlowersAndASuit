@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Call Phone Booth
   m_EditorClassIdentifier: 
   conversation: 7
+  controlMusic: 1
   steps:
   - type: 0
     character: 
@@ -156,7 +157,7 @@ MonoBehaviour:
     text: Hmm... I wonder how long he'll stay on!
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 15
+    fmodTextId: 16
   - type: 9
     character: Phone Number
     targetLocation: {x: 0, y: 0, z: 0}

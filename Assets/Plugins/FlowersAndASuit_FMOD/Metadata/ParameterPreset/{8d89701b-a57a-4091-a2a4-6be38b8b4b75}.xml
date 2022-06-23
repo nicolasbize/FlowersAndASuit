@@ -13,7 +13,7 @@
 	</object>
 	<object class="GameParameter" id="{9aa5b804-2db9-43de-aa3c-4de502988c61}">
 		<property name="maximum">
-			<value>16</value>
+			<value>17</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>

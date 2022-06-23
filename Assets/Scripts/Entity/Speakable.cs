@@ -14,8 +14,11 @@ public class Speakable : MonoBehaviour
     [SerializeField] PlayerController player;
     [field: SerializeField] public bool Busy { get; set; }
     [field: SerializeField] public Dialog Dialog { get; set; }
-    private Transform textMesh;
-    private Animator animator;
+    Transform textMesh;
+    Animator animator;
+    Action currentLineCallback;
+    DialogConversation currentClipPlayed;
+    int currentFmodId;
 
     private void Start() {
         animator = GetComponent<Animator>();
@@ -35,20 +38,25 @@ public class Speakable : MonoBehaviour
     }
 
     public void Speak(SpokenLine voiceLine, DialogConversation audioClip = DialogConversation.None, Action onDoneSpeaking = null) {
+        if (textMesh != null) {
+            Destroy(textMesh.gameObject);
+        }
         textMesh = Instantiate(textPrefab, transform);
         float distAbove = GetComponent<SpriteRenderer>().sprite.bounds.extents.y * 2 + distAboveHead;
         textMesh.position = transform.position + Vector3.up * distAbove;
         textMesh.GetComponent<TextMeshPro>().text = voiceLine.Text;
-        Action onCompleteSound = () => {
-            Destroy(textMesh.gameObject);
-            textMesh = null;
-            if (onDoneSpeaking != null) onDoneSpeaking();
-        };
 
+        currentLineCallback = onDoneSpeaking;
         if (voiceLine.FmodId < 0) { // we don't have the voice line, just display the text for some time
-            StartCoroutine(WaitForAndExecute(voiceLine.ManualDuration, onCompleteSound));
+            float duration = voiceLine.ManualDuration;
+            if (duration == 0) { // approximate
+                duration = Mathf.Max(2, voiceLine.Text.Split(' ').Length / 1.8f);
+            }
+            StartCoroutine(WaitForAndExecute(duration, OnCompleteSpeaking));
         }  else {
             DialogConversation clip = audioClip != DialogConversation.None ? audioClip : Dialog.fmodEvent;
+            currentClipPlayed = clip;
+            currentFmodId = voiceLine.FmodId;
             if (clip == DialogConversation.None) {
                 Debug.Log("Speakable trying to speak but doesn't have a clip to check");
                 return;
@@ -57,11 +65,26 @@ public class Speakable : MonoBehaviour
                 AudioUtils.PlayDialog(clip, voiceLine.FmodId);
                 StartCoroutine(WaitForAndExecute(voiceLine.ManualDuration, () => {
                     AudioUtils.StopDialog(clip, voiceLine.FmodId);
-                    onCompleteSound();
+                    OnCompleteSpeaking();
                 }));
             } else {
-                AudioUtils.PlayDialog(clip, voiceLine.FmodId, onCompleteSound);
+                AudioUtils.PlayDialog(clip, voiceLine.FmodId, OnCompleteSpeaking);
             }
+        }
+    }
+
+    void OnCompleteSpeaking() {
+        if (textMesh != null) {
+            Destroy(textMesh.gameObject);
+            textMesh = null;
+            currentClipPlayed = DialogConversation.None;
+            currentFmodId = -1;
+            if (currentLineCallback != null) {
+                currentLineCallback();
+                currentLineCallback = null;
+            }
+        } else {
+            Debug.Log("text mesh previously destroyed");
         }
     }
 
@@ -72,12 +95,28 @@ public class Speakable : MonoBehaviour
     }
 
     private void Update() {
+        
         animator.SetBool("is-speaking", IsSpeaking());
         Movable movable = GetComponent<Movable>();
-        bool moving = movable == null ? true : movable.IsMoving();
-        if (facePlayer && !moving && !CutSceneManager.Instance.IsPlayingCutScene()) {
-            GetComponent<SpriteRenderer>().flipX = player.transform.position.x < transform.position.x;
+        bool moving = movable == null ? false : movable.IsMoving();
+        if (!CutSceneManager.Instance.IsPlayingCutScene()) {
+            if (facePlayer && !moving) {
+                GetComponent<SpriteRenderer>().flipX = player.transform.position.x < transform.position.x;
+            }
+            if (Input.GetMouseButton(0) && IsSpeaking()) {
+                InterruptCurrentLine();
+            }
         }
     }
 
+    private void InterruptCurrentLine() {
+        if (IsSpeaking()) {
+            if (currentClipPlayed != DialogConversation.None && currentFmodId > -1) {
+                AudioUtils.StopDialog(currentClipPlayed, currentFmodId);
+                currentClipPlayed = DialogConversation.None;
+                currentFmodId = -1;
+            }
+            OnCompleteSpeaking();
+        }
+    }
 }

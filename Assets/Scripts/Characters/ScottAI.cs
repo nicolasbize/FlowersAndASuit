@@ -23,7 +23,7 @@ public class ScottAI : MonoBehaviour
         if (isDrugsPlanted) {
             return false;
         }
-        return GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("scott-idle-phone");
+        return GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("scott-pickup-phone");
     }
 
     // Update is called once per frame

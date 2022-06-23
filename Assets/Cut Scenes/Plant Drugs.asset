@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Plant Drugs
   m_EditorClassIdentifier: 
   conversation: 7
+  controlMusic: 1
   steps:
   - type: 6
     character: Scott
@@ -78,7 +79,7 @@ MonoBehaviour:
     text: Hello? Hellooo!!
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 14
+    fmodTextId: 15
   - type: 1
     character: Enzo
     targetLocation: {x: 5.9, y: 0, z: 0}
@@ -143,7 +144,7 @@ MonoBehaviour:
     text: I wouldn't want to be caught with this!
     objectGained: {fileID: 0}
     sound: 0
-    fmodTextId: 16
+    fmodTextId: 17
   - type: 3
     character: Scott
     targetLocation: {x: 0, y: 0, z: 0}

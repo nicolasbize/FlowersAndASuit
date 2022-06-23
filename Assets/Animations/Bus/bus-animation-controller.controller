@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: is_moving
+    m_ConditionEvent: is-moving
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1699127623711711774}
@@ -88,7 +88,7 @@ AnimatorController:
   m_Name: bus-animation-controller
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: is_moving
+  - m_Name: is-moving
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -141,7 +141,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: is_moving
+    m_ConditionEvent: is-moving
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1263930245289489875}

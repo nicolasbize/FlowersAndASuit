@@ -72,9 +72,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -272193209
-  m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingLayerID: 626224843
+  m_SortingLayer: 5
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 21b5b8c0a17d4bf449320bc8a7931d71, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -144,8 +144,8 @@ MonoBehaviour:
   <TextBeforePickup>k__BackingField:
     <Text>k__BackingField: A bit weird he had to take his clothes off...   Oh well
     <FmodId>k__BackingField: -1
+    <ManualDuration>k__BackingField: 0
   <DestroyAfterPickup>k__BackingField: 1
-  inventory: {fileID: 0}
 --- !u!114 &8972282399333921460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +161,4 @@ MonoBehaviour:
   <Observation>k__BackingField:
     <Text>k__BackingField: 
     <FmodId>k__BackingField: 0
+    <ManualDuration>k__BackingField: 0

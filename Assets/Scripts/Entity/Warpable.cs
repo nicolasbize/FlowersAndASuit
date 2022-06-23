@@ -10,6 +10,8 @@ public class Warpable : MonoBehaviour
     [SerializeField] Music warpMusic;
     [SerializeField] Transform transitionCanvas;
     [SerializeField] bool isDoorway;
+    [field: SerializeField] public float LimitLeftX { get; private set; }
+    [field: SerializeField] public float LimitRightX { get; private set; }
 
     PlayerController playerWarped;
     Action onWarpCallback;
@@ -36,6 +38,8 @@ public class Warpable : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         playerWarped.transform.position = spawn.transform.position;
         playerWarped.GetComponent<Movable>().StopMoving();
+        playerWarped.GetComponent<Movable>().LimitLeftX = LimitLeftX;
+        playerWarped.GetComponent<Movable>().LimitRightX = LimitRightX;
         Camera.main.GetComponent<CameraFollow>().leftBorder = spawn.limitCameraLeft;
         Camera.main.GetComponent<CameraFollow>().rightBorder = spawn.limitCameraRight;
         Camera.main.GetComponent<CameraFollow>().GoToFinalPosition();

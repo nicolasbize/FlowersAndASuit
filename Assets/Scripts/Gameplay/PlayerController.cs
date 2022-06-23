@@ -24,17 +24,8 @@ public class PlayerController : MonoBehaviour
     public PlayerState State { get; set; }
 
     void Update() {
-        //isInLiving = transform.position.y > -100;
-
         HighlightHoveredObjects();
         HandleClickInteractions();
-
-        //if (isInLiving) {
-        //    animator.SetBool("is_moving", State == PlayerState.Moving);
-        //} else {
-        //    animator.SetBool("is_walking_flowers", State == PlayerState.Moving);
-        //}
-
     }
 
     private void HighlightHoveredObjects() {

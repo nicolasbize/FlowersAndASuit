@@ -29,7 +29,8 @@ public class BusTrigger : MonoBehaviour
 
     private void CheckForBus(GameObject player) {
         if (InventoryManager.Instance.HasItemInInventory("Flowers") && InventoryManager.Instance.HasItemInInventory("Fancy Suit")) {
-            GameObject.Find("Enzo").GetComponent<PlayerController>().SetIdle();
+            PlayerController enzo = GameObject.Find("Enzo").GetComponent<PlayerController>();
+            enzo.SetIdle();
             CutSceneManager.Instance.PlayCutscene(finalCutscene);
             InventoryManager.Instance.ClearInventory();
             Camera.main.GetComponent<CameraFollow>().leftBorder = -9.65f;

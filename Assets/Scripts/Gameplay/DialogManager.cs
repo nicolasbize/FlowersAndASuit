@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static AudioUtils;
 using static Dialog;
 
 public class DialogManager : MonoBehaviour
 {
     [SerializeField] float timeBetweenConversations = 0.3f;
     [SerializeField] UIDialogContainer dialogOptionsPanel;
+    [SerializeField] Transform inventoryPanelCover;
 
     public static DialogManager Instance { get; private set; }
     void Awake() {
@@ -27,6 +29,7 @@ public class DialogManager : MonoBehaviour
     ConversationOutcome conversationOutcome;
     bool hasCompletedConversation;
     Action<ConversationOutcome> onCompleteConversation;
+    Music musicPlayedBeforeDialog = Music.MainTheme;
 
 
     public bool InConversation() {
@@ -41,7 +44,10 @@ public class DialogManager : MonoBehaviour
         conversationOutcome = new ConversationOutcome();
         hasCompletedConversation = false;
         onCompleteConversation = onCompleteCallback;
+        inventoryPanelCover.GetComponent<Animator>().SetTrigger("show");
         messageQueue.Clear();
+        musicPlayedBeforeDialog = AudioUtils.GetCurrentMusicPlaying();
+        AudioUtils.PlayMusic(Music.Dialog, 0.5f);
         DialogTreeUtils.ClearVisitedFlag(dialog.branches);
         DialogTreeUtils.SetBranchParent(dialog.branches, null);
         if (!String.IsNullOrEmpty(dialog.greeting)) {
@@ -74,11 +80,14 @@ public class DialogManager : MonoBehaviour
         } else {
             if (hasCompletedConversation) {
                 currentDialog = null;
+                inventoryPanelCover.GetComponent<Animator>().SetTrigger("hide");
                 if (conversationOutcome.ItemGained != null) {
                     InventoryManager.Instance.AddToInventory(conversationOutcome.ItemGained);
                 }
                 if (conversationOutcome.CutScene != null) {
-                    //cutscenePlayer.PlayCutscene(outcome.CutScene);
+                    CutSceneManager.Instance.PlayCutscene(conversationOutcome.CutScene);
+                } else {
+                    AudioUtils.PlayMusic(musicPlayedBeforeDialog, 0.7f);
                 }
             } else {
                 dialogOptionsPanel.Activate(currentDialog, currentBranches, OnDialogOptionSelected);

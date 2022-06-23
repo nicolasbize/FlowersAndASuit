@@ -28,6 +28,7 @@ public class CutSceneManager : MonoBehaviour
     Queue<Step> remainingSteps = new Queue<Step>();
     Step currentStep = null;
     GameObject currentCharacter;
+    bool readyToAdvance = false;
 
     public bool IsPlayingCutScene() {
         return remainingSteps.Count > 0;
@@ -62,32 +63,39 @@ public class CutSceneManager : MonoBehaviour
                     break;
             }
         }
+        if (readyToAdvance) {
+            readyToAdvance = false;
 
+            if (currentStep.objectGained != null) {
+                InventoryManager.Instance.AddToInventory(currentStep.objectGained);
+            }
+            if (remainingSteps.Count > 0) {
+                remainingSteps.Dequeue();
+            }
+            if (remainingSteps.Count > 0) {
+                PlayStep(remainingSteps.Peek());
+            }
+        }
     }
 
     private void Advance() {
-        if (currentStep.objectGained != null) {
-            InventoryManager.Instance.AddToInventory(currentStep.objectGained);
-        }
-        if (remainingSteps.Count > 0) {
-            remainingSteps.Dequeue();
-        }
-        if (remainingSteps.Count > 0) {
-            PlayStep(remainingSteps.Peek());
-        }
+        readyToAdvance = true;
     }
 
     private void PlayStep(Step step) {
         currentStep = step;
         currentCharacter = GameObject.Find(step.character);
         // check if we should play a sound / music
+        // note this does not advance
         if (currentStep.sound != AudioUtils.SoundType.None) {
             AudioUtils.PlaySound(currentStep.sound);
             StartCoroutine(StopFutureSound(currentStep.sound, currentStep.interactionDuration));
         }
         // check if we should speak
         if (!String.IsNullOrEmpty(currentStep.text)) {
-            if (currentStep.fmodTextId < 0) { // we don't have a voice line for this
+            Debug.Log(currentStep.text);
+            if (currentStep.fmodTextId <= 0) { // we don't have a voice line for this
+                // this will not advance automatically, just destroy the text after some time
                 SpokenLine line = new SpokenLine(currentStep.text, currentStep.interactionDuration);
                 currentCharacter.GetComponent<Speakable>().Speak(line);
             } else {
@@ -97,6 +105,7 @@ public class CutSceneManager : MonoBehaviour
                 if (step.type == StepType.MoveCharacter) {
                     currentCharacter.GetComponent<Speakable>().Speak(line, CurrentCutScene.conversation);
                 } else {
+                    // if we have a voice line and we're not moving, we will advance once the line has been said
                     currentCharacter.GetComponent<Speakable>().Speak(line, CurrentCutScene.conversation, Advance);
                 }
             }
@@ -127,6 +136,7 @@ public class CutSceneManager : MonoBehaviour
                 }
                 break;
             case StepType.MoveCharacter:
+                // advance after we've reached the destination
                 Movable movable = GameObject.Find(step.character).GetComponent<Movable>();
                 if (movable != null) {
                     if (!String.IsNullOrEmpty(currentStep.animationProperty)) {
@@ -136,16 +146,27 @@ public class CutSceneManager : MonoBehaviour
                         movable.GetComponent<SpriteRenderer>().flipX = currentStep.flipValue;
                         Advance();
                     });
+                } else {
+                    Debug.Log("trying to move something that cannot move");
                 }
                 break;
             case StepType.AnimateCharacter:
                 if (step.animationTrigger != "") {
                     currentCharacter = GameObject.Find(step.character);
                     currentCharacter.GetComponent<Animator>().SetTrigger(step.animationTrigger);
-                    // check if we have a vocal line, otherwise use interactionDuration
+                    // check if we have a vocal line, otherwise use interactionDuration to know when to stop
                     if (currentStep.fmodTextId <= 0) {
+                        Debug.Log("will be moving forward without a vocal line");
                         StartCoroutine(WaitAndAdvance(step.interactionDuration));
                     }
+                } else {
+                    Debug.Log("trying to animate something that doesn't have a trigger");
+                }
+                break;
+            case StepType.Wait:
+                // if we have a voice line, we'll use that as the timer
+                if (currentStep.fmodTextId <= 0) {
+                    StartCoroutine(WaitAndAdvance(step.interactionDuration));
                 }
                 break;
             case StepType.Teleport:
@@ -201,12 +222,6 @@ public class CutSceneManager : MonoBehaviour
                 }
                 Advance();
                 break;
-            case StepType.Wait:
-                // if we have a voice line, we'll use that as the timer
-                if (currentStep.fmodTextId <= 0) {
-                    StartCoroutine(WaitAndAdvance(step.interactionDuration));
-                }
-                break;
             case StepType.ActivateUI:
                 UI.gameObject.SetActive(currentStep.animationValue);
                 Advance();
@@ -234,12 +249,6 @@ public class CutSceneManager : MonoBehaviour
     IEnumerator StopFutureSound(SoundType sound, float duration) {
         yield return new WaitForSeconds(duration);
         AudioUtils.StopSound(sound);
-    }
-
-    IEnumerator PlayAnimation(GameObject character, string animation, float duration) {
-        currentCharacter.GetComponent<Animator>().Play(animation);
-        yield return new WaitForSeconds(duration);
-        Advance();
     }
 
 

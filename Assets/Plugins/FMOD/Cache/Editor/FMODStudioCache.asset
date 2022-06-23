@@ -358,7 +358,7 @@ MonoBehaviour:
   Name: Scott Dialogue
   StudioPath: 
   Min: 0
-  Max: 16
+  Max: 17
   Default: 0
   ID:
     data1: 3510370080
@@ -596,7 +596,7 @@ MonoBehaviour:
   - {fileID: 4205306280637274764}
   StringsBanks:
   - {fileID: 2346158573358980646}
-  cacheTime: 637914625763403269
+  cacheTime: 637915494803547831
   cacheVersion: 10
 --- !u!114 &460228559419828986
 MonoBehaviour:
@@ -764,7 +764,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637914625763403269
+  lastModified: 637915494803547831
   FileSizes:
   - Name: Desktop
     Value: 2720
@@ -864,10 +864,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FlowersAndASuit_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637914625763343419
+  lastModified: 637915494803487991
   FileSizes:
   - Name: Desktop
-    Value: 18656672
+    Value: 18703584
   Exists: 1
 --- !u!114 &4653169154470494749
 MonoBehaviour:
@@ -896,7 +896,7 @@ MonoBehaviour:
   - {fileID: -7430742231831705264}
   MinDistance: 1
   MaxDistance: 20
-  Length: 142801
+  Length: 145000
 --- !u!114 &5283598114121629958
 MonoBehaviour:
   m_ObjectHideFlags: 0
